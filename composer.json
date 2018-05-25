@@ -19,7 +19,7 @@
                 "Goper\\Websaper\\WebsaperServiceProvider"
             ],
             "aliases": {
-                "Parts": "Goper\\Websaper\\WebsaperFacade"
+                "WebSaper": "Goper\\Websaper\\WebsaperFacade"
             }
         }
     }
