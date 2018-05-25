@@ -1,0 +1,26 @@
+{
+    "name": "goper/websaper",
+    "description": "Laravel wrapper for spatie/crawler package.",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^5.6",
+        "spatie/crawler": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goper\\Websaper\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Goper\\Websaper\\WebsaperServiceProvider"
+            ],
+            "aliases": {
+                "Parts": "Goper\\Websaper\\WebsaperFacade"
+            }
+        }
+    }
+}
