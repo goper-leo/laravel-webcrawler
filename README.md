@@ -10,26 +10,28 @@ Laravel wrapper for spatie/crawler.
     "repositories": [
             {
                 "type": "vcs",
-                "url": "git@bitbucket.org:eetechmedia/parts.git"        
+                "url": "git@bitbucket.org:goper/websaper.git"        
             }
         ]
     ```
 
 2. Require this package
 
-    ``` "eetechmedia/parts": "dev-master" ```
+    ``` "goper/websaper": "dev-master" ```
 
 3. Run `composer install` or `composer update`
 
-4. Run `php artisan vendor:publish --provider=PartsServiceProvider` to publish **parts.php** config file
+4. Run `php artisan vendor:publish --provider=WebsaperServiceProvider` to publish **websaper.php** config file
 
 ### How to use ###
 
 1. Include facade on your controller
-``` use Parts;
+``` use WebSaper;
 ```
-2. To call search `Parts::search($partNumber)`
-
-### Environment Variables ###
-``` ECIA_COMPANY_ID=EETech ```
-``` ECIA_API_KEY=f51d0e92-facf-4c51-a4f6-e2c54dcd8c13 ```
+2. Create a pattern that implements `Goper\Websaper\Contracts\Picker` class.
+3. You want to get the content only just use `WebSaper::testCrawl($url_you_want_to_crawl);`
+4. You want to build and get the content
+```
+$content = WebSaper::testCrawl($request->url);
+$scraped = WebSaper::builder('Modules\Import\Patterns\AllAboutCircuits', $content);
+```

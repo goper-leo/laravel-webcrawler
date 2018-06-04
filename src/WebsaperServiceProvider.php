@@ -24,6 +24,8 @@ class WebsaperServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Add resources here...
+        $this->publishes([
+            __DIR__.'/config/websaper.php' => config_path('websaper.php'),
+        ]);
     }
 }

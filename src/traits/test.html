@@ -1,0 +1,1017 @@
+<!DOCTYPE html><html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>\n
+    <meta charset="utf-8">\n
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">\n
+    <meta name="robots" content="noodp">\n
+    <meta name="news_keywords" content="biodegradeable,Sensor,Sensors,medical,medical sensors,implants,bio implants,robin mitchell">\n
+    <meta property="og:type" content="article">\n
+    <meta property="og:url" content="https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/">\n
+    <meta property="og:title" content="Making Safer Implantable Medical Sensors: The Benefits and Challenges of Biodegradable Sensors">\n
+    <meta property="og:image" content="https://www.allaboutcircuits.com/uploads/thumbnails/160545_web-e1516185002644.jpg">\n
+    <meta name="thumbnail" content="https://www.allaboutcircuits.com/uploads/thumbnails/160545_web-e1516185002644.jpg">\n
+    <meta property="og:description" content="Imagine an implantable sensor that did not need to be removed because it degrades by itself over time. Meet the biodegradable sensor!">\n
+    <meta name="twitter:card" content="summary">\n
+    <meta name="twitter:site" content="@allaboutcircuit">\n
+    <link href="https://plus.google.com/102476148263859151067/" rel="publisher">\n
+    <title>Making Safer Implantable Medical Sensors: The Benefits and Challenges of Biodegradable Sensors - News</title>\n
+    \n
+    <link rel="icon" href="/assets/images/favicon.ico">\n
+    \n
+    <link rel="alternate" type="application/rss+xml" title="All About Circuits Articles" href="//www.allaboutcircuits.com/rss/">\n
+    <link rel="alternate" type="application/rss+xml" title="All About Circuits Forum RSS Feed" href="//forum.allaboutcircuits.com/forums/-/index.rss">\n
+    <link rel="alternate" type="application/rss+xml" title="All About Circuits Blog RSS Feed" href="//forum.allaboutcircuits.com/blogs/entriesRss.rss">\n
+    \n
+    <link href="/assets/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">\n
+    \n
+    <link href="/assets/css/combined.css?rob2018b" rel="stylesheet">\n
+    <link href="/assets/css/main_site.css" rel="stylesheet">\n
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">\n
+    <link href="/assets/css/aac-parts.css" rel="stylesheet">\n
+    \n
+    <link href="/assets/library/highlight/styles/docco.css" rel="stylesheet">\n
+    \n
+    <script src="https://pagead2.googlesyndication.com/pagead/osd.js"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_rendering_207.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-MMWSMVL&amp;cid=2073368413.1527493173"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script src="https://connect.facebook.net/signals/config/1808435332737507?v=2.8.14&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>\n
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>\n
+    <!--[if lt IE 9]>\n
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>\n
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>\n
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.js"></script>\n
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-sham.js"></script>\n
+    \n
+    <script src="/assets/js/css3-mediaqueries.js"></script>\n
+    <link href="/assets/css/ie8.css" rel="stylesheet">\n
+    <![endif]-->\n
+    \n
+    <script type="text/javascript">\n
+    \n
+    function searchFor(obj, query) {\n
+        for(var key in obj) {\n
+            if(obj.hasOwnProperty(key) && (typeof obj[key] === "string")) {\n
+                if(obj[key] === query) {\n
+                    return true;\n
+                }\n
+            }\n
+        }\n
+        return false;\n
+    }\n
+    var googletag = googletag || {};\n
+    googletag.cmd = googletag.cmd || [];\n
+    (function() {\n
+        var gads = document.createElement('script');\n
+        gads.async = true;\n
+        gads.type = 'text/javascript';\n
+        var useSSL = 'https:' == document.location.protocol;\n
+        gads.src = (useSSL ? 'https:' : 'http:') +\n
+        '//www.googletagservices.com/tag/js/gpt.js';\n
+        var node = document.getElementsByTagName('script')[0];\n
+        node.parentNode.insertBefore(gads, node);\n
+    })();\n
+</script>\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {\n
+    \tvar mappingSidebar = googletag.sizeMapping().\n
+    \taddSize([0,0], [300, 250]).\n
+    addSize([800, 600], [[300, 600], [300, 250]]).\n
+    build();  \n
+    \n
+    googletag.pubads().setTargeting("category",["sensors","hbm-dataaqu","iot","sensors","medical-fitness"]);\n
+    googletag.defineSlot('/62616433/main_sidebar', [[300, 600], [300, 250]], 'div-gpt-ad-1429623690593-0').defineSizeMapping(mappingSidebar).addService(googletag.pubads());\n
+    \n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+});\n
+</script>\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {\n
+    \tvar mappingLeaderboard = googletag.sizeMapping().\n
+    \taddSize([0,0], [[300, 50], [320, 50]]).\n
+    addSize([800, 600], [728,90]).\n
+    build();  \n
+    \n
+    googletag.defineSlot('/62616433/main_leaderboard', [[728, 90], [320,50], [300, 50]], 'div-gpt-ad-1430160961981-0').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+});\n
+</script>\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {\n
+    \tvar mappingWelcome = googletag.sizeMapping().\n
+    \taddSize([0,0], [300, 250]).\n
+    addSize([640, 0], [640, 480]).\n
+    build();\n
+    \n
+    googletag.defineSlot('/62616433/main_welcome', [[640, 480], [300, 250]], 'div-gpt-ad-1430160889889-0').defineSizeMapping(mappingWelcome).addService(googletag.pubads());\n
+    \tgoogletag.pubads().addEventListener('slotRenderEnded', function(event) {\n
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_welcome") === true) {$('#div-gpt-ad-1430160889889-0').trigger('adready');} \n
+    });\n
+    \tgoogletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();  \n
+    googletag.enableServices();\n
+});\n
+</script>\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/main_wallpaper', 'div-gpt-ad-1430235245447-0').addService(googletag.pubads());\n
+    \tgoogletag.pubads().addEventListener('slotRenderEnded', function(event) {\n
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_wallpaper") === true) {\n
+            \t        if ($('#wallpaperad').length) {\n
+                \t            var wa = $('#wallpaperad');\n
+                \t            var mh = $("main").height();\n
+                \t            wa.height(mh + 70);\n
+                \t        }\n
+                if($('.search-banner-form').length) {\n
+                    var temp = $('#wallpaperad');\n
+                    \t\t\tif(temp) {temp.insertAfter($('.search-banner-form'));}\n
+                }\n
+            } \n
+        });\n
+        googletag.pubads().enableSingleRequest();\n
+        googletag.pubads().collapseEmptyDivs();\n
+        googletag.enableServices();\n
+    });\n
+</script>\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/main_native_ad_unit_1', 'div-gpt-ad-1441294234226-0').addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+});\n
+</script>\n
+<script>\n
+googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/AAC_pop_form', 'div-gpt-ad-1525704923457-0').addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+});\n
+</script>\n
+<script src="/assets/library/jquery.popupoverlay.js"></script>\n
+<script>\n
+$(document).ready(function() {\n
+    \n
+    if($.cookie('aacwelcome') === undefined) {\n
+        if (popup_is_mobile() === false) {\n
+            $('#my_popup').popup({\n
+                color: 'white',\n
+                opacity: 1,\n
+                transition: '0.3s',\n
+                scrolllock: true,\n
+                beforeopen: function () {\n
+                    googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});\n
+                    $('#my_popup').removeClass("hidden");\n
+                }\n
+            });\n
+            $('#div-gpt-ad-1430160889889-0').bind('adready', function () {\n
+                var quotes = [{'author': 'James Kip Finch' , 'quote': 'The engineer has been, and is, a maker of history.'},\n
+                {'author': 'Gordon Lindsay Glegg', 'quote': 'The scientist discovers a new type of material or energy and the engineer discovers a new use for it.'},\n
+                {'author': 'Henry Petroski', 'quote': 'Engineering is achieving function while avoiding failure.'},\n
+                {'author': 'Henry Petroski', 'quote': 'Successful engineering is all about understanding how things break or fail.'},\n
+                {'author': 'Michio Kaku', 'quote': 'What we usually consider as impossible are simply engineering problems… there’s no law of physics preventing them.'},\n
+                {'author': 'Thomas Edison', 'quote': 'I have not failed, but found 1000 ways to not make a light bulb.'},\n
+                {'author': 'Robert Heinlein', 'quote': 'One man’s “magic” is another man’s engineering. “Supernatural” is a null word.'},\n
+                {'author': 'Unknown', 'quote': 'Everyone wants the project to be good, fast, and cheap... pick two.'},\n
+            ];\n
+            var quote = quotes[Math.floor(Math.random()*quotes.length)];\n
+            $('#welcomequote').text(quote.quote);\n
+            $('#welcomeauthor').text(quote.author);                           \n
+            $('#my_popup').popup('show');\n
+        });\n
+    } else {\n
+        $('#div-gpt-ad-1430160889889-0').detach().insertAfter('header');\n
+        $('#div-gpt-ad-1430160889889-0').addClass('text-center');\n
+        $('#div-gpt-ad-1430160889889-0').css({"padding-top": "20px", "padding-bottom": "20px", "background-color": "#f26b31"});\n
+        googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});\n
+    }\n
+    var welcomeExpire = new Date();\n
+    welcomeExpire.setHours(welcomeExpire.getHours() + 6);\n
+    $.cookie('aacwelcome','set', {domain: "allaboutcircuits.com", path: "/", expires: welcomeExpire});\n
+}\n
+});\n
+</script>\n
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">\n
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>\n
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>\n
+<script>\n
+function showSocialCode() {\n
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n
+\n
+ga('create', 'UA-1454132-1', 'auto');\n
+ga('require', 'GTM-MMWSMVL');\n
+ga('require', 'displayfeatures');\n
+ga('set',{'dimension1':'sensors,hbm-dataaqu,iot,sensors,medical-fitness'});\n
+ga('set',{'contentGroup1':'sensors,hbm-dataaqu,iot,sensors,medical-fitness'});\n
+ga('send', 'pageview');\n
+\n
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\n
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\n
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\n
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');\n
+        fbq('init', '1808435332737507'); // Insert your pixel ID here.\n
+        fbq('track', 'PageView');\n
+        fbq('track', 'ViewContent', {\n
+            content_ids: ['sensors','hbm-dataaqu','iot','sensors','medical-fitness'],\n
+            content_type: 'category'});\n
+            \n
+            _linkedin_data_partner_id = "353081";\n
+            (function(){var s = document.getElementsByTagName("script")[0];\n
+            var b = document.createElement("script");\n
+            b.type = "text/javascript";b.async = true;\n
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";\n
+            s.parentNode.insertBefore(b, s);})();\n
+        }\n
+        if(jstz.determine().name().indexOf("Europe") === -1) {\n
+            showSocialCode(); // NOT EU\n
+        } else {\n
+            window.addEventListener("load", function () {\n
+                window.cookieconsent.initialise({\n
+                    "palette": {\n
+                        "popup": {\n
+                            "background": "#252e39"\n
+                        },\n
+                        "button": {\n
+                            "background": "#14a7d0"\n
+                        }\n
+                    },\n
+                    "type": "opt-out",\n
+                    "content": {\n
+                        "message": "This website uses tracking cookies to ensure you get the best experience on our website.",\n
+                        "href": "https://www.allaboutcircuits.com/privacy-policy/",\n
+                        "dismiss": "OK, GOT IT",\n
+                        "deny": "X"\n
+                    },\n
+                    onInitialise: function (status) {\n
+                        var type = this.options.type;\n
+                        var didConsent = this.hasConsented();\n
+                        if (type == 'opt-out' && didConsent) {showSocialCode();}\n
+                    },\n
+                    \n
+                    onStatusChange: function (status, chosenBefore) {\n
+                        var type = this.options.type;\n
+                        var didConsent = this.hasConsented();\n
+                        if (type == 'opt-out' && didConsent) {showSocialCode();}\n
+                    },\n
+                    \n
+                    onRevokeChoice: function () {\n
+                        var type = this.options.type;\n
+                        if (type == 'opt-out') {showSocialCode();}\n
+                    },\n
+                    \n
+                })\n
+            });\n
+        }\n
+        </script>\n
+        <link rel="preload" href="https://adservice.google.com.ph/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com.ph/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_207.js" async=""></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}\n
+            .MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}\n
+            .MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}\n
+            .MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}\n
+            .MathJax_Hover_Arrow:hover span {background-color: #CCC!important}\n
+        </style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+            #MathJax_About.MathJax_MousePost {outline: none}\n
+            .MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+            .MathJax_MenuItem {padding: 1px 2em; background: transparent}\n
+            .MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}\n
+            .MathJax_MenuActive .MathJax_MenuArrow {color: white}\n
+            .MathJax_MenuArrow.RTL {left: .5em; right: auto}\n
+            .MathJax_MenuCheck {position: absolute; left: .7em}\n
+            .MathJax_MenuCheck.RTL {right: .7em; left: auto}\n
+            .MathJax_MenuRadioCheck {position: absolute; left: .7em}\n
+            .MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}\n
+            .MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}\n
+            .MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}\n
+            .MathJax_MenuDisabled {color: GrayText}\n
+            .MathJax_MenuActive {background-color: #606872; color: white}\n
+            .MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}\n
+            .MathJax_ContextMenu:focus {outline: none}\n
+            .MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}\n
+            #MathJax_AboutClose {top: .2em; right: .2em}\n
+            .MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}\n
+            .MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}\n
+            .MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}\n
+            .MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}\n
+            .MathJax_MenuClose:hover span {background-color: #CCC!important}\n
+            .MathJax_MenuClose:hover:focus {outline: none}\n
+        </style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}\n
+        </style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}\n
+        .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}\n
+    </style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+    #MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}\n
+    #MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}\n
+    #MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}\n
+</style><style type="text/css">.MathJax_Preview {color: #888}\n
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}\n
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}\n
+.MathJax_Error {color: #CC0000; font-style: italic}\n
+</style><style type="text/css">.MJXp-script {font-size: .8em}\n
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}\n
+.MJXp-bold {font-weight: bold}\n
+.MJXp-italic {font-style: italic}\n
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-largeop {font-size: 150%}\n
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}\n
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}\n
+.MJXp-display {display: block; text-align: center; margin: 1em 0}\n
+.MJXp-math span {display: inline-block}\n
+.MJXp-box {display: block!important; text-align: center}\n
+.MJXp-box:after {content: " "}\n
+.MJXp-rule {display: block!important; margin-top: .1em}\n
+.MJXp-char {display: block!important}\n
+.MJXp-mo {margin: 0 .15em}\n
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}\n
+.MJXp-denom {display: inline-table!important; width: 100%}\n
+.MJXp-denom > * {display: table-row!important}\n
+.MJXp-surd {vertical-align: top}\n
+.MJXp-surd > * {display: block!important}\n
+.MJXp-script-box > *  {display: table!important; height: 50%}\n
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}\n
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}\n
+.MJXp-script-box > * > * > * {display: block!important}\n
+.MJXp-mphantom {visibility: hidden}\n
+.MJXp-munderover {display: inline-table!important}\n
+.MJXp-over {display: inline-block!important; text-align: center}\n
+.MJXp-over > * {display: block!important}\n
+.MJXp-munderover > * {display: table-row!important}\n
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}\n
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}\n
+.MJXp-mtr {display: table-row!important}\n
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}\n
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}\n
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}\n
+.MJXp-mlabeledtr {display: table-row!important}\n
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}\n
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}\n
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}\n
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}\n
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}\n
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}\n
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}\n
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}\n
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}\n
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}\n
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}\n
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}\n
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}\n
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}\n
+</style><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-27/html/container.html"></head>\n
+<body><div id="MathJax_Message" style="display: none;"></div>\n
+    <div id="top-box" class="hidden-xs">\n
+        <div class="top-box-wrapper">\n
+            <div class="container navContainer">\n
+                <div class="row">\n
+                    <div class="social-box col-lg-3 col-md-4 col-sm-5 pull-right" itemscope="" itemtype="https://schema.org/Organization">\n
+                        <div class="hidden-print"><span class="hidden-xs">Connect with us</span>\n
+                            <link itemprop="url" href="//www.allaboutcircuits.com">\n
+                            <a href="https://www.facebook.com/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/allaboutcircuits&amp;width=90&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=20&amp;appId=421950967965311&quot; width=&quot;90&quot; height=&quot;20&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-facebook"></i></a>\n
+                            <a href="https://twitter.com/AllAboutCircuit" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;https://platform.twitter.com/widgets/follow_button.html?screen_name=allaboutcircuit&amp;show_screen_name=false&amp;show_count=true&amp;size=s&quot; title=&quot;Follow All About Circuits on Twitter&quot; width=&quot;160&quot; height=&quot;25&quot; style=&quot;border: 0; overflow: hidden;&quot;></iframe>" data-original-title="" title=""><i class="fa fa-twitter"></i></a>\n
+                            <a href="https://www.youtube.com/c/AllAboutCircuitsVideo" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;//sub.allaboutcircuits.com/youtube.html&quot; height=&quot;25&quot; width=&quot;120&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-youtube-play"></i></a>\n
+                            <a href="https://www.linkedin.com/company/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;//sub.allaboutcircuits.com/linkedin.html&quot; height=&quot;20&quot; width=&quot;115&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-linkedin"></i></a>\n
+                        </div>\n
+                    </div>\n
+                </div>\n
+            </div>\n
+        </div>\n
+    </div>\n
+    <div class="clearfix"></div>\n
+    <header id="headerProxy">\n
+        <nav id="main-nav" class="navbar yamm affix-top" role="navigation">\n
+            <div class="container navContainer">\n
+                <div class="row">\n
+                    <div class="navbar-header">\n
+                        \n
+                        <div class="resp-menu-wrap pull-right">\n
+                            <div class="search-block visible-xs pull-right" itemscope="" itemtype="https://schema.org/WebSite">\n
+                                <link itemprop="url" href="https://www.allaboutcircuits.com">\n
+                                <form action="/search" method="GET" class="navbar-form navbar-form-mobile navbar-right " itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">\n
+                                    <a href="#" class="close">×</a>\n
+                                    <i class="search-icon aaccon-search mobile-search"></i>\n
+                                    <meta itemprop="target" content="https://www.allaboutcircuits.com/search?q={q}">\n
+                                    <input type="text" name="q" value="" class="form-control" placeholder="Search" itemprop="query-input">\n
+                                </form>\n
+                            </div>\n
+                            <div class="user-menu-box pull-right movefront">\n
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#usernavbar" aria-expanded="false" aria-controls="navbar">\n
+                                    <i class="fa fa-eetech-user"></i>\n
+                                </button>\n
+                                <div class="clearfix"></div>\n
+                            </div>\n
+                            <div class="resp-menu-box pull-right movefront">\n
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">\n
+                                    \n
+                                    <img src="/assets/images/mobile-menu-v2.png" class="mobile-menu-icon">\n
+                                </button>\n
+                                <div class="clearfix"></div>\n
+                            </div>\n
+                        </div>\n
+                        <a class="navbar-brand" href="/">\n
+                            <img id="aac-logo-visible-lg" class="navLogo" alt="All About Circuits" src="/assets/images/aac_logo.png">\n
+                            <img id="aac-logo-visible-sm" class="navLogo logo-icon" alt="All About Circuits" src="/assets/images/aac_logo_icon.png">\n
+                        </a>\n
+                        \n
+                        \n
+                    </div>\n
+                    <div class="nav-block">\n
+                        <div class="search-block hidden-xs flx-item">\n
+                            <form action="/search" method="GET" id="topsearchform" class="navbar-form hidden-xs open open-default">\n
+                                <i class="search-icon aaccon-search desktop-search"></i>\n
+                                <input name="q" id="q" type="text" class="form-control" placeholder="Search" value="">\n
+                            </form>\n
+                        </div>\n
+                        <div id="navbar" class=" navbar-collapse collapse flx-item">\n
+                            <ul id="primary-menu" class="nav navbar-nav navbar-right pull-right ">\n
+                                <li id="articles_menu" class="dropdown yamm-fw">\n
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">ARTICLES <i class="fa fa-chevron-down"></i></a>\n
+                                    <ul class="dropdown-menu" role="menu">\n
+                                        <div class="dropdown-content">\n
+                                            <div class="container-fluid">\n
+                                                <div class="row">\n
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+                                                        <ul id="articles_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+                                                            <li id="articles_latest" itemprop="name"><a href="/latest/" itemprop="url">LATEST</a></li>\n
+                                                            <li id="articles_news" itemprop="name"><a href="/news/" itemprop="url">NEWS</a></li>\n
+                                                            <li id="articles_projects" itemprop="name"><a href="/projects/" itemprop="url">PROJECTS</a></li>\n
+                                                            <li id="articles_technical_articles" itemprop="name"><a href="/technical-articles/" itemprop="url">TECHNICAL ARTICLES</a></li>\n
+                                                            <li id="articles_new_industry_products" itemprop="name"><a href="/new-industry-products/" class="text-uppercase" itemprop="url">NEW INDUSTRY PRODUCTS</a></li>\n
+                                                        </ul>\n
+                                                    </div>\n
+                                                    <div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="articles_main">\n
+                                                    </div>\n
+                                                </div>\n
+                                            </div>\n
+                                        </div>\n
+                                    </ul>\n
+                                </li>\n
+                                <li id="forums_menu" class="dropdown yamm-fw">\n
+                                    <a class="dropdown-toggle dblclick" data-toggle="dropdown" href="//forum.allaboutcircuits.com/" role="button" aria-expanded="false">Forum <i class="fa fa-chevron-down"></i></a>\n
+                                    <ul class="dropdown-menu" role="menu">\n
+                                        <div class="dropdown-content">\n
+                                            <div class="container-fluid">\n
+                                                <div class="row">\n
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+                                                        <ul id="forums_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+                                                            <li id="forums_all" itemprop="name"><a href="//forum.allaboutcircuits.com/find-new/posts" itemprop="url">LATEST</a></li>\n
+                                                            <li id="forums_general" itemprop="name"><a href="//forum.allaboutcircuits.com/#electronics.3" itemprop="url">GENERAL ELECTRONICS</a></li>\n
+                                                            <li id="forums_circuits_projects" itemprop="name"><a href="//forum.allaboutcircuits.com/#circuits-and-projects.31" itemprop="url">CIRCUITS &amp; PROJECTS</a></li>\n
+                                                            <li id="forums_embedded_software" itemprop="name"><a href="//forum.allaboutcircuits.com/#software-microcomputing.16" itemprop="url">EMBEDDED &amp; MICRO</a></li>\n
+                                                            <li id="forums_community" itemprop="name"><a href="//forum.allaboutcircuits.com/#community.20" itemprop="url">COMMUNITY</a></li>\n
+                                                        </ul>\n
+                                                    </div>\n
+                                                    <div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="forums_main"></div>\n
+                                                </div>\n
+                                            </div>\n
+                                        </div>\n
+                                    </ul>\n
+                                </li>\n
+                                <li id="education_menu" class="dropdown yamm-fw">\n
+                                    <a class="dropdown-toggle dblclick" data-toggle="dropdown" href="https://www.allaboutcircuits.com/education" role="button" aria-expanded="false">\n
+                                        Education <i class="fa fa-chevron-down"></i>\n
+                                    </a>\n
+                                    <ul class="dropdown-menu" role="menu">\n
+                                        <div class="dropdown-content">\n
+                                            <div class="container-fluid">\n
+                                                <div class="row">\n
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+                                                        <ul id="education_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+                                                            <li id="education_textbook" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/textbook/" itemprop="url">Textbooks</a></li>\n
+                                                            <li id="education_video_lectures" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/video-lectures/" itemprop="url">Video Lectures</a></li>\n
+                                                            <li id="education_worksheets" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/worksheets/" itemprop="url">Worksheets</a></li>\n
+                                                            <li id="education_webinars" itemprop="name"><a class="text-uppercase" href="/industry-webinars/" itemprop="url">Industry Webinars</a></li>\n
+                                                            <li id="education_training" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/industry-training/" itemprop="url">Industry Training</a></li>\n
+                                                        </ul>\n
+                                                    </div>\n
+                                                    <div id="education_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>\n
+                                                </div>\n
+                                            </div>\n
+                                        </div>\n
+                                    </ul>\n
+                                </li>\n
+                                <li id="tools_menu" class="dropdown yamm-fw">\n
+                                    <a class="dropdown-toggle dblclick" data-toggle="dropdown" href="#" role="button" aria-expanded="false">\n
+                                        Tools <i class="fa fa-chevron-down"></i>\n
+                                    </a>\n
+                                    <ul class="dropdown-menu" role="menu">\n
+                                        <div class="dropdown-content">\n
+                                            <div class="container-fluid">\n
+                                                <div class="row">\n
+                                                    <div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+                                                        <ul id="tools_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+                                                            <li id="tools_calculators" itemprop="name"><a class="text-uppercase" href="/tools/" itemprop="url">Calculators</a></li>\n
+                                                            <li id="tools_part_search" itemprop="name"><a class="text-uppercase" href="/electronic-components/" itemprop="url">Part Search</a></li>\n
+                                                            <li id="tools_test_measurement" itemprop="name"><a class="text-uppercase" href="/test-measurement/" itemprop="url">Test Equipment DB</a></li>\n
+                                                            <li id="tools_bom" itemprop="name"><a class="text-uppercase" href="/bom/" itemprop="url">BOM Tool</a></li>\n
+                                                            <li id="tools_datasheet" itemprop="name"><a class="text-uppercase" href="/electronic-components/manufacturer/" itemprop="url">Datasheet Search</a></li>\n
+                                                        </ul>\n
+                                                    </div>\n
+                                                    <div id="tools_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>\n
+                                                </div>\n
+                                            </div>\n
+                                        </div>\n
+                                    </ul>\n
+                                </li>\n
+                                <li id="topics_giveaways_menu" class="cat-menu-item yamm-fw hidden-sm">\n
+                                    <a href="/giveaways/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Giveaways</a>\n
+                                </li>\n
+                                <li id="topics_iot_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">\n
+                                    <a href="/test-measurement/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Test Db <img src="/assets/images/beta.png" class="beta-search hidden-xs" alt="Test &amp; Measurement Db Beta"></a>\n
+                                </li>\n
+                                <li id="topics_part_search_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">\n
+                                    <a href="/electronic-components/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false" title="Electronics Part Search">Part Search</a>\n
+                                </li>\n
+                                <li class="login-menu-item dropdown hidden-xs">\n
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">LOG IN / JOIN</a>\n
+                                    <ul class="dropdown-menu" role="menu">\n
+                                        <li><a href="/login/" title="Login to your existing account">Log In</a></li>\n
+                                        <li><a href="//forum.allaboutcircuits.com/register" title="Create an account">Join AAC</a></li>\n
+                                        <li><a href="/login/" title="Sign in with your Facebook, Linkedin or Google account">Sign in with <i class="fa fa-facebook"></i> <i class="fa fa-linkedin"></i><i class="fa fa-google-plus"></i></a></li>\n
+                                        <li><a href="//forum.allaboutcircuits.com/register">Member Benefits</a></li>\n
+                                    </ul>\n
+                                </li>\n
+                            </ul>\n
+                        </div>\n
+                    </div>\n
+                    <div id="usernavbar" class="navbar-collapse collapse">\n
+                        <ul id="primary-menu" class="nav navbar-nav visible-xs navbar-right pull-right">\n
+                            <li><a href="/login/">Log In</a></li>\n
+                            <li><a href="//forum.allaboutcircuits.com/register">Join AAC</a></li>\n
+                            <li><a href="/login/">Sign in with &nbsp;<i class="fa fa-facebook"></i>&nbsp;<i class="fa fa-linkedin"></i>&nbsp;<i class="fa fa-google-plus"></i></a></li>\n
+                            <li><a href="//forum.allaboutcircuits.com/register">Member Benefits</a></li>\n
+                        </ul>\n
+                    </div>\n
+                </div>\n
+            </div>\n
+        </nav>\n
+        <div class="clearfix"></div>\n
+    </header><div id="wallpaperad" style="background: url(&quot;https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsuIeRBMBQv7Iwfp9PoNoMyX8qAJHjhnhGKvrvBhwUB2-gj7vMK0r_Pg32j0lKTmnQBiigUWlyJiFL0TOkI3YilnUrKA94WR5iIET63HxL-G5A2-5R9D4e9_UmtoTqPdmz37UhEjpT9rhbYUX2UkBJGNIQ4M_1kIUhRcBUlSSOiD7BMXfqHmK8dop_6Nib1FCXoqv-7CamUKzP7elBOMCCbBXpIoK2_qhZBIgQHmUQ_ji9aQtl4e8Hg4ItBkwCqpunsvXgrUDE4EGw&amp;sai=AMfl-YQdcBD1FSD-qAyQH5oPhdSYTu7-Ft7Ej_aCeFnhpiF31HnKFBN7m8l2h6RPf6Qr3LGCnJFJV8eV8B1AsdZ5mtZfLxgrU28oQFH85k0A8w&amp;sig=Cg0ArKJSzJ6FX7kL2CmgEAE&amp;urlfix=1&amp;adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKCbosiwWhABGAEyCO-QQeafh4Lv&quot;) center top no-repeat rgb(255, 255, 255); height: 4666px;"></div>\n
+    <main class="row-offcanvas row-offcanvas-right" style="margin-top: 70px;">\n
+        <section class="single-post">\n
+            <div class="container">\n
+                <div class="row rowtable">\n
+                    <div class="col-lg-9 col-md-8 col-sm-12 main-content block-1" data-mh="block-1" style="">\n
+                        <div class="breadcrumb-wrap hidden-xs">\n
+                            <ol class="breadcrumb">\n
+                                <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i> Home</span></a></li>\n
+                                <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/news/" itemprop="url"><span itemprop="title">News</span></a></li>\n
+                                <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><meta itemprop="url" content="https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/"><span itemprop="title">Making Safer Implantable Medical Sensors: The Benefits and Challenges of Biodegradable Sensors</span></li>\n
+                            </ol>\n
+                        </div> \n
+                        <article itemscope="itemscope" itemtype="https://schema.org/NewsArticle">\n
+                            <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/">\n
+                            <meta itemprop="description" content="Imagine an implantable sensor that did not need to be removed because it degrades by itself over time. Meet the biodegradable sensor!">\n
+                            <div class="hidden" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">\n
+                                <meta itemprop="url" content="https://www.allaboutcircuits.com/uploads/thumbnails/160545_web-e1516185002644.jpg">\n
+                                <meta itemprop="width" content="700">\n
+                                <meta itemprop="height" content="350">\n
+                            </div>\n
+                            <div class="hidden" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">\n
+                                <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">\n
+                                    <meta itemprop="url" content="https://www.allaboutcircuits.com/assets/images/og_default.png">\n
+                                    <meta itemprop="width" content="960">\n
+                                    <meta itemprop="height" content="960">\n
+                                </div>\n
+                                <meta itemprop="name" content="All About Circuits">\n
+                            </div>\n
+                            <div class="page-header">\n
+                                <h1 id="224" itemprop="headline">Making Safer Implantable Medical Sensors: The Benefits and Challenges of Biodegradable Sensors</h1>\n
+                                <p class="meta"><span itemprop="datePublished">3 days ago</span>\n
+                                    <span>by</span>\n
+                                    <span itemprop="author" itemscope="" itemtype="https://schema.org/Person">\n
+                                        <span itemprop="name"><a class="author" href="/author/robin-mitchell" itemprop="url">Robin Mitchell</a></span>\n
+                                    </span>\n
+                                    \n
+                                </p></div>\n
+                                <hr>\n
+                                \n
+                                \n
+                                <div id="div-gpt-ad-1430160961981-0" class="leaderboard_ad" data-google-query-id="CIXfv8Dzp9sCFckplgodDlAAXw" style="display: none;">\n
+                                    <script type="text/javascript">\n
+                                    \t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1430160961981-0');});\n
+                                    \t</script>\n
+                                    <div id="google_ads_iframe_/62616433/main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_leaderboard_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_leaderboard_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                    <div itemprop="articleBody">\n
+                                        <div class="sp-content-block">\n
+                                            <div class="lead" itemprop="headline">Implanted sensors are crucial for monitoring patient health, but they come with their own secondary problems such as risk of infection and damage to tissue. But imagine a sensor that did not need to be removed because it degrades by itself over time. Meet the biodegradable sensor!</div>
+
+                                            <p>Sensors are understandably&nbsp;popular, adding various features to consumer&nbsp;devices and functionalities to increasingly ambitious subsystems. Temperature sensors can monitor&nbsp;CPU temperatures, pressure sensors can measure the atmospheric pressure for weather monitoring, gas sensors can detect explosive materials, and IR sensors can detect intruders.</p>\n
+                                            <p>One field in particular that could hugely benefit from the sensor boom is the medical field where up-to-date readings from patients could give valuable insight to doctors. For example, patients who have had brain surgery may need to have their cranial pressure monitored as pressure build up in the brain can be fatal. External sensors (such as heart rate monitors) can be attached to the outside of the body while internal sensors need to be implanted inside the body to take their measurements. The procedures involved in implanting sensors can create opportunities for secondary problems including infections.</p>\n
+                                            <p>In many cases, additional procedures are required to either perform maintenance on an implanted device or remove it once its purpose has been fulfilled. This is where biodegradable sensors come in.</p>
+                                            <p>&nbsp;</p>
+                                            <h3>A Sensor that’s Food Safe</h3><p>A team of engineers from the University of Connecticut, led by senior&nbsp;biomedical engineer Thanh Duc Nguyen, has developed an <a href="http://www.pnas.org/content/early/2018/01/09/1710874115" target="_blank">implantable sensor that degrades inside living tissues</a>. The sensor designed by the engineers is a pressure sensor that utilizes the piezoelectric effect to generate a voltage when a deflection is applied (where the deflection is the result of pressure build up).</p>\n
+                                            <p>The sensor itself is made of molybdenum electrodes encased in a specially treated medical grade polymer, poly (L-lactide) (PLLA). The polymer does not inherently have piezoelectric properties <a href="https://www.theengineer.co.uk/biodegradable-sensor-diagnosis/" target="_blank">but an engineering student (Eli Curry) from Nguyen’s laboratory</a> discovered that PLLA can attain piezoelectric properties through&nbsp;heat treatment, stretching, and cutting of the material.</p>\n
+                                            <p>The pressure sensor has been tested in mice with positive results (on par with current commercial sensors for medical use)&nbsp;but is yet to be used in human trials.</p>\n
+                                            <p>&nbsp;</p>\n
+
+                                            <h5>
+                                                <img alt="" src="/uploads/articles/160545_web-e1516185002644.jpg" style="width: 700px; height: 509px; border: 1px solid rgb(205, 205, 205);">
+                                            </h5>\n
+                                            <h5 style="text-align: center;">
+                                                <em>The biodegradable pressure sensor. Image courtesy of Thanh Duc Nguyen via the&nbsp;<a href="https://today.uconn.edu/2018/01/biodegradable-sensor-monitors-pressure-body-disappears/" target="_blank">University of Connecticut</a>.</em>
+                                            </h5>
+
+                                            <p>&nbsp;</p>\n
+                                            <p>While the PLLA material is biodegradable, the sensor's molybdenum electrodes are not. However, this should not be an issue as the electrodes are already used in medical implants such as cardiovascular stents and bone implants.</p>\n
+                                            <p>If such sensors could be made available for general use, then the impact on the medical field could be massive. Patients could be fitted with sensors during their required operation but there would be no need to extract them as they would degrade by themselves. The <a href="https://today.uconn.edu/2018/01/biodegradable-sensor-monitors-pressure-body-disappears/" target="_blank">degrading property stops secondary infections from implant removal surgery</a> and biodegradable wires could be used to connect the sensor to external monitoring devices which do not require sterilization and biological compatibility.</p><p>&nbsp;</p><h3>A Stress/Strain Sensor</h3><p>Another research team from Stanford University has also created a biodegradable sensor for medical monitoring but theirs&nbsp;<a href="https://techxplore.com/news/2018-05-implantable-sensor-decomposes.html" target="_blank">measures strain and pressure</a>. The sensor is comprised of layers of magnesium electrodes that can be used to measure strain and pressure. Unlike the pressure sensor&nbsp;from the University of Connecticut, this device can be attached to tendons and ligaments and can provide critical data for those recovering from sports injuries and trauma.</p>\n
+                                            <p>This sensor is part of an ongoing Stanford push for biodegradable electronics. Stanford's&nbsp;<a href="http://baogroup.stanford.edu/" target="_blank">Professor Zhenan Bao's research group</a>&nbsp;has been exploring the realms of stretchable, flexible, self-healing, wearable circuits and electronic skin&nbsp;for nearly 15 years (and Professor Bao, herself, has been doing research for nearly 30 years).</p>\n
+                                            <p>Last year, Bao's group created what <a href="http://baogroup.stanford.edu/index.php/postdoctoral-scholars-alumni" target="_blank">postdoctoral fellow Ting Lei</a>&nbsp;described as a circuit made of "the first example of a <a href="https://news.stanford.edu/press-releases/2017/05/01/flexible-organicwave-electronics/" target="_blank">semiconductive polymer that can decompose</a>."&nbsp;</p>\n
+                                            <p>&nbsp;</p>\n
+                                            <p>
+                                                <img alt="" src="/uploads/articles/ewaste_hair.jpg" style="width: 700px; height: 466px; border: solid 1px #CDCDCD">
+                                            </p>\n
+                                            <h5 style="text-align: center;">
+                                                <i>2017's biodegradable sensor. Image courtesy of Bao lab via&nbsp;<a href="https://news.stanford.edu/press-releases/2017/05/01/flexible-organicwave-electronics/" target="_blank">Stanford News Service</a>.</i>
+                                            </h5>\n
+                                            <p>&nbsp;</p>\n
+                                            <p>This newest&nbsp;biodegradable strain and&nbsp;pressure&nbsp;sensor is actually composed of two sensors stacked atop one another, each making measurements.&nbsp;Where the University of Connecticut used PLLA, the Stanford group utilized&nbsp;poly-glycerol sebacate (PGS) and poly-octamethylene maleate citrate (POMaC).&nbsp;</p>\n
+                                            <p>You can read more about this new sensor in <a href="https://www.nature.com/articles/s41928-018-0071-7.epdf" target="_blank"><em>Nature Electronics</em></a>.</p><p>&nbsp;</p><h3>Beyond Medical Applications</h3><p>Biodegradable sensors could be extremely valuable for medical applications but there are plenty of other fields where they could be key, as well. If electronics could be made to be fully biodegradable, then e-waste could be made significantly safer and reduce the amount of waste in landfills.</p>\n
+                                            <p>Biodegradable sensors could also find significant use in agricultural uses where electronic sensors could be installed in mass on farmland and be replaced yearly with older sensors degrading into the soil.</p><p>&nbsp;</p>
+                                            <h3>Read More</h3>
+                                                <ul>\n
+                                                    <li><a href="https://www.allaboutcircuits.com/news/the-e-waste-disaster/" target="_blank">The E-Waste Disaster</a></li>\n
+                                                    <li><a href="https://www.allaboutcircuits.com/news/wearable-static-exercise-monitor/" target="_blank">The Rise of Galvanic Skin Response (GSR) Sensors in Wearables</a></li>\n
+                                                    <li><a href="https://www.allaboutcircuits.com/news/the-latest-in-medical-tech-for-diabetes-care-a-non-invasive-glucose-sensor/" target="_blank">The Latest in Medical Tech for Diabetes Care: A Non-Invasive Glucose Sensor</a></li>\n
+                                                </ul>
+                                            <p>&nbsp;</p>\n
+                                        </div>\n
+                                        <div class="meta-tags hidden-print">\n
+                                            <h4 class="pull-left"><b>Learn More About:</b></h4>\n
+                                            <div class="tags pull-left" itemprop="keywords">\n
+                                                <a data-href="/search?q=biodegradeable" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','biodegradeable', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">biodegradeable</a>\n
+                                                <a data-href="/search?q=Sensor" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','Sensor', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">Sensor</a>\n
+                                                <a data-href="/search?q=Sensors" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','Sensors', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">Sensors</a>\n
+                                                <a data-href="/search?q=medical" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','medical', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">medical</a>\n
+                                                <a data-href="/search?q=medical sensors" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','medical sensors', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">medical sensors</a>\n
+                                                <a data-href="/search?q=implants" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','implants', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">implants</a>\n
+                                                <a data-href="/search?q=bio implants" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','bio implants', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">bio implants</a>\n
+                                                <a data-href="/search?q=robin mitchell" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','robin mitchell', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">robin mitchell</a>\n
+                                            </div>\n
+                                            <div class="clearfix">&nbsp;</div>\n
+                                        </div>\n
+                                    </div>\n
+                                    <div class="social-media-shares hidden-print">\n
+                                        <div class="item">\n
+                                            <div class="facebook">\n
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'facebook',window.location.href)" ;="" return="" false;"="" target="_blank" title="Share on Facebook">\n
+                                                    <i class="fa fa-facebook"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+                                                </a>\n
+                                            </div>\n
+                                        </div>\n
+                                        <div class="item">\n
+                                            <div class="twitter">\n
+                                                <a href="https://twitter.com/share?url=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/&amp;via=allaboutcircuit" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'twitter',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Twitter">\n
+                                                    <i class="fa fa-twitter"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+                                                </a>\n
+                                            </div>\n
+                                        </div>\n
+                                        <div class="item">\n
+                                            <div class="google-plus">\n
+                                                <a href="https://plus.google.com/share?url=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480'); ga('send', 'event', 'social-share', 'google',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Google+">\n
+                                                    <i class="fa fa-google-plus"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+                                                </a>\n
+                                            </div>\n
+                                        </div>\n
+                                        <div class="item">\n
+                                            <div class="linkedin">\n
+                                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'linkedin',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Linkedin">\n
+                                                    <i class="fa fa-linkedin"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+                                                </a>\n
+                                            </div>\n
+                                        </div>\n
+                                        <div class="item">\n
+                                            <div class="reddit">\n
+                                                <a href="https://www.reddit.com/submit?url=&amp;url=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/&amp;title=Making Safer Implantable Medical Sensors: The Benefits and Challenges of Biodegradable Sensors - News" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes'); ga('send', 'event', 'social-share', 'reddit',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Reddit">\n
+                                                    <i class="fa fa-reddit-alien"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+                                                </a>\n
+                                            </div>\n
+                                        </div>\n
+                                    </div>\n
+                                    <div class="container-fluid other-articles hidden-print">\n
+                                        <div id="relatedarticles" class="row">\n
+                                            <h3><strong>You May Also Like:</strong></h3>\n
+                                        </div>\n
+                                        <div class="main-recommended-articles">\n
+                                            <div class="row article-item" id="recommended_1">\n
+                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+                                                    <div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+                                                        <a href="https://www.allaboutcircuits.com/news/tech-in-the-art-world/" title="Tech in the Art World" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');"><img src="/uploads/thumbnails/_80_80/Erwin_Redl.png" alt="" class="" align="left"></a>\n
+                                                    </div>\n
+                                                    <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">\n
+                                                        <a href="https://www.allaboutcircuits.com/news/tech-in-the-art-world/" title="Tech in the Art World" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');">\n
+                                                            <h4 class="article-title">Tech in the Art World</h4>\n
+                                                            <div class="excerpt hidden-xs">There's a fine line between art and tech. Find out what artists are using to create phenomenal modern pieces.</div>\n
+                                                        </a>\n
+                                                    </div>\n
+                                                </div>\n
+                                                <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+                                                    <div class="col-lg-12 meta-article-author" data-article-author="Jennifer A. Diffley"><h4><a href="/author/jennifer-a.-diffley">Jennifer A. Diffley</a></h4></div>\n
+                                                    <div class="col-lg-12 meta-article-date" data-article-published="December 09, 2015">December 09, 2015</div>\n
+                                                </div>\n
+                                            </div>\n
+                                            <div class="row article-item" id="recommended_2">\n
+                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+                                                    <div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+                                                        <a href="https://www.allaboutcircuits.com/news/new-programming-language-energy-harvesting-problem-intermittent-power/" title="New Programming Language Tackles Energy Harvesting's Problem with Intermittent Power" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');"><img src="/uploads/thumbnails/_80_80/proglang.jpg" alt="" class="" align="left"></a>\n
+                                                    </div>\n
+                                                    <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+                                                        <a href="https://www.allaboutcircuits.com/news/new-programming-language-energy-harvesting-problem-intermittent-power/" title="New Programming Language Tackles Energy Harvesting's Problem with Intermittent Power" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');" style="display: inline;">\n
+                                                            <h4 class="article-title">New Programming Language Tackles Energy Harvesting's Problem with Intermittent Power</h4>\n
+                                                            <div class="excerpt hidden-xs">Carnegie Mellon's new programming language helps make... </div></a></div>\n
+                                                        </div>\n
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+                                                            <div class="col-lg-12 meta-article-author" data-article-author="Robin Mitchell"><h4><a href="/author/robin-mitchell">Robin Mitchell</a></h4></div>\n
+                                                            <div class="col-lg-12 meta-article-date" data-article-published="January 18, 2017">January 18, 2017</div>\n
+                                                        </div>\n
+                                                    </div>\n
+                                                    <div class="row article-item" id="recommended_3">\n
+                                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+                                                            <div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+                                                                <a href="/news/self-driving-cars-tesla-model-s-fatal-crash/" title="Will the Autonomous Car Industry Survive Autopilot’s First Fatal Crash?" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');"><img src="/uploads/thumbnails/_80_80/carThumb.jpg" alt="" class="" align="left"></a>\n
+                                                            </div>\n
+                                                            <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+                                                                <a href="/news/self-driving-cars-tesla-model-s-fatal-crash/" title="Will the Autonomous Car Industry Survive Autopilot’s First Fatal Crash?" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');" style="display: inline;">\n
+                                                                    <h4 class="article-title">Will the Autonomous Car Industry Survive Autopilot’s First Fatal Crash?</h4>\n
+                                                                    <div class="excerpt hidden-xs">Examine the implications for the driverless car industry... </div></a></div>\n
+                                                                </div>\n
+                                                                <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+                                                                    <div class="col-lg-12 meta-article-author" data-article-author="Seth Schaffer"><h4><a href="/author/seth-schaffer">Seth Schaffer</a></h4></div>\n
+                                                                    <div class="col-lg-12 meta-article-date" data-article-published="July 09, 2016">July 09, 2016</div>\n
+                                                                </div>\n
+                                                            </div>\n
+                                                            <div class="row article-item" id="recommended_4">\n
+                                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+                                                                    <div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+                                                                        <a href="/news/op-amp-micropower-near-zero-drift-ultra-low-offset-texas-instruments/" title="MicroPower, MicroSize, Near-Zero Drift, and Low Offset Voltage: A New Op-Amp from Texas Instruments" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');"><img src="/uploads/thumbnails/_80_80/Texas_Instruments_microPower_Zero-Drift_Op-Amp_(OPA2333P)_Image.jpg" alt="" class="" align="left"></a>\n
+                                                                    </div>\n
+                                                                    <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+                                                                        <a href="/news/op-amp-micropower-near-zero-drift-ultra-low-offset-texas-instruments/" title="MicroPower, MicroSize, Near-Zero Drift, and Low Offset Voltage: A New Op-Amp from Texas Instruments" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio');" style="display: inline;">\n
+                                                                            <h4 class="article-title">MicroPower, MicroSize, Near-Zero Drift, and Low Offset Voltage: A New Op-Amp from Texas Instruments</h4>\n
+                                                                            ... </a></div>\n
+                                                                        </div>\n
+                                                                        <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+                                                                            <div class="col-lg-12 meta-article-author" data-article-author="Nick Davis"><h4><a href="/author/nick-davis">Nick Davis</a></h4></div>\n
+                                                                            <div class="col-lg-12 meta-article-date" data-article-published="March 01, 2018">March 01, 2018</div>\n
+                                                                        </div>\n
+                                                                    </div>\n
+                                                                </div>\n
+                                                                <br>\n
+                                                                <p class="text-center"><strong><a href="/latest/" onclick="ga('send','event','recommended article click','main site', 'load more');"><i class="fa fa-arrow-down"></i> Load More</a></strong></p>\n
+                                                            </div>\n
+                                                            <h3 id="comments-control" class="hidden-print"><a href="#"><b>Comments</b><i class="fa fa-chevron-up"></i></a></h3>\n
+                                                            <div id="comments-wrap" class="disqus-theme comments-box collapse in hidden-print">\n
+                                                                <h4><span><b itemprop="commentCount">\n
+                                                                    0 Comments\n
+                                                                </b></span><a href="/login/" class="pull-right login"><i class="fa fa-comment"></i>Login</a></h4>\n
+                                                                <hr>\n
+                                                                <div class="row">\n
+                                                                    <div id="comments" class="col-sm-12">\n
+                                                                        <form id="main-form" method="post" action="https://www.allaboutcircuits.com/">\n
+                                                                            <div class="hiddenFields">\n
+                                                                                <input type="hidden" name="ACT" value="25">\n
+                                                                                <input type="hidden" name="RET" value="https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio">\n
+                                                                                <input type="hidden" name="URI" value="news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio">\n
+                                                                                <input type="hidden" name="entry_id" value="411894">\n
+                                                                                <input type="hidden" name="parent_id" value="0">\n
+                                                                                <input type="hidden" name="site_id" value="1">\n
+                                                                                <input type="hidden" name="csrf_token" value="07ab8d6094ca026331435effb455a44a8282dcf9">\n
+                                                                            </div>\n
+                                                                            <div class="form-group clearfix">\n
+                                                                                <textarea style="resize:vertical;" placeholder="Please login before you can comment." readonly="" name="comment" rows="4" class="form-control comment-comment"></textarea>\n
+                                                                                <input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">\n
+                                                                            </div></form>\n
+                                                                            <form id="reply-form" class="hidden well" method="post" action="https://www.allaboutcircuits.com/">\n
+                                                                                <div class="hiddenFields">\n
+                                                                                    <input type="hidden" name="ACT" value="25">\n
+                                                                                    <input type="hidden" name="RET" value="https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio">\n
+                                                                                    <input type="hidden" name="URI" value="news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio">\n
+                                                                                    <input type="hidden" name="entry_id" value="411894">\n
+                                                                                    <input type="hidden" name="parent_id" value="0">\n
+                                                                                    <input type="hidden" name="site_id" value="1">\n
+                                                                                    <input type="hidden" name="csrf_token" value="07ab8d6094ca026331435effb455a44a8282dcf9">\n
+                                                                                </div>\n
+                                                                                <div class="form-group clearfix">\n
+                                                                                    <textarea style="resize:vertical;" placeholder="Please login before you can reply to this comment." readonly="" name="comment" rows="2" class="form-control comment-comment"></textarea>\n
+                                                                                    <input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">\n
+                                                                                </div></form>\n
+                                                                            </div>\n
+                                                                            <div class="clearfix">&nbsp;</div>\n
+                                                                        </div>\n
+                                                                    </div>\n
+                                                                </article>\n
+                                                                <div class="clearfix">&nbsp;</div>\n
+                                                            </div>\n
+                                                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 right-sidebar sidebar-offcanvas block-1" data-mh="block-1" style="">\n
+                                                                <div id="stick_column">\n
+                                                                    <div class="widget ads sidepin leaderboard_ad">\n
+                                                                        \n
+                                                                        <div id="div-gpt-ad-1429623690593-0" data-google-query-id="CITfv8Dzp9sCFckplgodDlAAXw">\n
+                                                                            <script type="text/javascript">\n
+                                                                                \t\t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1429623690593-0');});\n
+                                                                                \t\t</script>\n
+                                                                                <div id="google_ads_iframe_/62616433/main_sidebar_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_sidebar_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_sidebar_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                                                            </div>\n
+                                                                            <div class="widget recommended-articles">\n
+                                                                                <div class="sidebar-recommended-articles">\n
+                                                                                    <div class="clearfix"></div>\n
+                                                                                </div>\n
+                                                                                <div class="clearfix"></div>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                        \n
+                                                                        <div id="div-gpt-ad-1441294234226-0" data-google-query-id="CIjfv8Dzp9sCFckplgodDlAAXw" style="display: none;">\n
+                                                                            <script type="text/javascript">\n
+                                                                                googletag.cmd.push(function() {googletag.display('div-gpt-ad-1441294234226-0');});\n
+                                                                            </script>\n
+                                                                            <div id="google_ads_iframe_/62616433/main_native_ad_unit_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_native_ad_unit_1_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_native_ad_unit_1_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                                                        </div>\n
+                                                                    </div> \n
+                                                                </div> \n
+                                                            </section>\n
+                                                        </main>\n
+                                                        <footer class="hidden-print">\n
+                                                            <div class="widgets-box">\n
+                                                                <div class="container">\n
+                                                                    <div class="row">\n
+                                                                        <div class="col-md-3 col-sm-4  col-xs-12 widget-item">\n
+                                                                            <h4>WHO WE ARE</h4>\n
+                                                                            <p>\n
+                                                                                <a class="logo-link" href="/"><img class="navLogo" alt="All About Circuits" src="/assets/images/aac_logo.png">\n
+                                                                                </a>\n
+                                                                            </p>\n
+                                                                            <div class="description"> <a href="/contact-us/" class="see-more">More about us <i class="fa fa-arrow-right"></i></a>\n
+                                                                            </div>\n
+                                                                            <h4>Network Sites</h4>\n
+                                                                            <div class="col-md-6 col-sm-12 footer-links">\n
+                                                                                <ul class="list-unstyled">\n
+                                                                                    <li><a href="https://eepower.com" target="_blank">EEPower.com</a></li>\n
+                                                                                    <li><a href="https://maker.pro/" target="_blank">Maker.Pro</a></li>\n
+                                                                                    <li><a href="https://www.mikrocontroller.net/" target="_blank">Mikrocontroller.net</a></li>\n
+                                                                                </ul>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                        <div class="col-md-3 col-sm-2 col-xs-6 widget-item">\n
+                                                                            <h4>Content</h4>\n
+                                                                            <div class="col-md-6 col-sm-12 footer-links">\n
+                                                                                <ul class="list-unstyled">\n
+                                                                                    <li><a href="/bom/">BOM Tool</a></li>\n
+                                                                                    <li><a href="/tools/">Calculators</a></li>\n
+                                                                                    <li><a href="/electronic-components/manufacturer/">Datasheets</a></li>\n
+                                                                                    <li><a href="/electronic-components/" title="Electronic parts datasheets, prices &amp; stock">Electronic Components</a>\n
+                                                                                    </li><li><a href="//forum.allaboutcircuits.com/">Forum</a></li>\n
+                                                                                    <li><a href="/giveaways/">Giveaways</a></li>\n
+                                                                                    <li><a href="/industry-articles/">Industry Articles</a></li>\n
+                                                                                </ul>\n
+                                                                            </div>\n
+                                                                            <div class="col-md-6 col-sm-12 footer-links">\n
+                                                                                <ul class="list-unstyled">\n
+                                                                                    <li><a href="/industry-webinars/">Industry Webinars</a></li>\n
+                                                                                    <li><a href="/news/">News</a></li>\n
+                                                                                    <li><a href="/projects/">Projects</a></li>\n
+                                                                                    <li><a href="/technical-articles/">Technical Articles</a></li>\n
+                                                                                    <li><a href="/test-measurement/">Test Equipment</a></li>\n
+                                                                                    <li><a href="/textbook/">Textbook</a></li>\n
+                                                                                    <li><a href="/video-lectures/">Video Lectures</a></li>\n
+                                                                                    <li><a href="/worksheets/">Worksheets</a></li>\n
+                                                                                </ul>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                        <div class="col-md-3 col-sm-2 col-xs-6 widget-item">\n
+                                                                            <h4>Categories</h4>\n
+                                                                            <div class="col-md-6 col-sm-12 footer-links">\n
+                                                                                <ul class="list-unstyled">\n
+                                                                                    <li><a href="/latest/">Latest</a></li>\n
+                                                                                    <li><a href="/latest/analog/">Analog</a></li>\n
+                                                                                    <li><a href="/projects/category/arduino/">Arduino Projects</a></li>\n
+                                                                                    <li><a href="/latest/automotive/">Automotive</a></li>\n
+                                                                                    <li><a href="/latest/connectors/">Connectors</a></li>\n
+                                                                                    <li><a href="/latest/digital-ics/">Digital ICs</a>\n
+                                                                                    </li><li><a href="/latest/eda/">EDA Tools</a></li>\n
+                                                                                    <li><a href="/latest/electromechanical/">Electromechanical </a></li>\n
+                                                                                </ul>\n
+                                                                            </div>\n
+                                                                            <div class="col-md-6 col-sm-12 footer-links">\n
+                                                                                <ul class="list-unstyled">\n
+                                                                                    <li><a href="/latest/embedded/">Embedded</a></li>\n
+                                                                                    <li><a href="/latest/iot/">IoT</a></li>\n
+                                                                                    <li><a href="/latest/pcb/">PCB</a></li>\n
+                                                                                    <li><a href="/latest/power/">Power</a></li>\n
+                                                                                    <li><a href="/latest/sensors/">Sensors</a></li>\n
+                                                                                    <li><a href="/latest/test-and-measurement/">Test &amp; Measurement</a></li>\n
+                                                                                    <li><a href="/latest/wearables/">Wearables</a></li>\n
+                                                                                    <li><a href="/latest/wireless-rf/">Wireless RF</a></li>\n
+                                                                                </ul>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                        <div class="col-md-3 col-sm-4 col-xs-12 widget-item social-widget-box">\n
+                                                                            <div class="row">\n
+                                                                                <h4>Connect with Us</h4>\n
+                                                                                <div class="col-md-6 col-sm-6 col-xs-6 footer-links">\n
+                                                                                    <ul class="list-unstyled">\n
+                                                                                        <li><a href="https://www.facebook.com/allaboutcircuits" target="_blank">Facebook</a>\n
+                                                                                        </li>\n
+                                                                                        <li><a href="https://twitter.com/AllAboutCircuit" target="_blank">Twitter</a>\n
+                                                                                        </li>\n
+                                                                                        <li><a href="https://www.youtube.com/c/AllAboutCircuitsVideo" target="_blank">YouTube</a></li>\n
+                                                                                        <li><a href="https://www.linkedin.com/company/allaboutcircuits" target="_blank">LinkedIn</a></li>\n
+                                                                                    </ul>\n
+                                                                                </div>\n
+                                                                                <div class="col-md-6 col-sm-6 col-xs-6 footer-links">\n
+                                                                                    <ul class="list-unstyled">\n
+                                                                                        <li><a href="/contact-us/">Contact Us</a></li>\n
+                                                                                        <li><a href="/write-for-us/" onclick="ga('send','event','write-for-us','footer')">Write For Us</a></li>\n
+                                                                                        <li><a href="//www.eetech.com/" target="_blank">Advertise</a></li>\n
+                                                                                        <li><a href="http://us8.campaign-archive1.com/home/?u=18656ef6df14c935d4d9192ee&amp;id=2565529c4b">Newsletters</a></li>\n
+                                                                                    </ul>\n
+                                                                                </div>\n
+                                                                            </div>\n
+                                                                            <div class="clearfix visible-sm visible-xs">&nbsp;</div>\n
+                                                                            <div class="row">\n
+                                                                                <h4>Sign Up</h4>\n
+                                                                                <div class="newsletter-box">\n
+                                                                                    <form class="form-inline" role="form">\n
+                                                                                        <div class="input-group">\n
+                                                                                            <input type="text" id="signupemail" class="form-control" placeholder="Enter your email address">\n
+                                                                                            <div class="input-group-btn">\n
+                                                                                                <button type="button" class="btn" onclick="window.location.href='//forum.allaboutcircuits.com/register?email='+$('#signupemail').val();">Register</button>\n
+                                                                                            </div>\n
+                                                                                        </div>\n
+                                                                                    </form>\n
+                                                                                </div>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                    </div>\n
+                                                                </div>\n
+                                                            </div>\n
+                                                            <div class="copyright-box">\n
+                                                                <div class="container">\n
+                                                                    <div class="row">\n
+                                                                        <div class="col-md-6 col-sm-6 col-xs-12">\n
+                                                                            <p>© <a href="//eetech.com/" target="_blank">EETech Media, LLC</a>. All rights reserved</p>\n
+                                                                        </div>\n
+                                                                        <div class="col-md-6 col-sm-6 hidden-xs">\n
+                                                                            <a href="/privacy-policy/">Privacy Policy</a> · <a href="//forum.allaboutcircuits.com/help/terms">Terms of Service</a> · <a href="/user-agreement/">User Agreement</a>\n
+                                                                            <div class="back-to-top pull-right sm-hidden"><img src="/assets/images/btn-scrollUp.png">\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                    </div>\n
+                                                                </div>\n
+                                                            </div>\n
+                                                        </footer>\n
+                                                        <script src="/assets/js/jquery.mobile.custom.min.js"></script>\n
+                                                        <script src="/assets/library/bootstrap/js/bootstrap.min.js"></script>\n
+                                                        <script src="/assets/js/modernizr.js"></script>\n
+                                                        <script src="/assets/library/sticky-kit.min.js"></script>\n
+                                                        <script src="/assets/library/jquery.matchHeight/jquery.matchHeight.js"></script>\n
+                                                        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.min.js"></script>\n
+                                                        <script src="/assets/library/bootstrap-notify/bootstrap-notify.min.js"></script>\n
+                                                        <script src="/assets/js/main.js?2017b"></script>\n
+                                                        <script src="/assets/js/menu.js?2018a"></script>\n
+                                                        <script src="/assets/library/highlight/highlight.pack.js"></script>\n
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id=""></script>\n
+                                                        <script type="text/javascript" src="/assets/library/jquery.dotdotdot/jquery.dotdotdot.js"></script>\n
+                                                        <script type="text/javascript" src="/assets/js/articles.js"></script>\n
+                                                        \n
+                                                        <div id="div-gpt-ad-1430235245447-0" class="wallpaperadpixel" data-google-query-id="CIffv8Dzp9sCFckplgodDlAAXw">\n
+                                                            <script type="text/javascript">\n
+                                                                \t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1430235245447-0');});\n
+                                                                \t</script>\n
+                                                                <div id="google_ads_iframe_/62616433/main_wallpaper_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_wallpaper_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_wallpaper_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                                                \n
+                                                                \n
+                                                                \n
+                                                                <div id="div-gpt-ad-1525704923457-0" data-google-query-id="CInfv8Dzp9sCFckplgodDlAAXw" style="display: none;">\n
+                                                                    <script>\n
+                                                                        googletag.cmd.push(function() {googletag.display('div-gpt-ad-1525704923457-0');});\n
+                                                                    </script>\n
+                                                                    <div id="google_ads_iframe_/62616433/AAC_pop_form_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/AAC_pop_form_0" title="3rd party ad content" name="google_ads_iframe_/62616433/AAC_pop_form_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                                                    \n
+                                                                    <div id="my_popup_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: white; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 100000; transition: all 0.3s ease 0s;"></div><div id="my_popup_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: all 0.3s ease 0s; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; display: none;"><div class="hidden popup_content" id="my_popup" data-popup-initialized="true" aria-hidden="true" role="dialog" style="opacity: 0; visibility: hidden; display: inline-block; outline: none; transition: all 0.3s ease 0s; text-align: left; position: relative; vertical-align: middle;">\n
+                                                                        <div id="welcome-ad">\n
+                                                                            <div class="background-image"><img src="/assets/images/welcome/bg.jpg" alt=""></div>\n
+                                                                            <div class="welcome-ad-container">\n
+                                                                                <div class="container-fluid">\n
+                                                                                    <div class="row ad-header">\n
+                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><img src="/assets/images/welcome/logo.png" alt="All About Circuits Logo"></div>\n
+                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><span class="my_popup_close continue-site">Continue to site</span></div>\n
+                                                                                    </div>\n
+                                                                                    <div class="row">\n
+                                                                                        <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 hidden-xs hidden-sm hidden-md">\n
+                                                                                            <div class="quote">\n
+                                                                                                <div class="large">Quote of <span>the day</span></div>\n
+                                                                                                <p class="text"><span class="start-quote">“</span><span id="welcomequote"></span><span>”</span></p>\n
+                                                                                                <div class="author">- <span id="welcomeauthor"></span></div>\n
+                                                                                            </div>\n
+                                                                                        </div>\n
+                                                                                        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">\n
+                                                                                            <div id="div-gpt-ad-1430160889889-0" data-google-query-id="CIbfv8Dzp9sCFckplgodDlAAXw" style="display: none;"><div id="google_ads_iframe_/62616433/main_welcome_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_welcome_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_welcome_0" width="640" height="480" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+                                                                                        </div>\n
+                                                                                    </div>\n
+                                                                                </div>\n
+                                                                            </div>\n
+                                                                        </div>\n
+                                                                    </div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div><script src="https://px.ads.linkedin.com/collect/?time=1527493172975&amp;pid=353081&amp;url=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/&amp;pageUrl=https://www.allaboutcircuits.com/news/making-safer-implantable-medical-sensors-the-benefits-and-challenges-of-bio/&amp;ref=&amp;fmt=js&amp;s=1" type="text/javascript"></script><iframe id="google_osd_static_frame_1514134873125" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
