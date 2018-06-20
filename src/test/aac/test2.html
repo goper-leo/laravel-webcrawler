@@ -1,0 +1,1022 @@
+<!DOCTYPE html><html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>\n
+<meta charset="utf-8">\n
+<meta http-equiv="X-UA-Compatible" content="IE=edge">\n
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">\n
+<meta name="robots" content="noodp">\n
+<meta name="news_keywords" content="microchip,pic,avr,sam,Touch,touchdisplay,touch controller,dispaly,touch screen,screen">\n
+<meta property="og:type" content="article">\n
+<meta property="og:url" content="https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/">\n
+<meta property="og:title" content="New Library from Microchip Brings Touch and Gesture Functionalities to Familiar Microcontrollers">\n
+<meta property="og:image" content="https://www.allaboutcircuits.com/uploads/thumbnails/Microchip_library_featured.jpg">\n
+<meta name="thumbnail" content="https://www.allaboutcircuits.com/uploads/thumbnails/Microchip_library_featured.jpg">\n
+<meta property="og:description" content="Touch displays often require specialized touch controllers to drive displays, which can bump up the cost of final products. To mitigate cost increases, Microchip has just released a free touch library for use with most PIC, AVR, and SAM microcontrollers.">\n
+<meta name="twitter:card" content="summary">\n
+<meta name="twitter:site" content="@allaboutcircuit">\n
+<link href="https://plus.google.com/102476148263859151067/" rel="publisher">\n
+<title>New Library from Microchip Brings Touch and Gesture Functionalities to Familiar Microcontrollers - News</title>\n
+\n
+<link rel="icon" href="/assets/images/favicon.ico">\n
+\n
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Articles" href="//www.allaboutcircuits.com/rss/">\n
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Forum RSS Feed" href="//forum.allaboutcircuits.com/forums/-/index.rss">\n
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Blog RSS Feed" href="//forum.allaboutcircuits.com/blogs/entriesRss.rss">\n
+\n
+<link href="/assets/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">\n
+\n
+<link href="/assets/css/combined.css?rob2018b" rel="stylesheet">\n
+<link href="/assets/css/main_site.css" rel="stylesheet">\n
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">\n
+<link href="/assets/css/aac-parts.css" rel="stylesheet">\n
+\n
+<link href="/assets/library/highlight/styles/docco.css" rel="stylesheet">\n
+\n
+<script src="https://pagead2.googlesyndication.com/pagead/osd.js"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_rendering_211.js?cb=212"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-MMWSMVL&amp;cid=960019046.1528101061"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script src="https://connect.facebook.net/signals/config/1808435332737507?v=2.8.14&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>\n
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>\n
+<!--[if lt IE 9]>\n
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>\n
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>\n
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.js"></script>\n
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-sham.js"></script>\n
+    \n
+    <script src="/assets/js/css3-mediaqueries.js"></script>\n
+    <link href="/assets/css/ie8.css" rel="stylesheet">\n
+    <![endif]-->\n
+\n
+<script type="text/javascript">\n
+      \n
+  function searchFor(obj, query) {\n
+    for(var key in obj) {\n
+      if(obj.hasOwnProperty(key) && (typeof obj[key] === "string")) {\n
+        if(obj[key] === query) {\n
+          return true;\n
+        }\n
+      }\n
+    }\n
+    return false;\n
+  }\n
+  var googletag = googletag || {};\n
+  googletag.cmd = googletag.cmd || [];\n
+  (function() {\n
+    var gads = document.createElement('script');\n
+    gads.async = true;\n
+    gads.type = 'text/javascript';\n
+    var useSSL = 'https:' == document.location.protocol;\n
+    gads.src = (useSSL ? 'https:' : 'http:') +\n
+      '//www.googletagservices.com/tag/js/gpt.js';\n
+    var node = document.getElementsByTagName('script')[0];\n
+    node.parentNode.insertBefore(gads, node);\n
+  })();\n
+</script>\n
+<script type="text/javascript">\n
+  googletag.cmd.push(function() {\n
+\tvar mappingSidebar = googletag.sizeMapping().\n
+    \taddSize([0,0], [300, 250]).\n
+        addSize([800, 600], [[300, 600], [300, 250]]).\n
+        build();  \n
+        \n
+    googletag.pubads().setTargeting("category",["optoelectronics","embedded","microchip-embedded","general","engineering-consulting"]);\n
+    googletag.defineSlot('/62616433/main_sidebar', [[300, 600], [300, 250]], 'div-gpt-ad-1429623690593-0').defineSizeMapping(mappingSidebar).addService(googletag.pubads());\n
+    \n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script type="text/javascript">\n
+  googletag.cmd.push(function() {\n
+\tvar mappingLeaderboard = googletag.sizeMapping().\n
+    \taddSize([0,0], [[300, 50], [320, 50]]).\n
+        addSize([800, 600], [728,90]).\n
+        build();  \n
+  \n
+    googletag.defineSlot('/62616433/main_leaderboard', [[728, 90], [320,50], [300, 50]], 'div-gpt-ad-1430160961981-0').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script type="text/javascript">\n
+  googletag.cmd.push(function() {\n
+\tvar mappingWelcome = googletag.sizeMapping().\n
+    \taddSize([0,0], [300, 250]).\n
+        addSize([640, 0], [640, 480]).\n
+        build();\n
+  \n
+    googletag.defineSlot('/62616433/main_welcome', [[640, 480], [300, 250]], 'div-gpt-ad-1430160889889-0').defineSizeMapping(mappingWelcome).addService(googletag.pubads());\n
+  \tgoogletag.pubads().addEventListener('slotRenderEnded', function(event) {\n
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_welcome") === true) {$('#div-gpt-ad-1430160889889-0').trigger('adready');} \n
+    });\n
+\tgoogletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();  \n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script type="text/javascript">\n
+  googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/main_wallpaper', 'div-gpt-ad-1430235245447-0').addService(googletag.pubads());\n
+  \tgoogletag.pubads().addEventListener('slotRenderEnded', function(event) {\n
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_wallpaper") === true) {\n
+\t        if ($('#wallpaperad').length) {\n
+\t            var wa = $('#wallpaperad');\n
+\t            var mh = $("main").height();\n
+\t            wa.height(mh + 70);\n
+\t        }\n
+            if($('.search-banner-form').length) {\n
+                var temp = $('#wallpaperad');\n
+    \t\t\tif(temp) {temp.insertAfter($('.search-banner-form'));}\n
+            }\n
+        } \n
+    });\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script type="text/javascript">\n
+  googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/main_native_ad_unit_1', 'div-gpt-ad-1441294234226-0').addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script>\n
+  googletag.cmd.push(function() {\n
+    googletag.defineOutOfPageSlot('/62616433/AAC_pop_form', 'div-gpt-ad-1525704923457-0').addService(googletag.pubads());\n
+    googletag.pubads().enableSingleRequest();\n
+    googletag.pubads().collapseEmptyDivs();\n
+    googletag.enableServices();\n
+  });\n
+</script>\n
+<script src="/assets/library/jquery.popupoverlay.js"></script>\n
+<script>\n
+        $(document).ready(function() {\n
+\n
+            if($.cookie('aacwelcome') === undefined) {\n
+                if (popup_is_mobile() === false) {\n
+                    $('#my_popup').popup({\n
+                        color: 'white',\n
+                        opacity: 1,\n
+                        transition: '0.3s',\n
+                        scrolllock: true,\n
+                        beforeopen: function () {\n
+                            googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});\n
+                            $('#my_popup').removeClass("hidden");\n
+                        }\n
+                    });\n
+                    $('#div-gpt-ad-1430160889889-0').bind('adready', function () {\n
+                        var quotes = [{'author': 'James Kip Finch' , 'quote': 'The engineer has been, and is, a maker of history.'},\n
+                            {'author': 'Gordon Lindsay Glegg', 'quote': 'The scientist discovers a new type of material or energy and the engineer discovers a new use for it.'},\n
+                            {'author': 'Henry Petroski', 'quote': 'Engineering is achieving function while avoiding failure.'},\n
+                            {'author': 'Henry Petroski', 'quote': 'Successful engineering is all about understanding how things break or fail.'},\n
+                            {'author': 'Michio Kaku', 'quote': 'What we usually consider as impossible are simply engineering problems… there’s no law of physics preventing them.'},\n
+                            {'author': 'Thomas Edison', 'quote': 'I have not failed, but found 1000 ways to not make a light bulb.'},\n
+                            {'author': 'Robert Heinlein', 'quote': 'One man’s “magic” is another man’s engineering. “Supernatural” is a null word.'},\n
+                            {'author': 'Unknown', 'quote': 'Everyone wants the project to be good, fast, and cheap... pick two.'},\n
+                        ];\n
+                        var quote = quotes[Math.floor(Math.random()*quotes.length)];\n
+                        $('#welcomequote').text(quote.quote);\n
+                        $('#welcomeauthor').text(quote.author);                           \n
+                        $('#my_popup').popup('show');\n
+                    });\n
+                } else {\n
+                    $('#div-gpt-ad-1430160889889-0').detach().insertAfter('header');\n
+                    $('#div-gpt-ad-1430160889889-0').addClass('text-center');\n
+                    $('#div-gpt-ad-1430160889889-0').css({"padding-top": "20px", "padding-bottom": "20px", "background-color": "#f26b31"});\n
+                    googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});\n
+                }\n
+                var welcomeExpire = new Date();\n
+                welcomeExpire.setHours(welcomeExpire.getHours() + 6);\n
+                $.cookie('aacwelcome','set', {domain: "allaboutcircuits.com", path: "/", expires: welcomeExpire});\n
+           }\n
+        });\n
+    </script>\n
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">\n
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>\n
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>\n
+<script>\n
+        function showSocialCode() {\n
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n
+\n
+            ga('create', 'UA-1454132-1', 'auto');\n
+            ga('require', 'GTM-MMWSMVL');\n
+            ga('require', 'displayfeatures');\n
+            ga('set',{'dimension1':'optoelectronics,embedded,microchip-embedded,general,engineering-consulting'});\n
+            ga('set',{'contentGroup1':'optoelectronics,embedded,microchip-embedded,general,engineering-consulting'});\n
+            ga('send', 'pageview');\n
+\n
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\n
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\n
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\n
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');\n
+            fbq('init', '1808435332737507'); // Insert your pixel ID here.\n
+            fbq('track', 'PageView');\n
+            fbq('track', 'ViewContent', {\n
+                content_ids: ['optoelectronics','embedded','microchip-embedded','general','engineering-consulting'],\n
+            content_type: 'category'});\n
+\n
+            _linkedin_data_partner_id = "353081";\n
+            (function(){var s = document.getElementsByTagName("script")[0];\n
+                var b = document.createElement("script");\n
+                b.type = "text/javascript";b.async = true;\n
+                b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";\n
+                s.parentNode.insertBefore(b, s);})();\n
+        }\n
+        if(jstz.determine().name().indexOf("Europe") === -1) {\n
+            showSocialCode(); // NOT EU\n
+        } else {\n
+            window.addEventListener("load", function () {\n
+                window.cookieconsent.initialise({\n
+                    "palette": {\n
+                        "popup": {\n
+                            "background": "#252e39"\n
+                        },\n
+                        "button": {\n
+                            "background": "#14a7d0"\n
+                        }\n
+                    },\n
+                    "type": "opt-out",\n
+                    "content": {\n
+                        "message": "This website uses tracking cookies to ensure you get the best experience on our website.",\n
+                        "href": "https://www.allaboutcircuits.com/privacy-policy/",\n
+                        "dismiss": "OK, GOT IT",\n
+                        "deny": "X"\n
+                    },\n
+                    onInitialise: function (status) {\n
+                        var type = this.options.type;\n
+                        var didConsent = this.hasConsented();\n
+                        if (type == 'opt-out' && didConsent) {showSocialCode();}\n
+                    },\n
+\n
+                    onStatusChange: function (status, chosenBefore) {\n
+                        var type = this.options.type;\n
+                        var didConsent = this.hasConsented();\n
+                        if (type == 'opt-out' && didConsent) {showSocialCode();}\n
+                    },\n
+\n
+                    onRevokeChoice: function () {\n
+                        var type = this.options.type;\n
+                        if (type == 'opt-out') {showSocialCode();}\n
+                    },\n
+\n
+                })\n
+            });\n
+        }\n
+    </script>\n
+<link rel="preload" href="https://adservice.google.com.ph/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com.ph/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_211.js?v=212" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-27/html/container.html"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}\n
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}\n
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}\n
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}\n
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}\n
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+#MathJax_About.MathJax_MousePost {outline: none}\n
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}\n
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}\n
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}\n
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}\n
+.MathJax_MenuCheck {position: absolute; left: .7em}\n
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}\n
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}\n
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}\n
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}\n
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}\n
+.MathJax_MenuDisabled {color: GrayText}\n
+.MathJax_MenuActive {background-color: #606872; color: white}\n
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}\n
+.MathJax_ContextMenu:focus {outline: none}\n
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}\n
+#MathJax_AboutClose {top: .2em; right: .2em}\n
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}\n
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}\n
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}\n
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}\n
+.MathJax_MenuClose:hover span {background-color: #CCC!important}\n
+.MathJax_MenuClose:hover:focus {outline: none}\n
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}\n
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}\n
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}\n
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}\n
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}\n
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}\n
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}\n
+</style><style type="text/css">.MathJax_Preview {color: #888}\n
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}\n
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}\n
+.MathJax_Error {color: #CC0000; font-style: italic}\n
+</style><style type="text/css">.MJXp-script {font-size: .8em}\n
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}\n
+.MJXp-bold {font-weight: bold}\n
+.MJXp-italic {font-style: italic}\n
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}\n
+.MJXp-largeop {font-size: 150%}\n
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}\n
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}\n
+.MJXp-display {display: block; text-align: center; margin: 1em 0}\n
+.MJXp-math span {display: inline-block}\n
+.MJXp-box {display: block!important; text-align: center}\n
+.MJXp-box:after {content: " "}\n
+.MJXp-rule {display: block!important; margin-top: .1em}\n
+.MJXp-char {display: block!important}\n
+.MJXp-mo {margin: 0 .15em}\n
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}\n
+.MJXp-denom {display: inline-table!important; width: 100%}\n
+.MJXp-denom > * {display: table-row!important}\n
+.MJXp-surd {vertical-align: top}\n
+.MJXp-surd > * {display: block!important}\n
+.MJXp-script-box > *  {display: table!important; height: 50%}\n
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}\n
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}\n
+.MJXp-script-box > * > * > * {display: block!important}\n
+.MJXp-mphantom {visibility: hidden}\n
+.MJXp-munderover {display: inline-table!important}\n
+.MJXp-over {display: inline-block!important; text-align: center}\n
+.MJXp-over > * {display: block!important}\n
+.MJXp-munderover > * {display: table-row!important}\n
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}\n
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}\n
+.MJXp-mtr {display: table-row!important}\n
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}\n
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}\n
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}\n
+.MJXp-mlabeledtr {display: table-row!important}\n
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}\n
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}\n
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}\n
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}\n
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}\n
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}\n
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}\n
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}\n
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}\n
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}\n
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}\n
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}\n
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}\n
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}\n
+</style></head>\n
+<body><div id="MathJax_Message" style="display: none;"></div>\n
+<div id="top-box" class="hidden-xs">\n
+<div class="top-box-wrapper">\n
+<div class="container navContainer">\n
+<div class="row">\n
+<div class="social-box col-lg-3 col-md-4 col-sm-5 pull-right" itemscope="" itemtype="https://schema.org/Organization">\n
+<div class="hidden-print"><span class="hidden-xs">Connect with us</span>\n
+<link itemprop="url" href="//www.allaboutcircuits.com">\n
+<a href="https://www.facebook.com/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/allaboutcircuits&amp;width=90&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=20&amp;appId=421950967965311&quot; width=&quot;90&quot; height=&quot;20&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-facebook"></i></a>\n
+<a href="https://twitter.com/AllAboutCircuit" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;https://platform.twitter.com/widgets/follow_button.html?screen_name=allaboutcircuit&amp;show_screen_name=false&amp;show_count=true&amp;size=s&quot; title=&quot;Follow All About Circuits on Twitter&quot; width=&quot;160&quot; height=&quot;25&quot; style=&quot;border: 0; overflow: hidden;&quot;></iframe>" data-original-title="" title=""><i class="fa fa-twitter"></i></a>\n
+<a href="https://www.youtube.com/c/AllAboutCircuitsVideo" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;//sub.allaboutcircuits.com/youtube.html&quot; height=&quot;25&quot; width=&quot;120&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-youtube-play"></i></a>\n
+<a href="https://www.linkedin.com/company/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="<iframe src=&quot;//sub.allaboutcircuits.com/linkedin.html&quot; height=&quot;20&quot; width=&quot;115&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;></iframe>" data-original-title="" title=""><i class="fa fa-linkedin"></i></a>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+<div class="clearfix"></div>\n
+<header id="headerProxy">\n
+<nav id="main-nav" class="navbar yamm affix-top" role="navigation">\n
+<div class="container navContainer">\n
+<div class="row">\n
+<div class="navbar-header">\n
+\n
+<div class="resp-menu-wrap pull-right">\n
+<div class="search-block visible-xs pull-right" itemscope="" itemtype="https://schema.org/WebSite">\n
+<link itemprop="url" href="https://www.allaboutcircuits.com">\n
+<form action="/search" method="GET" class="navbar-form navbar-form-mobile navbar-right " itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">\n
+<a href="#" class="close">×</a>\n
+<i class="search-icon aaccon-search mobile-search"></i>\n
+<meta itemprop="target" content="https://www.allaboutcircuits.com/search?q={q}">\n
+<input type="text" name="q" value="" class="form-control" placeholder="Search" itemprop="query-input">\n
+</form>\n
+</div>\n
+<div class="user-menu-box pull-right movefront">\n
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#usernavbar" aria-expanded="false" aria-controls="navbar">\n
+<i class="fa fa-eetech-user"></i>\n
+</button>\n
+<div class="clearfix"></div>\n
+</div>\n
+<div class="resp-menu-box pull-right movefront">\n
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">\n
+\n
+<img src="/assets/images/mobile-menu-v2.png" class="mobile-menu-icon">\n
+</button>\n
+<div class="clearfix"></div>\n
+</div>\n
+</div>\n
+<a class="navbar-brand" href="/">\n
+<img id="aac-logo-visible-lg" class="navLogo" alt="All About Circuits" src="/assets/images/aac_logo.png">\n
+<img id="aac-logo-visible-sm" class="navLogo logo-icon" alt="All About Circuits" src="/assets/images/aac_logo_icon.png">\n
+</a>\n
+\n
+\n
+</div>\n
+<div class="nav-block">\n
+<div class="search-block hidden-xs flx-item">\n
+<form action="/search" method="GET" id="topsearchform" class="navbar-form hidden-xs open open-default">\n
+<i class="search-icon aaccon-search desktop-search"></i>\n
+<input name="q" id="q" type="text" class="form-control" placeholder="Search" value="">\n
+</form>\n
+</div>\n
+<div id="navbar" class=" navbar-collapse collapse flx-item">\n
+<ul id="primary-menu" class="nav navbar-nav navbar-right pull-right ">\n
+<li id="articles_menu" class="dropdown yamm-fw">\n
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">ARTICLES <i class="fa fa-chevron-down"></i></a>\n
+<ul class="dropdown-menu" role="menu">\n
+<div class="dropdown-content">\n
+<div class="container-fluid">\n
+<div class="row">\n
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+<ul id="articles_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+<li id="articles_latest" itemprop="name"><a href="/latest/" itemprop="url">LATEST</a></li>\n
+<li id="articles_news" itemprop="name"><a href="/news/" itemprop="url">NEWS</a></li>\n
+<li id="articles_projects" itemprop="name"><a href="/projects/" itemprop="url">PROJECTS</a></li>\n
+<li id="articles_technical_articles" itemprop="name"><a href="/technical-articles/" itemprop="url">TECHNICAL ARTICLES</a></li>\n
+<li id="articles_new_industry_products" itemprop="name"><a href="/new-industry-products/" class="text-uppercase" itemprop="url">NEW INDUSTRY PRODUCTS</a></li>\n
+</ul>\n
+</div>\n
+<div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="articles_main">\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</ul>\n
+</li>\n
+<li id="forums_menu" class="dropdown yamm-fw">\n
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="//forum.allaboutcircuits.com/" role="button" aria-expanded="false">Forum <i class="fa fa-chevron-down"></i></a>\n
+<ul class="dropdown-menu" role="menu">\n
+ <div class="dropdown-content">\n
+<div class="container-fluid">\n
+<div class="row">\n
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+<ul id="forums_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+<li id="forums_all" itemprop="name"><a href="//forum.allaboutcircuits.com/find-new/posts" itemprop="url">LATEST</a></li>\n
+<li id="forums_general" itemprop="name"><a href="//forum.allaboutcircuits.com/#electronics.3" itemprop="url">GENERAL ELECTRONICS</a></li>\n
+<li id="forums_circuits_projects" itemprop="name"><a href="//forum.allaboutcircuits.com/#circuits-and-projects.31" itemprop="url">CIRCUITS &amp; PROJECTS</a></li>\n
+<li id="forums_embedded_software" itemprop="name"><a href="//forum.allaboutcircuits.com/#software-microcomputing.16" itemprop="url">EMBEDDED &amp; MICRO</a></li>\n
+<li id="forums_community" itemprop="name"><a href="//forum.allaboutcircuits.com/#community.20" itemprop="url">COMMUNITY</a></li>\n
+</ul>\n
+</div>\n
+<div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="forums_main"></div>\n
+</div>\n
+</div>\n
+</div>\n
+</ul>\n
+</li>\n
+<li id="education_menu" class="dropdown yamm-fw">\n
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="https://www.allaboutcircuits.com/education" role="button" aria-expanded="false">\n
+Education <i class="fa fa-chevron-down"></i>\n
+</a>\n
+<ul class="dropdown-menu" role="menu">\n
+<div class="dropdown-content">\n
+<div class="container-fluid">\n
+<div class="row">\n
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+<ul id="education_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+<li id="education_textbook" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/textbook/" itemprop="url">Textbooks</a></li>\n
+<li id="education_video_lectures" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/video-lectures/" itemprop="url">Video Lectures</a></li>\n
+<li id="education_worksheets" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/worksheets/" itemprop="url">Worksheets</a></li>\n
+<li id="education_webinars" itemprop="name"><a class="text-uppercase" href="/industry-webinars/" itemprop="url">Industry Webinars</a></li>\n
+<li id="education_training" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/industry-training/" itemprop="url">Industry Training</a></li>\n
+</ul>\n
+</div>\n
+ <div id="education_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>\n
+</div>\n
+</div>\n
+</div>\n
+</ul>\n
+</li>\n
+<li id="tools_menu" class="dropdown yamm-fw">\n
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="#" role="button" aria-expanded="false">\n
+Tools <i class="fa fa-chevron-down"></i>\n
+</a>\n
+<ul class="dropdown-menu" role="menu">\n
+<div class="dropdown-content">\n
+<div class="container-fluid">\n
+<div class="row">\n
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">\n
+<ul id="tools_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">\n
+<li id="tools_calculators" itemprop="name"><a class="text-uppercase" href="/tools/" itemprop="url">Calculators</a></li>\n
+<li id="tools_part_search" itemprop="name"><a class="text-uppercase" href="/electronic-components/" itemprop="url">Part Search</a></li>\n
+<li id="tools_test_measurement" itemprop="name"><a class="text-uppercase" href="/test-measurement/" itemprop="url">Test Equipment DB</a></li>\n
+<li id="tools_bom" itemprop="name"><a class="text-uppercase" href="/bom/" itemprop="url">BOM Tool</a></li>\n
+<li id="tools_datasheet" itemprop="name"><a class="text-uppercase" href="/electronic-components/manufacturer/" itemprop="url">Datasheet Search</a></li>\n
+</ul>\n
+</div>\n
+<div id="tools_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>\n
+</div>\n
+</div>\n
+</div>\n
+</ul>\n
+</li>\n
+<li id="topics_giveaways_menu" class="cat-menu-item yamm-fw hidden-sm">\n
+<a href="/giveaways/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Giveaways</a>\n
+</li>\n
+<li id="topics_iot_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">\n
+<a href="/test-measurement/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Test Db <img src="/assets/images/beta.png" class="beta-search hidden-xs" alt="Test &amp; Measurement Db Beta"></a>\n
+</li>\n
+<li id="topics_part_search_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">\n
+<a href="/electronic-components/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false" title="Electronics Part Search">Part Search</a>\n
+</li>\n
+<li class="login-menu-item dropdown hidden-xs">\n
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">LOG IN / JOIN</a>\n
+<ul class="dropdown-menu" role="menu">\n
+ <li><a href="/login/" title="Login to your existing account">Log In</a></li>\n
+<li><a href="//forum.allaboutcircuits.com/register" title="Create an account">Join AAC</a></li>\n
+<li><a href="/login/" title="Sign in with your Facebook, Linkedin or Google account">Sign in with <i class="fa fa-facebook"></i> <i class="fa fa-linkedin"></i><i class="fa fa-google-plus"></i></a></li>\n
+<li><a href="//forum.allaboutcircuits.com/register">Member Benefits</a></li>\n
+</ul>\n
+</li>\n
+</ul>\n
+</div>\n
+</div>\n
+<div id="usernavbar" class="navbar-collapse collapse">\n
+<ul id="primary-menu" class="nav navbar-nav visible-xs navbar-right pull-right">\n
+<li><a href="/login/">Log In</a></li>\n
+<li><a href="//forum.allaboutcircuits.com/register">Join AAC</a></li>\n
+<li><a href="/login/">Sign in with &nbsp;<i class="fa fa-facebook"></i>&nbsp;<i class="fa fa-linkedin"></i>&nbsp;<i class="fa fa-google-plus"></i></a></li>\n
+<li><a href="//forum.allaboutcircuits.com/register">Member Benefits</a></li>\n
+</ul>\n
+</div>\n
+</div>\n
+</div>\n
+</nav>\n
+<div class="clearfix"></div>\n
+</header><div id="wallpaperad" style="background: url(&quot;https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvUqv64CxIdEU6Gfd-2dQAws_nuuCaSgPLBWSPWjDkKGnyaTvqQAqdczfLUK3SAtb25Mk7Hih-gw7X59zjKj5PA19mUeltKryYuDGCdwtZuQp1i4Ux1wzMR9M478Dkq9XUyg7fo58rmguJUG1Yz_EsKnfswTaQDAE0vdXYrWOXQW_ctJ6YHz91WOnZBUTGa63lldQKfFW1dchoC5EPuDAE-j_ISu5hi3H88VqHKLIT9jFp3KfUe0vKxeiO4oprhhPH6_DkbfUGuvQ&amp;sai=AMfl-YQXeUmRYTwYvXKQ1m502Q451J2mSkfWvNjzHkjXwO5ZbVmH1YldxnkdvOZnK8VOxxCNciB_Ofyf51wfA_YBDEJwFteaes-TjQYn_CUkEg&amp;sig=Cg0ArKJSzIxuVWKcTEsLEAE&amp;urlfix=1&amp;adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKCb6sblQRABGAEyCLIvRjbBMm37&quot;) center top no-repeat rgb(0, 8, 35); height: 4521px;"></div>\n
+<main class="row-offcanvas row-offcanvas-right" style="margin-top: 70px;">\n
+<section class="single-post">\n
+<div class="container">\n
+<div class="row rowtable">\n
+<div class="col-lg-9 col-md-8 col-sm-12 main-content block-1" data-mh="block-1" style="">\n
+<div class="breadcrumb-wrap hidden-xs">\n
+<ol class="breadcrumb">\n
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i> Home</span></a></li>\n
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/news/" itemprop="url"><span itemprop="title">News</span></a></li>\n
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><meta itemprop="url" content="https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/"><span itemprop="title">New Library from Microchip Brings Touch and Gesture Functionalities to Familiar Microcontrollers</span></li>\n
+</ol>\n
+</div> \n
+<article itemscope="itemscope" itemtype="https://schema.org/NewsArticle">\n
+<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/">\n
+<meta itemprop="description" content="Touch displays often require specialized touch controllers to drive displays, which can bump up the cost of final products. To mitigate cost increases, Microchip has just released a free touch library for use with most PIC, AVR, and SAM microcontrollers. ">\n
+<div class="hidden" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">\n
+<meta itemprop="url" content="https://www.allaboutcircuits.com/uploads/thumbnails/Microchip_library_featured.jpg">\n
+<meta itemprop="width" content="700">\n
+<meta itemprop="height" content="350">\n
+</div>\n
+<div class="hidden" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">\n
+<div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">\n
+<meta itemprop="url" content="https://www.allaboutcircuits.com/assets/images/og_default.png">\n
+<meta itemprop="width" content="960">\n
+<meta itemprop="height" content="960">\n
+</div>\n
+<meta itemprop="name" content="All About Circuits">\n
+</div>\n
+<div class="page-header">\n
+<h1 id="243" itemprop="headline">New Library from Microchip Brings Touch and Gesture Functionalities to Familiar Microcontrollers</h1>\n
+<p class="meta"><span itemprop="datePublished">3 days ago</span>\n
+<span>by</span>\n
+<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">\n
+<span itemprop="name"><a class="author" href="/author/robin-mitchell" itemprop="url">Robin Mitchell</a></span>\n
+</span>\n
+\n
+</p></div>\n
+<hr>\n
+\n
+\n
+<div id="div-gpt-ad-1430160961981-0" class="leaderboard_ad" data-google-query-id="CPyRvYjMudsCFUxivQodUxcBBg" style="display: none;">\n
+<script type="text/javascript">\n
+\t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1430160961981-0');});\n
+\t</script>\n
+<div id="google_ads_iframe_/62616433/main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_leaderboard_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_leaderboard_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+<div itemprop="articleBody">\n
+<div class="sp-content-block">\n
+<div class="lead" itemprop="headline">
+    Touch displays often require specialized touch controllers to drive displays, which can bump up the cost of final products. To mitigate cost increases, Microchip has just released a free touch library for use with most PIC, AVR, and SAM microcontrollers.
+</div>
+
+
+<p>For some, it seems like only yesterday that&nbsp;touchscreens started to become integrated into products, taking up the mantle as our&nbsp;primary technology interface from the mouse and keyboard.</p>\n
+<p>The first touch displays that I remember used resistive displays which could be found on the LG Optimus, Sony Ericsson, and even the Nintendo DS. But it was not long before capacitive displays took the market by storm and now the majority of displays are capacitive.</p>\n
+<p>There are many reasons for the dominance of <a href="https://techexplainer.wordpress.com/2012/04/02/resistive-vs-capacitive-touchscreen/" target="_blank">capacitive displays over resistive displays</a>, including multitouch support, better screen contrast, and higher sensitivity. Now that displays can be found in many products and most mobile devices use touch screens, customers are beginning to expect such technology as standard. This expectation is pressuring designers to integrate touch displays into their products,</p>\n
+<p>But a few issues come with this touch revolution. Integrating a touch display usually requires a touch controller which can increase the cost of manufacturing. And with the slowly rising popularity of wearable electronics, space on a PCB is becoming seriously precious.</p>\n
+<p>In response to the rising demand for touch-oriented design resources, Microchip has released their <a href="https://globenewswire.com/news-release/2018/05/21/1509311/0/en/Easily-Implement-Low-power-Touch-Pads-with-Surface-Gestures-Using-Microchip-s-New-Software-Library.html" target="_blank">2D Touch Surface library</a> that brings touch display capabilities to simple microcontrollers including PICs, AVRs, and SAMs.</p>\n
+<p>&nbsp;</p>\n
+<p><img alt="" src="/uploads/articles/28243484838_57f0ba71ee_z.jpg" style="width: 640px; height: 457px; border: solid 1px #CDCDCD"></p>\n
+<h5 style="text-align: center;"><em>Image courtesy of Microchip.</em></h5><p>&nbsp;</p><h3>Microchip’s Touch Library</h3><p>The library (which only requires ADC2 and 14KB free program memory)&nbsp;allows the designer to easily create phone-like UI elements without the need for a complex operating system in the background. This means that products such as the PIC16F1559 (costing as low as £0.90 per piece), can be used to create user-friendly interfaces without losing a tiny footprint.</p>\n
+<p>The touch library also has other features, including:</p>\n
+<ul>\n
+    <li>Single/dual finger tracking</li>\n
+    <li>Dual finger surface gestures</li>\n
+    <li>Water-tolerant 2D touch sensing</li>\n
+    <li>Noise-robust touch sensing</li>\n
+    <li>Low-power touch (sleep scan mode consumes as little as 5uA)</li>\n
+    <li>Simple integration into Microchip projects</li>\n
+    <li>Library access and GUI based configuration via MCC / START</li>\n
+</ul>
+<p>&nbsp;</p>
+<div class="embed-responsive embed-responsive-16by9">\n
+    <iframe src="https://player.vimeo.com/video/204705818" width="640" height="360" frameborder="0" allowfullscreen=""></iframe>\n
+</div>
+
+<br>
+
+<h3>Gesture Control: The Next Interface Paradigm</h3>\n
+
+    <p>But touch control is not the only capability of the Microchip touch library; with further processing, gestures can be detected, as well. This reflects the fact that gesture recognition is poised to become the next form of interaction to work with, and possibly overtake, touch interfaces. It was just about two years ago, remember, that <a href="https://www.allaboutcircuits.com/news/radar-chip-revolutionizing-gesture-recognition-google-atap-project-soli/" target="_blank">Google's Project Soli</a> introduced us to some novel gesture recognition concepts. These concepts, such as the pinch and zoom gestures, are now standard motions, also included in Microchip's product demonstration.</p>\n
+<p>These gestures can be detected from up to 8 inches away from the display. The image below shows the different gestures that can be detected using the library.</p>\n
+<p>&nbsp;</p>\n
+<p style="text-align: center;"><img alt="" src="/uploads/articles/2dgestures.png" style="width: 150px; height: 273px;"></p>\n
+<h5 style="text-align: center;"><i>Gestures built into the library. Image courtesy of&nbsp;<a href="https://www.microchip.com/images/default-source/design-centers/touch-gesture/2d-touch/txfg-pr-ds00001599f-ps.png?sfvrsn=f630ba2a_2" target="_blank">Microchip</a></i></h5>\n
+<p>&nbsp;</p>\n
+<p>Another thing that the Microchip website features is the ability to match gestures to GPIO pins. While they do not go further into detail about this ability, this could mean one of two things (or both). The first possibility is that when a gesture is detected, it can send a signal to a GPIO pin which can be picked up by an ISR. This would result in lightning fast responses from complex gestures as the gestures are directly linked to the hardware.</p>\n
+<p>The other possibility is that gestures could be used to output signals from GPIOs as soon as they are detected, which could be used to drive another microcontroller or I/O device. Either way, there is no operating system requiring overheads which results in faster responses from touch displays.</p>\n
+<p>&nbsp;</p>\n
+<hr>\n
+<p>&nbsp;</p>\n
+<p>User interfaces are changing more rapidly than ever. The release of Microchip's library could allow many more designers, including students, to keep up with these trends and design better systems. If you decide to check out the library, please let us know your experiences in the comments below!</p><p>&nbsp;</p>\n
+</div>\n
+<div class="meta-tags hidden-print">\n
+<h4 class="pull-left"><b>Learn More About:</b></h4>\n
+<div class="tags pull-left" itemprop="keywords">\n
+<a data-href="/search?q=microchip" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','microchip', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">microchip</a>\n
+<a data-href="/search?q=pic" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','pic', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">pic</a>\n
+<a data-href="/search?q=avr" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','avr', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">avr</a>\n
+<a data-href="/search?q=sam" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','sam', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">sam</a>\n
+<a data-href="/search?q=Touch" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','Touch', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">Touch</a>\n
+<a data-href="/search?q=touchdisplay" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','touchdisplay', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">touchdisplay</a>\n
+<a data-href="/search?q=touch controller" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','touch controller', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">touch controller</a>\n
+<a data-href="/search?q=dispaly" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','dispaly', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">dispaly</a>\n
+<a data-href="/search?q=touch screen" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','touch screen', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">touch screen</a>\n
+<a data-href="/search?q=screen" rel="nofollow" class="jslink tag" onclick="ga('send','event','learn more about','screen', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">screen</a>\n
+</div>\n
+<div class="clearfix">&nbsp;</div>\n
+</div>\n
+</div>\n
+<div class="social-media-shares hidden-print">\n
+<div class="item">\n
+<div class="facebook">\n
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'facebook',window.location.href)" ;="" return="" false;"="" target="_blank" title="Share on Facebook">\n
+<i class="fa fa-facebook"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+</a>\n
+</div>\n
+</div>\n
+<div class="item">\n
+<div class="twitter">\n
+<a href="https://twitter.com/share?url=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/&amp;via=allaboutcircuit" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'twitter',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Twitter">\n
+<i class="fa fa-twitter"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+</a>\n
+</div>\n
+</div>\n
+<div class="item">\n
+<div class="google-plus">\n
+<a href="https://plus.google.com/share?url=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480'); ga('send', 'event', 'social-share', 'google',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Google+">\n
+<i class="fa fa-google-plus"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+</a>\n
+</div>\n
+</div>\n
+<div class="item">\n
+<div class="linkedin">\n
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); ga('send', 'event', 'social-share', 'linkedin',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Linkedin">\n
+<i class="fa fa-linkedin"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+</a>\n
+</div>\n
+</div>\n
+<div class="item">\n
+<div class="reddit">\n
+<a href="https://www.reddit.com/submit?url=&amp;url=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/&amp;title=New Library from Microchip Brings Touch and Gesture Functionalities to Familiar Microcontrollers - News" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes'); ga('send', 'event', 'social-share', 'reddit',window.location.href)" ;return="" false;"="" target="_blank" title="Share on Reddit">\n
+<i class="fa fa-reddit-alien"></i><span class="counter hidden-sm hidden-xs">Share</span>\n
+</a>\n
+</div>\n
+</div>\n
+</div>\n
+<div class="container-fluid other-articles hidden-print">\n
+<div id="relatedarticles" class="row">\n
+<h3><strong>You May Also Like:</strong></h3>\n
+</div>\n
+<div class="main-recommended-articles"><div class="row article-item"><div class="col-lg-9 col-md-9 col-sm-9 col-xs-12"><div class="col-md-2 col-sm-2 col-xs-2 darken"><a href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssAzw2NpTRJST9QpOaMD2FW2a5DBNb3eIdXgB8XC_OY3Wp7HbmreMg10mk1TkY0g4xNZ89o2VWZr_4c_ylYztoR4ZT38vSl1h8-6mz7syGGlhL_R4Vacv4dKoCGtJveMaVxIz4aF-SxNociWxApzrY0hitWNG9nEGtyT4wo5H1aIeWhuvSDDu3f8nXRteiP86XhAtv-eXePjcfHy1nCDg20709wPeY22lIWxkvFIz5Z0CAsiQmW9uhCbvCccx91T9HwoBMndbGoK3E&amp;sai=AMfl-YQwelvNaAoectbJaU28b_SbMO9293rsXrsmb0Db3RTXhnNXDMjK1qxvvGS2ACFOBygWzQgEvAH3y53FIcohZoPCe1RHeQYk8E5a1xZBVg&amp;sig=Cg0ArKJSzFsRi_bvvh3fEAE&amp;urlfix=1&amp;adurl=http://www.microchip.com/design-centers/security-ics/cryptoauthentication/cloud-authentication/google-iot-core-atecc608a?utm_source=AllAboutCircuits.com&amp;utm_medium=Native&amp;utm_term=315x220&amp;utm_content=SCS&amp;utm_campaign=Google+Cloud+IoT" title="Trusted IoT Authentication to Google Cloud IoT Core" target="_blank"><img src="https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstKM9ZYRicWu5QNaKuzI1MHiOzgYVtQvBsi58Hm1q5ZpVs8YG-ii2DytOCrrH4t2QIjvo6dcNLSLSj_AEhNt_Wg1sdLaXXmCB1Vh_tV0kwZ-sy0JUq8OWOYUOxgOPKg4iXtxzIYeUES0Pf5M4-Zwx0w0RZNq3LdpL5B4AZMq9NV84zJc0l7-fa_ojiUYdJfO_9qT6HkYogZaMakdRG7ztVVI8m8koouiEdrh2llTIY6yfWPl7eQxmHIB21vLSmM97kLBlhhgWiFC_ekbSYlC-8&amp;sai=AMfl-YSe-Z9WSJW5YxXrsZXufvH0QM3uI1ZZfshF7Yg6rsAiDb0qYx1vdYZd_EyhNXTKQJkZv0mJSUmN52ifgGx0BNeUWkZqGRVU61J6R_SPRQ&amp;sig=Cg0ArKJSzHC-RmzdEPI2EAE&amp;urlfix=1&amp;adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKCboqjTkAEQARgBMghkgn3pA5kdTg" alt="" class="" align="left"></a></div><div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;"><a href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssAzw2NpTRJST9QpOaMD2FW2a5DBNb3eIdXgB8XC_OY3Wp7HbmreMg10mk1TkY0g4xNZ89o2VWZr_4c_ylYztoR4ZT38vSl1h8-6mz7syGGlhL_R4Vacv4dKoCGtJveMaVxIz4aF-SxNociWxApzrY0hitWNG9nEGtyT4wo5H1aIeWhuvSDDu3f8nXRteiP86XhAtv-eXePjcfHy1nCDg20709wPeY22lIWxkvFIz5Z0CAsiQmW9uhCbvCccx91T9HwoBMndbGoK3E&amp;sai=AMfl-YQwelvNaAoectbJaU28b_SbMO9293rsXrsmb0Db3RTXhnNXDMjK1qxvvGS2ACFOBygWzQgEvAH3y53FIcohZoPCe1RHeQYk8E5a1xZBVg&amp;sig=Cg0ArKJSzFsRi_bvvh3fEAE&amp;urlfix=1&amp;adurl=http://www.microchip.com/design-centers/security-ics/cryptoauthentication/cloud-authentication/google-iot-core-atecc608a?utm_source=AllAboutCircuits.com&amp;utm_medium=Native&amp;utm_term=315x220&amp;utm_content=SCS&amp;utm_campaign=Google+Cloud+IoT" title="Trusted IoT Authentication to Google Cloud IoT Core" target="_blank"><h4 class="article-title">Trusted IoT Authentication to Google Cloud IoT Core</h4><div class="excerpt hidden-xs">ATECC608A: Your Secured Hardware Root of Trust</div></a></div></div><div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info"><div class="col-lg-12 meta-article-author"><h4><a href="https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssAzw2NpTRJST9QpOaMD2FW2a5DBNb3eIdXgB8XC_OY3Wp7HbmreMg10mk1TkY0g4xNZ89o2VWZr_4c_ylYztoR4ZT38vSl1h8-6mz7syGGlhL_R4Vacv4dKoCGtJveMaVxIz4aF-SxNociWxApzrY0hitWNG9nEGtyT4wo5H1aIeWhuvSDDu3f8nXRteiP86XhAtv-eXePjcfHy1nCDg20709wPeY22lIWxkvFIz5Z0CAsiQmW9uhCbvCccx91T9HwoBMndbGoK3E&amp;sai=AMfl-YQwelvNaAoectbJaU28b_SbMO9293rsXrsmb0Db3RTXhnNXDMjK1qxvvGS2ACFOBygWzQgEvAH3y53FIcohZoPCe1RHeQYk8E5a1xZBVg&amp;sig=Cg0ArKJSzFsRi_bvvh3fEAE&amp;urlfix=1&amp;adurl=http://www.microchip.com/design-centers/security-ics/cryptoauthentication/cloud-authentication/google-iot-core-atecc608a?utm_source=AllAboutCircuits.com&amp;utm_medium=Native&amp;utm_term=315x220&amp;utm_content=SCS&amp;utm_campaign=Google+Cloud+IoT" target="_blank">Microchip</a></h4></div><div class="col-lg-12 meta-article-date">Sponsored</div></div></div>\n
+<div class="row article-item" id="recommended_1">\n
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+<div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+<a href="https://www.allaboutcircuits.com/projects/build-a-development-platform-for-a-PICAXE-40x2/" title="Build a Development Platform for a PICAXE 40X2" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');"><img src="/uploads/thumbnails/_80_80/PA-40X2_BBA_Thumbnail.jpg" alt="" class="" align="left"></a>\n
+</div>\n
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+<a href="https://www.allaboutcircuits.com/projects/build-a-development-platform-for-a-PICAXE-40x2/" title="Build a Development Platform for a PICAXE 40X2" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');" style="display: inline;">\n
+<h4 class="article-title">Build a Development Platform for a PICAXE 40X2</h4>\n
+<div class="excerpt hidden-xs">The PICAXE 40X2 features 32 I/O ports and speeds up to... </div></a></div>\n
+</div>\n
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+<div class="col-lg-12 meta-article-author" data-article-author="Charles R. Hampton"><h4><a href="/author/charles-r.-hampton">Charles R. Hampton</a></h4></div>\n
+<div class="col-lg-12 meta-article-date" data-article-published="May 25, 2016">May 25, 2016</div>\n
+</div>\n
+</div>\n
+<div class="row article-item" id="recommended_2">\n
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+<div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+<a href="https://www.allaboutcircuits.com/news/mcu-or-dsp-graphics-and-cryptography-in-microchips-new-microcontrollers/" title="MCU or DSP?: Graphics and Cryptography in Microchip’s New Microcontrollers" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');"><img src="/uploads/thumbnails/_80_80/CCTB_NewMicrochipMCUs_thumb.jpg" alt="" class="" align="left"></a>\n
+</div>\n
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+<a href="https://www.allaboutcircuits.com/news/mcu-or-dsp-graphics-and-cryptography-in-microchips-new-microcontrollers/" title="MCU or DSP?: Graphics and Cryptography in Microchip’s New Microcontrollers" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');" style="display: inline;">\n
+<h4 class="article-title">MCU or DSP?: Graphics and Cryptography in Microchip’s New Microcontrollers</h4>\n
+<div class="excerpt hidden-xs">The hardware inside microcontrollers is increasingly powerful... </div></a></div>\n
+</div>\n
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+<div class="col-lg-12 meta-article-author" data-article-author="Robert Keim"><h4><a href="/author/robert-keim">Robert Keim</a></h4></div>\n
+<div class="col-lg-12 meta-article-date" data-article-published="July 21, 2017">July 21, 2017</div>\n
+</div>\n
+</div>\n
+<div class="row article-item" id="recommended_3">\n
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+<div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+<a href="/news/a-new-coulomb-transistor-concept/" title="Researchers Develop a New Coulomb Transistor Concept" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');"><img src="/uploads/thumbnails/_80_80/Holsman_SET_featured.jpg" alt="" class="" align="left"></a>\n
+</div>\n
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated is-truncated" style="word-wrap: break-word;">\n
+<a href="/news/a-new-coulomb-transistor-concept/" title="Researchers Develop a New Coulomb Transistor Concept" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');" style="display: inline;">\n
+<h4 class="article-title">Researchers Develop a New Coulomb Transistor Concept</h4>\n
+<div class="excerpt hidden-xs">A research team from the University of Hamburg has... </div></a></div>\n
+</div>\n
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+<div class="col-lg-12 meta-article-author" data-article-author="Zabrel Holsman"><h4><a href="/author/zabrel-holsman">Zabrel Holsman</a></h4></div>\n
+<div class="col-lg-12 meta-article-date" data-article-published="August 05, 2017">August 05, 2017</div>\n
+</div>\n
+</div>\n
+<div class="row article-item" id="recommended_4" style="display: none;">\n
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">\n
+<div class="col-md-2 col-sm-2 col-xs-2 darken">\n
+<a href="/news/putin-comments-artificial-intelligence-questions-future-geopolitics-warfare/" title="Putin’s Comments on Artificial Intelligence Raise Questions about Future Geopolitics and Warfare" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');"><img src="/uploads/thumbnails/_80_80/Putin.jpg" alt="" class="" align="left"></a>\n
+</div>\n
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">\n
+<a href="/news/putin-comments-artificial-intelligence-questions-future-geopolitics-warfare/" title="Putin’s Comments on Artificial Intelligence Raise Questions about Future Geopolitics and Warfare" onclick="ga('send','event','recommended article click','main site', 'https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller');">\n
+<h4 class="article-title">Putin’s Comments on Artificial Intelligence Raise Questions about Future Geopolitics and Warfare</h4>\n
+<div class="excerpt hidden-xs">Russia’s president spoke briefly about the future of artificial intelligence in the context of military applications, leading many to...</div>\n
+</a>\n
+</div>\n
+</div>\n
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">\n
+<div class="col-lg-12 meta-article-author" data-article-author="Heather Hamilton-Post"><h4><a href="/author/heather-hamilton-post">Heather Hamilton-Post</a></h4></div>\n
+<div class="col-lg-12 meta-article-date" data-article-published="September 07, 2017">September 07, 2017</div>\n
+</div>\n
+</div>\n
+</div>\n
+<br>\n
+<p class="text-center"><strong><a href="/latest/" onclick="ga('send','event','recommended article click','main site', 'load more');"><i class="fa fa-arrow-down"></i> Load More</a></strong></p>\n
+</div>\n
+<h3 id="comments-control" class="hidden-print"><a href="#"><b>Comments</b><i class="fa fa-chevron-up"></i></a></h3>\n
+<div id="comments-wrap" class="disqus-theme comments-box collapse in hidden-print">\n
+<h4><span><b itemprop="commentCount">\n
+0 Comments\n
+</b></span><a href="/login/" class="pull-right login"><i class="fa fa-comment"></i>Login</a></h4>\n
+<hr>\n
+<div class="row">\n
+<div id="comments" class="col-sm-12">\n
+<form id="main-form" method="post" action="https://www.allaboutcircuits.com/">\n
+<div class="hiddenFields">\n
+<input type="hidden" name="ACT" value="25">\n
+<input type="hidden" name="RET" value="https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller">\n
+<input type="hidden" name="URI" value="news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller">\n
+<input type="hidden" name="entry_id" value="412838">\n
+<input type="hidden" name="parent_id" value="0">\n
+<input type="hidden" name="site_id" value="1">\n
+<input type="hidden" name="csrf_token" value="fd57c8331c0d6e2207b2727625ce1a649e43c852">\n
+</div>\n
+<div class="form-group clearfix">\n
+<textarea style="resize:vertical;" placeholder="Please login before you can comment." readonly="" name="comment" rows="4" class="form-control comment-comment"></textarea>\n
+<input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">\n
+</div></form>\n
+<form id="reply-form" class="hidden well" method="post" action="https://www.allaboutcircuits.com/">\n
+<div class="hiddenFields">\n
+<input type="hidden" name="ACT" value="25">\n
+<input type="hidden" name="RET" value="https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller">\n
+<input type="hidden" name="URI" value="news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller">\n
+<input type="hidden" name="entry_id" value="412838">\n
+<input type="hidden" name="parent_id" value="0">\n
+<input type="hidden" name="site_id" value="1">\n
+<input type="hidden" name="csrf_token" value="fd57c8331c0d6e2207b2727625ce1a649e43c852">\n
+</div>\n
+<div class="form-group clearfix">\n
+<textarea style="resize:vertical;" placeholder="Please login before you can reply to this comment." readonly="" name="comment" rows="2" class="form-control comment-comment"></textarea>\n
+<input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">\n
+</div></form>\n
+</div>\n
+<div class="clearfix">&nbsp;</div>\n
+</div>\n
+</div>\n
+</article>\n
+<div class="clearfix">&nbsp;</div>\n
+</div>\n
+<div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 right-sidebar sidebar-offcanvas block-1" data-mh="block-1" style="">\n
+<div id="stick_column">\n
+<div class="widget ads sidepin leaderboard_ad">\n
+\n
+<div id="div-gpt-ad-1429623690593-0" data-google-query-id="CPuRvYjMudsCFUxivQodUxcBBg">\n
+<script type="text/javascript">\n
+\t\t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1429623690593-0');});\n
+\t\t</script>\n
+<div id="google_ads_iframe_/62616433/main_sidebar_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_sidebar_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_sidebar_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+</div>\n
+<div class="widget recommended-articles">\n
+<div class="sidebar-recommended-articles">\n
+<div class="clearfix"></div>\n
+</div>\n
+<div class="clearfix"></div>\n
+</div>\n
+</div>\n
+\n
+<div id="div-gpt-ad-1441294234226-0" data-google-query-id="CP-RvYjMudsCFUxivQodUxcBBg">\n
+<script type="text/javascript">\n
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1441294234226-0');});\n
+</script>\n
+<div id="google_ads_iframe_/62616433/main_native_ad_unit_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_native_ad_unit_1_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_native_ad_unit_1_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+</div>\n
+</div> \n
+</div> \n
+</section>\n
+</main>\n
+<footer class="hidden-print">\n
+<div class="widgets-box">\n
+<div class="container">\n
+<div class="row">\n
+<div class="col-md-3 col-sm-4  col-xs-12 widget-item">\n
+<h4>WHO WE ARE</h4>\n
+<p>\n
+<a class="logo-link" href="/"><img class="navLogo" alt="All About Circuits" src="/assets/images/aac_logo.png">\n
+</a>\n
+</p>\n
+<div class="description"> <a href="/contact-us/" class="see-more">More about us <i class="fa fa-arrow-right"></i></a>\n
+</div>\n
+<h4>Network Sites</h4>\n
+<div class="col-md-6 col-sm-12 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="https://eepower.com" target="_blank">EEPower.com</a></li>\n
+<li><a href="https://maker.pro/" target="_blank">Maker.Pro</a></li>\n
+<li><a href="https://www.mikrocontroller.net/" target="_blank">Mikrocontroller.net</a></li>\n
+</ul>\n
+</div>\n
+</div>\n
+<div class="col-md-3 col-sm-2 col-xs-6 widget-item">\n
+<h4>Content</h4>\n
+<div class="col-md-6 col-sm-12 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="/bom/">BOM Tool</a></li>\n
+<li><a href="/tools/">Calculators</a></li>\n
+<li><a href="/electronic-components/manufacturer/">Datasheets</a></li>\n
+<li><a href="/electronic-components/" title="Electronic parts datasheets, prices &amp; stock">Electronic Components</a>\n
+</li><li><a href="//forum.allaboutcircuits.com/">Forum</a></li>\n
+<li><a href="/giveaways/">Giveaways</a></li>\n
+<li><a href="/industry-articles/">Industry Articles</a></li>\n
+</ul>\n
+</div>\n
+<div class="col-md-6 col-sm-12 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="/industry-webinars/">Industry Webinars</a></li>\n
+<li><a href="/news/">News</a></li>\n
+<li><a href="/projects/">Projects</a></li>\n
+<li><a href="/technical-articles/">Technical Articles</a></li>\n
+<li><a href="/test-measurement/">Test Equipment</a></li>\n
+<li><a href="/textbook/">Textbook</a></li>\n
+<li><a href="/video-lectures/">Video Lectures</a></li>\n
+<li><a href="/worksheets/">Worksheets</a></li>\n
+</ul>\n
+</div>\n
+</div>\n
+<div class="col-md-3 col-sm-2 col-xs-6 widget-item">\n
+<h4>Categories</h4>\n
+<div class="col-md-6 col-sm-12 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="/latest/">Latest</a></li>\n
+<li><a href="/latest/analog/">Analog</a></li>\n
+<li><a href="/projects/category/arduino/">Arduino Projects</a></li>\n
+<li><a href="/latest/automotive/">Automotive</a></li>\n
+<li><a href="/latest/connectors/">Connectors</a></li>\n
+<li><a href="/latest/digital-ics/">Digital ICs</a>\n
+</li><li><a href="/latest/eda/">EDA Tools</a></li>\n
+<li><a href="/latest/electromechanical/">Electromechanical </a></li>\n
+</ul>\n
+</div>\n
+<div class="col-md-6 col-sm-12 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="/latest/embedded/">Embedded</a></li>\n
+<li><a href="/latest/iot/">IoT</a></li>\n
+<li><a href="/latest/pcb/">PCB</a></li>\n
+<li><a href="/latest/power/">Power</a></li>\n
+<li><a href="/latest/sensors/">Sensors</a></li>\n
+<li><a href="/latest/test-and-measurement/">Test &amp; Measurement</a></li>\n
+<li><a href="/latest/wearables/">Wearables</a></li>\n
+<li><a href="/latest/wireless-rf/">Wireless RF</a></li>\n
+</ul>\n
+</div>\n
+</div>\n
+<div class="col-md-3 col-sm-4 col-xs-12 widget-item social-widget-box">\n
+<div class="row">\n
+<h4>Connect with Us</h4>\n
+<div class="col-md-6 col-sm-6 col-xs-6 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="https://www.facebook.com/allaboutcircuits" target="_blank">Facebook</a>\n
+</li>\n
+<li><a href="https://twitter.com/AllAboutCircuit" target="_blank">Twitter</a>\n
+</li>\n
+<li><a href="https://www.youtube.com/c/AllAboutCircuitsVideo" target="_blank">YouTube</a></li>\n
+<li><a href="https://www.linkedin.com/company/allaboutcircuits" target="_blank">LinkedIn</a></li>\n
+</ul>\n
+</div>\n
+<div class="col-md-6 col-sm-6 col-xs-6 footer-links">\n
+<ul class="list-unstyled">\n
+<li><a href="/contact-us/">Contact Us</a></li>\n
+<li><a href="/write-for-us/" onclick="ga('send','event','write-for-us','footer')">Write For Us</a></li>\n
+<li><a href="//www.eetech.com/" target="_blank">Advertise</a></li>\n
+<li><a href="http://us8.campaign-archive1.com/home/?u=18656ef6df14c935d4d9192ee&amp;id=2565529c4b">Newsletters</a></li>\n
+</ul>\n
+</div>\n
+</div>\n
+<div class="clearfix visible-sm visible-xs">&nbsp;</div>\n
+<div class="row">\n
+<h4>Sign Up</h4>\n
+<div class="newsletter-box">\n
+<form class="form-inline" role="form">\n
+<div class="input-group">\n
+<input type="text" id="signupemail" class="form-control" placeholder="Enter your email address">\n
+<div class="input-group-btn">\n
+<button type="button" class="btn" onclick="window.location.href='//forum.allaboutcircuits.com/register?email='+$('#signupemail').val();">Register</button>\n
+</div>\n
+</div>\n
+</form>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+<div class="copyright-box">\n
+<div class="container">\n
+<div class="row">\n
+<div class="col-md-6 col-sm-6 col-xs-12">\n
+<p>© <a href="//eetech.com/" target="_blank">EETech Media, LLC</a>. All rights reserved</p>\n
+</div>\n
+<div class="col-md-6 col-sm-6 hidden-xs">\n
+<a href="/privacy-policy/">Privacy Policy</a> · <a href="//forum.allaboutcircuits.com/help/terms">Terms of Service</a> · <a href="/user-agreement/">User Agreement</a>\n
+<div class="back-to-top pull-right sm-hidden"><img src="/assets/images/btn-scrollUp.png">\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</footer>\n
+<script src="/assets/js/jquery.mobile.custom.min.js"></script>\n
+<script src="/assets/library/bootstrap/js/bootstrap.min.js"></script>\n
+<script src="/assets/js/modernizr.js"></script>\n
+<script src="/assets/library/sticky-kit.min.js"></script>\n
+<script src="/assets/library/jquery.matchHeight/jquery.matchHeight.js"></script>\n
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.min.js"></script>\n
+<script src="/assets/library/bootstrap-notify/bootstrap-notify.min.js"></script>\n
+<script src="/assets/js/main.js?2017b"></script>\n
+<script src="/assets/js/menu.js?2018a"></script>\n
+<script src="/assets/library/highlight/highlight.pack.js"></script>\n
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id=""></script>\n
+<script type="text/javascript" src="/assets/library/jquery.dotdotdot/jquery.dotdotdot.js"></script>\n
+<script type="text/javascript" src="/assets/js/articles.js"></script>\n
+\n
+<div id="div-gpt-ad-1430235245447-0" class="wallpaperadpixel" data-google-query-id="CP6RvYjMudsCFUxivQodUxcBBg">\n
+<script type="text/javascript">\n
+\t\tgoogletag.cmd.push(function() {googletag.display('div-gpt-ad-1430235245447-0');});\n
+\t</script>\n
+<div id="google_ads_iframe_/62616433/main_wallpaper_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_wallpaper_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_wallpaper_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+\n
+\n
+\n
+<div id="div-gpt-ad-1525704923457-0" data-google-query-id="CICSvYjMudsCFUxivQodUxcBBg" style="display: none;">\n
+<script>\n
+        googletag.cmd.push(function() {googletag.display('div-gpt-ad-1525704923457-0');});\n
+    </script>\n
+<div id="google_ads_iframe_/62616433/AAC_pop_form_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/AAC_pop_form_0" title="3rd party ad content" name="google_ads_iframe_/62616433/AAC_pop_form_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+\n
+<div id="my_popup_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: white; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 100000; transition: all 0.3s ease 0s;"></div><div id="my_popup_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: all 0.3s ease 0s; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; display: none;"><div class="hidden popup_content" id="my_popup" data-popup-initialized="true" aria-hidden="true" role="dialog" style="opacity: 0; visibility: hidden; display: inline-block; outline: none; transition: all 0.3s ease 0s; text-align: left; position: relative; vertical-align: middle;">\n
+<div id="welcome-ad">\n
+<div class="background-image"><img src="/assets/images/welcome/bg.jpg" alt=""></div>\n
+<div class="welcome-ad-container">\n
+<div class="container-fluid">\n
+<div class="row ad-header">\n
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><img src="/assets/images/welcome/logo.png" alt="All About Circuits Logo"></div>\n
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><span class="my_popup_close continue-site">Continue to site</span></div>\n
+</div>\n
+<div class="row">\n
+<div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 hidden-xs hidden-sm hidden-md">\n
+<div class="quote">\n
+<div class="large">Quote of <span>the day</span></div>\n
+ <p class="text"><span class="start-quote">“</span><span id="welcomequote"></span><span>”</span></p>\n
+<div class="author">- <span id="welcomeauthor"></span></div>\n
+</div>\n
+</div>\n
+<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">\n
+<div id="div-gpt-ad-1430160889889-0" data-google-query-id="CP2RvYjMudsCFUxivQodUxcBBg" style="display: none;"><div id="google_ads_iframe_/62616433/main_welcome_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/main_welcome_0" title="3rd party ad content" name="google_ads_iframe_/62616433/main_welcome_0" width="640" height="480" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div>\n
+</div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div><script src="https://px.ads.linkedin.com/collect/?time=1528101061679&amp;pid=353081&amp;url=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/&amp;pageUrl=https://www.allaboutcircuits.com/news/library-Microchip-touch-interface-gesture-pic-avr-sam-microcontroller/&amp;ref=&amp;fmt=js&amp;s=1" type="text/javascript"></script><iframe id="google_osd_static_frame_9416469335278" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

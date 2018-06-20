@@ -28,6 +28,6 @@ trait Validation
      */
     public function sampleContent()
     {
-        return file_get_contents(__DIR__ . '/test.html', FILE_USE_INCLUDE_PATH);
+        return file_get_contents(__DIR__ . '/../test/aac/test2.html', FILE_USE_INCLUDE_PATH);
     }
 }
