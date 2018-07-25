@@ -1,0 +1,1776 @@
+<!DOCTYPE html><html class="no-js wf-proximanova-n7-active wf-proximanova-i4-active wf-proximanova-n4-active wf-proximanova-i7-active wf-proximanova-n3-active wf-proximanova-i3-active wf-lettergothicstd-n7-active wf-active" lang="en"><!--<![endif]--><head>\n
+    \n
+    \n
+\n
+<title>The Undead Remote | Hackaday.io</title>\n
+<meta charset="utf-8">\n
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+<meta name="theme-color" content="#333333">\n
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">\n
+<link rel="stylesheet" href="//cdn.hackaday.io/css/style.css?version=0.112.1">\n
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//use.typekit.net/ymb0lgk.js"></script>\n
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}.tk-letter-gothic-std{font-family:"letter-gothic-std",sans-serif;}</style><style type="text/css">@font-face{font-family:tk-proxima-nova-n7;src:url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:tk-proxima-nova-i7;src:url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:tk-proxima-nova-n4;src:url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-proxima-nova-i4;src:url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-proxima-nova-n3;src:url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:tk-proxima-nova-i3;src:url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;}@font-face{font-family:tk-letter-gothic-std-n7;src:url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}</style><script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+        <meta name="description" content="The mutant offspring of a shake flashlight and a universal remote.">\n
+        <link rel="canonical" href="https://hackaday.io/project/159735-the-undead-remote">\n
+\n
+\n
+        <script type="text/javascript">\n
+        function getCommentIdFromUrl() {\n
+            if(window.location.hash) {\n
+                var hash = window.location.hash.substring(1);\n
+                var commentId = parseInt(hash.replace('j-discussion-', ''));\n
+                if (commentId) {\n
+                    return commentId;\n
+                }\n
+            }\n
+            return null;\n
+        }\n
+\n
+        var commentId = getCommentIdFromUrl();\n
+        if (commentId) {\n
+            var url = window.location.href;\n
+            if (url.indexOf('?') > -1) {\n
+                url = url.substring(0, url.indexOf('?'));\n
+            }\n
+            if (url.indexOf('#') > -1) {\n
+                url = url.substring(0, url.indexOf('#'));\n
+            }\n
+            url += '/discussion-' + commentId;\n
+            window.location.href = url;\n
+        }\n
+    </script>\n
+    \n
+\n
+\n
+\n
+<meta name="twitter:card" content="summary_large_image">\n
+<meta name="twitter:site" content="@hackadayio">\n
+<meta name="twitter:title" content="The Undead Remote">\n
+<meta name="twitter:image" content="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg">\n
+\n
+    <meta name="twitter:description" content="This energy harvesting device has a built-in use model.  When your remote isn&amp;apos;t working, isn&amp;apos;t it instinctual to shake it to try to prompt a response?  With this remote, that instinct brings results.  I have ripped the guts out of a shake flashlight and crudely glued them into the back of a universal remote.  This project was completed in an afternoon. ">\n
+\n
+\n
+    \n
+\n
+\n
+\n
+<meta property="og:type" content="website">\n
+<meta property="og:title" content="The Undead Remote">\n
+<meta property="og:url" content="https://hackaday.io/project/159735-the-undead-remote">\n
+<meta property="og:image" content="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg">\n
+\n
+    <meta property="og:description" content="This energy harvesting device has a built-in use model. When your remote isn't working, isn't it instinctual to shake it to try to prompt a response? With this remote, that instinct brings results. I have ripped the guts out of a shake flashlight and crudely glued them into the back of a universal remote. This project was completed in an afternoon.">\n
+\n
+\n
+\n
+    <script>\n
+        var HIO = {\n
+            projectId: 159735,\n
+            hackadayPrize: {\n
+                id: 40,\n
+                key: 'prize2018'\n
+            },\n
+            \n
+            _csrf: 'Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU'\n
+        };\n
+    </script>\n
+<style type="text/css">@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/399a91/0000000000000000000158cf/23/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/f61233/0000000000000000000158d0/23/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/477d8d/0000000000000000000158d7/23/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/8adb93/0000000000000000000158d8/23/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/3693ba/0000000000000000000158d9/23/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/9c140d/0000000000000000000158da/23/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;}@font-face{font-family:letter-gothic-std;src:url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2cd276/000000000000000000012e1b/23/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}</style><style class="redactor-placeholder-style-tag">#redactor-uuid-0.redactor-placeholder::after { top: 10px; left: 10px; }</style></head>\n
+<body class="project-detail page_v2 ">\n
+    \n
+\n
+<div class="header" id="header">\n
+\n
+    \n
+\n
+    <div class="container">\n
+\n
+        <a href="/" title="Hackaday.io Home" class="logo">Hack a Day</a>\n
+\n
+        <a href="javascript:void(0);" class="button-menu">Menu</a>\n
+\n
+        <ul class="nav" role="navigation">\n
+            <li><a href="/projects" class="">Projects</a></li>\n
+            <li><a href="/lists" class="">Lists</a></li>\n
+            <li><a href="/contests" class="">Contests</a></li>\n
+            <li><a href="/stack" class="">Stack</a></li>\n
+            <li class="dropdown j-more-open">\n
+                <a href="javascript:void(0)" class="dropdown-link">More \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-arrow-down">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 9.702l4.79-4.79a.707.707 0 0 1 1 .999l-5.14 5.14a.705.705 0 0 1-.652.197.712.712 0 0 1-.646-.196l-5.14-5.14a.703.703 0 0 1-.004-1.002.708.708 0 0 1 1.003.004L8 9.702z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+</a>\n
+                <ul role="menu" class="dropdown-menu more-menu" id="j-more">\n
+                    <li><a href="https://hackaday.com/blog/" target="_blank" rel="noopener noreferrer">Blog</a></li>\n
+                    <li><a href="/events">Events</a></li>\n
+                    <li><a href="/hackerspaces">Hackerspaces</a></li>\n
+                    <li><a href="/hackers">Profiles</a></li>\n
+                    <li><a href="/submissions/prize2018/list">\n
+                        2018 Prize Entries\n
+                    </a></li>\n
+                    <li><a href="https://store.hackaday.com/" class="j-store-tracking" target="_blank" rel="noopener noreferrer">Store</a></li>\n
+                    <li><a href="/project/8563-jobs-board">Jobs Board</a></li>\n
+                </ul>\n
+            </li>\n
+            <li class="search-holder">\n
+                <form id="search-form" action="/search" onsubmit="return submitSearch();" method="GET">\n
+\n
+                    <input type="text" placeholder="Search projects, profiles ..." name="term" class="input-field j-add-search" id="j-add-search" value="" autocomplete="off" pattern=".{2,}" required="" title="2 characters minimum">\n
+                    <button type="submit" class="button-search" title="Search">\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-search">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.542 9.368a4.547 4.547 0 1 0-1.015 1.079c.04.086.094.166.165.237l2.727 2.727a.8.8 0 0 0 1.137.006.801.801 0 0 0-.006-1.136l-2.726-2.727a.812.812 0 0 0-.282-.185zm-1.72-.473a2.91 2.91 0 1 0-4.114-4.116 2.91 2.91 0 0 0 4.114 4.117z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                    </button>\n
+                </form>\n
+            </li>\n
+        </ul>\n
+\n
+        \n
+\n
+            <ul class="nav right nav-signin" role="navigation">\n
+                <li><a href="/signup" class="gold-white-button">Sign up</a></li>\n
+                <li><a href="/signin?returnUrl=/project/159735-the-undead-remote">Log In</a></li>\n
+            </ul>\n
+\n
+        \n
+    </div>\n
+</div>\n
+\n
+<div id="topMessage" class="alert small hide">\n
+    <span class="j-top-content"></span>\n
+    <a href="javascript:void(0);" class="alert-close j-top-message-close" title="Close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close-circle">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.047 10.658a.562.562 0 0 1-.398-.165L7.984 8.828 6.32 10.493a.562.562 0 0 1-.961-.398.56.56 0 0 1 .164-.398L7.19 8.033 5.523 6.368a.561.561 0 1 1 .795-.796l1.665 1.665L9.65 5.572a.563.563 0 0 1 .795.796L8.78 8.033l1.665 1.664a.562.562 0 0 1-.398.961zm-2.062-7.5a4.875 4.875 0 1 0 .002 9.75 4.875 4.875 0 0 0-.004-9.75zm0 10.875a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+ Close\n
+    </a>\n
+</div>\n
+\n
+\n
+\n
+\n
+<script>\n
+    var HIO = HIO || {};\n
+    HIO.enableFeedV3 = true\n
+</script>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+    \n
+    <div class="header-photo">\n
+        <div class="overlay"></div>\n
+    </div>\n
+\n
+    <div class="headline" style="background-image: url(https://cdn.hackaday.io/images/resize/1400x500/4509291531626889545.JPG)">\n
+    \n
+\n
+<div class="headline-image-overlay"></div>\n
+<div class="progress-holder">\n
+    <div class="progress">\n
+        <div class="progress-item">\n
+            <div class="progress-number foreground">0%</div>\n
+        </div>\n
+        <div class="progress-number">0%</div>\n
+    </div>\n
+</div>\n
+    <div class="container">\n
+        <h1>The Undead Remote</h1>\n
+        \n
+\n
+\n
+\n
+<p class="description">The mutant offspring of a shake flashlight and a universal remote.</p>\n
+        <div class="author">\n
+            <span class="identity-card" data-id="56488"><a href="/oneohm"><img src="https://cdn.hackaday.io/images/resize/24x24/7209781474652455482.JPG" alt="oneohm">oneohm</a></span>\n
+        </div>\n
+        \n
+\n
+\n
+\n
+    <div class="project-following-container ">\n
+        <a href="javascript:void(0)" data-href="/project/159735/event/unfollow" class="gold-gold-button unfollow text-changing-button" data-before="Following" data-after="Unfollow?">Following</a>\n
+        <a href="javascript:void(0)" data-href="/project/159735/event/follow" class="gold-gold-button follow">Follow project</a>\n
+    </div>\n
+\n
+        \n
+\n
+\n
+\n
+    <div class="project-skulling-container ">\n
+        <a href="javascript:void(0)" data-href="/project/159735/event/unskull" class="gold-gold-button unskulled text-changing-button" data-before="Liked" data-after="Unlike?">Liked</a>\n
+        <a href="javascript:void(0)" data-href="/project/159735/event/skull" class="gold-gold-button skulled">Like project</a>\n
+    </div>\n
+\n
+    </div>\n
+    <div id="modal-onboarding-back" class="modal-background"></div>\n
+\n
+<div class="modal-content-holder onboarding-modal" id="onboarding-modal">\n
+    <div class="submissions-close modal-close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </div>\n
+    <div class="onboarding-holder">\n
+        <h2>Sign up</h2>\n
+        <div class="onboarding-tabs">\n
+            <div class="onboarding-tab-navs">\n
+                <button id="signup-tab" class="active">Sign up</button>\n
+                <button id="login-tab">Login</button>\n
+            </div>\n
+        </div>\n
+        <div class="onboarding-content">\n
+            <div class="auth-buttons">\n
+                <a href="/auth/github" class="sign-in-with-github-button onboarding-btn button j-dialog-auth-window">\n
+                    \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-github--signin">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3.643 7.513c-.158-.45-.228-.967-.228-1.543 0-1.024.33-1.41.77-1.955-.337-1.167.122-1.965.122-1.965s.71-.142 2.05.79c.728-.303 2.666-.328 3.584-.068.563-.36 1.593-.873 2.008-.73.113.176.355.688.147 1.813.14.247.874.772.877 2.258-.012.548-.07 1.01-.18 1.402.02 0-.14.485-.177.484C12.13 9.034 11.13 9.42 9.52 9.58c.522.32.672.72.672 1.802 0 1.083-.015 1.23-.012 1.478.006.408.623.604.6.736-.023.13-.517.11-.747.032-.654-.22-.588-.75-.588-.75l-.022-1.447s.044-.78-.253-.78v2.37c0 .516.372.672.372.863 0 .327-.68-.03-.888-.235-.32-.31-.283-.97-.275-1.49.006-.502-.006-1.603-.006-1.603l-.216.005s.088 2.403-.114 2.84c-.263.563-1.054.757-1.054.5 0-.172.194-.117.302-.503.093-.33.06-2.78.06-2.78s-.253.146-.253.605c0 .21-.007 1.41-.007 1.767 0 .45-.657.705-.973.705-.16 0-.36-.008-.36-.09 0-.208.602-.33.602-.762 0-.375-.008-1.34-.008-1.34s-.304.052-.736.052c-1.09 0-1.435-.675-1.6-1.053a1.859 1.859 0 0 0-.784-.908c-.18-.113-.222-.247-.013-.285.966-.175 1.212 1.063 1.857 1.26.46.14 1.052.08 1.346-.105.04-.378.32-.705.554-.877-1.64-.153-2.612-.705-3.116-1.593-.005 0-.236-.482-.217-.482z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                    Github\n
+                </a>\n
+                <a href="/auth/twitter" class="sign-in-with-twitter-button onboarding-btn button j-dialog-auth-window">\n
+                    \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-twitter--signin">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.725 2.04c1.2-.022 1.837.406 2.447.946.517-.044 1.19-.324 1.586-.52.128-.07.256-.138.385-.207-.226.595-.533 1.062-1.004 1.416-.106.08-.21.186-.34.237v.007c.67-.007 1.225-.304 1.75-.463v.007c-.276.428-.65.863-1.05 1.175l-.482.374c.008.692-.01 1.355-.144 1.94-.773 3.388-2.82 5.688-6.064 6.674-1.165.355-3.046.5-4.38.175-.662-.16-1.26-.34-1.82-.58a7.252 7.252 0 0 1-.877-.44l-.272-.162c.302.01.654.09.99.038.305-.048.604-.035.884-.094.7-.15 1.322-.35 1.858-.653.26-.15.654-.324.838-.537a2.706 2.706 0 0 1-.92-.16c-1.002-.346-1.585-.98-1.964-1.933.303.032 1.177.11 1.38-.058-.38-.02-.748-.236-1.01-.397C1.71 8.333 1.053 7.51 1.058 6.24c.106.048.21.1.317.147.202.083.408.127.65.177.102.02.305.078.423.037h-.015c-.156-.176-.41-.296-.567-.484-.517-.628-1-1.592-.695-2.74.08-.29.202-.55.334-.785l.015.007c.06.122.193.214.278.316.264.32.59.607.92.86 1.132.862 2.15 1.39 3.785 1.784.415.1.894.175 1.39.177-.14-.395-.095-1.035.015-1.42.275-.96.874-1.654 1.752-2.025a3.8 3.8 0 0 1 .687-.208c.126-.013.252-.027.378-.043" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                    Twitter\n
+                </a>\n
+            </div>\n
+            <div class="or-container-padding">\n
+                <div class="or-border-holder">\n
+                    OR\n
+                </div>\n
+            </div>\n
+            <form method="POST" action="/signup">\n
+                <input id="onboarding-email" type="text" class="input-field" placeholder="Email address" required="" name="email">\n
+                <input id="onboarding-pass" type="password" class="input-field" placeholder="Password" required="" name="password">\n
+                <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+                <input type="hidden" class="input-field" placeholder="Invitation Code" required="" name="invitation_code" value="5Ad0ix2-b96J">\n
+                <button type="submit" class="gold-gold-button signup">Create account</button>\n
+                <button type="button" class="forgot-password hidden">Forgot your password?</button>\n
+                <div class="j-modal-form-message"></div>\n
+            </form>\n
+        </div>\n
+    </div>\n
+</div>\n
+    <div class="project-join-top ">\n
+        \n
+\n
+\n
+\n
+\n
+\n
+\n
+        \n
+\n
+\n
+\n
+\n
+    <a href="javascript:void(0)" class="login-button button-upload">\n
+        <span>Join this project</span>\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-join">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g fill-rule="evenodd"><path d="M9.516 13.71H1.93v-1.34c0-.4 1.035-.984 2.63-1.558 1.587-.572 2.095-1.055 2.095-2.088 0-.62-.485-.418-.698-1.553-.09-.47-.518-.007-.6-1.082 0-.43.234-.536.234-.536s-.12-.634-.165-1.122c-.06-.608.354-2.18 2.56-2.18 2.204 0 2.617 1.572 2.56 2.18-.047.488-.166 1.122-.166 1.122s.234.107.234.536c-.082 1.075-.51.612-.6 1.083-.212 1.137-.697.934-.697 1.554 0 .53.135.917.48 1.243a2.999 2.999 0 0 0-.284 3.743z"></path><path d="M11.992 14.516a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5zm1.482-2.17a.33.33 0 0 0 0-.66h-1.098V10.59a.33.33 0 1 0-.66 0v1.097H10.62a.329.329 0 0 0-.33.33c0 .18.147.33.33.33h1.097v1.097a.33.33 0 0 0 .66 0v-1.098h1.097z"></path></g></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </a>\n
+\n
+\n
+\n
+\n
+    </div>\n
+</div>\n
+\n
+    \n
+\n
+<div id="similars">\n
+    <div class="similars-header">\n
+        Similar projects worth following\n
+        <a href="javascript:void(0)" class="submissions-close">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+        </a>\n
+    </div>\n
+    <div class="container"></div>\n
+</div>\n
+    <div class="project-menu-details-holder">\n
+    <div class="container">\n
+        <div class="content-left">\n
+            <div class="section-profile-stats">\n
+                \n
+\n
+\n
+\n
+\n
+    <div class="stat-one">\n
+        <span title="View Count">3.9k</span>\n
+        <small>views</small>\n
+    </div>\n
+\n
+                \n
+\n
+\n
+\n
+<a href="javascript:void(0)">\n
+    <div class="stat-one">\n
+        <span title="Comments" class="comment_count">1</span>\n
+        <small>comments</small>\n
+    </div>\n
+</a>\n
+                \n
+\n
+\n
+\n
+\n
+    \n
+        <a href="/hackers/all/project/159735/following">\n
+    \n
+        <div class="stat-one">\n
+            <span title="Followers" class="follower_count">8</span>\n
+            <small>followers</small>\n
+        </div>\n
+    \n
+        </a>\n
+    \n
+\n
+                \n
+\n
+\n
+\n
+\n
+    \n
+        <a href="/hackers/all/project/159735/likers">\n
+    \n
+    <div class="stat-one">\n
+        <span title="Likes" class="like_count">10</span>\n
+        <small>likes</small>\n
+    </div>\n
+    \n
+        </a>\n
+    \n
+\n
+            </div>\n
+        </div>\n
+\n
+        <div class="content-right">\n
+            <ul class="project-menu">\n
+                \n
+\n
+\n
+\n
+<li>\n
+    \n
+        <a href="#menu-description" class=" menu-scroll active">Description</a>\n
+    \n
+</li>\n
+                \n
+\n
+\n
+\n
+<li>\n
+    \n
+        <a href="#menu-details" class="menu-add-content menu-scroll">Details</a>\n
+        \n
+    \n
+</li>\n
+                \n
+\n
+\n
+\n
+<li>\n
+    \n
+        Files <span>0</span>\n
+    \n
+</li>\n
+                \n
+\n
+\n
+\n
+\n
+    <li>\n
+        \n
+            <a href="#menu-components" class="menu-add-content menu-scroll">Components <span>7</span></a>\n
+            <ul class="menu-add-content-dropdown">\n
+                \n
+                <li><a href="/project/159735/components" class="grey-gold-button very-small-button">View all</a></li>\n
+            </ul>\n
+        \n
+    </li>\n
+\n
+                \n
+\n
+\n
+\n
+<li>\n
+    \n
+        Logs <span>0</span>\n
+    \n
+</li>\n
+                \n
+\n
+\n
+\n
+\n
+    <li>\n
+        \n
+            <a href="#menu-instructions" class="menu-add-content menu-scroll">Instructions <span>24</span></a>\n
+            <ul class="menu-add-content-dropdown">\n
+                \n
+            <li><a href="/project/159735/instructions" class="grey-gold-button very-small-button">View all</a></li>\n
+            </ul>\n
+        \n
+    </li>\n
+\n
+                \n
+\n
+\n
+\n
+<li>\n
+    \n
+        <a href="#j-discussions-title" class="menu-scroll">Discussion <span>1</span></a>\n
+    \n
+</li>\n
+            </ul>\n
+        </div>\n
+    </div>\n
+</div>\n
+\n
+\n
+    <div class="container">\n
+        <div class="content-left">\n
+    \n
+\n
+\n
+\n
+\n
+\n
+    <ul class="submissions-icons">\n
+        \n
+            \n
+                <li>\n
+                    <a href="/submissions/prize2018/list" class="submission-icon submission-icon-40">\n
+                        The 2018 Hackaday Prize\n
+                    </a>\n
+                </li>\n
+            \n
+            \n
+                <script>HIO.forPrize = true;</script>\n
+            \n
+        \n
+            \n
+            \n
+        \n
+    </ul>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+\n
+    <a href="/project/159735/gallery#bdce93ad90f4cf01411b6de5168c3bbc" id="project-image" class="image-holder lazy" data-src="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg" data-image="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg"></a>\n
+\n
+\n
+<div class="thumbs-holder">\n
+    \n
+        \n
+            <a href="/project/159735/gallery#bdce93ad90f4cf01411b6de5168c3bbc" class="image-holder thumb lazy" data-src="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg" data-image="https://cdn.hackaday.io/images/resize/600x600/6825721531627129333.jpg"></a>\n
+        \n
+            <a href="/project/159735/gallery#7a1c3129f7df4b58d02c4e813d8bda5a" class="image-holder thumb lazy" data-src="https://cdn.hackaday.io/images/resize/600x600/1206841531627147901.jpg" data-image="https://cdn.hackaday.io/images/resize/600x600/1206841531627147901.jpg"></a>\n
+        \n
+    \n
+</div>\n
+\n
+\n
+    <div class="view-gallery-holder">\n
+        <a href="/project/159735/gallery">\n
+            <div class="view-gallery grey-gold-button very-small-button">View Gallery</div>\n
+        </a>\n
+    </div>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+<aside class="section section-project-stats">\n
+    \n
+        <div class="icon-view-count" title="View Count">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-eye">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.014 12.122c4.036 0 7.002-4.146 7.002-4.146S11.694 3.83 8.014 3.83c-3.68 0-7.002 4.146-7.002 4.146s2.965 4.146 7.002 4.146zm0-1.572a2.573 2.573 0 1 0-.002-5.146 2.573 2.573 0 0 0 .002 5.146zm0-1a1.573 1.573 0 0 0 0-3.146 1.572 1.572 0 0 0 0 3.145z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+            <span class="view_count">3.9k</span>\n
+        </div>\n
+    \n
+    <div class="action-comment-with-hover" title="Comments">\n
+        <a href="#j-discussions-title">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-comment">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.312 2.038c3.832 0 6.167 2.303 6.167 5.14 0 2.842-2.336 5.113-6.168 5.113-.467 0-.923-.14-1.364-.204-1.785 2.32-4.598 1.863-4.598 1.863 1.987-.968 1.947-2.57 1.594-2.783-1.56-.944-2.498-2.38-2.498-3.988 0-2.84 3.034-5.142 6.866-5.142" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+            <span class="comment_count">1</span>\n
+        </a>\n
+    </div>\n
+    \n
+        <div class="action-view" title="Followers">\n
+            \n
+                <a href="/hackers/all/project/159735/following">\n
+            \n
+                \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-users">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.48 10.79c.347-.278.478-.604.478-1.068 0-.496-.396-.335-.57-1.243-.073-.378-.423-.007-.49-.868 0-.343.19-.428.19-.428s-.096-.507-.134-.898c-.047-.486.29-1.743 2.094-1.743 1.802 0 2.14 1.257 2.093 1.743-.037.39-.134.898-.134.898s.19.085.19.428c-.066.86-.416.49-.49.867-.173.908-.57.746-.57 1.242 0 .826.416 1.212 1.715 1.67 1.303.46 2.15.927 2.15 1.246v1.072H0v-1.34c0-.4 1.042-.984 2.645-1.558 1.6-.572 2.11-1.054 2.11-2.087 0-.62-.488-.418-.703-1.554-.09-.47-.52-.006-.602-1.082 0-.43.235-.535.235-.535s-.12-.634-.166-1.123c-.06-.608.357-2.18 2.575-2.18 2.22 0 2.635 1.572 2.577 2.18-.047.49-.167 1.123-.167 1.123s.235.106.235.535c-.082 1.076-.513.612-.602 1.083-.214 1.137-.702.934-.702 1.555 0 1.02.497 1.502 2.045 2.064z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                <span class="follower_count">8</span>\n
+            \n
+                </a>\n
+            \n
+        </div>\n
+        \n
+            <div class="action-skull" title="Likes">\n
+                \n
+                    <a href="/hackers/all/project/159735/likers">\n
+                \n
+                    \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-skull">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M5.508 5.892l.583-.582-.68-.627c-.522-.48-.703-.753-.77-1.166a1.694 1.694 0 0 0-1.41-1.395l-.544-.076.524.503.524.5-.51.577c-.28.317-.558.63-.618.7-.062.067-.3-.04-.542-.242-.238-.2-.48-.364-.54-.364-.234 0 .048.726.432 1.11.32.318.53.407.98.41.484 0 .686.1 1.264.613.38.336.697.614.707.617.01.003.28-.257.6-.578zm6.173.045c.635-.55.877-.676 1.292-.675a1.59 1.59 0 0 0 1.49-1.07c.09-.27.136-.514.106-.545-.03-.03-.286.134-.567.365l-.51.42-.606-.665-.607-.665.505-.535.506-.534-.544.083c-.71.108-1.296.69-1.41 1.402-.07.423-.25.688-.826 1.215l-.737.673.52.59c.286.325.54.597.565.604.025.007.396-.29.826-.663zm-2.137 3.52c-.06-.103-.29-.273-.51-.38-.603-.29-.745-.598-.434-.94.376-.418 1.082-.38 1.442.078.34.433.36.71.07 1.12-.244.352-.412.387-.57.12zm-3.82-.12c-.288-.41-.27-.69.07-1.122.36-.457 1.066-.496 1.444-.08.31.344.168.653-.433.943-.22.106-.45.276-.51.378-.158.266-.326.23-.57-.12zm1.85 1.21c0-.378.278-.927.44-.873.194.064.41.78.295.97-.045.072-.138.047-.21-.058-.103-.145-.148-.148-.202-.014-.096.235-.322.217-.322-.026zm-.275.997c0-.24.253-.306.23-.016-.012.18-.015.638.528.655.542.017.49-.384.493-.572.002-.36.246-.28.246.012 0 .296.22.545.6.547.38 0 .38-.323.38-.624 0-.252.146-.59.366-.85.535-.636.736-1.22.736-2.135 0-2.387-2.244-3.872-4.32-2.857-1.917.94-2.3 3.69-.72 5.168.198.184.36.466.36.627.01.535.12.67.554.676.435.007.445-.366.546-.63zm5.458 2.057l-.51-.447.567-.654c.31-.36.634-.655.72-.655.084 0 .326.166.538.37.463.442.627.344.39-.23-.277-.666-.894-1.104-1.556-1.104-.47 0-.662-.09-1.108-.515-.323-.31-.563-.45-.6-.353-.032.09-.236.408-.453.706l-.394.544.47.456c.26.25.47.56.47.684 0 .857.754 1.645 1.573 1.646h.402l-.51-.447zm-8.896.24c.443-.23.822-.842.822-1.327 0-.17.195-.51.432-.756l.432-.446-.328-.402c-.18-.222-.4-.52-.487-.662-.148-.246-.18-.237-.618.17-.346.324-.63.45-1.133.503-.77.08-1.256.47-1.456 1.17-.153.533-.03.563.404.1.178-.19.4-.345.494-.345.094 0 .43.294.747.654l.574.653-.518.448-.518.448h.375c.205 0 .555-.094.777-.21z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                    <span class="like_count">10</span>\n
+                \n
+                    </a>\n
+                \n
+            </div>\n
+        \n
+    \n
+</aside>\n
+    \n
+\n
+\n
+\n
+\n
+\n
+    <aside class="section section-team">\n
+        <h2 class="section-title">\n
+            Team\n
+            (<span id="contributor-count">1</span>)\n
+        </h2>\n
+\n
+        <ul class="contributors-list">\n
+            \n
+                <li>\n
+                    <span class="gray-link"><span class="identity-card" data-id="56488"><a href="/hacker/56488-oneohm"><img src="https://cdn.hackaday.io/images/resize/24x24/7209781474652455482.JPG" alt="oneohm">oneohm</a></span></span>\n
+                </li>\n
+            \n
+\n
+            \n
+\n
+            \n
+\n
+            \n
+\n
+            \n
+        </ul>\n
+\n
+        <div class="error-message hide" id="team-error"><p></p></div>\n
+\n
+        \n
+            <input type="hidden" name="HADPrizeSubmission" value="true">\n
+            \n
+                <a href="javascript:void(0)" class="login-button">Join this project's team</a>\n
+            \n
+        \n
+    </aside>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+    \n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <aside class="section section-tags">\n
+        \n
+                <div class="special-tags">\n
+                    <a href="/projects?tag=hardware" class="tag">\n
+                        <span class="hardware icon-button"></span>\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-button icon-hardware">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.096 10.822a2.52 2.52 0 0 0 3.089 3.108l-1.428-1.428.374-1.4 1.4-.374 1.43 1.428a2.523 2.523 0 0 0-3.22-3.055L7.06 5.42l-.096-.096a2.526 2.526 0 0 0-.613-2.568 2.517 2.517 0 0 0-2.442-.65l1.428 1.428-.375 1.4-1.398.374-1.43-1.428a2.522 2.522 0 0 0 3.108 3.089l3.854 3.852zm-1.715-.528l-.416.418c.285.874.08 1.873-.613 2.568-.66.662-1.6.878-2.442.65l1.428-1.428-.375-1.4-1.398-.374-1.428 1.428a2.522 2.522 0 0 1 3.108-3.089l.456-.456 1.683 1.684zM8.48 5.83l.618-.617a2.518 2.518 0 0 1 3.089-3.107l-1.43 1.428.376 1.4 1.4.374 1.43-1.428a2.523 2.523 0 0 1-3.22 3.055l-.578.58L8.478 5.83z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        <span>hardware</span>\n
+                    </a>\n
+                </div>\n
+\n
+        \n
+                <div class="special-tags">\n
+                    <a href="/projects?tag=completed project" class="tag">\n
+                        <span class="complete-circle icon-button"></span>\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-button icon-complete-circle">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.023 14.03a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm-.064-3.693a.496.496 0 0 1-.68.059L5.023 8.57a.468.468 0 0 1-.17-.317c-.022-.256.323-.658.588-.68a.489.489 0 0 1 .352.105L7.505 9.06l2.913-3.344a.499.499 0 0 1 .327-.166c.266-.023.674.312.697.57a.461.461 0 0 1-.112.34l-3.37 3.877z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        <span>completed project</span>\n
+                    </a>\n
+                </div>\n
+\n
+        \n
+        \n
+                <a href="/projects?tag=2018hackadayprize" class="tag">2018hackadayprize</a>\n
+        \n
+    </aside>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <aside class="section section-lists">\n
+        <h2 class="section-title">Related lists</h2>\n
+        \n
+            \n
+            \n
+\n
+<div class="section-lists list-items">\n
+    <a href="/list/129186-2018-thp-digikey-parts">\n
+        <div title="2018 THP: Digikey Parts" class="list-item-cover lazy" data-src="https://cdn.hackaday.io/images/resize/600x600/9777001523471495221.png">\n
+        </div>\n
+    </a>\n
+    <div class="list-item-title">\n
+        <h4><a href="/list/129186-2018-thp-digikey-parts">2018 THP: Digikey Parts</a></h4>\n
+        <p>Hackaday Prize entries using Digikey parts</p>\n
+        <span>543 projects</span>\n
+    </div>\n
+</div>\n
+\n
+        \n
+        \n
+    </aside>\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <aside class="section section-submissions-lists">\n
+        <h2 class="section-title">This project is submitted for</h2>\n
+        <ul>\n
+            \n
+                <li><a href="/submissions/prize2018/list">The 2018 Hackaday Prize</a></li>\n
+            \n
+                <li><a href="/submissions/prize2018_harvesting/list">Power Harvesting Challenge</a></li>\n
+            \n
+        </ul>\n
+    </aside>\n
+\n
+    \n
+\n
+\n
+\n
+<aside class="section section-project-time">\n
+    <p class="project-time">\n
+        This project was\n
+            \n
+                created on 07/15/2018\n
+                \n
+                     and last updated 8 days ago.\n
+                \n
+            \n
+    </p>\n
+</aside>\n
+    \n
+\n
+\n
+\n
+\n
+\n
+</div>\n
+\n
+        <div class="content-right">\n
+    \n
+\n
+\n
+\n
+\n
+    <section class="section section-description">\n
+        <h2 id="menu-description" class="section-title">Description</h2>\n
+        <div class="description">This energy harvesting device has a built-in use model.  When your remote isn't working, isn't it instinctual to shake it to try to prompt a response?  With this remote, that instinct brings results.  I have ripped the guts out of a shake flashlight and crudely glued them into the back of a universal remote.  This project was completed in an afternoon. </div>\n
+    </section>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <section class="section section-details">\n
+        <h2 id="menu-details" class="section-title">Details</h2>\n
+        \n
+\n
+        \n
+            <div class="post-content details-content">\n
+                <p></p><p>This project addresses dead batteries. &nbsp;Of all of the televisions in the world, how many have remotes? &nbsp;Of those remotes, how many require batteries? &nbsp;Of all of those batteries, how often do they need replacing? &nbsp;Then consider: &nbsp;what is the cost, financially and environmentally, of replacing those batteries?</p>\n
+\n
+<p>This project solves these problems by providing a remote that does not require batteries and doesn't change how we already interact with our remotes; what is more, it capitalizes on our frustrated instinct to shake our non-responsive remote, hoping this will bring our remotes back to life.<br></p><p>Rather than choosing an existing open hardware license I am electing to the maximum extent possible to refuse ownership and make no attempt to enforce any rights or privileges that may exist for this design. Information should be free!</p>\n
+                    \n
+                <p></p>\n
+            </div>\n
+        \n
+        <div class="detail-btns">\n
+            \n
+                \n
+            \n
+        </div>\n
+    </section>\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+        <section class="section section-components">\n
+            <h2 id="menu-components" class="section-title">Components</h2>\n
+            \n
+            <ul class="section-component-list">\n
+                \n
+                    \n
+    <li class="component-164618">\n
+        <span class="component-number">1</span>\n
+        <span class="component-x">×</span>\n
+        <span class="component-content">\n
+            Shake flashlight\n
+            <span class="component-description"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/gp/product/B01EJ0XB8O">https://www.amazon.com/gp/product/B01EJ0XB8O</a></span>\n
+       </span>\n
+    </li>\n
+\n
+    <li class="component-164619">\n
+        <span class="component-number">1</span>\n
+        <span class="component-x">×</span>\n
+        <span class="component-content">\n
+            Universal remote (similar linked)\n
+            <span class="component-description"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/GE-24927-Universal-Compatible-Ergonomic/dp/B000246UEE">https://www.amazon.com/GE-24927-Universal-Compatible-Ergonomic/dp/B000246UEE</a></span>\n
+       </span>\n
+    </li>\n
+\n
+    <li class="component-164620">\n
+        <span class="component-number">1</span>\n
+        <span class="component-x">×</span>\n
+        <span class="component-content">\n
+            DAP Rapid Fuse All Purpose Adhesive\n
+            <span class="component-description"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/DAP-00155-Curing-Purpose-Adhesive/dp/B01DA6X0E8">https://www.amazon.com/DAP-00155-Curing-Purpose-Adhesive/dp/B01DA6X0E8</a></span>\n
+       </span>\n
+    </li>\n
+\n
+    <li class="component-164621">\n
+        <span class="component-number">1</span>\n
+        <span class="component-x">×</span>\n
+        <span class="component-content">\n
+            Loctite GO2 Glue\n
+            <span class="component-description"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Loctite-Purpose-Adhesive-3-5-Fluid-1624412/dp/B0762KDTLD">https://www.amazon.com/Loctite-Purpose-Adhesive-3-5-Fluid-1624412/dp/B0762KDTLD</a></span>\n
+       </span>\n
+    </li>\n
+\n
+    <li class="component-164622">\n
+        <span class="component-number">1</span>\n
+        <span class="component-x">×</span>\n
+        <span class="component-content">\n
+            Wire\n
+            <span class="component-description"></span>\n
+       </span>\n
+    </li>\n
+\n
+                \n
+            </ul>\n
+            <p>\n
+                \n
+                \n
+                    <a href="/project/159735/components" class="grey-gold-button medium-button show">View all 7 components</a>\n
+                \n
+            </p>\n
+        </section>\n
+    \n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    \n
+        <section class="section section-instructions">\n
+            <h2 id="menu-instructions" class="section-title">\n
+                Build Instructions\n
+                \n
+                    <a href="" class="section-collapse j-instructions-collapse">\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-arrow-up">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.26l4.79 4.79a.706.706 0 0 0 1-.997l-5.14-5.14a.705.705 0 0 0-.652-.197.712.712 0 0 0-.646.196l-5.14 5.14a.707.707 0 0 0 .999.999L8 6.26z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon icon-arrow-down hide" style="display: none;">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 9.702l4.79-4.79a.707.707 0 0 1 1 .999l-5.14 5.14a.705.705 0 0 1-.652.197.712.712 0 0 1-.646-.196l-5.14-5.14a.703.703 0 0 1-.004-1.002.708.708 0 0 1 1.003.004L8 9.702z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        <span class="collapse-text">Collapse instructions</span>\n
+                    </a>\n
+                \n
+            </h2>\n
+            \n
+            \n
+                <ul class="instructions-list post-content section-instructions-list j-instructions-list">\n
+                    \n
+                        <li>\n
+                            <span class="instruction-number">1</span>\n
+                            <!-- Default to step number if no title -->\n
+                            \n
+                            <div class="instruction-list-title">The lucky couple:  a clearanced universal remote and a shake flashlight.</div>\n
+                            <div class="instruction-list-item"><figure><a href="https://cdn.hackaday.io/images/7515861531613922552.jpeg" target="_blank"><img data-src="https://cdn.hackaday.io/images/7515861531613922552.jpeg" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a></figure></div>\n
+                        </li>\n
+                    \n
+                        <li>\n
+                            <span class="instruction-number">2</span>\n
+                            <!-- Default to step number if no title -->\n
+                            \n
+                            <div class="instruction-list-title">Extract the guts.</div>\n
+                            <div class="instruction-list-item"><figure><a href="https://cdn.hackaday.io/images/5468241531614738092.jpeg" target="_blank"><img data-src="https://cdn.hackaday.io/images/5468241531614738092.jpeg" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a></figure></div>\n
+                        </li>\n
+                    \n
+                        <li>\n
+                            <span class="instruction-number">3</span>\n
+                            <!-- Default to step number if no title -->\n
+                            \n
+                            <div class="instruction-list-title">Chop the superficial bits from the top of the shake coil assembly to fit the remote casing.</div>\n
+                            <div class="instruction-list-item"><figure><a href="https://cdn.hackaday.io/images/1925351531614847934.jpeg" target="_blank"><img data-src="https://cdn.hackaday.io/images/1925351531614847934.jpeg" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a></figure></div>\n
+                        </li>\n
+                    \n
+                </ul>\n
+            \n
+            <p>\n
+                \n
+                \n
+                    <a href="/project/159735/instructions" class="grey-gold-button medium-button show">View all 24 instructions</a>\n
+                \n
+            </p>\n
+        </section>\n
+    \n
+\n
+    \n
+    \n
+\n
+\n
+\n
+\n
+    <section class="section section-share">\n
+        <h2 class="section-title">Enjoy this project?</h2>\n
+        Share \n
+        <span class="gray-link">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-link-circle--share">\n
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10.78 5.371a1.67 1.67 0 0 0-2.357 0L7.33 6.464a1.67 1.67 0 0 0 0 2.356c.076.076.155.14.241.196l.554-.554a.936.936 0 0 1-.26-.177.911.911 0 0 1-.003-1.29l1.093-1.092c.354-.355.935-.355 1.289 0s.354.934 0 1.289l-.818.818c.068.14.158.463.026.999a1.79 1.79 0 0 0 .227-.185l1.093-1.093a1.66 1.66 0 0 0 .007-2.36zM8.547 7.294l-.54.539c.012.007.027.01.038.018a.915.915 0 0 1 .14 1.402l-1.093 1.094c-.355.354-.935.354-1.29 0s-.354-.935 0-1.29l.807-.806c-.075-.177-.14-.501-.022-1.006-.08.056-.159.116-.227.188L5.268 8.526a1.67 1.67 0 0 0 0 2.356c.324.324.75.486 1.18.486s.852-.162 1.18-.486L8.72 9.79a1.67 1.67 0 0 0 0-2.356c-.056-.053-.117-.094-.173-.14zm5.475.747a5.995 5.995 0 0 1-5.996 5.995 5.995 5.995 0 0 1-5.995-5.995 5.995 5.995 0 0 1 5.995-5.995 5.995 5.995 0 0 1 5.996 5.995z"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+        </span>\n
+        <a href="https://twitter.com/intent/tweet?url=https://hackaday.io/project/159735-the-undead-remote&amp;text=The Undead Remote by oneohm&amp;related=hackadayio&amp;via=hackadayio" target="_blank" alt="Share on twitter" class="gray-link">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-twitter-circle--share">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.023 14.03a6 6 0 1 0-.002-12.002 6 6 0 0 0 .002 12.002zm.834-8.345c-.524.19-.855.683-.818 1.22l.012.208-.21-.025a3.405 3.405 0 0 1-1.994-.983L5.57 5.83l-.07.203c-.15.453-.055.932.26 1.254.167.178.13.203-.16.097-.1-.034-.188-.06-.197-.046-.03.03.072.415.15.568.11.21.332.42.575.542l.206.097-.243.005c-.234 0-.242.004-.217.093.084.275.415.568.783.695l.26.09-.226.134c-.335.195-.73.305-1.123.314-.19.004-.344.02-.344.034 0 .042.51.28.81.373.892.275 1.952.156 2.748-.314.567-.336 1.133-1 1.397-1.645.142-.343.285-.97.285-1.27 0-.196.012-.22.247-.454.137-.135.267-.283.292-.326.042-.08.038-.08-.176-.008-.356.127-.406.11-.23-.08.13-.136.285-.382.285-.454 0-.013-.062.008-.133.047-.076.04-.243.104-.37.143l-.225.072-.206-.14a1.794 1.794 0 0 0-.356-.187 1.43 1.43 0 0 0-.733.017z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+        </a> \n
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://hackaday.io/project/159735-the-undead-remote" target="_blank" alt="Share on Facebook" class="gray-link">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-facebook-circle--share">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.023 14.03a6 6 0 1 0-.002-12.002 6 6 0 0 0 .002 12.002zm-.847-2.737V8.028h-.674V6.904h.674v-.676c0-.917.38-1.463 1.462-1.463h.9V5.89h-.563c-.42 0-.45.157-.45.45v.563h1.02l-.12 1.125h-.9v3.265h-1.35z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+        </a> \n
+        <a href="https://plus.google.com/share?url=https://hackaday.io/project/159735-the-undead-remote&amp;h1=en-US" target="_blank" alt="Share on Google+" class="gray-link">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-google-circle--share">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.023 14.03a6 6 0 1 0-.002-12.002 6 6 0 0 0 .002 12.002zm4.774-7.64h-1.42v1.58h-.67V6.39H9.143v-.655h1.562V4.172h.67v1.563h1.193c.087.213.164.432.227.656zM2.023 8.03c0 1.48.537 2.835 1.426 3.882.167-.282.427-.56.812-.788.87-.532 2.04-.603 2.674-.643-.196-.25-.422-.517-.422-.954 0-.236.07-.377.14-.543-.155.015-.306.03-.447.03-1.482 0-2.322-1.106-2.322-2.196 0-.644.297-1.358.895-1.876.8-.656 1.75-.768 2.503-.768h2.88l-.894.504h-.866c.322.265.99.825.99 1.89 0 1.035-.588 1.522-1.17 1.985-.187.182-.393.378-.393.684 0 .307.207.478.363.604l.503.392c.618.512 1.176.99 1.176 1.955 0 .636-.297 1.275-.876 1.765-.31.05-.63.078-.956.08.587-.26.892-.73.892-1.297 0-.714-.458-1.09-1.523-1.85-.112-.01-.182-.01-.323-.01-.126 0-.88.025-1.468.22-.307.112-1.202.45-1.202 1.444 0 .108.012.213.034.314a5.989 5.989 0 0 1-2.43-4.82zm5.793.2c.322-.323.347-.77.347-1.02 0-1.01-.598-2.576-1.76-2.576-.36 0-.753.182-.98.462-.236.293-.306.67-.306 1.032 0 .94.543 2.493 1.75 2.493.346 0 .723-.17.95-.39z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+        </a>\n
+    </section>\n
+\n
+\n
+    \n
+    <section class="section last">\n
+    <h2 id="j-discussions-title" class="section-title">Discussions</h2>\n
+\n
+    <form id="j-discussion-add-top" action="/discussions/add" name="add-comment" method="POST" class="skip-global-form discussion-form j-discussion-add hide">\n
+\n
+        <div class="redactor-box" role="application" dir="ltr"><span class="redactor-voice-label" id="redactor-voice-0" aria-hidden="false">Rich text editor</span><div class="redactor-layer redactor-styles redactor-layer-img-edit redactor-in redactor-relative redactor-placeholder" aria-labelledby="redactor-voice-0" role="presentation" id="redactor-uuid-0" contenteditable="true" spellcheck="true" dir="ltr" style="min-height: 78px;" placeholder="Add your comment"><p>​</p></div><textarea placeholder="Add your comment" name="comment" class="redactor-comment textarea-field" style="display: none;"></textarea></div>\n
+\n
+        <div class="error-message alert-danger hide" id="addCommentErrorMessageTop"></div>\n
+\n
+        <input type="hidden" name="categoryId" value="159735">\n
+        <input type="hidden" name="category" value="project">\n
+        <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+        <input type="hidden" name="replyTo" value="0">\n
+\n
+        <input type="submit" class="button-grey-gold-medium" value="Post comment">\n
+    </form>\n
+\n
+    <div id="discussion-list" class="discussion-list">\n
+        \n
+<p>\n
+    </p><div class="signup-holder textarea-holder">\n
+        <textarea placeholder="Log In or become a member to leave your comment" name="comment" class="editable input-comment" style="height: 55.6px;"></textarea>\n
+    </div>\n
+    <a href="#" class="button-grey-gold-small login-comment login-button">Log In/Sign up to comment</a>\n
+<p></p>\n
+<div class="modal-content-holder login-modal" id="login-modal">\n
+    <div class="submissions-close modal-close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </div>\n
+    <div class="signup-holder">\n
+        <h2>Become a member</h2>\n
+        <p>In order to follow projects &amp; hackers or give likes\n
+        <br>you need to create an account.</p>\n
+        <form action="/signup" method="POST">\n
+            <fieldset class="form-left">\n
+                <input type="text" class="input-field" placeholder="Enter your email address" required="" name="email">\n
+                <input type="password" class="input-field" placeholder="Pick a secure password" required="" name="password">\n
+            </fieldset>\n
+            <fieldset class="form-right">\n
+                <button class="gold-gold-button signup" type="submit">Sign up</button>\n
+          </fieldset>\n
+          <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+          <input class="input-field" placeholder="Invitation Code" required="" name="invitation_code" value="5Ad0ix2-b96J" type="hidden">\n
+        </form>\n
+        <a id="login-modal-signin" href="/signin">Already a member?</a>\n
+    </div>\n
+</div>\n
+\n
+\n
+\n
+\n
+\n
+    \n
+    \n
+\n
+    <div id="j-discussion-110921" data-level="1" class="discussions-item" style="margin-left: 0px;">\n
+        <div class="discussions-item-image">\n
+\n
+            <a href="/hacker/112047">\n
+                <img src="https://cdn.hackaday.io/images/resize/100x100/default-avatar.png" alt="">\n
+            </a>\n
+\n
+            \n
+        </div>\n
+        <div class="discussions-item-body">\n
+            <small class="authorship">\n
+\n
+                <span class="identity-card" data-id="112047"><a href="/hacker/112047-techfrk">techfrk</a></span>\n
+\n
+                wrote <a class="gray-link" href="/project/159735-the-undead-remote/discussion-110921"><span class="time-card" style="margin: 0" title="07/22/2018 at 16:04">2 days ago</span></a>\n
+\n
+                <span id="comment-points-holder-110921" class="hide">\n
+                    • <span id="comment-points-110921">\n
+                         point\n
+                    </span>\n
+                </span>\n
+\n
+            </small>\n
+            <div class="comment-content">\n
+                <div id="comment-110921-content">\n
+                    <p>That would be good for the lady's&nbsp; ;) ...I was thinking something similar to a charge mat or a dock. Good work!</p>\n
+                </div>\n
+                <p id="comment-110921-editor" class="hide"></p>\n
+            </div>\n
+            <p>\n
+                <span class="comment-actions" id="actions-110921">\n
+                    \n
+                    \n
+                    &nbsp;\n
+                </span>\n
+                <span class="delete-confirm hide"><span class="delete-q">Are you sure?</span> <a href="#" class="delete-yes">yes</a> | <a href="#" class="delete-no">no</a></span>\n
+            </p>\n
+        </div>\n
+    </div>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+<script type="text/javascript">\n
+\n
+    var pageIndex = 0;\n
+\n
+\n
+</script>\n
+    </div>\n
+\n
+    \n
+\n
+</section>\n
+\n
+\n
+\n
+\n
+</div>\n
+\n
+    </div>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <div class="container">\n
+        <section class="section-recommendations">\n
+            <h2 class="section-title">Similar Projects</h2>\n
+            <div>\n
+                \n
+                    \n
+\n
+<div class="project-item  ">\n
+\n
+    \n
+        <ul class="submissions-icons">\n
+            \n
+                \n
+            \n
+            \n
+        </ul>\n
+    \n
+\n
+\n
+    <a href="/project/22030-airvolt" class="item-link">\n
+        <div title="AirVolt by Kirill" class="project-item-cover " style="background-image: url(https://cdn.hackaday.io/images/resize/600x600/2496201494844116715.png)">\n
+\n
+        </div>\n
+        \n
+                <div class="project-item-stats">\n
+                    \n
+                    \n
+                        <span class="action-view-count" title="View Count">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-eye">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.014 12.122c4.036 0 7.002-4.146 7.002-4.146S11.694 3.83 8.014 3.83c-3.68 0-7.002 4.146-7.002 4.146s2.965 4.146 7.002 4.146zm0-1.572a2.573 2.573 0 1 0-.002-5.146 2.573 2.573 0 0 0 .002 5.146zm0-1a1.573 1.573 0 0 0 0-3.146 1.572 1.572 0 0 0 0 3.145z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            199\n
+                        </span>\n
+                    \n
+\n
+                    <span class="action-view" title="Followers">\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-users">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.48 10.79c.347-.278.478-.604.478-1.068 0-.496-.396-.335-.57-1.243-.073-.378-.423-.007-.49-.868 0-.343.19-.428.19-.428s-.096-.507-.134-.898c-.047-.486.29-1.743 2.094-1.743 1.802 0 2.14 1.257 2.093 1.743-.037.39-.134.898-.134.898s.19.085.19.428c-.066.86-.416.49-.49.867-.173.908-.57.746-.57 1.242 0 .826.416 1.212 1.715 1.67 1.303.46 2.15.927 2.15 1.246v1.072H0v-1.34c0-.4 1.042-.984 2.645-1.558 1.6-.572 2.11-1.054 2.11-2.087 0-.62-.488-.418-.703-1.554-.09-.47-.52-.006-.602-1.082 0-.43.235-.535.235-.535s-.12-.634-.166-1.123c-.06-.608.357-2.18 2.575-2.18 2.22 0 2.635 1.572 2.577 2.18-.047.49-.167 1.123-.167 1.123s.235.106.235.535c-.082 1.076-.513.612-.602 1.083-.214 1.137-.702.934-.702 1.555 0 1.02.497 1.502 2.045 2.064z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        3\n
+                    </span>\n
+\n
+                    \n
+\n
+                    \n
+                        <span class="action-skull" title="Likes">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-skull">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M5.508 5.892l.583-.582-.68-.627c-.522-.48-.703-.753-.77-1.166a1.694 1.694 0 0 0-1.41-1.395l-.544-.076.524.503.524.5-.51.577c-.28.317-.558.63-.618.7-.062.067-.3-.04-.542-.242-.238-.2-.48-.364-.54-.364-.234 0 .048.726.432 1.11.32.318.53.407.98.41.484 0 .686.1 1.264.613.38.336.697.614.707.617.01.003.28-.257.6-.578zm6.173.045c.635-.55.877-.676 1.292-.675a1.59 1.59 0 0 0 1.49-1.07c.09-.27.136-.514.106-.545-.03-.03-.286.134-.567.365l-.51.42-.606-.665-.607-.665.505-.535.506-.534-.544.083c-.71.108-1.296.69-1.41 1.402-.07.423-.25.688-.826 1.215l-.737.673.52.59c.286.325.54.597.565.604.025.007.396-.29.826-.663zm-2.137 3.52c-.06-.103-.29-.273-.51-.38-.603-.29-.745-.598-.434-.94.376-.418 1.082-.38 1.442.078.34.433.36.71.07 1.12-.244.352-.412.387-.57.12zm-3.82-.12c-.288-.41-.27-.69.07-1.122.36-.457 1.066-.496 1.444-.08.31.344.168.653-.433.943-.22.106-.45.276-.51.378-.158.266-.326.23-.57-.12zm1.85 1.21c0-.378.278-.927.44-.873.194.064.41.78.295.97-.045.072-.138.047-.21-.058-.103-.145-.148-.148-.202-.014-.096.235-.322.217-.322-.026zm-.275.997c0-.24.253-.306.23-.016-.012.18-.015.638.528.655.542.017.49-.384.493-.572.002-.36.246-.28.246.012 0 .296.22.545.6.547.38 0 .38-.323.38-.624 0-.252.146-.59.366-.85.535-.636.736-1.22.736-2.135 0-2.387-2.244-3.872-4.32-2.857-1.917.94-2.3 3.69-.72 5.168.198.184.36.466.36.627.01.535.12.67.554.676.435.007.445-.366.546-.63zm5.458 2.057l-.51-.447.567-.654c.31-.36.634-.655.72-.655.084 0 .326.166.538.37.463.442.627.344.39-.23-.277-.666-.894-1.104-1.556-1.104-.47 0-.662-.09-1.108-.515-.323-.31-.563-.45-.6-.353-.032.09-.236.408-.453.706l-.394.544.47.456c.26.25.47.56.47.684 0 .857.754 1.645 1.573 1.646h.402l-.51-.447zm-8.896.24c.443-.23.822-.842.822-1.327 0-.17.195-.51.432-.756l.432-.446-.328-.402c-.18-.222-.4-.52-.487-.662-.148-.246-.18-.237-.618.17-.346.324-.63.45-1.133.503-.77.08-1.256.47-1.456 1.17-.153.533-.03.563.404.1.178-.19.4-.345.494-.345.094 0 .43.294.747.654l.574.653-.518.448-.518.448h.375c.205 0 .555-.094.777-.21z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            3\n
+                        </span>\n
+                    \n
+                </div>\n
+        \n
+\n
+        <div class="project-item-title ">\n
+            \n
+                AirVolt will be first radio wave charger with the radius of operation of up to 9 meters.\n
+            \n
+        </div>\n
+\n
+        \n
+\n
+        \n
+\n
+    </a>\n
+\n
+    <div class="project-item-headline">\n
+        <span class="project-owner hide">Project Owner</span>\n
+        <span class="project-owner hide">Contributor</span>\n
+        <h3 class="element-title">\n
+            <a href="/project/22030-airvolt" title="AirVolt">AirVolt</a>\n
+        </h3>\n
+        <p><span class="identity-card" data-id="220637"><a href="/KirillAirVolt"><img src="https://cdn.hackaday.io/images/resize/24x24/default-avatar.png" alt="Kirill">Kirill</a></span></p>\n
+\n
+    </div>\n
+</div>\n
+\n
+                \n
+                    \n
+\n
+<div class="project-item  ">\n
+\n
+    \n
+\n
+\n
+    <a href="/project/7290-the-hackpack" class="item-link">\n
+        <div title="The Hackpack by Alpha Charlie" class="project-item-cover " style="background-image: url(https://cdn.hackaday.io/images/resize/600x600/6015991440091275471.jpg)">\n
+\n
+        </div>\n
+        \n
+                <div class="project-item-stats">\n
+                    \n
+                    \n
+                        <span class="action-view-count" title="View Count">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-eye">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.014 12.122c4.036 0 7.002-4.146 7.002-4.146S11.694 3.83 8.014 3.83c-3.68 0-7.002 4.146-7.002 4.146s2.965 4.146 7.002 4.146zm0-1.572a2.573 2.573 0 1 0-.002-5.146 2.573 2.573 0 0 0 .002 5.146zm0-1a1.573 1.573 0 0 0 0-3.146 1.572 1.572 0 0 0 0 3.145z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            3.7k\n
+                        </span>\n
+                    \n
+\n
+                    <span class="action-view" title="Followers">\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-users">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.48 10.79c.347-.278.478-.604.478-1.068 0-.496-.396-.335-.57-1.243-.073-.378-.423-.007-.49-.868 0-.343.19-.428.19-.428s-.096-.507-.134-.898c-.047-.486.29-1.743 2.094-1.743 1.802 0 2.14 1.257 2.093 1.743-.037.39-.134.898-.134.898s.19.085.19.428c-.066.86-.416.49-.49.867-.173.908-.57.746-.57 1.242 0 .826.416 1.212 1.715 1.67 1.303.46 2.15.927 2.15 1.246v1.072H0v-1.34c0-.4 1.042-.984 2.645-1.558 1.6-.572 2.11-1.054 2.11-2.087 0-.62-.488-.418-.703-1.554-.09-.47-.52-.006-.602-1.082 0-.43.235-.535.235-.535s-.12-.634-.166-1.123c-.06-.608.357-2.18 2.575-2.18 2.22 0 2.635 1.572 2.577 2.18-.047.49-.167 1.123-.167 1.123s.235.106.235.535c-.082 1.076-.513.612-.602 1.083-.214 1.137-.702.934-.702 1.555 0 1.02.497 1.502 2.045 2.064z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        779\n
+                    </span>\n
+\n
+                    \n
+\n
+                    \n
+                        <span class="action-skull" title="Likes">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-skull">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M5.508 5.892l.583-.582-.68-.627c-.522-.48-.703-.753-.77-1.166a1.694 1.694 0 0 0-1.41-1.395l-.544-.076.524.503.524.5-.51.577c-.28.317-.558.63-.618.7-.062.067-.3-.04-.542-.242-.238-.2-.48-.364-.54-.364-.234 0 .048.726.432 1.11.32.318.53.407.98.41.484 0 .686.1 1.264.613.38.336.697.614.707.617.01.003.28-.257.6-.578zm6.173.045c.635-.55.877-.676 1.292-.675a1.59 1.59 0 0 0 1.49-1.07c.09-.27.136-.514.106-.545-.03-.03-.286.134-.567.365l-.51.42-.606-.665-.607-.665.505-.535.506-.534-.544.083c-.71.108-1.296.69-1.41 1.402-.07.423-.25.688-.826 1.215l-.737.673.52.59c.286.325.54.597.565.604.025.007.396-.29.826-.663zm-2.137 3.52c-.06-.103-.29-.273-.51-.38-.603-.29-.745-.598-.434-.94.376-.418 1.082-.38 1.442.078.34.433.36.71.07 1.12-.244.352-.412.387-.57.12zm-3.82-.12c-.288-.41-.27-.69.07-1.122.36-.457 1.066-.496 1.444-.08.31.344.168.653-.433.943-.22.106-.45.276-.51.378-.158.266-.326.23-.57-.12zm1.85 1.21c0-.378.278-.927.44-.873.194.064.41.78.295.97-.045.072-.138.047-.21-.058-.103-.145-.148-.148-.202-.014-.096.235-.322.217-.322-.026zm-.275.997c0-.24.253-.306.23-.016-.012.18-.015.638.528.655.542.017.49-.384.493-.572.002-.36.246-.28.246.012 0 .296.22.545.6.547.38 0 .38-.323.38-.624 0-.252.146-.59.366-.85.535-.636.736-1.22.736-2.135 0-2.387-2.244-3.872-4.32-2.857-1.917.94-2.3 3.69-.72 5.168.198.184.36.466.36.627.01.535.12.67.554.676.435.007.445-.366.546-.63zm5.458 2.057l-.51-.447.567-.654c.31-.36.634-.655.72-.655.084 0 .326.166.538.37.463.442.627.344.39-.23-.277-.666-.894-1.104-1.556-1.104-.47 0-.662-.09-1.108-.515-.323-.31-.563-.45-.6-.353-.032.09-.236.408-.453.706l-.394.544.47.456c.26.25.47.56.47.684 0 .857.754 1.645 1.573 1.646h.402l-.51-.447zm-8.896.24c.443-.23.822-.842.822-1.327 0-.17.195-.51.432-.756l.432-.446-.328-.402c-.18-.222-.4-.52-.487-.662-.148-.246-.18-.237-.618.17-.346.324-.63.45-1.133.503-.77.08-1.256.47-1.456 1.17-.153.533-.03.563.404.1.178-.19.4-.345.494-.345.094 0 .43.294.747.654l.574.653-.518.448-.518.448h.375c.205 0 .555-.094.777-.21z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            26\n
+                        </span>\n
+                    \n
+                </div>\n
+        \n
+\n
+        <div class="project-item-title ">\n
+            \n
+                A backpack for hackers with built-in power, SoC, Wifi, Bluetooth, SDR. and a gear selection for mobile hardware and software hacking.\n
+            \n
+        </div>\n
+\n
+        \n
+\n
+        \n
+\n
+    </a>\n
+\n
+    <div class="project-item-headline">\n
+        <span class="project-owner hide">Project Owner</span>\n
+        <span class="project-owner hide">Contributor</span>\n
+        <h3 class="element-title">\n
+            <a href="/project/7290-the-hackpack" title="The Hackpack">The Hackpack</a>\n
+        </h3>\n
+        <p><span class="identity-card" data-id="48212"><a href="/alphacharlie"><img src="https://cdn.hackaday.io/images/resize/24x24/8413471501699695553.jpeg" alt="Alpha Charlie">Alpha Charlie</a></span></p>\n
+\n
+    </div>\n
+</div>\n
+\n
+                \n
+                    \n
+\n
+<div class="project-item  ">\n
+\n
+    \n
+        <ul class="submissions-icons">\n
+            \n
+                \n
+                    <li>\n
+                        <a href="/submissions/prize2015/list" class="submission-icon submission-icon-5">The 2015 Hackaday Prize</a>\n
+                    </li>\n
+                \n
+            \n
+            \n
+        </ul>\n
+    \n
+\n
+\n
+    <a href="/project/5489-jsoknit-2015" class="item-link">\n
+        <div title="Jsoknit 2015 by Daniel Sikar" class="project-item-cover " style="background-image: url(https://cdn.hackaday.io/images/resize/600x600/5827771439682583041.jpg)">\n
+\n
+        </div>\n
+        \n
+                <div class="project-item-stats">\n
+                    \n
+                    \n
+                        <span class="action-view-count" title="View Count">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-eye">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.014 12.122c4.036 0 7.002-4.146 7.002-4.146S11.694 3.83 8.014 3.83c-3.68 0-7.002 4.146-7.002 4.146s2.965 4.146 7.002 4.146zm0-1.572a2.573 2.573 0 1 0-.002-5.146 2.573 2.573 0 0 0 .002 5.146zm0-1a1.573 1.573 0 0 0 0-3.146 1.572 1.572 0 0 0 0 3.145z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            874\n
+                        </span>\n
+                    \n
+\n
+                    <span class="action-view" title="Followers">\n
+                        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-users">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.48 10.79c.347-.278.478-.604.478-1.068 0-.496-.396-.335-.57-1.243-.073-.378-.423-.007-.49-.868 0-.343.19-.428.19-.428s-.096-.507-.134-.898c-.047-.486.29-1.743 2.094-1.743 1.802 0 2.14 1.257 2.093 1.743-.037.39-.134.898-.134.898s.19.085.19.428c-.066.86-.416.49-.49.867-.173.908-.57.746-.57 1.242 0 .826.416 1.212 1.715 1.67 1.303.46 2.15.927 2.15 1.246v1.072H0v-1.34c0-.4 1.042-.984 2.645-1.558 1.6-.572 2.11-1.054 2.11-2.087 0-.62-.488-.418-.703-1.554-.09-.47-.52-.006-.602-1.082 0-.43.235-.535.235-.535s-.12-.634-.166-1.123c-.06-.608.357-2.18 2.575-2.18 2.22 0 2.635 1.572 2.577 2.18-.047.49-.167 1.123-.167 1.123s.235.106.235.535c-.082 1.076-.513.612-.602 1.083-.214 1.137-.702.934-.702 1.555 0 1.02.497 1.502 2.045 2.064z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                        742\n
+                    </span>\n
+\n
+                    \n
+\n
+                    \n
+                        <span class="action-skull" title="Likes">\n
+                            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-skull">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M5.508 5.892l.583-.582-.68-.627c-.522-.48-.703-.753-.77-1.166a1.694 1.694 0 0 0-1.41-1.395l-.544-.076.524.503.524.5-.51.577c-.28.317-.558.63-.618.7-.062.067-.3-.04-.542-.242-.238-.2-.48-.364-.54-.364-.234 0 .048.726.432 1.11.32.318.53.407.98.41.484 0 .686.1 1.264.613.38.336.697.614.707.617.01.003.28-.257.6-.578zm6.173.045c.635-.55.877-.676 1.292-.675a1.59 1.59 0 0 0 1.49-1.07c.09-.27.136-.514.106-.545-.03-.03-.286.134-.567.365l-.51.42-.606-.665-.607-.665.505-.535.506-.534-.544.083c-.71.108-1.296.69-1.41 1.402-.07.423-.25.688-.826 1.215l-.737.673.52.59c.286.325.54.597.565.604.025.007.396-.29.826-.663zm-2.137 3.52c-.06-.103-.29-.273-.51-.38-.603-.29-.745-.598-.434-.94.376-.418 1.082-.38 1.442.078.34.433.36.71.07 1.12-.244.352-.412.387-.57.12zm-3.82-.12c-.288-.41-.27-.69.07-1.122.36-.457 1.066-.496 1.444-.08.31.344.168.653-.433.943-.22.106-.45.276-.51.378-.158.266-.326.23-.57-.12zm1.85 1.21c0-.378.278-.927.44-.873.194.064.41.78.295.97-.045.072-.138.047-.21-.058-.103-.145-.148-.148-.202-.014-.096.235-.322.217-.322-.026zm-.275.997c0-.24.253-.306.23-.016-.012.18-.015.638.528.655.542.017.49-.384.493-.572.002-.36.246-.28.246.012 0 .296.22.545.6.547.38 0 .38-.323.38-.624 0-.252.146-.59.366-.85.535-.636.736-1.22.736-2.135 0-2.387-2.244-3.872-4.32-2.857-1.917.94-2.3 3.69-.72 5.168.198.184.36.466.36.627.01.535.12.67.554.676.435.007.445-.366.546-.63zm5.458 2.057l-.51-.447.567-.654c.31-.36.634-.655.72-.655.084 0 .326.166.538.37.463.442.627.344.39-.23-.277-.666-.894-1.104-1.556-1.104-.47 0-.662-.09-1.108-.515-.323-.31-.563-.45-.6-.353-.032.09-.236.408-.453.706l-.394.544.47.456c.26.25.47.56.47.684 0 .857.754 1.645 1.573 1.646h.402l-.51-.447zm-8.896.24c.443-.23.822-.842.822-1.327 0-.17.195-.51.432-.756l.432-.446-.328-.402c-.18-.222-.4-.52-.487-.662-.148-.246-.18-.237-.618.17-.346.324-.63.45-1.133.503-.77.08-1.256.47-1.456 1.17-.153.533-.03.563.404.1.178-.19.4-.345.494-.345.094 0 .43.294.747.654l.574.653-.518.448-.518.448h.375c.205 0 .555-.094.777-.21z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+                            1\n
+                        </span>\n
+                    \n
+                </div>\n
+        \n
+\n
+        <div class="project-item-title hasBadge">\n
+            \n
+                Simple embedded software function definition JSON framework.\n
+            \n
+        </div>\n
+\n
+        \n
+\n
+        \n
+\n
+    </a>\n
+\n
+    <div class="project-item-headline">\n
+        <span class="project-owner hide">Project Owner</span>\n
+        <span class="project-owner hide">Contributor</span>\n
+        <h3 class="element-title">\n
+            <a href="/project/5489-jsoknit-2015" title="Jsoknit 2015">Jsoknit 2015</a>\n
+        </h3>\n
+        <p><span class="identity-card" data-id="64757"><a href="/dsikar"><img src="https://cdn.hackaday.io/images/resize/24x24/9962031439683126396.jpg" alt="Daniel Sikar">Daniel Sikar</a></span></p>\n
+\n
+    </div>\n
+</div>\n
+\n
+                \n
+            </div>\n
+        </section>\n
+\n
+    </div>\n
+\n
+    \n
+\n
+\n
+\n
+\n
+    <div class="page-basic-info-static page-basic-info-static-dark guest-message-signup">\n
+        <h1>Does this project spark your interest?</h1>\n
+        <p class="page-basic-info-text"><a href="javascript:void(0)">Become a member</a>  to follow this project and never miss any updates</p>\n
+        \n
+\n
+<div class="signup-holder">\n
+    <form method="POST" action="/signup?returnUrl=/project/159735-the-undead-remote">\n
+        <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+\n
+        \n
+        <input type="text" class="input-field input-email" placeholder="Your email address" name="email"><input type="password" class="input-field input-password" placeholder="Password" name="password"><button class="black-gold-button signup" type="submit">\n
+                Become a member\n
+        </button>\n
+        <input required="" class="input-field" placeholder="Invitation Code" name="invitation_code" value="5Ad0ix2-b96J" type="hidden">\n
+    </form>\n
+</div>\n
+\n
+    </div>\n
+\n
+\n
+    <div id="footer" class="footer ">\n
+    \n
+        <a href="#header" class="back-to-top">\n
+            \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-long-arrow-up">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8.023 2.03L4.78 5.26h2.688v1.11h1.11V5.26h2.688L8.023 2.03zm-.555 5.505V8.92h1.11V7.534H7.47zm0 2.56v1.383h1.11v-1.384H7.47zm0 2.55v1.384h1.11v-1.385H7.47z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+ Going up?\n
+        </a>\n
+    \n
+    <p>\n
+        <a href="https://hackaday.com/about/">About Us</a>\n
+        <a href="mailto:projects-contact@hackaday.com">Contact Hackaday.io</a>\n
+        <a href="/project/37">Give Feedback</a> <a href="/tos">Terms of Use</a>\n
+        <a href="https://supplyframe.com/company/privacy">Privacy Policy</a>\n
+        <a href="https://dev.hackaday.io/" target="_blank" rel="noopener noreferrer">Hackaday API</a>\n
+    </p>\n
+    <p><a id="footer--home" href="/">© 2018 Hackaday</a></p>\n
+\n
+    \n
+</div>\n
+\n
+\n
+<script type="text/javascript">\n
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n
+\n
+    ga('create', 'UA-47229708-1', 'auto');\n
+\n
+    var dimensionValue = 'nonregistered';\n
+    ga('set', 'dimension1', dimensionValue);\n
+    ga('require', 'displayfeatures');\n
+\n
+    ga('send', 'pageview');\n
+</script>\n
+\n
+<script>\n
+    var csrftoken = 'Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU';\n
+</script>\n
+\n
+\n
+<img src="//analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&amp;zone=HIO_project&amp;extra=logged=false|haveAccountCookie=0|&amp;ab=undefined" alt="" class="sf-impression">\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+    \n
+<div class="j-modal-confirmation modal-background"></div>\n
+<div class="j-modal-confirmation modal-content-holder">\n
+    <div class="close"><a href="" id="modal-cancel" title="Close"><span class="modal-close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </span></a></div>\n
+    <p class="text-center" id="modal-message"></p>\n
+    <p class="text-center">\n
+        <a class="grey-grey-button" id="modal-yes" href="javascript:void(0);" data-projecttype="project" data-projectid="159735" data-pageid="" data-pagetype="">Yes, delete it</a>\n
+        <a class="gold-gold-button" id="modal-cancel" href="">Cancel</a>\n
+    </p>\n
+</div>\n
+    <div id="submission-popup-back"></div>\n
+    <div id="submission-popup"></div>\n
+\n
+    <div id="modal-report-back" class="modal-background"></div>\n
+<div id="modal-report" class="modal-content-holder container">\n
+    <a href="javascript:void(0);" class="modal-close" title="Close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </a>\n
+    <form action="/report/project" class="j-modal-form">\n
+        <h2>Report project as inappropriate</h2>\n
+\n
+        <p class="intro-text">\n
+            You are about to report the project "<b>The Undead Remote</b>", please tell us the reason.\n
+        </p>\n
+\n
+        <textarea name="comment" class="j-report-comment" placeholder="Why do you report the project as inappropriate"></textarea>\n
+\n
+        <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+        \n
+            <input type="hidden" name="projectId" value="159735">\n
+        \n
+        <div class="modal-footer">\n
+            <input type="submit" value="Report" class="gold-gold-button submit-button">\n
+        </div>\n
+        <div class="j-modal-form-message"></div>\n
+    </form>\n
+    <div class="j-modal-message hide"></div>\n
+</div>\n
+\n
+    \n
+\n
+\n
+<div id="modal-contributor-apply-back" class="modal-background"></div>\n
+<div id="modal-contributor-apply" class="modal-content-holder container">\n
+    <a href="javascript:void(0);" class="modal-close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </a>\n
+    <form id="contributor-apply-form">\n
+        <h2>Send message</h2>\n
+\n
+        <textarea name="message" class="j-report-comment">Hello,\n
+\n
+I really like your project and I think I have skills to help you.\n
+        </textarea>\n
+        <p class="application-success">Your application has been submitted.</p>\n
+        <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+        <input type="hidden" name="projectId" value="159735">\n
+\n
+        <div class="modal-footer">\n
+            <div class="error-message hide" id="contributor-apply-error"><p></p></div>\n
+            <input type="submit" value="Send" class="gold-gold-button">\n
+        </div>\n
+    </form>\n
+</div>\n
+\n
+    \n
+\n
+<div id="modal-contributor-remove-back" class="modal-background"></div>\n
+<div id="modal-contributor-remove" class="modal-content-holder container">\n
+    <a href="javascript:void(0);" class="modal-close">\n
+        \n
+\n
+\n
+\n
+\n
+    <div class="icon icon-close">\n
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 6.99L4.767 3.76a.714.714 0 1 0-1.01 1.01L6.992 8 3.76 11.233a.714.714 0 1 0 1.01 1.01L8 9.008l3.233 3.232a.714.714 0 1 0 1.01-1.01L9.008 8l3.232-3.233a.714.714 0 1 0-1.01-1.01L8 6.992z" fill-rule="evenodd"></path></svg>\n
+        \n
+    </div>\n
+\n
+\n
+    </a>\n
+    <form id="contributor-remove-form">\n
+        <h2>Remove Member</h2>\n
+        <p>\n
+            Are you sure you want to remove yourself as\n
+            a member for this project?\n
+        </p>\n
+        <p>Project owner will be notified upon removal.</p>\n
+        <input type="hidden" name="_csrf" value="Wyt9vaoE-f4UI4o4A0gkfK_D1KVBJwW551fU">\n
+        <input type="hidden" name="projectId" value="159735">\n
+        <input type="hidden" name="remove_contributor_id" id="remove_contributor_id">\n
+\n
+        <div class="modal-footer">\n
+            <input type="submit" value="Remove" class="grey-grey-button">\n
+            <input value="Nevermind" class="gold-gold-button">\n
+        </div>\n
+    </form>\n
+</div>\n
+\n
+\n
+    \n
+\n
+    \n
+\n
+\n
+    <script>\n
+        var usersFromComments = '[{"id":112047,"username":"Techfrk","screen_name":"techfrk","avatar_url":"https://cdn.hackaday.io/images/default-avatar.png"}]';\n
+    </script>\n
+\n
+\n
+\n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    <script src="//cdn.hackaday.io/build/OkhhCeSBz5ZL/BE4f7QZBTswUbzMyssop5H1caXZkXKImKPN7f/Cv0BjjjDWy+lHLlwzkG+AO+13Ufu/K5x47KlMR6xhx+AjXWd/fiD+qVRI00RZT+Q0pP5u+AWuViWAVF7s79oAlz3I++5aicn0uPo/nZ+9Kq9zAV2GG/upTgtN5oGnU6gL4DlKruJC85kfSNH0FeSBMVsDlGb5p/0QV8Yh7B65QGNanYMBAam218SRpWY3a+MfQNZ3niv+2HxyNRMJyKxriODaHoG85WZyh89PgJ0kbqn4nLCVdBgPZFSmw1cHT1NZEr+E9z1rVqTfCRGaPjJy7YwUbm3fwGPBGHJd17e1xW4ZxA8ov79/xJu3yl04ThS4uWLLDFpRwDMGmh01DFCmsu5SfMngJNlJjACj7dfY+z7IgbfDX06JzJy+nybcdkR9zx9mC2OnAzLWmtWpOcnlEJ7C8qqbL09nhfag7lhGBN/GWuiBLR7omqG11AMYO6DAI0vhOmRat1X5wMCklVPad2R2n2WTTycUEHfLSF2JLueAZt+U3ULmshNg8AMZeObNQfLKzxCStk33MvXn8ec1R4F/4KzZyUKRbbqVY5ViavMWh5I9WtprlOnA+7xVgfSLLdFdVyBjXPXsiAhq85bWCueXe8e/xA5LY2mwVMxPxXYgdiHA8fj+49RyZSnGsMQPpaPRTsMGR0bvwLhkGZe0N7D7Kz72fHtX/aAzJEJy2K55yrT2AWsxfBLj/GC3qsNLJJqDAC8vwECfT87lan5N0fBYgZkoz4gttA==-0.112.1.js"></script>\n
+\n
+\n
+</body></html>

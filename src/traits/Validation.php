@@ -26,8 +26,8 @@ trait Validation
      * Get sample content
      * @return string
      */
-    public function sampleContent()
+    public function sampleContent($file)
     {
-        return file_get_contents(__DIR__ . '/../test/aac/test2.html', FILE_USE_INCLUDE_PATH);
+        return file_get_contents(__DIR__ . '/../test/' . $file, FILE_USE_INCLUDE_PATH);
     }
 }

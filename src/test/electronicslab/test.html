@@ -1,0 +1,1360 @@
+<!DOCTYPE html><html lang="en-US" prefix="og: http://ogp.me/ns#" class="js  slb"><!--<![endif]--><head>\n
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html; charset=UTF-8">\n
+    <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1, minimum-scale=1">\n
+\t\n
+<meta name="description" content="Here you can find useful projects with description, schematics and PCB, electronics articles and other electronic engineering resources. Projects hosted on our website are contributed from visitors and partners around the world.">\n
+<meta name="keywords" content="electronics, schemaitcs, projects, circuits, electronics projects, DIY, Power Supply, sensor, circuit city electronic store, diagram electronic circuit, circuit city electronic, circuit electronic free, electronic circuit analysis, electronic circuit schematic, electronic circuit design, electronic circuit project, hobby circuit electronic, basic electronic circuit, simple electronic circuit,\n
+circuit electronic electronic equation noise, electronic timer circuit, circuit circuit diagram electronic, electronic circuit simulator, circuit electronic free schematic, circuit circuit electronic, circuit diagrams.com electronic, ballast circuit electronic, electronic circuit simulation, electronic circuit software, digital electronic circuit, circuit electronic hobbyist, encyclopedia of electronic circuit,\n
+electronic device and circuit theory, electronic circuit boards, electronic device circuit, circuit diagram electronic free, amplifier circuit electronic, circuit design electronic project, circuit electronic electronic project, 100 amplifier, circuit component electronic integrated, circuit electronic electronic schematic, circuit electronic test, circuit electronic tutorial, circuit electronic measurement temperature, \n
+circuit circuit electronic electronic symbol, circuit electronic, circuit electronic kit, audio, electronic circuit breaker, circuit electronic find schematic, archive circuit electronic, circuit electronic snap, electronic circuit board, electronic project circuit diagram, circuit drawing electronic free, electronic circuit plan, circuit electronic sensor, automobile circuit electronic, electronic timing circuit,\n
+circuit electronic supply, circuit electronic free scheme, circuit electronic testing, circuit consulting design, design electronic product service, circuit counter electronic, circuit electronic magazine, circuit electronic page search, automotive circuit electronic, book circuit electronic, circuit electronic midi, circuit electronic video, ballast circuit electronic electronic, circuit compoent electronic identification,\n
+circuit control electronic radio, circuit designing electronic ">\n
+<meta name="robots" content="index, follow">\n
+<meta name="language" content="English">\n
+\n
+\t\n
+                <title>Dual DC Motor Driver For Robot with L298 - Electronics-Lab</title>\n
+                <meta name="google-site-verification" content="SYaGR9LgaB5xPoNEzTQ7fKc_iLFYNTE1oA64F-8mk_g">\n
+    <link rel="shortcut icon" href="http://www.electronics-lab.com/wp-content/themes/electronicslab/favicon.ico?2" type="image/x-icon">\n
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel=stylesheet type=text/css> -->\n
+\t<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'> -->\n
+    <link href="http://www.electronics-lab.com/wp-content/themes/electronicslab/css/open-sans.css" rel="stylesheet" type="text/css">\n
+    <link rel="profile" href="http://gmpg.org/xfn/11">\n
+    <link rel="pingback" href="http://www.electronics-lab.com/xmlrpc.php">\n
+    \n
+<!-- This site is optimized with the Yoast SEO Premium plugin v7.7.3 - https://yoast.com/wordpress/plugins/seo/ -->\n
+<link rel="canonical" href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/">\n
+<meta property="og:locale" content="en_US">\n
+<meta property="og:type" content="article">\n
+<meta property="og:title" content="Dual DC Motor Driver For Robot with L298 - Electronics-Lab">\n
+<meta property="og:description" content="Dual Motor L298 H-Bridge Control project can control two DC motors connected to it.&nbsp; The circuit is designed around the popular dual H-Bridge L298 from ST. This board can be configured to drive a single motor with high current rating also. This can be achieved with the help of jumpers on the board. &nbsp;An onboardRead More">\n
+<meta property="og:url" content="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/">\n
+<meta property="og:site_name" content="Electronics-Lab">\n
+<meta property="og:image" content="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-SCH-e1461228244732.png">\n
+<meta property="og:image:width" content="780">\n
+<meta property="og:image:height" content="365">\n
+<meta name="twitter:card" content="summary">\n
+<meta name="twitter:description" content="Dual Motor L298 H-Bridge Control project can control two DC motors connected to it.&nbsp; The circuit is designed around the popular dual H-Bridge L298 from ST. This board can be configured to drive a single motor with high current rating also. This can be achieved with the help of jumpers on the board. &nbsp;An onboardRead More">\n
+<meta name="twitter:title" content="Dual DC Motor Driver For Robot with L298 - Electronics-Lab">\n
+<meta name="twitter:image" content="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500.jpg">\n
+<!-- / Yoast SEO Premium plugin. -->\n
+\n
+<link rel="dns-prefetch" href="//s0.wp.com">\n
+<link rel="dns-prefetch" href="//secure.gravatar.com">\n
+<link rel="dns-prefetch" href="//fonts.googleapis.com">\n
+<link rel="dns-prefetch" href="//s.w.org">\n
+<link rel="alternate" type="application/rss+xml" title="Electronics-Lab » Feed" href="http://www.electronics-lab.com/feed/">\n
+<link rel="alternate" type="application/rss+xml" title="Electronics-Lab » Comments Feed" href="http://www.electronics-lab.com/comments/feed/">\n
+<link rel="alternate" type="application/rss+xml" title="Electronics-Lab » Dual DC Motor Driver For Robot with L298 Comments Feed" href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/feed/">\n
+\t\t<script src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=992315172788487&amp;output=json_html&amp;callback=googletag.impl.pubads.callbackProxy3&amp;impl=fif&amp;eid=108809080,108809103,108809154,21060509&amp;sc=0&amp;sfv=1-0-9&amp;iu=/4250/ElectronicsLab&amp;sz=728x90&amp;cookie_enabled=1&amp;abxe=1&amp;lmt=1532329285&amp;dt=1532329285481&amp;frm=20&amp;biw=800&amp;bih=600&amp;oid=3&amp;adx=104&amp;ady=7083&amp;adk=1653261244&amp;gut=v2&amp;ifi=4&amp;u_tz=480&amp;u_his=2&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/&amp;dssz=105&amp;icsg=4503341929332732&amp;std=0&amp;vrg=121&amp;vrp=121&amp;ga_vid=2037386140.1532329282&amp;ga_sid=1532329282&amp;ga_hid=2102029458&amp;ga_fc=true"></script><script src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=992315172788487&amp;output=json_html&amp;callback=googletag.impl.pubads.callbackProxy2&amp;impl=fif&amp;eid=108809080,108809103,108809154,21060509&amp;sc=0&amp;sfv=1-0-9&amp;iu=/4250/ElectronicsLab&amp;sz=300x250&amp;cookie_enabled=1&amp;abxe=1&amp;lmt=1532329285&amp;dt=1532329285476&amp;frm=20&amp;biw=800&amp;bih=600&amp;oid=3&amp;adx=247&amp;ady=2623&amp;adk=2008699722&amp;gut=v2&amp;ifi=3&amp;u_tz=480&amp;u_his=2&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/&amp;dssz=104&amp;icsg=4503341929332732&amp;std=0&amp;vrg=121&amp;vrp=121&amp;ga_vid=2037386140.1532329282&amp;ga_sid=1532329282&amp;ga_hid=2102029458&amp;ga_fc=true"></script><script src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=992315172788487&amp;output=json_html&amp;callback=googletag.impl.pubads.callbackProxy1&amp;impl=fif&amp;eid=108809080,108809103,108809154,21060509&amp;sc=0&amp;sfv=1-0-9&amp;iu=/4250/ElectronicsLab&amp;sz=300x250&amp;cookie_enabled=1&amp;abxe=1&amp;lmt=1532329285&amp;dt=1532329285456&amp;frm=20&amp;biw=800&amp;bih=600&amp;oid=3&amp;adx=247&amp;ady=1153&amp;adk=632168443&amp;gut=v2&amp;ifi=2&amp;u_tz=480&amp;u_his=2&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/&amp;dssz=103&amp;icsg=4503341929332732&amp;std=0&amp;vrg=121&amp;vrp=121&amp;ga_vid=2037386140.1532329282&amp;ga_sid=1532329282&amp;ga_hid=2102029458&amp;ga_fc=true"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.1o-4ybCSy04.O/m=auth/exm=plus,plusone/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCOCxs8QC305ZpbxxhCukgnir7jpYQ/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.1o-4ybCSy04.O/m=plus,plusone/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCOCxs8QC305ZpbxxhCukgnir7jpYQ/cb=gapi.loaded_0" async=""></script><script src="https://pagead2.googlesyndication.com/pub-config/r20160913/ca-pub-6394990980523463.js"></script><script src="https://pagead2.googlesyndication.com/pagead/osd.js"></script><script src="https://securepubads.g.doubleclick.net/static/glade/extra_35.js"></script><script type="text/javascript" async="" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script async="" type="text/javascript" src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/gpt.js"></script><script async="" src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/fbds.js"></script><script type="text/javascript" async="" src="//electronics-lab.api.oneall.com/socialize/library.js"></script><script async="" src="https://static.addtoany.com/menu/page.js"></script><script type="text/javascript">\n
+\t\t\twindow._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.electronics-lab.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.7"}};\n
+\t\t\t!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);\n
+\t\t</script><script src="http://www.electronics-lab.com/wp-includes/js/wp-emoji-release.min.js?ver=4.9.7" type="text/javascript" defer=""></script>\n
+\t\t<style type="text/css">\n
+img.wp-smiley,\n
+img.emoji {\n
+\tdisplay: inline !important;\n
+\tborder: none !important;\n
+\tbox-shadow: none !important;\n
+\theight: 1em !important;\n
+\twidth: 1em !important;\n
+\tmargin: 0 .07em !important;\n
+\tvertical-align: -0.1em !important;\n
+\tbackground: none !important;\n
+\tpadding: 0 !important;\n
+}\n
+</style>\n
+<link rel="stylesheet" id="pure_slide_social_tab_css-css" href="http://www.electronics-lab.com/wp-content/plugins/puretheme-slide-social-tabs/css/plugins-main.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="kento-like-post-style-css" href="http://www.electronics-lab.com/wp-content/plugins/kento-post-view-counter/css/style.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="kento-like-post-date-style-css" href="http://www.electronics-lab.com/wp-content/plugins/kento-post-view-counter/css/jquery-ui.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="gsc_style_search_bar_more-css" href="http://www.electronics-lab.com/wp-content/plugins/google-custom-search/css/gsc.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="contact-form-7-css" href="http://www.electronics-lab.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.3" type="text/css" media="all">\n
+<link rel="stylesheet" id="public_print_styles--css" href="http://www.electronics-lab.com/wp-content/plugins/social-sharing-icons/public/css/oa-social-sharing-icons-public.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="wp-parallax-content-slider-css-css" href="http://www.electronics-lab.com/wp-content/plugins/wp-parallax-content-slider/css/style.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="hamburger.css-css" href="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/css/wpr-hamburger.css?ver=1.0" type="text/css" media="all">\n
+<link rel="stylesheet" id="wprmenu.css-css" href="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/css/wprmenu.css?ver=1.0" type="text/css" media="all">\n
+<style id="wprmenu.css-inline-css" type="text/css">\n
+@media only screen and ( max-width: 1023px ) {\n
+\t\t\t\t#wprmenu_bar {\n
+\t\t\t\t\tbackground-color: #283593;\n
+\t\t\t\t}\n
+\t\t\t\n
+\t\t\t\thtml body div#mg-wprm-wrap .wpr_submit .icon.icon-search {\n
+\t\t\t\t\tcolor: #FFFFFF;\n
+\t\t\t\t}\n
+\t\t\t\t#wprmenu_bar .menu_title, #wprmenu_bar .wprmenu_icon_menu {\n
+\t\t\t\t\tcolor: #ffffff;\n
+\t\t\t\t}\n
+\t\t\t\t#wprmenu_bar .menu_title {\n
+\t\t\t\t\tfont-size: 16px;\n
+\t\t\t\t\tfont-weight: normal;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap li.menu-item a {\n
+\t\t\t\t\tfont-size: 15px;\n
+\t\t\t\t\ttext-transform: uppercase;\n
+\t\t\t\t\tfont-weight: normal;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap li.menu-item-has-children ul.sub-menu a {\n
+\t\t\t\t\tfont-size: 15px;\n
+\t\t\t\t\ttext-transform: uppercase;\n
+\t\t\t\t\tfont-weight: normal;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap li.current-menu-item > a {\n
+\t\t\t\t\tbackground: #d53f3f;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap li.current-menu-item > a,\n
+\t\t\t\t#mg-wprm-wrap li.current-menu-item span.wprmenu_icon{\n
+\t\t\t\t\tcolor: #FFFFFF !important;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap {\n
+\t\t\t\t\tbackground-color: #3b5999;\n
+\t\t\t\t}\n
+\t\t\t\t.cbp-spmenu-push-toright {\n
+\t\t\t\t\tleft: 80% ;\n
+\t\t\t\t}\n
+\t\t\t\t.cbp-spmenu-push-toright .mm-slideout {\n
+\t\t\t\t\tleft:80% ;\n
+\t\t\t\t}\n
+\t\t\t\t.cbp-spmenu-push-toleft {\n
+\t\t\t\t\tleft: -80% ;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap.cbp-spmenu-right,\n
+\t\t\t\t#mg-wprm-wrap.cbp-spmenu-left,\n
+\t\t\t\t#mg-wprm-wrap.cbp-spmenu-right.custom,\n
+\t\t\t\t#mg-wprm-wrap.cbp-spmenu-left.custom,\n
+\t\t\t\t.cbp-spmenu-vertical {\n
+\t\t\t\t\twidth: 80%;\n
+\t\t\t\t\tmax-width: 400px;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a,\n
+\t\t\t\tdiv#mg-wprm-wrap ul li span.wprmenu_icon {\n
+\t\t\t\t\tcolor: #ffffff !important;\n
+\t\t\t\t}\n
+\t\t\t\t#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a:hover {\n
+\t\t\t\t\tbackground: #d53f3f;\n
+\t\t\t\t\tcolor: #606060 !important;\n
+\t\t\t\t}\n
+\t\t\t\tdiv#mg-wprm-wrap ul>li:hover>span.wprmenu_icon {\n
+\t\t\t\t\tcolor: #606060 !important;\n
+\t\t\t\t}\n
+\t\t\t\t.wprmenu_bar .hamburger-inner, .wprmenu_bar .hamburger-inner::before, .wprmenu_bar .hamburger-inner::after {\n
+\t\t\t\t\tbackground: #FFFFFF;\n
+\t\t\t\t}\n
+\t\t\t\t.wprmenu_bar .hamburger:hover .hamburger-inner, .wprmenu_bar .hamburger:hover .hamburger-inner::before,\n
+\t\t\t .wprmenu_bar .hamburger:hover .hamburger-inner::after {\n
+\t\t\t\tbackground: #FFFFFF;\n
+\t\t\t\t}\n
+\t\t\tdiv.wprmenu_bar div.hamburger{padding-right: 6px !important;}\n
+\t\t\t\t#wprmenu_menu, #wprmenu_menu ul, #wprmenu_menu li, .wprmenu_no_border_bottom {\n
+\t\t\t\t\tborder-bottom:none;\n
+\t\t\t\t}\n
+\t\t\t\t#wprmenu_menu.wprmenu_levels ul li ul {\n
+\t\t\t\t\tborder-top:none;\n
+\t\t\t\t}\n
+\t\t\t\n
+\t\t\t\t#wprmenu_menu.left {\n
+\t\t\t\t\twidth:80%;\n
+\t\t\t\t\tleft: -80%;\n
+\t\t\t\t\tright: auto;\n
+\t\t\t\t}\n
+\t\t\t\t#wprmenu_menu.right {\n
+\t\t\t\t\twidth:80%;\n
+\t\t\t\t\tright: -80%;\n
+\t\t\t\t\tleft: auto;\n
+\t\t\t\t}\n
+\t\t\t\n
+\t\t\t\t\t.wprmenu_bar .hamburger {\n
+\t\t\t\t\t\tfloat: left;\n
+\t\t\t\t\t}\n
+\t\t\t\t\t.wprmenu_bar #custom_menu_icon.hamburger {\n
+\t\t\t\t\t\ttop: 0px;\n
+\t\t\t\t\t\tleft: 0px;\n
+\t\t\t\t\t\tfloat: left !important;\n
+\t\t\t\t\t\tbackground-color: #CCCCCC;\n
+\t\t\t\t\t}\n
+\t\t\t\t.custMenu #custom_menu_icon {\n
+\t\t\t\tdisplay: block;\n
+\t\t\t}html { padding-top: 42px !important; }#wprmenu_bar,#mg-wprm-wrap { display: block; }\n
+\t\t\tdiv#wpadminbar { position: fixed; }}\n
+</style>\n
+<link rel="stylesheet" id="wpr_icons-css" href="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/inc/icons/style.css?ver=1.0" type="text/css" media="all">\n
+<link rel="stylesheet" id="dashicons-css" href="http://www.electronics-lab.com/wp-includes/css/dashicons.min.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="twentythirteen-fonts-css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Bitter:400,700&amp;subset=latin,latin-ext" type="text/css" media="all">\n
+<link rel="stylesheet" id="genericons-css" href="http://www.electronics-lab.com/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1" type="text/css" media="all">\n
+<link rel="stylesheet" id="twentythirteen-style-css" href="http://www.electronics-lab.com/wp-content/themes/electronicslab/style.css?ver=2013-07-18" type="text/css" media="all">\n
+<!--[if lt IE 9]>\n
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://www.electronics-lab.com/wp-content/themes/electronicslab/css/ie.css?ver=2013-07-18' type='text/css' media='all' />\n
+<![endif]-->\n
+<link rel="stylesheet" id="wpdreams-asl-basic-css" href="http://www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/style.basic.css?ver=4.6.4" type="text/css" media="all">\n
+<link rel="stylesheet" id="wpdreams-ajaxsearchlite-css" href="http://www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/style-underline.css?ver=4.6.4" type="text/css" media="all">\n
+<link rel="stylesheet" id="jetpack-widget-social-icons-styles-css" href="http://www.electronics-lab.com/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css?ver=20170506" type="text/css" media="all">\n
+<link rel="stylesheet" id="slb_core-css" href="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.7.0" type="text/css" media="all">\n
+<link rel="stylesheet" id="easy_table_style-css" href="http://www.electronics-lab.com/wp-content/plugins/easy-table/themes/default/style.css?ver=1.6" type="text/css" media="all">\n
+<link rel="stylesheet" id="sendpress-fe-css-css" href="http://www.electronics-lab.com/wp-content/plugins/sendpress/css/front-end.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="addtoany-css" href="http://www.electronics-lab.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.14" type="text/css" media="all">\n
+<link rel="stylesheet" id="jetpack_css-css" href="http://www.electronics-lab.com/wp-content/plugins/jetpack/css/jetpack.css?ver=6.3.2" type="text/css" media="all">\n
+<link rel="stylesheet" id="wp-paginate-css" href="http://www.electronics-lab.com/wp-content/plugins/wp-paginate/wp-paginate.css?ver=1.3.1" type="text/css" media="screen">\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/puretheme-slide-social-tabs/js/social.js?ver=4.9.7"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var kento_pvc_ajax = {"kento_pvc_ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php"};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/kento-post-view-counter/js/kento-pvc.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/kento-post-view-counter/js/google-chart-jsapi.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/google-custom-search/js/gsc.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/google-custom-search/js/jsapi.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/js/modernizr.custom.js?ver=1.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/js/jquery.touchSwipe.min.js?ver=1.0"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var wprmenu = {"zooming":"no","from_width":"1023","push_width":"400","menu_width":"80","parent_click":"yes","swipe":"no"};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/wp-responsive-menu/js/wprmenu.js?ver=1.0"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var sendpress = {"invalidemail":"Please enter your e-mail address","missingemail":"Please enter your e-mail address","required":"Please enter all the required fields. <br> Required fields are marked with an (*)","ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php"};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/sendpress/js/sendpress.signup.js?ver=1.9.7.18"></script>\n
+<link rel="https://api.w.org/" href="http://www.electronics-lab.com/wp-json/">\n
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.electronics-lab.com/xmlrpc.php?rsd">\n
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.electronics-lab.com/wp-includes/wlwmanifest.xml"> \n
+<meta name="generator" content="WordPress 4.9.7">\n
+<link rel="alternate" type="application/json+oembed" href="http://www.electronics-lab.com/wp-json/oembed/1.0/embed?url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/">\n
+<link rel="alternate" type="text/xml+oembed" href="http://www.electronics-lab.com/wp-json/oembed/1.0/embed?url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/&amp;format=xml">\n
+\n
+<script data-cfasync="false">\n
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};\n
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");\n
+</script>\n
+\t\t\t<link href="http://www.electronics-lab.com/wp-content/plugins/puretheme-slide-social-tabs/css/font-awesome.css" rel="stylesheet">\t\t\n
+\t\t\t\t\t<style type="text/css">\n
+\t\t\t\t\t\t\t</style>\t\t\n
+\t\t\n
+ <!-- OneAll.com / Social Sharing for WordPress / v2.4 -->\n
+<script data-cfasync="false" type="text/javascript">\n
+ (function() {\n
+  var oa = document.createElement('script'); oa.type = 'text/javascript';\n
+  oa.async = true; oa.src = '//electronics-lab.api.oneall.com/socialize/library.js';\n
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oa, s);\n
+ })();\n
+</script>\n
+<script type="text/javascript">\n
+\twindow._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';\n
+\twindow._wp_rp_wp_ajax_url = "http://www.electronics-lab.com/wp-admin/admin-ajax.php";\n
+\twindow._wp_rp_plugin_version = '3.5.4';\n
+\twindow._wp_rp_post_id = '48591';\n
+\twindow._wp_rp_num_rel_posts = '4';\n
+\twindow._wp_rp_thumbnails = true;\n
+\twindow._wp_rp_post_title = 'Dual+DC+Motor+Driver+For+Robot+with+L298';\n
+\twindow._wp_rp_post_tags = [];\n
+\twindow._wp_rp_promoted_content = true;\n
+</script>\n
+<script type="text/javascript" src="https://wprp.zemanta.com/static/js/loader.js?version=3.5.4" async=""></script>\n
+\n
+<link rel="dns-prefetch" href="//v0.wordpress.com">\n
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">\n
+<link rel="dns-prefetch" href="//s0.wp.com">\n
+<link rel="dns-prefetch" href="//s1.wp.com">\n
+<link rel="dns-prefetch" href="//s2.wp.com">\n
+<link rel="dns-prefetch" href="//public-api.wordpress.com">\n
+<link rel="dns-prefetch" href="//0.gravatar.com">\n
+<link rel="dns-prefetch" href="//1.gravatar.com">\n
+<link rel="dns-prefetch" href="//2.gravatar.com">\n
+<style type="text/css">img#wpstats{display:none}</style>            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">\n
+                            <style type="text/css">\n
+                    <!--\n
+                    \n
+            @font-face {\n
+                font-family: 'aslsicons2';\n
+                src: url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot');\n
+                src: url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot?#iefix') format('embedded-opentype'),\n
+                     url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff2') format('woff2'),\n
+                     url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff') format('woff'),\n
+                     url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.ttf') format('truetype'),\n
+                     url('//www.electronics-lab.com/wp-content/plugins/ajax-search-lite/css/fonts/icons2.svg#icons') format('svg');\n
+                font-weight: normal;\n
+                font-style: normal;\n
+            }\n
+            div[id*='ajaxsearchlite'].wpdreams_asl_container {\n
+                width: 100%;\n
+                margin: 0px 0px 0px 0px;\n
+            }\n
+            div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {\n
+                font-weight: bold;\n
+                color: rgba(217, 49, 43, 1);\n
+                background-color: rgba(238, 238, 238, 1);\n
+            }\n
+                                -->\n
+                </style>\n
+                            <script type="text/javascript">\n
+                if ( typeof _ASL !== "undefined" && _ASL !== null && typeof _ASL.initialize !== "undefined" )\n
+                    _ASL.initialize();\n
+            </script>\n
+            \t\t\t<style type="text/css" id="wp-custom-css">\n
+\t\t\t\t/*\n
+You can add your own CSS here.\n
+\n
+Click the help icon above to learn more.\n
+*/\n
+.page-template-buyparts #primary{min-height:620px;}\n
+\n
+.page-template-buyparts #content {\n
+ float: left;\n
+ width: 100%;\n
+margin-top: 70px;\n
+}\n
+\n
+.page-template-buyparts .articles-header{margin-top:0;}\n
+\n
+.cbp-spmenu-push { \n
+  overflow-x: unset !important;\n
+}\n
+\n
+.widget-title {\n
+font-size: 15px;\n
+margin-bottom: 20px;\n
+text-transform: uppercase;\n
+letter-spacing: 2px;\n
+text-align: center;\n
+}\n
+\n
+.jetpack_subscription_widget .widget-title {\n
+font-size: 15px;\n
+margin-bottom: 20px;\n
+text-transform: uppercase;\n
+letter-spacing: 2px;\n
+text-align: center;\n
+}\n
+\n
+#subscribe-email input {\n
+width: 65%;\n
+height: 40px;\n
+padding: 10px 8px;\n
+font-size: 15px;\n
+float: left;\n
+border: 1px solid #4CAF50;\n
+margin-bottom: 20px;\n
+margin-top: 15px;\n
+}\n
+\n
+#subscribe-submit input {\n
+background: #4CAF50;\n
+width: 35%;\n
+padding: 0;\n
+border: 1px solid #4CAF50;\n
+height: 40px;\n
+margin-top: 15px;\n
+}\n
+\n
+.success {\n
+margin-bottom: 20px;\n
+}\t\t\t</style>\n
+\t\t\n
+    <!--[if lt IE 9]>\n
+    <script src=http://www.electronics-lab.com/wp-content/themes/electronicslab/js/html5.js></script>\n
+    <![endif]-->\n
+    <script type="text/javascript">\n
+    jQuery(document).ready(function(){\n
+    jQuery("#jetpack_remote_comment").css("height","50px");\n
+        jQuery("#comment").focus(function(){        \n
+           jQuery("#jetpack_remote_comment").css("height","350px");\n
+        });\n
+    });\n
+</script>\n
+\n
+    \n
+    <!--<script src=http://www.electronics-lab.com/wp-content/themes/electronicslab/js/jquery.min.js></script> -->\n
+    <!-- // <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->\n
+    <script src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/jquery.cycle.all.js"></script>\n
+    <script src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/common.js"></script>\n
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel=stylesheet type=text/css> -->\n
+    <link href="http://www.electronics-lab.com/wp-content/themes/electronicslab/css/roboto.css" rel="stylesheet" type="text/css">\n
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.electronics-lab.com/wp-content/themes/electronicslab/css/responsive.css">\n
+\n
+    <!-- Faceboook Ad Retargeting Code-->\n
+    <script>(function() {\n
+            var _fbq = window._fbq || (window._fbq = []);\n
+            if (!_fbq.loaded) {\n
+                var fbds = document.createElement('script');\n
+                fbds.async = true;\n
+                // fbds.src = '//connect.facebook.net/en_US/fbds.js';\n
+                fbds.src = 'http://www.electronics-lab.com/wp-content/themes/electronicslab/js/fbds.js';\n
+                var s = document.getElementsByTagName('script')[0];\n
+                s.parentNode.insertBefore(fbds, s);\n
+                _fbq.loaded = true;\n
+            }\n
+            _fbq.push(['addPixelId', '516933505148651']);\n
+        })();\n
+        window._fbq = window._fbq || [];\n
+        window._fbq.push(['track', 'PixelInitialized', {}]);\n
+    </script>\n
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=516933505148651&amp;ev=PixelInitialized" /></noscript>\n
+    <!-- Faceboook Ad Retargeting Code-->\n
+\n
+\n
+    <!--Engineering360 Ad Network Header Tag-->\n
+    <script type="text/javascript">\n
+        var googletag = googletag || {};\n
+        googletag.cmd = googletag.cmd || [];\n
+        (function() {\n
+            var gads = document.createElement("script");\n
+            gads.async = true;\n
+            gads.type = "text/javascript";\n
+            var useSSL = "https:" == document.location.protocol;\n
+            // http://www.googletagservices.com/tag/js/gpt.js\n
+            // gads.src = (useSSL ? "https:" : "http:") + "http://www.electronics-lab.com/wp-content/themes/electronicslab/js/gpt.js";\n
+            gads.src =  "http://www.electronics-lab.com/wp-content/themes/electronicslab/js/gpt.js";\n
+            var node =document.getElementsByTagName("script")[0];\n
+            node.parentNode.insertBefore(gads, node);\n
+        })();\n
+    </script>\n
+    <!--Engineering360 Ad Network Header Tag-->\n
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.electronics-lab.com/wp-content/themes/electronicslab/css/jquery.bxslider.css">\n
+    <script src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/jquery.bxslider.min.js"></script>\n
+    <script>\n
+        jQuery(document).ready(function(){\n
+            jQuery('.bxslider').bxSlider({\n
+                auto: true,\n
+                pager: false\n
+\n
+            });\n
+            jQuery('.search-field').focus(function(){\n
+                jQuery(this).data('placeholder',jQuery(this).attr('placeholder'))\n
+                .attr('placeholder','');\n
+            }).blur(function(){\n
+                jQuery(this).attr('placeholder',jQuery(this).data('placeholder'));\n
+            });\n
+        });\n
+\n
+    </script>\n
+\n
+<!-- Global Site Tag (gtag.js) - Google Analytics -->\n
+<!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-3150019-1"></script>\n
+<script>\n
+  window.dataLayer = window.dataLayer || [];\n
+  function gtag(){dataLayer.push(arguments);}\n
+  gtag('js', new Date());\n
+\n
+  gtag('config', 'UA-3150019-1');\n
+</script-->\n
+\n
+\n
+<script type="text/javascript">\n
+\n
+  var _gaq = _gaq || [];\n
+  _gaq.push(['_setAccount', 'UA-3150019-1']);\n
+  _gaq.push(['_trackPageview']);\n
+\n
+  (function() {\n
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n
+  })();\n
+\n
+</script>\n
+\n
+\n
+<script src="//cdnstaticpr.com/js/pp.js" async=""></script>\n
+\n
+<link rel="preload" href="https://adservice.google.com.ph/adsid/integrator.js?domain=www.electronics-lab.com" as="script"><script type="text/javascript" src="https://adservice.google.com.ph/adsid/integrator.js?domain=www.electronics-lab.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.electronics-lab.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.electronics-lab.com"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="http://secure.gravatar.com/css/hovercard.css?ver=2018Julaa"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="http://secure.gravatar.com/css/services.css?ver=2018Julaa"><link rel="stylesheet" type="text/css" href="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/themes/baseline/css/style.css"><link rel="stylesheet" type="text/css" href="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/themes/default/css/style.css"><script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/timeline.35155ed6aa6e065422c11b2526f1caf9.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}\n
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:-webkit-sticky;top:0}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}\n
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}\n
+.fb_customer_chat_bounce_in_v1{animation-duration:250ms;animation-name:fb_bounce_in_v1}.fb_customer_chat_bounce_out_v1{animation-duration:250ms;animation-name:fb_bounce_out_v1}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v1{0%{opacity:0;transform:scale(.8, .8);transform-origin:bottom right}80%{opacity:.8;transform:scale(1.03, 1.03)}100%{opacity:1;transform:scale(1, 1)}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v1{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_121.js" async=""></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html"><script type="text/javascript" src="http://electronics-lab.api.oneall.com/socialize/sharing/library.js"></script></head>\n
+<body class="project-template-default single single-project postid-48591">\n
+\n
+<script>\n
+  window.fbAsyncInit = function() {\n
+    FB.init({\n
+      appId      : '1116214541854100',\n
+      xfbml      : true,\n
+      version    : 'v2.12'\n
+    });\n
+    FB.AppEvents.logPageView();\n
+  };\n
+\n
+  (function(d, s, id){\n
+     var js, fjs = d.getElementsByTagName(s)[0];\n
+     if (d.getElementById(id)) {return;}\n
+     js = d.createElement(s); js.id = id;\n
+     js.src = "https://connect.facebook.net/en_US/sdk.js";\n
+     fjs.parentNode.insertBefore(js, fjs);\n
+   }(document, 'script', 'facebook-jssdk'));\n
+</script>\n
+\n
+<div class="showbackgroundhomepage" style="display:none">&nbsp;</div>\n
+<div id="page" class="hfeed site">\n
+<header id="masthead" class="site-header" role="banner">\n
+    <div id="widget-area" class="widget-area" role="complementary">\n
+                    <div class="top-part-panel">\n
+                <div class="coomon-wrapper">\n
+                    <div class="top-part-panel-border">\n
+                        <aside id="execphp-2" class="widget widget_execphp">\t\t\t<div class="execphpwidget"><a href="http://www.electronics-lab.com/" rel="home"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/logo.png" alt="electronicslab" title="electronicslab" width="304"></a></div>\n
+\t\t</aside>                        <aside class="widget widget_text" id="text-3">\n
+                            <div class="textwidget">\n
+                                <a target="_blank" class="ads_statistics" value="4" id="985976" href="http://www.gateworks.com"><img src="http://www.electronics-lab.com/wp-content/uploads/ads_dir/1513235488_banner_imges.png"></a>                            </div>\n
+                        </aside>\n
+                        <aside class="widget widget_execphp">\n
+                            <label>23   July , 2018</label>\n
+                            <br>\n
+                            <div class="lighter">\n
+                                <form method="get" id="searchform" action="http://www.electronics-lab.com/">\n
+                                    <span><input type="search" class="search rounded" placeholder="Search..." name="s" value="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'"></span>\n
+                                </form>\n
+                            </div>\n
+                            <!--<div class="headersearchbox">\n
+                            <form method="get" id="searchform" action="/" class="search-box">\n
+                            <label>\n
+                            <input class="search-field" type="search" title="Search for:" name="s" value="" placeholder="Search..." />\n
+                            </label>\n
+                            <input type="submit" class="search-submit" id="searchsubmit" value="" class="btn" />\n
+                            </form>\n
+                            </div>-->\n
+                        </aside>\n
+                    </div>\n
+                </div>\n
+            </div>\n
+                                <div class="nav-panel">\n
+                <div class="coomon-wrapper">\n
+                    <aside id="nav_menu-2" class="widget widget_nav_menu"><div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu"><li id="menu-item-32737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-32737"><a href="http://www.electronics-lab.com/">Home</a></li>\n
+<li id="menu-item-32859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32859"><a href="http://www.electronics-lab.com/projects/">Projects</a>\n
+<ul class="sub-menu">\n
+\t<li id="menu-item-32821" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32821"><a href="http://www.electronics-lab.com/projectcategory/projects/audio/">Audio</a></li>\n
+\t<li id="menu-item-32834" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32834"><a href="http://www.electronics-lab.com/projectcategory/projects/arduino/">Arduino</a></li>\n
+\t<li id="menu-item-32822" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32822"><a href="http://www.electronics-lab.com/projectcategory/projects/automotive/">Automotive</a></li>\n
+\t<li id="menu-item-32823" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32823"><a href="http://www.electronics-lab.com/projectcategory/projects/game-and-entetainment-robots/">Game – Robots</a></li>\n
+\t<li id="menu-item-63360" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-63360"><a href="http://www.electronics-lab.com/projectcategory/projects/mcu-development/">MCU Development</a></li>\n
+\t<li id="menu-item-32824" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32824"><a href="http://www.electronics-lab.com/projectcategory/projects/microcontroller/">Microcontroller</a></li>\n
+\t<li id="menu-item-32825" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32825"><a href="http://www.electronics-lab.com/projectcategory/projects/miscellaneous/">Miscellaneous</a></li>\n
+\t<li id="menu-item-63359" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-63359"><a href="http://www.electronics-lab.com/projectcategory/projects/motor-control/">Motor Control</a></li>\n
+\t<li id="menu-item-64157" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-64157"><a href="http://www.electronics-lab.com/projectcategory/projects/modules/">Modules</a></li>\n
+\t<li id="menu-item-32826" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32826"><a href="http://www.electronics-lab.com/projectcategory/projects/moterlight-and-power-control/">Light – Power Control</a></li>\n
+\t<li id="menu-item-32827" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32827"><a href="http://www.electronics-lab.com/projectcategory/projects/oscllators-and-timers/">Oscillators – Timers</a></li>\n
+\t<li id="menu-item-32828" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32828"><a href="http://www.electronics-lab.com/projectcategory/projects/pc-related/">PC Related</a></li>\n
+\t<li id="menu-item-32829" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32829"><a href="http://www.electronics-lab.com/projectcategory/projects/power/">Power</a></li>\n
+\t<li id="menu-item-32830" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32830"><a href="http://www.electronics-lab.com/projectcategory/projects/rf-circuits/">RF Circuits</a></li>\n
+\t<li id="menu-item-32832" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32832"><a href="http://www.electronics-lab.com/projectcategory/projects/science-related/">Science</a></li>\n
+\t<li id="menu-item-32833" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32833"><a href="http://www.electronics-lab.com/projectcategory/projects/security-and-other-sensors-and-detectors/">Sensors – Detectors</a></li>\n
+\t<li id="menu-item-32835" class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32835"><a href="http://www.electronics-lab.com/projectcategory/projects/test-and-measurement/">Test – Measurement</a></li>\n
+</ul>\n
+</li>\n
+<li id="menu-item-32735" class="download-drop menu-item menu-item-type-post_type menu-item-object-page menu-item-32735"><a href="http://www.electronics-lab.com/downloads/">Downloads</a></li>\n
+<li id="menu-item-32734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32734"><a href="http://www.electronics-lab.com/articles/">Articles</a></li>\n
+<li id="menu-item-61975" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61975"><a href="http://www.electronics-lab.com/buy-parts/">Buy Parts</a></li>\n
+<li id="menu-item-36402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36402"><a href="http://www.electronics-lab.com/community/">Community</a></li>\n
+<li id="menu-item-32731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32731"><a href="http://www.electronics-lab.com/blog/">Blog</a></li>\n
+<li id="menu-item-73407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73407"><a href="https://www.wellpcb.com">PCB Proto</a></li>\n
+<li id="menu-item-32730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32730"><a href="http://www.electronics-lab.com/contact-us/">Contact Us</a>\n
+<ul class="sub-menu">\n
+\t<li id="menu-item-70285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70285"><a href="http://www.electronics-lab.com/advertising/">Advertising</a></li>\n
+</ul>\n
+</li>\n
+</ul></div></aside>                </div>\n
+            </div>\n
+                                <div class="banner-part">\n
+                <!-- Header Top Adds Start -->\n
+                <!-- <div class="add-barbox">\n
+                   <div class="topadd-barbox">\n
+                                         </div>\n
+                   <div class="leftadd-barbox">\n
+                                          \n
+                   </div>\n
+                   <div class="rightadd-barbox">\n
+                                       </div>\n
+                </div> -->\n
+                <!-- Header Top Adds END -->\n
+                <!-- <div class="breadcrumb-box"> -->\n
+                    <div class="coomon-wrapper">\n
+                        <aside id="bcn_widget-2" class="widget widget_breadcrumb_navxt"><div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><!-- Breadcrumb NavXT 5.2.0 -->\n
+<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to Electronics-Lab." href="http://www.electronics-lab.com" class="home"></a></span>  / <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to the Projects projectcategory archives." href="http://www.electronics-lab.com/projectcategory/projects/">Projects</a></span>  / <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to the Game - Robots projectcategory archives." href="http://www.electronics-lab.com/projectcategory/projects/game-and-entetainment-robots/">Game - Robots</a></span>  / <span typeof="v:Breadcrumb"><span property="v:title"></span>Dual DC Motor Driver For Robot with L298</span></div></aside>                        \n
+                        <div style="margin: 25px 0px 0px 0px;text-align:right;" class="headerads">\n
+                                                    </div>\n
+\n
+\n
+\n
+                    </div>\n
+                <!-- </div> -->\n
+            </div>\n
+             \n
+    </div>\n
+</header>\n
+<section id="main" class="site-main content-main-panel">\n
+<script type="text/javascript">var clicks=1;function hit(b){var a=clicks++;jQuery.ajax({url:"http://www.electronics-lab.com/wp-content/plugins/download-management/download.php?id="+b+"&count="+a,dataType:"",type:"POST",success:function(c){$("#hitd").html(c)}})};</script>\n
+<script language="javascript">jQuery(document).ready(function(a){a("#cmail").click(function(){var b=document.getElementById("sml_email");var c=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!c.test(b.value)){a("#val").html("Please enter valid email address");a(".sml_thankyou").hide();b.focus;return false}a(".sml_subscribe").submit()})});</script>\n
+<div class="add-barbox">\n
+   <div class="topadd-barbox">\n
+      <a class="no_popup1 ads_statistics test123" value="0" href="https://analytics.oemsecrets.com/main.php?n=Avnet-EU&amp;table=wallpaper&amp;m=xilinx&amp;p=JulyW2&amp;source=elab&amp;event_link=https://www.avnet.com/wps/portal/silica/solutions/markets/embedded-vision/embedded-vision-with-avnet-and-xilinx/?cmp=EMEA-AVS-XLX-SW2-BAN-ELAB-LSC-201807" target="_blank" id="896574"><img src="http://www.electronics-lab.com/wp-content/uploads/ads_dir/21037787731570x728.png"></a>   </div>\n
+</div> \n
+<div id="primary" class="content-area singlelesson">\n
+<div class="coomon-wrapper">\n
+    <div id="content" class="site-content" role="main">\n
+        <div class="content-panel-box-border spaccer-top-margin">\n
+                                        \n
+                <h1 class="title-inner-sub"><a rel="" href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/">Dual DC Motor Driver For Robot with L298</a></h1>\n
+\n
+                <div class="box-inner-panel">\n
+                    <div class="project-details-line-panel">\n
+\n
+                        <span class="user">Rajkumar Sharma</span>&nbsp;&nbsp;\n
+\n
+                        &nbsp;&nbsp;\n
+                        <span class="url"><a href="http://www.rajkumarsharma.com">http://www.rajkumarsharma.com</a></span>&nbsp;&nbsp;\n
+                        <span class="digit">            <script>\n
+                document.cookie="kentopvc_48591=yes";\n
+            </script>\n
+\n
+            <div id="kento-pvc-single"><span class="kento-pvc-total"> 10571</span></div></span>\n
+                                                    <span class="raring-s"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab//images/moderate-rating.png"></span>\n
+                            \t<span class="p_test">Project tested</span>\n
+\n
+                    </div>\n
+                    <div class="content-panel-box-border " style="margin-top: 0px;"> \n
+    <div style="margin: 25px 15px;text-align:center;clear:both;"> \n
+        <center><div data-glade="" id="glade-aslot-1" data-ad-unit-path="/58549846/Electronics-Lab-Mouser-US_2018_728x90" width="728" height="90" data-fetch="false"><div style="width: 728px; height: 90px;"><iframe src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;glade_req=1&amp;glv=35&amp;dt=1532329281853&amp;output=html&amp;iu=/58549846/Electronics-Lab-Mouser-US_2018_728x90&amp;sz=728x90&amp;guci=2.2.0.0.2.2.0&amp;sfv=1-0-29&amp;correlator=4284386280140515&amp;adk=430769360&amp;biw=800&amp;bih=600&amp;adx=141.3125&amp;ady=508.34375&amp;oid=3&amp;u_sd=1&amp;ifi=1&amp;vis=1&amp;url=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/" scrolling="no" marginwidth="0" marginheight="0" style="margin: 0px; border: 0px; width: 100%; height: 100%;"></iframe></div></div>\n
+<script async="" src="https://securepubads.g.doubleclick.net/static/glade.js"></script>\n
+</center>\n
+    </div>\n
+</div>                   \n
+                    <div class="box-panel-common">\n
+                        <div class="content-common1 right-content-img center_div"> \n
+\n
+<div class="rightpartdiv">\n
+    <p>
+        <a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-m080aa-500x500/" rel="attachment wp-att-48592" data-slb-active="1" data-slb-asset="1722675798" data-slb-internal="48592" data-slb-group="48591"><img class="aligncenter size-full wp-image-48592" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500.jpg" alt="L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500" width="500" height="500" srcset="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500.jpg 500w, http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-150x150.jpg 150w, http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-300x300.jpg 300w, http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-75x75.jpg 75w" sizes="(max-width: 500px) 100vw, 500px"></a>
+    </p>\n
+    <p style="text-align: center;"></p><center><!--Engineering360 300x250 Ad Tag-->\n
+        <div id="tile1" data-google-query-id="CI6q97XTtNwCFZR7vQodVeoH4Q">\n
+            <script type="text/javascript">\n
+            googletag.cmd.push(function() {\n
+                googletag.pubads().display('/4250/ElectronicsLab', [300, 250], 'tile1');\n
+            });\n
+            </script>\n
+            <div id="google_ads_iframe_/4250/ElectronicsLab_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html" id="google_ads_iframe_/4250/ElectronicsLab_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+        </center><p></p>\n
+        <p>Dual Motor L298 H-Bridge Control project can control two DC motors connected to it.&nbsp; The circuit is designed around the popular dual H-Bridge L298 from ST. This board can be configured to drive a single motor with high current rating also. This can be achieved with the help of jumpers on the board. &nbsp;An onboard 5V regulator can take a maximum of 18V of DC input. Should you wish to drive this board with higher voltage than 18V, you will need to connect a external 5V regulated source to the logic circuit. For this you will need to remove J-5V.&nbsp; This board can fit in any small toy or robot due to small size and very low profile. L298 IC is mounted under the PCB in horizontal position to make board small and low profile to fit any small robot. On board 5V regulator can be used to power up external Micro-Controller board as well as internal logic supply.</p>\n
+        <h3>Features</h3>\n
+        <ul>\n
+            <li>Motor supply: 7 to 46 VDC</li>\n
+            <li>Open J-5V Jumper if Input Motor Supply is above 18V ( Required External 5V for Logic)</li>\n
+            <li>Control Logic Input: Standard TTL logic level</li>\n
+            <li>Output DC drive to motor: up to 2 A each (Peak)</li>\n
+            <li>On Board 5V Regulator (Close J-5V to Use On Board 5V Regulator)</li>\n
+            <li>Enable and direction control pins available</li>\n
+            <li>External Diode Bridge for protection</li>\n
+            <li>Heat-sink for IC</li>\n
+            <li>Power-On LED indicator</li>\n
+            <li>Header Connector for Inputs and PWM</li>\n
+            <li>On Board PCB&nbsp; Solderable Jumpers for Enable</li>\n
+            <li>Screw terminal connector for easy input supply (PWR) / output (Motor) connection</li>\n
+            <li>Four mounting holes of 3.2 mm each</li>\n
+            <li>PCB dimensions 41X40mm</li>\n
+        </ul>\n
+        <p><strong>Note 01:</strong> Solder the Jumper PCB-J-A and PCB-J-B to enable the board permanently,</p>\n
+        <p>Jumpers are located under the PCB</p>\n
+        <p><strong>Note 02:</strong> Open Jumper J1, J2, J3, J4, J5 for Dual Motor Operations</p>\n
+        <p><strong>Note 03:</strong> For Single motor operation clos the jumpers J1, J2, J3, J4, J5</p>\n
+        <h3>Schematic</h3>\n
+        <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-sch/" rel="attachment wp-att-48593" data-slb-active="1" data-slb-asset="15253087" data-slb-internal="48593" data-slb-group="48591"><img class="aligncenter size-full wp-image-48593" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-SCH-e1461228244732.png" alt="L298-DUAL-DC-MOTOR-MODULE-SCH" width="780" height="365"></a></p>\n
+        <p style="text-align: center;"></p>
+
+    <center><!--Engineering360 300x250 Ad Tag-->\n
+            <div id="tile2" data-google-query-id="CMnv97XTtNwCFQkkvQodHXQBPw">\n
+                <script type="text/javascript">\n
+                googletag.cmd.push(function() {\n
+                    googletag.pubads().display('/4250/ElectronicsLab', [300, 250], 'tile2');\n
+                });\n
+                </script>\n
+                <div id="google_ads_iframe_/4250/ElectronicsLab_1__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;">
+                    <iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html" id="google_ads_iframe_/4250/ElectronicsLab_1" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe>
+                </div>
+            </div>\n
+    </center><p></p>\n
+    <h3>Parts List</h3>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-bom/" rel="attachment wp-att-48594" data-slb-active="1" data-slb-asset="918653384" data-slb-internal="48594" data-slb-group="48591"><img class="aligncenter size-full wp-image-48594" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-BOM-e1461228301995.png" alt="L298-DUAL-DC-MOTOR-MODULE-BOM" width="450" height="241"></a></p>\n
+    <h3>Connections</h3>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-connections/" rel="attachment wp-att-48595" data-slb-active="1" data-slb-asset="117907730" data-slb-internal="48595" data-slb-group="48591"><img class="aligncenter size-full wp-image-48595" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-e1461228466372.png" alt="L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS" width="500" height="306"></a></p>\n
+    <h3>Photos</h3>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-china/" rel="attachment wp-att-48600" data-slb-active="1" data-slb-asset="193219414" data-slb-internal="48600" data-slb-group="48591"><img class="aligncenter size-full wp-image-48600" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-China-e1461228688864.jpg" alt="L298-DUAL-DC-MOTOR-MODULE-China" width="750" height="401"></a></p>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-img_4702/" rel="attachment wp-att-48601" data-slb-active="1" data-slb-asset="1725578512" data-slb-internal="48601" data-slb-group="48591"><img class="aligncenter size-full wp-image-48601" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-IMG_4702-e1461228744823.jpg" alt="L298-DUAL-DC-MOTOR-MODULE-IMG_4702" width="750" height="403"></a></p>\n
+    <p>&nbsp;</p>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-img_4710/" rel="attachment wp-att-48602" data-slb-active="1" data-slb-asset="1771703145" data-slb-internal="48602" data-slb-group="48591"><img class="aligncenter size-full wp-image-48602" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-IMG_4710-e1461228787678.jpg" alt="L298-DUAL-DC-MOTOR-MODULE-IMG_4710" width="750" height="638"></a></p>\n
+    <p><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/l298-dual-dc-motor-module-img_4713/" rel="attachment wp-att-48603" data-slb-active="1" data-slb-asset="334871387" data-slb-internal="48603" data-slb-group="48591"><img class="aligncenter size-full wp-image-48603" src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-IMG_4713-e1461228861448.jpg" alt="L298-DUAL-DC-MOTOR-MODULE-IMG_4713" width="750" height="547"></a></p>\n
+    <h3>Video</h3>\n
+    <p><iframe src="https://www.youtube.com/embed/SvpV1W_61j8?feature=player_detailpage" width="720" height="460" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>\n
+</div> \n
+                        </div>                       \n
+<div class="social_buttons"><div class="oneall_sharing_icons oneall_sharing_icons_custom"><span class="oas_box oas_box_btns_hfrr oas_box_custom"><span class="oas_btn oas_btn_facebook" title="Share On Facebook"></span><span class="oas_btn oas_btn_twitter" title="Share On Twitter"></span><span class="oas_btn oas_btn_linkedin" title="Share On LinkedIn"></span><span class="oas_btn oas_btn_google_plus" title="Share On Google Plus"></span><span class="oas_btn oas_btn_email" title="Email"></span><span class="oas_btn oas_btn_counter" title=""></span><span class="oas_btn oas_btn_facebook_like_but" title="Share On Facebook Like Button"></span><span class="oas_btn oas_btn_google_plus_one_but" title="Share On Google +1 Button"></span><span class="oas_btn oas_btn_twitter_tweet_but" title="Share On Twitter Tweet Button"></span></span></div></div>\n
+                    </div>\n
+\t\t\t\t\t\n
+\t\t\t\t\t\n
+\n
+                    <div class="box-panel-common">    \n
+                                                </div>                \n
+                    </div>  \n
+\n
+                </div><!-- #content -->\n
+                <!-- pcb image -->\n
+\n
+                                    <div class="content-panel-box-border">\n
+                        <div class="download-box-panel thumb-project-box-panel-s">\n
+                            <div class="box-panel-common">\n
+                                <h2 class="title-sub-inner">PCB </h2>\n
+                            </div>\n
+                            <div class="box-panel-common gallery-thumb-spccer">\n
+                                <a href="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_LAYOUT.png" rel="lightbox"><img src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_LAYOUT.png"></a><a href="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_TOP.png" rel="lightbox"><img src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_TOP.png"></a><a href="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_BOTTOM.png" rel="lightbox"><img src="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE-PCB_BOTTOM.png"></a>                            </div>\n
+\n
+                        </div>\n
+\n
+                    </div>\n
+                                                        <div class="content-panel-box-border">\n
+                        <div class="download-box-panel">\n
+                            <div class="box-panel-common">\n
+                                <h2 class="title-sub-inner">Download</h2>\n
+\n
+\n
+                                <a href="#" class="open-icon" data-linkeurldid="downLoadOpen"> </a>\n
+                            </div>\n
+\n
+                            <!--  <a href="#" target="_blank"><img src="" width ="80" height="100"></a> -->\n
+                            <div class="download-details-panel" id="downLoadOpen">\n
+                                <ul>\n
+                                    \n
+                                            <li><a href="http://www.electronics-lab.com/wp-content/uploads/2016/04/L298-DUAL-DC-MOTOR-MODULE.pdf" target="_blank">L298-DUAL-DC-MOTOR-MODULE.pdf<img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/pdf-d-icon.png"></a></li>\n
+\n
+                                             </ul>\n
+                            </div>\n
+                        </div>\n
+                    </div>\n
+                    \n
+                <div class="box-panel-common ad-fix-full"> \n
+                    <div id="widget-area" class="widget-area" role="complementary">\n
+                        <aside id="text-9" class="widget widget_text">\t\t\t<div class="textwidget"></div>\n
+\t\t</aside>                        <aside id="text-9" class="widget widget_text">\n
+                            <div class="textwidget">\n
+                                <!--Engineering360 718x90 Ad Tag-->\n
+<div id="leaderboard2" data-google-query-id="CIuM-LXTtNwCFQpqvQodevQN0g">\n
+  <script type="text/javascript">\n
+    googletag.cmd.push(function() {\n
+      googletag.pubads().display('/4250/ElectronicsLab', [728, 90], 'leaderboard2');\n
+    });\n
+  </script>\n
+<div id="google_ads_iframe_/4250/ElectronicsLab_2__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="http://tpc.googlesyndication.com/safeframe/1-0-9/html/container.html" id="google_ads_iframe_/4250/ElectronicsLab_2" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div></div>\n
+\n
+\n
+                            </div>\n
+                        </aside>\n
+                    </div>\n
+                </div>\n
+                <div class="add-three-show-panel">\n
+\n
+                    \n
+                                                <div class="form-box-panel-one spaccer-top-margin"> \n
+                    <div class="add-form-inner-box-fix comment-input-box">\n
+                        \n
+<div id="comments" class="comments-area commentdiv">\n
+\n
+\t    <header class="entry-header">\n
+<h3 class="title-inner-sub1">\n
+\n
+\t\t\t4 Response on “<span>Dual DC Motor Driver For Robot with L298</span>”\t\t</h3></header>\n
+\n
+\t\t<ol class="comment-list">\n
+\t\t\t\t\t<li id="comment-149928" class="comment even thread-even depth-1 parent">\n
+\t\t\t<article id="div-comment-149928" class="comment-body">\n
+\t\t\t\t<footer class="comment-meta">\n
+\t\t\t\t\t<div class="comment-author vcard">\n
+\t\t\t\t\t\t<img alt="" src="http://1.gravatar.com/avatar/ddc87cef5df0f88cff0224a713b49789?s=74&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/ddc87cef5df0f88cff0224a713b49789?s=148&amp;d=mm&amp;r=g 2x" class="avatar avatar-74 photo grav-hashed grav-hijack" height="74" width="74" id="grav-ddc87cef5df0f88cff0224a713b49789-0">\t\t\t\t\t\t<b class="fn">Herren Thomas Dsouza</b> <span class="says">says:</span>\t\t\t\t\t</div><!-- .comment-author -->\n
+\n
+\t\t\t\t\t<div class="comment-metadata">\n
+\t\t\t\t\t\t<a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/#comment-149928">\n
+\t\t\t\t\t\t\t<time datetime="2016-04-23T20:16:05+00:00">\n
+\t\t\t\t\t\t\t\t23 April, 2016 at 8:16 pm\t\t\t\t\t\t\t</time>\n
+\t\t\t\t\t\t</a>\n
+\t\t\t\t\t\t\t\t\t\t\t</div><!-- .comment-metadata -->\n
+\n
+\t\t\t\t\t\t\t\t\t</footer><!-- .comment-meta -->\n
+\n
+\t\t\t\t<div class="comment-content">\n
+\t\t\t\t\t<p>Great! So I call this website a engineering university. Gracius.</p>\n
+\t\t\t\t</div><!-- .comment-content -->\n
+\n
+\t\t\t\t<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-149928" onclick="return addComment.moveForm( &quot;div-comment-149928&quot;, &quot;149928&quot;, &quot;respond&quot;, &quot;48591&quot; )" aria-label="Reply to Herren Thomas Dsouza">Reply</a></div>\t\t\t</article><!-- .comment-body -->\n
+<ol class="children">\n
+\t\t<li id="comment-150233" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">\n
+\t\t\t<article id="div-comment-150233" class="comment-body">\n
+\t\t\t\t<footer class="comment-meta">\n
+\t\t\t\t\t<div class="comment-author vcard">\n
+\t\t\t\t\t\t<img alt="" src="http://0.gravatar.com/avatar/fdea3339ad420ef5834cda78619443a1?s=74&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/fdea3339ad420ef5834cda78619443a1?s=148&amp;d=mm&amp;r=g 2x" class="avatar avatar-74 photo grav-hashed grav-hijack" height="74" width="74" id="grav-fdea3339ad420ef5834cda78619443a1-0">\t\t\t\t\t\t<b class="fn">Electronics Lab</b> <span class="says">says:</span>\t\t\t\t\t</div><!-- .comment-author -->\n
+\n
+\t\t\t\t\t<div class="comment-metadata">\n
+\t\t\t\t\t\t<a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/#comment-150233">\n
+\t\t\t\t\t\t\t<time datetime="2016-04-24T09:06:43+00:00">\n
+\t\t\t\t\t\t\t\t24 April, 2016 at 9:06 am\t\t\t\t\t\t\t</time>\n
+\t\t\t\t\t\t</a>\n
+\t\t\t\t\t\t\t\t\t\t\t</div><!-- .comment-metadata -->\n
+\n
+\t\t\t\t\t\t\t\t\t</footer><!-- .comment-meta -->\n
+\n
+\t\t\t\t<div class="comment-content">\n
+\t\t\t\t\t<p>Thanks for your kind words, they are really encouraging to us.</p>\n
+\t\t\t\t</div><!-- .comment-content -->\n
+\n
+\t\t\t\t<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-150233" onclick="return addComment.moveForm( &quot;div-comment-150233&quot;, &quot;150233&quot;, &quot;respond&quot;, &quot;48591&quot; )" aria-label="Reply to Electronics Lab">Reply</a></div>\t\t\t</article><!-- .comment-body -->\n
+</li><!-- #comment-## -->\n
+</ol><!-- .children -->\n
+</li><!-- #comment-## -->\n
+\t\t<li id="comment-177956" class="comment even thread-odd thread-alt depth-1 parent">\n
+\t\t\t<article id="div-comment-177956" class="comment-body">\n
+\t\t\t\t<footer class="comment-meta">\n
+\t\t\t\t\t<div class="comment-author vcard">\n
+\t\t\t\t\t\t<img alt="" src="http://1.gravatar.com/avatar/196dfe26fc4a9d2e1afd5e37d482886c?s=74&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/196dfe26fc4a9d2e1afd5e37d482886c?s=148&amp;d=mm&amp;r=g 2x" class="avatar avatar-74 photo grav-hashed grav-hijack" height="74" width="74" id="grav-196dfe26fc4a9d2e1afd5e37d482886c-0">\t\t\t\t\t\t<b class="fn">Ágio Felipe</b> <span class="says">says:</span>\t\t\t\t\t</div><!-- .comment-author -->\n
+\n
+\t\t\t\t\t<div class="comment-metadata">\n
+\t\t\t\t\t\t<a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/#comment-177956">\n
+\t\t\t\t\t\t\t<time datetime="2018-02-15T19:54:52+00:00">\n
+\t\t\t\t\t\t\t\t15 February, 2018 at 7:54 pm\t\t\t\t\t\t\t</time>\n
+\t\t\t\t\t\t</a>\n
+\t\t\t\t\t\t\t\t\t\t\t</div><!-- .comment-metadata -->\n
+\n
+\t\t\t\t\t\t\t\t\t</footer><!-- .comment-meta -->\n
+\n
+\t\t\t\t<div class="comment-content">\n
+\t\t\t\t\t<p>Hello, what is the function of diodes D2, D3, D4 and D5?</p>\n
+\t\t\t\t</div><!-- .comment-content -->\n
+\n
+\t\t\t\t<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-177956" onclick="return addComment.moveForm( &quot;div-comment-177956&quot;, &quot;177956&quot;, &quot;respond&quot;, &quot;48591&quot; )" aria-label="Reply to Ágio Felipe">Reply</a></div>\t\t\t</article><!-- .comment-body -->\n
+<ol class="children">\n
+\t\t<li id="comment-177975" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">\n
+\t\t\t<article id="div-comment-177975" class="comment-body">\n
+\t\t\t\t<footer class="comment-meta">\n
+\t\t\t\t\t<div class="comment-author vcard">\n
+\t\t\t\t\t\t<img alt="" src="http://0.gravatar.com/avatar/fdea3339ad420ef5834cda78619443a1?s=74&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/fdea3339ad420ef5834cda78619443a1?s=148&amp;d=mm&amp;r=g 2x" class="avatar avatar-74 photo grav-hashed grav-hijack" height="74" width="74" id="grav-fdea3339ad420ef5834cda78619443a1-1">\t\t\t\t\t\t<b class="fn">admin</b> <span class="says">says:</span>\t\t\t\t\t</div><!-- .comment-author -->\n
+\n
+\t\t\t\t\t<div class="comment-metadata">\n
+\t\t\t\t\t\t<a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/#comment-177975">\n
+\t\t\t\t\t\t\t<time datetime="2018-02-16T18:25:11+00:00">\n
+\t\t\t\t\t\t\t\t16 February, 2018 at 6:25 pm\t\t\t\t\t\t\t</time>\n
+\t\t\t\t\t\t</a>\n
+\t\t\t\t\t\t\t\t\t\t\t</div><!-- .comment-metadata -->\n
+\n
+\t\t\t\t\t\t\t\t\t</footer><!-- .comment-meta -->\n
+\n
+\t\t\t\t<div class="comment-content">\n
+\t\t\t\t\t<p>These diodes are used to protect the IC from voltage spikes.</p>\n
+\t\t\t\t</div><!-- .comment-content -->\n
+\n
+\t\t\t\t<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-177975" onclick="return addComment.moveForm( &quot;div-comment-177975&quot;, &quot;177975&quot;, &quot;respond&quot;, &quot;48591&quot; )" aria-label="Reply to admin">Reply</a></div>\t\t\t</article><!-- .comment-body -->\n
+</li><!-- #comment-## -->\n
+</ol><!-- .children -->\n
+</li><!-- #comment-## -->\n
+\t\t</ol><!-- .comment-list -->\n
+\n
+\t\t\n
+\t\t\n
+\t\n
+\n
+\t\n
+\t\t<div id="respond" class="comment-respond">\n
+\t\t\t\t\t\t\t<h3 id="reply-title" class="comment-reply-title">Leave a Reply\t\t\t\t\t<small><a rel="nofollow" id="cancel-comment-reply-link" href="/project/dual-dc-motor-driver-robot-l298/#respond" style="display:none;">Cancel reply</a></small>\n
+\t\t\t\t</h3>\n
+\t\t\t\t\t\t<form id="commentform" class="comment-form">\n
+\t\t\t\t<iframe title="Comment Form" src="http://jetpack.wordpress.com/jetpack-comment/?blogid=95929522&amp;postid=48591&amp;comment_registration=0&amp;require_name_email=1&amp;stc_enabled=1&amp;stb_enabled=1&amp;show_avatars=1&amp;avatar_default=mystery&amp;greeting=Leave+a+Reply&amp;greeting_reply=Leave+a+Reply+to+%s&amp;color_scheme=transparent&amp;lang=en_US&amp;jetpack_version=6.3.2&amp;show_cookie_consent=10&amp;has_cookie_consent=0&amp;sig=0cf88882868fbf291ec5331f8588b74163fda4b6#parent=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/" style="width: 100%; height: 50px; border: 0px;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" scrolling="no"></iframe>\n
+\t\t\t\t<!--[if !IE]><!-->\n
+\t\t\t\t<script>\n
+\t\t\t\t\tdocument.addEventListener('DOMContentLoaded', function () {\n
+\t\t\t\t\t\tvar commentForms = document.getElementsByClassName('jetpack_remote_comment');\n
+\t\t\t\t\t\tfor (var i = 0; i < commentForms.length; i++) {\n
+\t\t\t\t\t\t\tcommentForms[i].allowTransparency = true;\n
+\t\t\t\t\t\t\tcommentForms[i].scrolling = 'no';\n
+\t\t\t\t\t\t}\n
+\t\t\t\t\t});\n
+\t\t\t\t</script>\n
+\t\t\t\t<!--<![endif]-->\n
+\t\t\t<input id="ak_js" name="ak_js" type="hidden" value="1532329285002"></form>\n
+\t\t</div>\n
+\n
+\t\t\n
+\t\t<input type="hidden" name="comment_parent" id="comment_parent" value="">\n
+\n
+\t\t<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p></div><!-- #comments -->                    </div>\n
+                </div>\n
+                                    <div id="widget-area" class="widget-area tetsrtr" role="complementary">\n
+                                                <aside id="text-10" class="widget widget_text">\n
+                            <div class="textwidget">\n
+                                <a class="no_popup1 ads_statistics test123" value="0" href="http://www.electronics-lab.com/contact-us/" target="_blank" id="566776"><img src="http://www.electronics-lab.com/wp-content/uploads/ads_dir/273992883300x250.png"></a>                            </div>\n
+                        </aside>\n
+                        <aside id="text-11" class="widget widget_text">\n
+                            <div class="textwidget">\n
+                                <a class="no_popup1 ads_statistics test123" value="0" href="https://e-teknet.com/PCBPromotion.php" target="_blank" id="608054"><img src="http://www.electronics-lab.com/wp-content/uploads/ads_dir/1500522895PCBLady_SquareV1.jpg"></a>                            </div>\n
+                        </aside>\n
+                        <aside id="text-12" class="widget widget_text">\n
+                            <div class="textwidget">\n
+                                <a class="no_popup1 ads_statistics" value="0" href="https://analytics.oemsecrets.com/main.php?n=Avnet-EU&amp;table=projects&amp;source=elab&amp;event_link=https://www.avnet.com/shop/emea/?cmp=GLOBAL-EMEA-GLOBAL-REACHFURTHER-TPM-OEMSECRETS-ElectronicsLab-BAN-201707" target="_blank" id="418071"><img src="http://www.electronics-lab.com/wp-content/uploads/ads_dir/641118241Generic ad-Reach further-eCommerce-300x250-B.jpg"></a>                            </div>\n
+                        </aside>\n
+                    </div>\n
+\n
+                                            </div>\n
+\n
+        <div class="add-three-show-panel-list mar_bottom0">\n
+            <aside id="widget_crp-2" class="widget widget_widget_crp"><h2 class="widget-title">Related Projects:</h2><div id="crp_related" class="crp_related_widget"><ul><li><a class="thumb" href="http://www.electronics-lab.com/project/2x-l298-dual-dc-motor-driver-board-robots/"><img src="http://www.electronics-lab.com/wp-content/uploads/2016/12/L298-Dual-DC-Motor-Driver-Board-IMG1.jpg" alt="2X L298 Dual DC Motor Driver Board for Robots" title="2X L298 Dual DC Motor Driver Board for Robots" width="" height="" class="crp_thumb"></a><a href="http://www.electronics-lab.com/project/2x-l298-dual-dc-motor-driver-board-robots/" class="crp_title">2X L298 Dual DC Motor Driver Board for Robots</a><span class="title-position">Rajkumar Sharma</span><span class="crp_excerpt"> 2XL298 H-Bridge Dual Motor driver project can control two DC…</span><span class="crp_date"> 20 December, 2016</span> <a href="http://www.electronics-lab.com/project/2x-l298-dual-dc-motor-driver-board-robots/" class="read-more">Read More</a></li><li><a class="thumb" href="http://www.electronics-lab.com/project/dual-motor-l298-h-bridge-motor-control/"><img src="http://www.electronics-lab.com/wp-content/uploads/2015/12/IMG.png" alt="Dual Motor L298 H-Bridge Motor Control" title="Dual Motor L298 H-Bridge Motor Control" width="" height="" class="crp_thumb"></a><a href="http://www.electronics-lab.com/project/dual-motor-l298-h-bridge-motor-control/" class="crp_title">Dual Motor L298 H-Bridge Motor Control</a><span class="title-position">Rajkumar Sharma</span><span class="crp_excerpt"> Dual Motor L298 H-Bridge Control project can control two DC…</span><span class="crp_date"> 18 December, 2015</span> <a href="http://www.electronics-lab.com/project/dual-motor-l298-h-bridge-motor-control/" class="read-more">Read More</a></li><li><a class="thumb" href="http://www.electronics-lab.com/project/dual-dc-motor-driver-using-two-l293d/"><img src="http://www.electronics-lab.com/wp-content/uploads/2016/03/Dual-DC-Motor-driver-for-robot-using-L293D-DC001-e1459241252416.jpg" alt="Dual DC Motor driver using two L293D" title="Dual DC Motor driver using two L293D" width="" height="" class="crp_thumb"></a><a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-using-two-l293d/" class="crp_title">Dual DC Motor driver using two L293D</a><span class="title-position">Rajkumar Sharma</span><span class="crp_excerpt"> Dual DC Motor driver using two L293D IC. The L293D…</span><span class="crp_date"> 29 March, 2016</span> <a href="http://www.electronics-lab.com/project/dual-dc-motor-driver-using-two-l293d/" class="read-more">Read More</a></li></ul><div style="clear:both"></div></div></aside>\n
+        </div>\n
+\n
+\n
+\n
+    </div>\n
+</div><!-- #primary -->\n
+\n
+<script type="text/javascript">\n
+    jQuery(window).load(function() {\n
+\n
+        jQuery(".gallery-thumb-spccer img").each(function(){\n
+\n
+            var maxWidth = 366;\n
+            var maxHeight = 250;  \n
+\n
+            var ratio = 0;\n
+            var width = jQuery(this).width();\n
+            var height = jQuery(this).height();\n
+            if(width > maxWidth){\n
+                ratio = maxWidth / width;\n
+                jQuery(this).css("width", maxWidth);\n
+                jQuery(this).css("height", height * ratio);\n
+                height = height * ratio;\n
+            }\n
+            var width = jQuery(this).width();\n
+            var height = jQuery(this).height();\n
+\n
+            if(height > maxHeight){\n
+\n
+                ratio = maxHeight / height;\n
+                jQuery(this).css("height", maxHeight);\n
+                jQuery(this).css("width", width * ratio);\n
+                width = width * ratio;\n
+\n
+            }\n
+        });\n
+\n
+        jQuery(".crp_related_widget img").each(function(){\n
+            //jQuery(".crp_related_widget img").on("load",function(){\n
+\n
+            var maxWidth = 352;\n
+            var maxHeight = 215;  \n
+\n
+\n
+\n
+            var ratio = 0;\n
+            var width = jQuery(this).width();\n
+            var height = jQuery(this).height();\n
+            if(width > maxWidth){\n
+                ratio = maxWidth / width;\n
+                jQuery(this).css("width", maxWidth);\n
+                jQuery(this).css("height", height * ratio);\n
+                height = height * ratio;\n
+            }\n
+            var width = jQuery(this).width();\n
+            var height = jQuery(this).height();\n
+\n
+            if(height > maxHeight){\n
+\n
+\n
+                ratio = maxHeight / height;\n
+                jQuery(this).css("height", maxHeight);\n
+                jQuery(this).css("width", width * ratio);\n
+                width = width * ratio;\n
+\n
+            }\n
+        });\n
+\n
+\n
+    });\n
+</script>\n
+    \n
+</div></section>         \n
+<!-- #main -->\n
+\n
+<footer id="colophon" class="site-footer" role="contentinfo 589">\n
+              \n
+            <div class="footer-add-panel footer-home" style="background: none !important;">\n
+            <div class="coomon-wrapper">\n
+                \n
+                        <div class="footer-ad-inner-pg">\n
+\n
+                             \n
+                                                  \n
+                        <aside id="text-8" class="widget widget_text">\n
+                            <div class="textwidget">\n
+                                <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n
+<!-- electronics-lab.com 728x90 -->\n
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6394990980523463" data-ad-slot="6089602559" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:728px;height:90px;"></iframe></ins></ins></ins>\n
+<script>\n
+(adsbygoogle = window.adsbygoogle || []).push({});\n
+</script>                            </div>\n
+                        </aside>\n
+                           \n
+                    </div>\n
+                </div>\n
+            </div>\n
+                        <div class="footer-navigation-panel">\n
+        <div class="coomon-wrapper">\n
+            <div id="widget-area" class="widget-area" role="complementary">\n
+                  \n
+                    <div class="footer-last-left">\n
+                        \n
+\t\t\t\t\t\t<aside id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-32769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32769"><a href="http://www.electronics-lab.com/search-site/">Search Site</a></li>\n
+<li id="menu-item-32768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32768"><a href="http://www.electronics-lab.com/advertising/">Advertising</a></li>\n
+<li id="menu-item-32770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32770"><a href="http://www.electronics-lab.com/contact-us/">Contact Us</a></li>\n
+<li id="menu-item-38054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38054"><a href="http://www.electronics-lab.com/blog/">Blog</a></li>\n
+<li id="menu-item-38055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38055"><a href="http://www.electronics-lab.com/community/">Community</a></li>\n
+<li id="menu-item-69111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69111"><a href="http://www.electronics-lab.com/link/">Links</a></li>\n
+</ul></div></aside><aside id="nav_menu-4" class="widget widget_nav_menu"><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-74412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74412"><a href="http://www.electronics-lab.com/android-app/">Android App</a></li>\n
+<li id="menu-item-74413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74413"><a href="http://www.electronics-lab.com/projects/">Projects</a></li>\n
+<li id="menu-item-74414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74414"><a href="http://www.electronics-lab.com/buy-parts/">Buy Parts</a></li>\n
+</ul></div></aside> \n
+\t\t\t\t\t\t\n
+                        <div class="socialicons">\n
+                            <li><a href="https://www.facebook.com/electronicslab" target="blank"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/facebookicon.jpg" width="32" height="31" alt="">Follow with facebook</a></li>\n
+                            <li><a href="https://twitter.com/electronicslab" target="blank"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/twittericon.jpg" alt="">Follow with twitter</a></li> \n
+                            <li><a href="https://plus.google.com/106870045731149868749/" target="blank"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/googleplus.jpg" alt="">Follow with google+</a></li></div> \n
+                    </div>\n
+                                      \n
+                    <div class="footer-last-right">\n
+                        <aside id="execphp-3" class="widget widget_execphp">\t\t\t<div class="execphpwidget"><a href="http://www.electronics-lab.com/" rel="home"><img src="http://www.electronics-lab.com/wp-content/themes/electronicslab/images/logo-footer.png" alt="electronicslab" title="electronicslab" width="221" height="48"></a></div>\n
+\t\t</aside>\t\t\t\t\t\t\n
+                    </div>       \n
+                    \n
+            </div>\n
+\n
+\n
+        </div>\n
+    </div>\n
+\n
+    <div class="footerbottom"> \n
+\t\t<div class="coomon-wrapper"><aside id="text-4" class="widget widget_text">\t\t\t<div class="textwidget"><div class="left">© Electronics-lab.com - 2018 ,  Some rights reserved. </div>\n
+<div class="right">\n
+Projects are licensed CC BY-SA unless otherwise noted\n
+<div></div>\n
+\t\t</div></div></aside><aside id="text-53" class="widget widget_text">\t\t\t<div class="textwidget">\n
+\t</div>\n
+\t\t</aside>\t\n
+\n
+\t\t</div>\n
+\n
+\t</div>\n
+    <!-- .widget-area -->\n
+</footer>\n
+\n
+\n
+\n
+<!-- #colophon -->\n
+\n
+\n
+  \n
+<script>\n
+    jQuery(function() {\n
+        /*  setTimeout(loaddiv, 15000);\n
+        function loaddiv()\n
+        {\n
+        var tx = jQuery(".headerads").text().trim();\n
+\n
+        if(tx=='')\n
+        {\n
+        alert(tx);\n
+        jQuery(".headerads").hide();\n
+        }\n
+        }*/\n
+        jQuery(".footer-add-panel").addClass('footer-home');\n
+    });\n
+\n
+</script>\n
+<style type="text/css">\n
+.ipsLayout_container{\n
+\tz-index: 1;\n
+}\n
+</style>\n
+<div class="main_social">\n
+\t\t\t\n
+\t<div class="facebook_area on">\n
+\t\t<div class="facebook_left">\n
+\t\t\t<i class="fa fa-facebook c_facebook"></i>\n
+\t\t\t<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/electronicslab&amp;width=240&amp;height=346&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false" style="border: 0px solid #fff; overflow: hidden; width: 240px;"></iframe>\n
+\t\t</div>\n
+\t</div>\n
+\t\n
+\t\n
+\t\t\t \n
+\t<div class="twitter_area on">\t\t\t\n
+\t\t<div class="twitter_left">\n
+\t\t\t<i class="fa fa-twitter c_twitter"></i>\n
+\t\t\t<div style="width:248px;font-size:8px;text-align:right;height:225px">\n
+\t\t\t\t\n
+\t\t\t\t<div id="twitter-box"></div>\n
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 520px; height: 600px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="613626937425182720" title="Twitter Timeline"></iframe>\n
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>\n
+\t\t\t\t<!--<script>\n
+\t\t\t\t  var tw_user = 'ElectronicsLab';\n
+\t\t\t\t  var tw_width = 248;\n
+\t\t\t\t  var tw_height = 325;\n
+\t\t\t\t  var no_face = 10;\n
+\t\t\t\t\t(function() {\n
+\t\t\t\t\t  var tw_box = document.createElement('script'); tw_box.type = 'text/javascript'; tw_box.async = true;\n
+\t\t\t\t\t  tw_box.src = 'http://www.electronics-lab.com/wp-content/plugins/puretheme-slide-social-tabs/js/twitter.js';\n
+\t\t\t\t\t  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(tw_box);\n
+\t\t\t\t  })();\n
+\t\t\t\t</script>-->\n
+\t\t\t\t<div class="hidebar"></div>\n
+\t\t\t</div>\n
+\t\t</div>\n
+\t</div>\n
+\t\t\n
+\t\n
+\t\t\t\n
+\t<div class="google_area on">\t\t\t\n
+\t\t<div class="google_left">\n
+\t\t\t<i class="fa fa-google-plus c_google"></i>\n
+\n
+\t\t\t<div style="float: left; margin: 10px 10px 10px 15px;">\n
+\t\t\t\t\n
+\t\t\t\t<div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 270px; height: 232px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 270px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 232px;" tabindex="0" vspace="0" width="100%" id="I0_1532329283124" name="I0_1532329283124" src="https://apis.google.com/_/im/_/widget/render/plus/followers?usegapi=1&amp;action=followers&amp;height=250&amp;source=blogger:blog:followers&amp;width=270&amp;hl=en&amp;origin=http://www.electronics-lab.com&amp;url=https://plus.google.com/106870045731149868749&amp;gsrc=3p&amp;ic=1&amp;jsh=m;/_/scs/apps-static/_/js/k=oz.gapi.en_US.1o-4ybCSy04.O/am=wQ/rt=j/d=1/rs=AGLTcCOCxs8QC305ZpbxxhCukgnir7jpYQ/m=__features__#_methods=onPlusOne,_ready,_close,_open,_resizeMe,_renderstart,oncircled,drefresh,erefresh,onload&amp;id=I0_1532329283124&amp;_gfid=I0_1532329283124&amp;parent=http://www.electronics-lab.com&amp;pfname=&amp;rpctoken=66392304" data-gapiattached="true" title="+1"></iframe></div>\n
+\t\t\t\t<script type="text/javascript">(function () {window.___gcfg = {'lang': 'en'};var po = document.createElement('script');po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);})();</script>\n
+\t\t\t</div>\n
+\t\t</div>\n
+\t</div>\t\t\n
+\t\t\n
+\t\t</div>\n
+\n
+\t\t\t\t<div id="wprmenu_bar" class="wprmenu_bar normalslide left">\n
+\t\t\t\t\t<div class="hamburger hamburger--slider">\n
+  \t\t\t\t\t\t<span class="hamburger-box">\n
+    \t\t\t\t\t\t<span class="hamburger-inner"></span>\n
+  \t\t\t\t\t\t</span>\n
+\t\t\t\t\t</div>\n
+\t\t\t\t\t<div class="menu_title">\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href="http://www.electronics-lab.com">MENU</a>\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n
+\t\t\t\t</div>\n
+\t\t\t\n
+\t\t\t<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left default " id="mg-wprm-wrap">\n
+\t\t\t\t\t\t\t\t<ul id="wprmenu_menu_ul">\n
+\t\t\t\t\t<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-32737"><a href="http://www.electronics-lab.com/">Home</a></li>\n
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32859 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="http://www.electronics-lab.com/projects/" class="wprmenu_parent_item">Projects</a>\n
+<ul class="sub-menu" style="display: none;">\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32821"><a href="http://www.electronics-lab.com/projectcategory/projects/audio/">Audio</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32834"><a href="http://www.electronics-lab.com/projectcategory/projects/arduino/">Arduino</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32822"><a href="http://www.electronics-lab.com/projectcategory/projects/automotive/">Automotive</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32823"><a href="http://www.electronics-lab.com/projectcategory/projects/game-and-entetainment-robots/">Game – Robots</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-63360"><a href="http://www.electronics-lab.com/projectcategory/projects/mcu-development/">MCU Development</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32824"><a href="http://www.electronics-lab.com/projectcategory/projects/microcontroller/">Microcontroller</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32825"><a href="http://www.electronics-lab.com/projectcategory/projects/miscellaneous/">Miscellaneous</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-63359"><a href="http://www.electronics-lab.com/projectcategory/projects/motor-control/">Motor Control</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-64157"><a href="http://www.electronics-lab.com/projectcategory/projects/modules/">Modules</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32826"><a href="http://www.electronics-lab.com/projectcategory/projects/moterlight-and-power-control/">Light – Power Control</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32827"><a href="http://www.electronics-lab.com/projectcategory/projects/oscllators-and-timers/">Oscillators – Timers</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32828"><a href="http://www.electronics-lab.com/projectcategory/projects/pc-related/">PC Related</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32829"><a href="http://www.electronics-lab.com/projectcategory/projects/power/">Power</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32830"><a href="http://www.electronics-lab.com/projectcategory/projects/rf-circuits/">RF Circuits</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32832"><a href="http://www.electronics-lab.com/projectcategory/projects/science-related/">Science</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32833"><a href="http://www.electronics-lab.com/projectcategory/projects/security-and-other-sensors-and-detectors/">Sensors – Detectors</a></li>\n
+\t<li class="menu-item menu-item-type-taxonomy menu-item-object-projectcategory menu-item-32835"><a href="http://www.electronics-lab.com/projectcategory/projects/test-and-measurement/">Test – Measurement</a></li>\n
+</ul>\n
+</li>\n
+<li class="download-drop menu-item menu-item-type-post_type menu-item-object-page menu-item-32735"><a href="http://www.electronics-lab.com/downloads/">Downloads</a></li>\n
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32734"><a href="http://www.electronics-lab.com/articles/">Articles</a></li>\n
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61975"><a href="http://www.electronics-lab.com/buy-parts/">Buy Parts</a></li>\n
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36402"><a href="http://www.electronics-lab.com/community/">Community</a></li>\n
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32731"><a href="http://www.electronics-lab.com/blog/">Blog</a></li>\n
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73407"><a href="https://www.wellpcb.com">PCB Proto</a></li>\n
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32730 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="http://www.electronics-lab.com/contact-us/" class="wprmenu_parent_item">Contact Us</a>\n
+<ul class="sub-menu" style="display: none;">\n
+\t<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70285"><a href="http://www.electronics-lab.com/advertising/">Advertising</a></li>\n
+</ul>\n
+</li>\n
+\t\t\t\t\t\t\t\t\t\t\t\t<li>\n
+\t\t\t\t\t\t\t\t<div class="wpr_search search_top">\n
+\t\t\t\t\t\t\t\t\t<form role="search" method="get" class="wpr-search-form" action="http://www.electronics-lab.com"><label for="search-form-5b557d3ddcaed"></label><input type="search" class="wpr-search-field" placeholder="Search..." value="" name="s" title="Search for:"><button type="submit" class="wpr_submit"><i class="wpr-icon-search"></i></button></form>\t\t\t\t\t\t\t\t</div>\n
+\t\t\t\t\t\t\t</li>\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n
+\t\t\t\t</ul>\n
+\t\t\t</div>\n
+\t\t\t\t<div style="display:none">\n
+\t<div class="grofile-hash-map-ddc87cef5df0f88cff0224a713b49789">\n
+\t</div>\n
+\t<div class="grofile-hash-map-fdea3339ad420ef5834cda78619443a1">\n
+\t</div>\n
+\t<div class="grofile-hash-map-196dfe26fc4a9d2e1afd5e37d482886c">\n
+\t</div>\n
+\t</div>\n
+<link rel="stylesheet" id="basecss-css" href="http://www.electronics-lab.com/wp-content/plugins/eu-cookie-law/css/style.css?ver=4.9.7" type="text/css" media="all">\n
+<link rel="stylesheet" id="customadds_css-css" href="http://www.electronics-lab.com/wp-content/plugins/custom-adsence/css/customadds_css.css?ver=4.9.7" type="text/css" media="all">\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript">\n
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"d MM, yy","firstDay":1,"isRTL":false});});\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var _wpcf7 = {"loaderUrl":"http:\/\/www.electronics-lab.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.3"></script>\n
+<script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201830"></script>\n
+<script type="text/javascript" src="https://secure.gravatar.com/js/gprofiles.js?ver=2018Julaa"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var WPGroHo = {"my_hash":""};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/comment-reply.min.js?ver=4.9.7"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/themes/electronicslab/js/functions.js?ver=2014-06-08"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var ajaxsearchlite = {"ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php","backend_ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php","js_scope":"jQuery"};\n
+var ASL = {"ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php","backend_ajaxurl":"http:\/\/www.electronics-lab.com\/wp-admin\/admin-ajax.php","js_scope":"jQuery","detect_ajax":"0","version":"4640"};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/ajax-search-lite/js/min/jquery.ajaxsearchlite.min.js?ver=4.6.4"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>\n
+<script type="text/javascript">\n
+/* <![CDATA[ */\n
+var eucookielaw_data = {"euCookieSet":"","autoBlock":"0","expireTimer":"360","scrollConsent":"0","networkShareURL":"","isCookiePage":"","isRefererWebsite":""};\n
+/* ]]> */\n
+</script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/eu-cookie-law/js/scripts.js?ver=3.0.5"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/custom-adsence/js/customadds_js.js"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/custom-adsence/js/jquery.easytabs.min.js"></script>\n
+<script async="async" type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/akismet/_inc/form.js?ver=4.0.8"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/client/js/prod/lib.core.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/client/js/prod/lib.view.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/themes/baseline/js/prod/client.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/themes/default/js/prod/client.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/template-tags/item/js/prod/tag.item.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/template-tags/ui/js/prod/tag.ui.js?ver=2.7.0"></script>\n
+<script type="text/javascript" src="http://www.electronics-lab.com/wp-content/plugins/simple-lightbox/content-handlers/image/js/prod/handler.image.js?ver=2.7.0"></script>\n
+<script type="text/javascript" id="slb_footer">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB && SLB.has_child('View.init') ) { SLB.View.init({"ui_autofit":true,"ui_animate":true,"slideshow_autostart":true,"slideshow_duration":"6","group_loop":true,"ui_overlay_opacity":"0.8","ui_title_default":false,"theme_default":"slb_default","ui_labels":{"loading":"Loading","close":"Close","nav_next":"Next","nav_prev":"Previous","slideshow_start":"Start slideshow","slideshow_stop":"Stop slideshow","group_status":"Item %current% of %total%"}}); }\n
+if ( !!window.SLB && SLB.has_child('View.assets') ) { {$.extend(SLB.View.assets, {"1722675798":{"id":48592,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500.jpg","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-300x300.jpg","width":300,"height":300,"mime-type":"image\/jpeg"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-500x270.jpg","width":500,"height":270,"mime-type":"image\/jpeg"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-75x75.jpg","width":75,"height":75,"mime-type":"image\/jpeg"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500.jpg","width":500,"height":500}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-M080AA-500x500","caption":""},"15253087":{"id":48593,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-SCH-e1461228244732.png","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-300x140.png","width":300,"height":140,"mime-type":"image\/png"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-768x359.png","width":768,"height":359,"mime-type":"image\/png"},"large":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-1024x479.png","width":1024,"height":479,"mime-type":"image\/png"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-604x270.png","width":604,"height":270,"mime-type":"image\/png"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-150x70.png","width":150,"height":70,"mime-type":"image\/png"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-75x75.png","width":75,"height":75,"mime-type":"image\/png"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-SCH-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-SCH-e1461228244732.png","width":780,"height":365}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-SCH","caption":""},"918653384":{"id":48594,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-BOM-e1461228301995.png","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-300x160.png","width":300,"height":160,"mime-type":"image\/png"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-768x411.png","width":768,"height":411,"mime-type":"image\/png"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-604x270.png","width":604,"height":270,"mime-type":"image\/png"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-150x80.png","width":150,"height":80,"mime-type":"image\/png"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-75x75.png","width":75,"height":75,"mime-type":"image\/png"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-BOM-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-BOM-e1461228301995.png","width":450,"height":241}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-BOM","caption":""},"117907730":{"id":48595,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-e1461228466372.png","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-300x184.png","width":300,"height":184,"mime-type":"image\/png"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-768x470.png","width":768,"height":470,"mime-type":"image\/png"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-604x270.png","width":604,"height":270,"mime-type":"image\/png"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-150x92.png","width":150,"height":92,"mime-type":"image\/png"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-75x75.png","width":75,"height":75,"mime-type":"image\/png"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-150x150.png","width":150,"height":150,"mime-type":"image\/png"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS-e1461228466372.png","width":500,"height":306}},"image_meta":{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-CONNECTIONS","caption":""},"193219414":{"id":48600,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-China-e1461228688864.jpg","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-300x160.jpg","width":300,"height":160,"mime-type":"image\/jpeg"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-768x411.jpg","width":768,"height":411,"mime-type":"image\/jpeg"},"large":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-1024x547.jpg","width":1024,"height":547,"mime-type":"image\/jpeg"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-604x270.jpg","width":604,"height":270,"mime-type":"image\/jpeg"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-150x80.jpg","width":150,"height":80,"mime-type":"image\/jpeg"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-75x75.jpg","width":75,"height":75,"mime-type":"image\/jpeg"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-China-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-China-e1461228688864.jpg","width":750,"height":401}},"image_meta":{"aperture":"2.4","credit":"","camera":"iPhone 4S","caption":"","created_timestamp":"1457464671","copyright":"","focal_length":"4.28","iso":"80","shutter_speed":"0.0083333333333333","title":"","orientation":"1","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-China","caption":""},"1725578512":{"id":48601,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4702-e1461228744823.jpg","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-300x161.jpg","width":300,"height":161,"mime-type":"image\/jpeg"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-768x413.jpg","width":768,"height":413,"mime-type":"image\/jpeg"},"large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-1024x551.jpg","width":1024,"height":551,"mime-type":"image\/jpeg"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-604x270.jpg","width":604,"height":270,"mime-type":"image\/jpeg"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-150x81.jpg","width":150,"height":81,"mime-type":"image\/jpeg"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-75x75.jpg","width":75,"height":75,"mime-type":"image\/jpeg"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4702-e1461228744823.jpg","width":750,"height":403}},"image_meta":{"aperture":"2.4","credit":"","camera":"iPhone 4S","caption":"","created_timestamp":"1457460937","copyright":"","focal_length":"4.28","iso":"80","shutter_speed":"0.0083333333333333","title":"","orientation":"1","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-IMG_4702","caption":""},"1771703145":{"id":48602,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4710-e1461228787678.jpg","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-300x255.jpg","width":300,"height":255,"mime-type":"image\/jpeg"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-768x653.jpg","width":768,"height":653,"mime-type":"image\/jpeg"},"large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-1024x871.jpg","width":1024,"height":871,"mime-type":"image\/jpeg"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-604x270.jpg","width":604,"height":270,"mime-type":"image\/jpeg"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-150x128.jpg","width":150,"height":128,"mime-type":"image\/jpeg"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-75x75.jpg","width":75,"height":75,"mime-type":"image\/jpeg"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4710-e1461228787678.jpg","width":750,"height":638}},"image_meta":{"aperture":"2.4","credit":"","camera":"iPhone 4S","caption":"","created_timestamp":"1457461135","copyright":"","focal_length":"4.28","iso":"50","shutter_speed":"0.01","title":"","orientation":"1","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-IMG_4710","caption":""},"334871387":{"id":48603,"type":"image","source":"http:\/\/www.electronics-lab.com\/wp-content\/uploads\/2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4713-e1461228861448.jpg","internal":true,"sizes":{"thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-300x219.jpg","width":300,"height":219,"mime-type":"image\/jpeg"},"medium_large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-768x560.jpg","width":768,"height":560,"mime-type":"image\/jpeg"},"large":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-1024x747.jpg","width":1024,"height":747,"mime-type":"image\/jpeg"},"post-thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-604x270.jpg","width":604,"height":270,"mime-type":"image\/jpeg"},"crp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-150x109.jpg","width":150,"height":109,"mime-type":"image\/jpeg"},"detail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-75x75.jpg","width":75,"height":75,"mime-type":"image\/jpeg"},"wp_rp_thumbnail":{"file":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"original":{"file":"2016\/04\/L298-DUAL-DC-MOTOR-MODULE-IMG_4713-e1461228861448.jpg","width":750,"height":547}},"image_meta":{"aperture":"2.4","credit":"","camera":"iPhone 4S","caption":"","created_timestamp":"1457461199","copyright":"","focal_length":"4.28","iso":"50","shutter_speed":"0.025","title":"","orientation":"1","keywords":[]},"description":"","title":"L298-DUAL-DC-MOTOR-MODULE-IMG_4713","caption":""}});} }\n
+/* THM */\n
+if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_baseline',{"name":"Baseline","parent":"","styles":[{"handle":"base","uri":"http:\/\/www.electronics-lab.com\/wp-content\/plugins\/simple-lightbox\/themes\/baseline\/css\/style.css","deps":[]}],"layout_raw":"<div class=\"slb_container\"><div class=\"slb_content\">{{item.content}}<div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><div class=\"slb_controls\"><span class=\"slb_close\">{{ui.close}}<\/span><span class=\"slb_slideshow\">{{ui.slideshow_control}}<\/span><\/div><div class=\"slb_loading\">{{ui.loading}}<\/div><\/div><div class=\"slb_details\"><div class=\"inner\"><div class=\"slb_data\"><div class=\"slb_data_content\"><span class=\"slb_data_title\">{{item.title}}<\/span><span class=\"slb_group_status\">{{ui.group_status}}<\/span><div class=\"slb_data_desc\">{{item.description}}<\/div><\/div><\/div><div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><\/div><\/div><\/div>"}); }if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_default',{"name":"Default (Light)","parent":"slb_baseline","styles":[{"handle":"base","uri":"http:\/\/www.electronics-lab.com\/wp-content\/plugins\/simple-lightbox\/themes\/default\/css\/style.css","deps":[]}]}); }})})(jQuery);}/* ]]> */</script>\n
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>\n
+\n
+\t\t<!--[if IE]>\n
+\t\t<script type="text/javascript">\n
+\t\t\tif ( 0 === window.location.hash.indexOf( '#comment-' ) ) {\n
+\t\t\t\t// window.location.reload() doesn't respect the Hash in IE\n
+\t\t\t\twindow.location.hash = window.location.hash;\n
+\t\t\t}\n
+\t\t</script>\n
+\t\t<![endif]-->\n
+\t\t<script type="text/javascript">\n
+\t\t\t(function () {\n
+\t\t\t\tvar comm_par_el = document.getElementById( 'comment_parent' ),\n
+\t\t\t\t\tcomm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',\n
+\t\t\t\t\tframe = document.getElementById( 'jetpack_remote_comment' ),\n
+\t\t\t\t\ttellFrameNewParent;\n
+\n
+\t\t\t\ttellFrameNewParent = function () {\n
+\t\t\t\t\tif ( comm_par ) {\n
+\t\t\t\t\t\tframe.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=95929522&postid=48591&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%s&color_scheme=transparent&lang=en_US&jetpack_version=6.3.2&show_cookie_consent=10&has_cookie_consent=0&sig=0cf88882868fbf291ec5331f8588b74163fda4b6#parent=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/" + '&replytocom=' + parseInt( comm_par, 10 ).toString();\n
+\t\t\t\t\t} else {\n
+\t\t\t\t\t\tframe.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=95929522&postid=48591&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%s&color_scheme=transparent&lang=en_US&jetpack_version=6.3.2&show_cookie_consent=10&has_cookie_consent=0&sig=0cf88882868fbf291ec5331f8588b74163fda4b6#parent=http://www.electronics-lab.com/project/dual-dc-motor-driver-robot-l298/";\n
+\t\t\t\t\t}\n
+\t\t\t\t};\n
+\n
+\t\t\t\t\n
+\t\t\t\tif ( 'undefined' !== typeof addComment ) {\n
+\t\t\t\t\taddComment._Jetpack_moveForm = addComment.moveForm;\n
+\n
+\t\t\t\t\taddComment.moveForm = function ( commId, parentId, respondId, postId ) {\n
+\t\t\t\t\t\tvar returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),\n
+\t\t\t\t\t\t\tcancelClick, cancel;\n
+\n
+\t\t\t\t\t\tif ( false === returnValue ) {\n
+\t\t\t\t\t\t\tcancel = document.getElementById( 'cancel-comment-reply-link' );\n
+\t\t\t\t\t\t\tcancelClick = cancel.onclick;\n
+\t\t\t\t\t\t\tcancel.onclick = function () {\n
+\t\t\t\t\t\t\t\tvar cancelReturn = cancelClick.call( this );\n
+\t\t\t\t\t\t\t\tif ( false !== cancelReturn ) {\n
+\t\t\t\t\t\t\t\t\treturn cancelReturn;\n
+\t\t\t\t\t\t\t\t}\n
+\n
+\t\t\t\t\t\t\t\tif ( ! comm_par ) {\n
+\t\t\t\t\t\t\t\t\treturn cancelReturn;\n
+\t\t\t\t\t\t\t\t}\n
+\n
+\t\t\t\t\t\t\t\tcomm_par = 0;\n
+\n
+\t\t\t\t\t\t\t\ttellFrameNewParent();\n
+\n
+\t\t\t\t\t\t\t\treturn cancelReturn;\n
+\t\t\t\t\t\t\t};\n
+\t\t\t\t\t\t}\n
+\n
+\t\t\t\t\t\tif ( comm_par == parentId ) {\n
+\t\t\t\t\t\t\treturn returnValue;\n
+\t\t\t\t\t\t}\n
+\n
+\t\t\t\t\t\tcomm_par = parentId;\n
+\n
+\t\t\t\t\t\ttellFrameNewParent();\n
+\n
+\t\t\t\t\t\treturn returnValue;\n
+\t\t\t\t\t};\n
+\t\t\t\t}\n
+\n
+\t\t\t\t\n
+\t\t\t\t// Do the post message bit after the dom has loaded.\n
+\t\t\t\tdocument.addEventListener( 'DOMContentLoaded', function () {\n
+\t\t\t\t\tvar iframe_url = "http:\/\/jetpack.wordpress.com";\n
+\t\t\t\t\tif ( window.postMessage ) {\n
+\t\t\t\t\t\tif ( document.addEventListener ) {\n
+\t\t\t\t\t\t\twindow.addEventListener( 'message', function ( event ) {\n
+\t\t\t\t\t\t\t\tvar origin = event.origin.replace( /^http:\/\//i, 'https://' );\n
+\t\t\t\t\t\t\t\tif ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {\n
+\t\t\t\t\t\t\t\t\treturn;\n
+\t\t\t\t\t\t\t\t}\n
+\t\t\t\t\t\t\t\tjQuery( frame ).height( event.data );\n
+\t\t\t\t\t\t\t});\n
+\t\t\t\t\t\t} else if ( document.attachEvent ) {\n
+\t\t\t\t\t\t\twindow.attachEvent( 'message', function ( event ) {\n
+\t\t\t\t\t\t\t\tvar origin = event.origin.replace( /^http:\/\//i, 'https://' );\n
+\t\t\t\t\t\t\t\tif ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {\n
+\t\t\t\t\t\t\t\t\treturn;\n
+\t\t\t\t\t\t\t\t}\n
+\t\t\t\t\t\t\t\tjQuery( frame ).height( event.data );\n
+\t\t\t\t\t\t\t});\n
+\t\t\t\t\t\t}\n
+\t\t\t\t\t}\n
+\t\t\t\t})\n
+\n
+\t\t\t})();\n
+\t\t</script>\n
+\n
+\t\t<script type="text/javascript" src="https://stats.wp.com/e-201830.js" async="async" defer="defer"></script>\n
+<script type="text/javascript">\n
+\t_stq = window._stq || [];\n
+\t_stq.push([ 'view', {v:'ext',j:'1:6.3.2',blog:'95929522',post:'48591',tz:'3',srv:'www.electronics-lab.com'} ]);\n
+\t_stq.push([ 'clickTrackerInit', '95929522', '48591' ]);\n
+</script>\n
+<!-- Eu Cookie Law 3.0.5 --><div class="pea_cook_wrapper pea_cook_bottomright" style="color:#FFFFFF;background:rgb(61,94,120);background: rgba(61,94,120,0.85);"><p>By continuing to use the site, you agree to the use of cookies. <a style="color:#FFFFFF;" href="#" id="fom">more info</a> <button id="pea_cook_btn" class="pea_cook_btn" href="#">Accept</button></p></div><div class="pea_cook_more_info_popover"><div class="pea_cook_more_info_popover_inner" style="color:#FFFFFF;background-color: rgba(61,94,120,0.9);"><p>The cookie settings on this website are set to "allow cookies" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click "Accept" below then you are consenting to this.</p><p><a style="color:#FFFFFF;" href="#" id="pea_close">Close</a></p></div></div>\n
+<script type="text/javascript">\n
+var infolinks_pid = 2955596;\n
+var infolinks_wsid = 0;\n
+</script>\n
+\n
+\n
+\n
+\n
+\n
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/bSTT5dUx9MY.js?version=42#channel=f2eff285243d448&amp;origin=http://www.electronics-lab.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/bSTT5dUx9MY.js?version=42#channel=f2eff285243d448&amp;origin=http://www.electronics-lab.com" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe id="google_osd_static_frame_3097489470596" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe><iframe name="oauth2relay310710060" id="oauth2relay310710060" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http://www.electronics-lab.com&amp;jsh=m;/_/scs/apps-static/_/js/k=oz.gapi.en_US.1o-4ybCSy04.O/am=wQ/rt=j/d=1/rs=AGLTcCOCxs8QC305ZpbxxhCukgnir7jpYQ/m=__features__#rpctoken=1967461295&amp;forcesecure=1" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.7a5ca036ea5299f1d2ebb2234731e35e.html?origin=http://www.electronics-lab.com&amp;settingsEndpoint=https://syndication.twitter.com/settings" title="Twitter settings iframe" style="display: none;"></iframe><img src="http://pixel.wp.com/g.gif?v=ext&amp;j=1:6.3.2&amp;blog=95929522&amp;post=48591&amp;tz=3&amp;srv=www.electronics-lab.com&amp;host=www.electronics-lab.com&amp;ref=&amp;rand=0.6052002704868482" alt=":)" width="6" height="5" id="wpstats"><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body></html>

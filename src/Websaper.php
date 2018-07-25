@@ -63,9 +63,9 @@ class Websaper
      * Test crawling method
      * @return array
      */
-    public function testCrawl()
+    public function testCrawl($file = 'hackaday/test.html')
     {
-        return $this->sampleContent();
+        return $this->sampleContent($file);
     }
 
     /**
@@ -84,9 +84,10 @@ class Websaper
         $getters = new $class;
         $title = $getters->title($xpath);
         $summary = $getters->summary($xpath);
+        $banner = $getters->banner($xpath);
         $body = $getters->content($xpath);
 
-        return compact('title', 'summary', 'body');
+        return compact('title', 'summary', 'body', 'banner');
     }
 
 }
