@@ -85,9 +85,10 @@ class Websaper
         $title = $getters->title($xpath);
         $summary = $getters->summary($xpath);
         $banner = $getters->banner($xpath);
+        $materials = $getters->materials($xpath);
         $body = $getters->content($xpath);
 
-        return compact('title', 'summary', 'body', 'banner');
+        return compact('title', 'summary', 'body', 'banner', 'materials');
     }
 
 }

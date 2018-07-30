@@ -29,6 +29,14 @@ interface Picker
     public function banner($content);
 
     /**
+     * Get materials
+     *
+     * @param  string  $content
+     * @return
+     */
+    public function materials($content);
+
+    /**
      * Get content
      *
      * @param  string  $content
