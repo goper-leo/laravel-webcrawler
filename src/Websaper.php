@@ -46,6 +46,7 @@ class Websaper
     public function crawl($url)
     {
         $this->url = $url;
+
         // domcontentloaded
         $content = $this->browsershot
                     ->url($this->url)
@@ -55,6 +56,7 @@ class Websaper
                     ->setOption('args', ['--headless=false'])
                     ->noSandbox()
                     ->dismissDialogs()
+                    ->timeout($this->config['time_out'])
                     ->bodyHtml();
 
         return $content;

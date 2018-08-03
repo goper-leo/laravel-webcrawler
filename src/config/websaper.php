@@ -29,15 +29,9 @@ return [
     */
     'npm_binary' => env('NPM_BINARY', '/usr/local/bin/node'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Reader
-    |--------------------------------------------------------------------------
-    | To find the path run `which npm`.
-    | Example: '/usr/local/bin/node'
-    */
-    'npm_binary' => [
-        
-    ],
+    /**
+     * Set websaper timeout
+     */
+    'time_out' => env('WEBSAPER_TIMEOUT', 10000)
 
 ];
