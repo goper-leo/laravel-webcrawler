@@ -1,0 +1,3179 @@
+<!DOCTYPE html><html lang="en"><head>\n
+    <meta charset="utf-8">\n
+          <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile mode if small screen device -->\n
+    \n
+    <title>Qwiic Flex Glove Controller Hookup Guide - learn.sparkfun.com</title>\n
+\n
+    <!--[if lt IE 9]>\n
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>\n
+    <![endif]-->\n
+\n
+    <link href="/css/bootstrap.min.css?rev=1532360793" rel="stylesheet">\n
+    <link rel="stylesheet" href="/css/theme.github.css?rev=1532360793" type="text/css" media="screen">    <link rel="alternate" type="application/atom+xml" title="Education Blog" href="https://learn.sparkfun.com/feeds/blog">\n
+    <link rel="alternate" type="application/atom+xml" title="Tutorials" href="https://learn.sparkfun.com/feeds/tutorials">\n
+    <link rel="alternate" type="application/atom+xml" title="Education Blog Comments" href="https://learn.sparkfun.com/feeds/blog_comments">\n
+    <link rel="alternate" type="application/atom+xml" title="Tutorial Comments" href="https://learn.sparkfun.com/feeds/tutorial_comments">\n
+\n
+    <script src="https://js.hs-scripts.com/2224003.js" type="text/javascript" id="hs-script-loader"></script><script src="https://script.crazyegg.com/pages/scripts/0046/4761.js?425813" async="" type="text/javascript"></script><script id="hs-analytics" src="//js.hs-analytics.net/analytics/1532927700000/2224003.js"></script><script async="" src="//static.olark.com/jsclient/loader.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/v1531759913576/recaptcha__en.js"></script><script src="https://connect.facebook.net/signals/config/988931021243392?v=2.8.23&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="g-recaptcha-script" src="//www.google.com/recaptcha/api.js?render=explicit&amp;onload=grecaptchaOnloadCallback" async="" defer=""></script><script type="text/javascript">\n
+      var SFECONFIG = {\n
+        dnt: false,\n
+        http_server: 'http://learn.sparkfun.com',\n
+        https_server: 'https://learn.sparkfun.com',\n
+        http_static: 'https://cdn.sparkfun.com',\n
+        learn_server: 'https://learn.sparkfun.com',\n
+        commerce_server: 'https://www.sparkfun.com',\n
+        base_url: '/',\n
+        url: '/',\n
+        controller: 'tutorials',\n
+        action: 'view',\n
+        entity_id: '',\n
+        auth: false,\n
+        sparkrev: '1532360793',\n
+        search_key: 'xY6qr5Ui3V2UMA762D9Z'      };\n
+      var require = {\n
+        paths: {\n
+          'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min'\n
+        },\n
+        baseUrl: '/js/',\n
+        urlArgs: "sparkrev=" + SFECONFIG.sparkrev,\n
+        deps: ['jqueryui'],\n
+        callback: function() {\n
+          $('#learn').learn();\n
+          $('#learn').sfeutil();\n
+          $.shared('domready');\n
+        }\n
+      };\n
+    </script>\n
+    <script src="/js/learn-built.js?sparkrev=1532360793"></script>\n
+          <script>\n
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n
+\n
+      ga('create', 'UA-3404365-1', 'auto', {'allowLinker': true});\n
+      ga('require', 'linker');\n
+      ga('linker:autoLink', ['www.sparkfun.com', 'avc.sparkfun.com'] );\n
+      ga('require', 'displayfeatures');\n
+            ga('set', 'dimension1', 'Guest');\n
+      ga('send', 'pageview');\n
+\n
+      </script>\n
+        <script type="text/javascript">\n
+    !function(f,b,e,v,n,t,s)\n
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n
+    n.queue=[];t=b.createElement(e);t.async=!0;\n
+    t.src=v;s=b.getElementsByTagName(e)[0];\n
+    s.parentNode.insertBefore(t,s)}(window,document,'script',\n
+        'https://connect.facebook.net/en_US/fbevents.js'); \n
+    fbq('init', '988931021243392');\n
+    fbq('track', 'PageView');\n
+  </script>\n
+  <noscript>\n
+    <img height="1" width="1"src="https://www.facebook.com/tr?id=988931021243392&ev=PageView&noscript=1"/>\n
+  </noscript>\n
+      <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jqueryui" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js?sparkrev=1532360793"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tutorial" src="/js/tutorial.js?sparkrev=1532360793"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery.imagesloaded" src="/js/jquery.imagesloaded.js?sparkrev=1532360793"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="rainbow" src="/js/rainbow.js?sparkrev=1532360793"></script><style type="text/css" id="hs-form-styled2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f">.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.pika-single.is-hidden{display:none}.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.pika-single{*zoom:1}.pika-single:before,.pika-single:after{content:" ";display:table}.pika-single:after{clear:both}.pika-lendar{float:left;width:240px;margin:8px}.pika-title{position:relative;text-align:center}.pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.pika-prev,.pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.pika-prev:hover,.pika-next:hover{opacity:1}.pika-prev.is-disabled,.pika-next.is-disabled{cursor:default;opacity:0.2}.pika-prev,.is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.pika-next,.is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.pika-select{display:inline-block;*display:inline}.pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.pika-table th,.pika-table td{width:14.28571%;padding:0}.pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.pika-table abbr{border-bottom:none;cursor:help}.pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.is-today .pika-button{color:#3af;font-weight:bold}.is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.pika-week{font-size:11px;color:#999}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-1 .hs-input{width:95%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-1 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-1 input[type="checkbox"],.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-2 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f fieldset.form-columns-3 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f label.hs-hidden{visibility:hidden}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .hs-field-desc{width:100%}.hsformerror{margin:0 0 2px;padding:2px 6px;height:auto;background-color:#fdd2d0;font-size:11px;border:1px solid #fcb3af;padding:4px 16px 4px 10px;color:#000;display:none;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(100%, #fdd2d0));background-image:-webkit-linear-gradient(#fefefe, #fdd2d0);background-image:-moz-linear-gradient(#fefefe, #fdd2d0);background-image:-o-linear-gradient(#fefefe, #fdd2d0);background-image:linear-gradient(#fefefe,#fdd2d0);-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 0 6px #ddd;-moz-box-shadow:0 0 6px #ddd;box-shadow:0 0 6px #ddd;z-index:99999}.hsformerror em{border:10px solid;border-color:#fdd2d0 transparent transparent;bottom:-17px;display:block;height:0;left:60px;position:absolute;width:0}.hsformerror p{font-family:Lucida Grande,Lucida Sans Unicode,bitstream vera sans,trebuchet ms,verdana,sans-serif;margin:0;float:left;margin-right:8px}.hsformerror:hover{cursor:default}.hsformerror .close-form-error{float:right;display:inline;top:3px;position:absolute;font-family:Verdana !important;color:#b17c79 !important;cursor:pointer !important;font-size:11px !important;font-weight:normal !important}.hsformerror .close-form-error:hover{color:#cc8884}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-2 .hs-form-field,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-2 .hs-form-field .hs-input,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-3 .hs-form-field .hs-input{width:95%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-2 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-2 .hs-form-field input[type="radio"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-3 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_f4719c4e-7a7d-4890-84eb-e80b8d78233f .form-columns-3 .hs-form-field input[type="radio"]{width:auto}}.legal-consent-container .field.hs-form-field{margin-bottom:8px}.legal-consent-container .hs-field-desc.checkbox-desc{margin:-12px 0 0 21px}.legal-consent-container .hs-form-booleancheckbox-display p{margin:0;display:inline-block}.legal-consent-container .hs-error-msgs label{color:#f2545b}.legal-consent-container ~ .hs_recaptcha{margin-top:18px}#hs-outer-captcha-target,#hs-outer-captcha-target *{display:none;height:0;width:0}.hubspot-link__container{font-size:11px;position:relative;top:-18px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.hubspot-link{color:#9fa0a2;text-decoration:none}.hubspot-link:hover{text-decoration:underline}.hubspot-link__icon{margin-bottom:-1px;margin-right:5px}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="generic" src="/js/generic.js?sparkrev=1532360793"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="c" src="/js/c.js?sparkrev=1532360793"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="clipboard.min" src="/js/clipboard.min.js?sparkrev=1532360793"></script><style data-olark="true" type="text/css">.olark-key,#hbl_code,#olark-data{display: none !important;}</style><style data-olark="true" type="text/css">@media print {#habla_beta_container_do_not_rely_on_div_classes_or_names {display: none !important}}</style><link data-olark="true" rel="stylesheet" href="https://static.olark.com/jsclient/styles/artsy-albatross/theme.css" type="text/css"><style type="text/css" id="hs-form-styled2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54">.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.pika-single.is-hidden{display:none}.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.pika-single{*zoom:1}.pika-single:before,.pika-single:after{content:" ";display:table}.pika-single:after{clear:both}.pika-lendar{float:left;width:240px;margin:8px}.pika-title{position:relative;text-align:center}.pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.pika-prev,.pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.pika-prev:hover,.pika-next:hover{opacity:1}.pika-prev.is-disabled,.pika-next.is-disabled{cursor:default;opacity:0.2}.pika-prev,.is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.pika-next,.is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.pika-select{display:inline-block;*display:inline}.pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.pika-table th,.pika-table td{width:14.28571%;padding:0}.pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.pika-table abbr{border-bottom:none;cursor:help}.pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.is-today .pika-button{color:#3af;font-weight:bold}.is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.pika-week{font-size:11px;color:#999}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-1 .hs-input{width:95%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-1 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-1 input[type="checkbox"],.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-2 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 fieldset.form-columns-3 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 label.hs-hidden{visibility:hidden}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .hs-field-desc{width:100%}.hsformerror{margin:0 0 2px;padding:2px 6px;height:auto;background-color:#fdd2d0;font-size:11px;border:1px solid #fcb3af;padding:4px 16px 4px 10px;color:#000;display:none;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(100%, #fdd2d0));background-image:-webkit-linear-gradient(#fefefe, #fdd2d0);background-image:-moz-linear-gradient(#fefefe, #fdd2d0);background-image:-o-linear-gradient(#fefefe, #fdd2d0);background-image:linear-gradient(#fefefe,#fdd2d0);-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 0 6px #ddd;-moz-box-shadow:0 0 6px #ddd;box-shadow:0 0 6px #ddd;z-index:99999}.hsformerror em{border:10px solid;border-color:#fdd2d0 transparent transparent;bottom:-17px;display:block;height:0;left:60px;position:absolute;width:0}.hsformerror p{font-family:Lucida Grande,Lucida Sans Unicode,bitstream vera sans,trebuchet ms,verdana,sans-serif;margin:0;float:left;margin-right:8px}.hsformerror:hover{cursor:default}.hsformerror .close-form-error{float:right;display:inline;top:3px;position:absolute;font-family:Verdana !important;color:#b17c79 !important;cursor:pointer !important;font-size:11px !important;font-weight:normal !important}.hsformerror .close-form-error:hover{color:#cc8884}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-2 .hs-form-field,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-2 .hs-form-field .hs-input,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-3 .hs-form-field .hs-input{width:95%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-2 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-2 .hs-form-field input[type="radio"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-3 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54 .form-columns-3 .hs-form-field input[type="radio"]{width:auto}}.legal-consent-container .field.hs-form-field{margin-bottom:8px}.legal-consent-container .hs-field-desc.checkbox-desc{margin:-12px 0 0 21px}.legal-consent-container .hs-form-booleancheckbox-display p{margin:0;display:inline-block}.legal-consent-container .hs-error-msgs label{color:#f2545b}.legal-consent-container ~ .hs_recaptcha{margin-top:18px}#hs-outer-captcha-target,#hs-outer-captcha-target *{display:none;height:0;width:0}.hubspot-link__container{font-size:11px;position:relative;top:-18px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.hubspot-link{color:#9fa0a2;text-decoration:none}.hubspot-link:hover{text-decoration:underline}.hubspot-link__icon{margin-bottom:-1px;margin-right:5px}</style></head>\n
+\n
+  <body id="learn" class="layout-default no-type tutorials-view no-touch" ontouchstart="" style="">\n
+            <!--\n
+    Start of DoubleClick Floodlight Tag: Please do not remove\n
+    Activity name of this tag: Universal\n
+    URL of the webpage where the tag is expected to be placed: http://sparkfun.com\n
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.\n
+    Creation Date: 07/18/2016\n
+  -->\n
+  <script type="text/javascript">\n
+    var axel = Math.random() + "";\n
+    var a = axel * 10000000000000;\n
+    document.write('<iframe src="https://5626816.fls.doubleclick.net/activityi;src=5626816;type=count0;cat=unive0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');\n
+  </script><iframe src="https://5626816.fls.doubleclick.net/activityi;src=5626816;type=count0;cat=unive0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=8289458424474.601?" width="1" height="1" frameborder="0" style="display:none"></iframe>\n
+  <noscript>\n
+    <iframe src="https://5626816.fls.doubleclick.net/activityi;src=5626816;type=count0;cat=unive0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>\n
+  </noscript>\n
+  <!-- End of DoubleClick Floodlight Tag: Please do not remove -->\n
+    \n
+    <div class="wrapper" itemscope="" itemtype="http://schema.org/WebSite">\n
+      <meta itemprop="url" content="https://learn.sparkfun.com/">\n
+      <div class="wrapper-inner">\n
+\n
+    \n
+<div class="header">\n
+  <div class="container">\n
+\n
+    <!-- Mobile Nav Button -->\n
+    <div class="mobile-menu-container left">\n
+      <a id="nav_toggle" class="mobile-menu-button nav_toggle" href="#" aria-expanded="false"><span class="sfe-icon-hamburger"></span></a>\n
+              <a id="search_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-search"></span></a>\n
+          </div>\n
+\n
+    <nav class="top-links">\n
+      <ul>\n
+        <li>\n
+          <a href="https://www.sparkfun.com/distributors">Find a Retailer</a>        </li>\n
+                  <li>\n
+            <div class="dropdown">\n
+              <a href="#" id="phone_hours" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">\n
+                Need Help?\n
+                <span class="caret"></span>\n
+              </a>\n
+              <div class="dropdown-menu pull-right need-help" role="menu" aria-labelledby="phone_hours">\n
+                <h4>Customer Service</h4>\n
+                <p><a href="https://www.sparkfun.com/orders/"><span class="glyphicon glyphicon-dashboard"></span> Track My Order</a></p>\n
+                <p><a href="https://www.sparkfun.com/support"><span class="glyphicon glyphicon-question-sign"></span> Frequently Asked Questions</a></p>\n
+                <p><a href="https://www.sparkfun.com/support#InternationalShipping"><span class="glyphicon glyphicon-globe"></span> International Shipping Info</a></p>\n
+                <p><a href="mailto:support@sparkfun.com"><span class="glyphicon glyphicon-envelope"></span> Send Email</a></p>\n
+                <p class="small text-muted">\n
+                  Mon-Fri, 9am to 12pm and<br>\n
+                  1pm to 5pm U.S. Mountain Time:\n
+                </p>\n
+                <p><span class="glyphicon glyphicon-earphone"></span> (303) 284-0979</p>\n
+                                  <p><a data-toggle="chatpopup" href="https://www.sparkfun.com/chat/popup"><span class="glyphicon glyphicon-comment"></span> Chat With Us</a></p>\n
+                              </div>\n
+            </div>\n
+          </li>\n
+              </ul>\n
+    </nav>\n
+\n
+    <!-- Logo -->\n
+    <div class="logo-container">\n
+      <a class="logo" href="https://www.sparkfun.com/">\n
+        <span class="sfe-icon-flame"></span>\n
+        <span class="sfe-icon-sparkfun" data-icon="🔥">\n
+          <span class="visuallyhidden">sparkfun.com</span>\n
+        </span>\n
+      </a>\n
+    </div>\n
+\n
+    <!-- Tabs -->\n
+    <!-- also edit mobile tabs in .tabs-container-mobile -->\n
+    <nav class="tabs-container hidden-xs">\n
+      <ul>\n
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>\n
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>\n
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>\n
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>\n
+      </ul>\n
+    </nav>\n
+\n
+    <!-- Cart & User -->\n
+    <div class="user-container mobile-menu-container right">\n
+\n
+      <a id="account_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-user"></span></a>\n
+\n
+              <div class="cart mobile-menu-button">\n
+          <a href="https://www.sparkfun.com/cart">\n
+            <span id="cart_status" class="sfe-icon-carticon cart-empty">\n
+              <span class="visuallyhidden">Shopping Cart</span>\n
+            </span>\n
+            <span class="cart_count">\n
+              <span id="items_in_cart">0</span>\n
+              <span id="cart_noun" class="visuallyhidden">items</span>\n
+            </span>\n
+          </a>\n
+        </div>\n
+      \n
+              <div class="user">\n
+          <!-- login modal trigger -->\n
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/login?redirect=/learn/tutorials/qwiic-flex-glove-controller-hookup-guide" data-toggle="modal" data-target="#login_modal" data-remote="false">log in</a>\n
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/make">register</a>        </div>\n
+      \n
+    </div>\n
+\n
+    <nav class="tabs-container-mobile visible-xs col-xs-12">\n
+      <ul>\n
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>\n
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>\n
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>\n
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>\n
+      </ul>\n
+    </nav>\n
+\n
+  </div>\n
+\n
+  <!-- Navigation / Search -->\n
+  <div class="main-nav-container">\n
+\n
+    <div class="container">\n
+\n
+      <nav class="product-nav">\n
+        <button type="button" class="product-menu" aria-expanded="false">\n
+          <span class="menu-icon sfe-icon-hamburger"></span>\n
+          <span class="product-menu-name">Product Menu</span>\n
+        </button>\n
+\n
+                  <form id="search_form" class="search" action="https://www.sparkfun.com/search/results" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">\n
+            <meta itemprop="target" content="https://www.sparkfun.com/search/results?term={term}">\n
+            <div class="ui-widget">\n
+              <input name="term" id="global-search" class="form-control ui-autocomplete-input" type="text" value="" placeholder="find products, tutorials, etc..." itemprop="query-input" autocomplete="off">\n
+              <button type="submit" class="glyphicon glyphicon-search global-search-icon" aria-label="Search"></button>\n
+            </div>\n
+          </form>\n
+              </nav>\n
+\n
+      <nav class="sub-nav">\n
+        <ul>\n
+          <li>\n
+            <a href="https://www.sparkfun.com/sparkx"><span class="sfe-icon-sparkx"></span></a>          </li>\n
+          <li>\n
+            <a href="http://www.sparkfuneducation.com/?__hstc=108804957.f1521775cdd1fb29f1a8aeca93bf4664.1532927438265.1532927438265.1532927438265.1&amp;__hssc=108804957.1.1532927438267&amp;__hsfp=4287614620" target="_blank">Education</a>\n
+          </li>\n
+          <li class="hidden-sm">\n
+            <a href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>          </li>\n
+          <li>\n
+            <a href="https://forum.sparkfun.com/" target="_blank">Forum</a>\n
+          </li>\n
+        </ul>\n
+      </nav>\n
+\n
+    </div>\n
+\n
+    <div class="product-menu-container" tabindex="-1" aria-hidden="true">\n
+      <div class="container">\n
+\n
+        <div class="fixed-product-menu-container col-lg-2 col-sm-3 col-xs-12">\n
+          <div class="sub-nav-mobile product-menu-group">\n
+            <a class="product-menu-heading desktop-toggle" href="https://www.sparkfun.com/account/mobile_toggle?redirect=/learn/tutorials/qwiic-flex-glove-controller-hookup-guide">Desktop Site</a>            <a class="product-menu-heading" href="https://www.sparkfun.com/sparkx"><span class="sfe-icon-sparkx"></span></a>            <a class="product-menu-heading" href="http://www.sparkfuneducation.com/?__hstc=108804957.f1521775cdd1fb29f1a8aeca93bf4664.1532927438265.1532927438265.1532927438265.1&amp;__hssc=108804957.1.1532927438267&amp;__hsfp=4287614620" target="_blank">Education</a>\n
+            <a class="product-menu-heading" href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>            <ul class="list-unstyled">\n
+            </ul>\n
+          </div>\n
+          <div class="product-menu-group">\n
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories">All Categories</a>            <ul class="list-unstyled">\n
+            </ul>\n
+          </div>\n
+          <div class="product-menu-group">\n
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories/featured">Featured <span class="visible-xs pull-right glyphicon glyphicon-plus"></span></a>            <ul class="list-unstyled">\n
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/new_products">New Products</a></li>\n
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/top"><span class="sfe-icon-flame"></span> Top Sellers</a></li>\n
+                              <li>\n
+                  <a href="https://www.sparkfun.com/spectacle" class="product-menu-item"> Spectacle</a>\n
+                </li>\n
+                            <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/283"><span class="sfe-icon-sparkx"></span></a></li>\n
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/sale">Sale</a></li>\n
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/gift_certificates">Gift Certificates</a></li>\n
+            </ul>\n
+          </div>\n
+                      <a href="https://www.sparkfun.com/top_electronics_kits_for_beginners" class="hidden-xs">\n
+              <img class="img-responsive img-rounded center-block" src="https://cdn.sparkfun.com//c/180-180/assets/product_menu_items/1/top-kits.jpg" alt="Top Electronics Kits for Beginners">\n
+            </a>\n
+                  </div>\n
+\n
+                              <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/287" class="product-menu-heading">\n
+                 Brands                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/featured" class="product-menu-item">\n
+                                              <span class="product-menu-item-icon sfe-icon-flame" style="color:#ee2e22"></span> SparkFun                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/103" class="product-menu-item">\n
+                                              <span class="product-menu-item-icon sfe-icon-arduino" style="color:#00878f"></span> Arduino                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/233" class="product-menu-item">\n
+                                              <span class="product-menu-item-icon sfe-icon-rpi-multi-color" style="color:#ffffff"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> Raspberry Pi                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/qwiic" class="product-menu-item">\n
+                                               Qwiic                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/284" class="product-menu-item">\n
+                                               micro:bit                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/287" class="product-menu-item">\n
+                                               <small>all brands</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/2" class="product-menu-heading">\n
+                 Development                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/299" class="product-menu-item">\n
+                                               Single Board Comp.                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/300" class="product-menu-item">\n
+                                               Microcontrollers                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/136" class="product-menu-item">\n
+                                               FPGA                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/149" class="product-menu-item">\n
+                                               Prototyping Boards                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/1" class="product-menu-item">\n
+                                               Programmers                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/2" class="product-menu-item">\n
+                                               <small>all development</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/23" class="product-menu-heading">\n
+                 Sensors                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/304" class="product-menu-item">\n
+                                               Movement                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/146" class="product-menu-item">\n
+                                               Biometrics                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/102" class="product-menu-item">\n
+                                               Imaging                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/305" class="product-menu-item">\n
+                                               Environment                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/117" class="product-menu-item">\n
+                                               Capacitive                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/23" class="product-menu-item">\n
+                                               <small>all sensors</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/46" class="product-menu-heading">\n
+                 Tools                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/271" class="product-menu-item">\n
+                                               3D Printing                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/280" class="product-menu-item">\n
+                                               CNC                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/49" class="product-menu-item">\n
+                                               Soldering                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/47" class="product-menu-item">\n
+                                               Hand Tools                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/177" class="product-menu-item">\n
+                                               Instruments                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/46" class="product-menu-item">\n
+                                               <small>all tools</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/310" class="product-menu-heading">\n
+                 Miscellaneous                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/157" class="product-menu-item">\n
+                                               All Kits                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/176" class="product-menu-item">\n
+                                               Books                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/311" class="product-menu-item">\n
+                                               Arts/Crafts Supplies                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/351" class="product-menu-item">\n
+                                               SD Cards                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/130" class="product-menu-item">\n
+                                               Swag                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/310" class="product-menu-item">\n
+                                               <small>all misc</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/51" class="product-menu-heading">\n
+                 Components                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/89" class="product-menu-item">\n
+                                               LED &amp; Illumination                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/145" class="product-menu-item">\n
+                                               Buttons &amp; Switches                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/76" class="product-menu-item">\n
+                                               LCDs &amp; OLEDs                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/28" class="product-menu-item">\n
+                                               Power                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/70" class="product-menu-item">\n
+                                               Cables                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/51" class="product-menu-item">\n
+                                               <small>all components</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/204" class="product-menu-heading">\n
+                 E-Textiles                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/327" class="product-menu-item">\n
+                                               LilyPad                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/328" class="product-menu-item">\n
+                                               Sewable Electronics                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/206" class="product-menu-item">\n
+                                               Materials                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/268" class="product-menu-item">\n
+                                               E-Textile Power                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/329" class="product-menu-item">\n
+                                               E-Textile Kits                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/204" class="product-menu-item">\n
+                                               <small>all e-textiles</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/31" class="product-menu-heading">\n
+                 Robotics                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/pages/Actobotics" class="product-menu-item">\n
+                                               Actobotics                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/178" class="product-menu-item">\n
+                                               Motors &amp; Drivers                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/330" class="product-menu-item">\n
+                                               Parts                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/155" class="product-menu-item">\n
+                                               Hardware                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/181" class="product-menu-item">\n
+                                               Robotics Kits                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/31" class="product-menu-item">\n
+                                               <small>all robotics</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/16" class="product-menu-heading">\n
+                 Wireless &amp; IoT                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/115" class="product-menu-item">\n
+                                               Bluetooth                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/112" class="product-menu-item">\n
+                                               WiFi                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/338" class="product-menu-item">\n
+                                               Satellite                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/4" class="product-menu-item">\n
+                                               GPS                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/339" class="product-menu-item">\n
+                                               Wireless Kits                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/16" class="product-menu-item">\n
+                                               <small>all wireless/IoT</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">\n
+              <a href="https://www.sparkfun.com/categories/273" class="product-menu-heading">\n
+                 Audio                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>\n
+              </a>\n
+              <ul class="list-unstyled">\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/343" class="product-menu-item">\n
+                                               Audio Boards                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/342" class="product-menu-item">\n
+                                               Audio Cables                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/344" class="product-menu-item">\n
+                                               Speakers                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/345" class="product-menu-item">\n
+                                               Audio Chips                                          </a>\n
+                  </li>\n
+                                  <li>\n
+                    <a href="https://www.sparkfun.com/categories/273" class="product-menu-item">\n
+                                               <small>all audio</small>\n
+                                          </a>\n
+                  </li>\n
+                              </ul>\n
+            </div>\n
+                  \n
+      </div>\n
+    </div>\n
+\n
+  </div>\n
+</div>\n
+\n
+\n
+    \n
+    <div class="content">\n
+      <div class="container" id="airlock">\n
+\n
+        \n
+        <div class="main-title">\n
+  <ul class="breadcrumb">\n
+    <li><a href="https://learn.sparkfun.com/">Home</a></li>\n
+    <li><a href="https://learn.sparkfun.com/tutorials">Tutorials</a></li>\n
+    <li>Qwiic Flex Glove Controller Hookup Guide</li>\n
+      </ul>\n
+\n
+  <h1>\n
+    Qwiic Flex Glove Controller Hookup Guide  </h1>\n
+\n
+</div>\n
+\n
+\n
+<a id="nav_toggle_pages" class="nav_toggle nav-toggle-trigger" href="#"><span>≡</span> Pages</a>\n
+\n
+<div id="tutorial" class="row">\n
+\n
+  <div class="col-sm-8" id="sections">\n
+\n
+    <div class="contributors">\n
+                      Contributors:\n
+                <a href="https://www.sparkfun.com/users/1014493"><img src="https://static.sparkfun.com/avatar/fde91fc929973498fdcfcfc9ccb086ab?d=retro&amp;s=20&amp;r=pg"> Englandsaurus</a>          </div>\n
+\n
+    <span class="fave_widget verbose">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="785">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">1</span>\n
+</span>    <div class="share-link-inline">\n
+\n
+  <a class="share-link-toggle" href="#">\n
+    <span class="share-title">\n
+      <span class="sfe-icon-share"></span>\n
+      Share    </span>\n
+  </a>\n
+\n
+  <div class="share-link-inner dialog">\n
+    Use this URL to share:<br>\n
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t785" onclick="$(this).select();">\n
+\n
+    <div class="share-social">\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http://sfe.io/t785" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http://sfe.io/t785&amp;name=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http://sfe.io/t785" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>\n
+\n
+    </div>\n
+\n
+    </div>\n
+  \n
+  <div class="share-social">\n
+\n
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Qwiic+Flex+Glove+Controller+Hookup+Guide&amp;url=http://sfe.io/t785&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>\n
+\n
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http://sfe.io/t785&amp;t=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>\n
+\n
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http://sfe.io/t785&amp;media=https://cdn.sparkfun.com//r/500-1000/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-04.jpg&amp;description=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>\n
+    \n
+  </div>\n
+\n
+  \n
+</div>\n
+\n
+          <div class="section tutorial-page">\n
+        <h2 id="introduction">Introduction</h2>\n
+        <p>Flex sensors are great for telling how bent something is in a project, but we’ve been running into issues with durability when using them in wearable applications like gloves. The <a href="https://www.sparkfun.com/products/14666">Qwiic Flex Glove Controller</a> isolates the weak point to allow for more permanent flex sensor applications. The board has an onboard ADS1015 ADC to I<sup>2</sup>C so we can get a whole bunch of analog inputs without touching our microcontroller’s ADC pins.</p>\n
+\n
+\n
+\n
+<div>\n
+<div class="tile product-tile has_addl_actions big grid " data-id="14666" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="SEN14666">\n
+      <meta itemprop="gtin13" content="0845156008940">\n
+    <meta itemprop="sku" content="SEN-14666">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14666">\n
+      <img src="https://cdn.sparkfun.com/r/500-500/assets/parts/1/2/8/6/2/14666-SparkFun_Qwiic_Flex_Glove_Controller-01.jpg" alt="SparkFun Qwiic Flex Glove Controller" height="500" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14666">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14666" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14666 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14666"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14666" itemprop="url">\n
+        <span itemprop="name">SparkFun Qwiic Flex Glove Controller</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="18 available"><span class="sfe-icon-stock-low"><span class="visuallyhidden">18 available</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      SEN-14666    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        The SparkFun Qwiic Flex Glove Controller allows you to incorporate flex sensors into a glove to control lighting, sound, and …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="39.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="39.95">39.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14666">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">1</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14666" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+<div class="flex-video-wrap clearfix">\n
+  <div class="flex-video widescreen img">\n
+    <iframe src="https://www.youtube.com/embed/8PYa828t3MQ/?autohide=1&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1" frameborder="0" allowfullscreen="" width="560" height="315"></iframe>\n
+  </div>\n
+</div>\n
+\n
+\n
+\n
+<p>In this hookup guide, we’ll figure out how to pull values from our fingers as well as calibrate the sensor for our range of motion. We’ll also cover recommended placement and installation to implement these into gloves.</p>\n
+\n
+<h3>Required Materials</h3>\n
+\n
+<p>To get started, you’ll need a microcontroller to, well, control everything.</p>\n
+\n
+\n
+\n
+<div class="tile-wrap">\n
+<div class="tile product-tile has_addl_actions  grid " data-id="13975" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV13975">\n
+    <meta itemprop="sku" content="DEV-13975">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/13975">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/1/7/2/2/13975-01.jpg" alt="SparkFun RedBoard - Programmed with Arduino" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="13975">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13975" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_13975 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_13975"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/13975" itemprop="url">\n
+        <span itemprop="name">SparkFun RedBoard - Programmed with Arduino</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-13975    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        At SparkFun we use many Arduinos and we're always looking for the simplest, most stable one. Each board is a bit different an…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="19.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.95">19.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">\n
+        \n
+<span class="product-rating" title="4.6 stars">\n
+          <span class="sfe-icon-star-full" data-star-index="0"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="1"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="2"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="3"></span>\n
+          <span class="sfe-icon-star-half" data-star-index="4"></span>\n
+  </span>\n
+<meta itemprop="ratingValue" content="4.6">\n
+<meta itemprop="bestRating" content="5">\n
+<meta itemprop="worstRating" content="1">\n
+    <span class="count" itemprop="reviewCount">34</span>\n
+  </span>\n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13975">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">30</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13975" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="13907" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV13907">\n
+      <meta itemprop="gtin13" content="0845156007646">\n
+    <meta itemprop="sku" content="DEV-13907">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/13907">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/1/5/6/4/13907-01.jpg" alt="SparkFun ESP32 Thing" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="13907">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13907" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_13907 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_13907"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/13907" itemprop="url">\n
+        <span itemprop="name">SparkFun ESP32 Thing</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-13907    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        The SparkFun ESP32 Thing is a comprehensive development platform for Espressif’s ESP32, their super-charged version of the …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="19.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.95">19.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">\n
+        \n
+<span class="product-rating" title="3.8 stars">\n
+          <span class="sfe-icon-star-full" data-star-index="0"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="1"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="2"></span>\n
+          <span class="sfe-icon-star-half" data-star-index="3"></span>\n
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>\n
+  </span>\n
+<meta itemprop="ratingValue" content="3.8">\n
+<meta itemprop="bestRating" content="5">\n
+<meta itemprop="worstRating" content="1">\n
+    <span class="count" itemprop="reviewCount">55</span>\n
+  </span>\n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13907">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">47</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13907" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="13825" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV13825">\n
+    <meta itemprop="sku" content="DEV-13825">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/13825">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/1/4/1/8/13825-01.jpg" alt="Raspberry Pi 3" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="13825">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13825" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_13825 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_13825"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/13825" itemprop="url">\n
+        <span itemprop="name">Raspberry Pi 3</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-13825    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        Everyone knows and loves Raspberry Pi, but what if you didn't need additional peripherals to make it wireless. The Raspberry …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="39.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="39.95">39.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">\n
+        \n
+<span class="product-rating" title="4.7 stars">\n
+          <span class="sfe-icon-star-full" data-star-index="0"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="1"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="2"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="3"></span>\n
+          <span class="sfe-icon-star-half" data-star-index="4"></span>\n
+  </span>\n
+<meta itemprop="ratingValue" content="4.7">\n
+<meta itemprop="bestRating" content="5">\n
+<meta itemprop="worstRating" content="1">\n
+    <span class="count" itemprop="reviewCount">92</span>\n
+  </span>\n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13825">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">90</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13825" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="13774" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="WRL13774">\n
+    <meta itemprop="sku" content="WRL-13774">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/13774">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/1/3/2/8/13774-01.jpg" alt="Particle Photon (Headers)" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="13774">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13774" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_13774 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_13774"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/13774" itemprop="url">\n
+        <span itemprop="name">Particle Photon (Headers)</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      WRL-13774    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        Particle's IoT (Internet of Things) hardware development board, the Photon, provides everything you need to build a connected…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="19"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">\n
+        \n
+<span class="product-rating" title="4.8 stars">\n
+          <span class="sfe-icon-star-full" data-star-index="0"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="1"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="2"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="3"></span>\n
+          <span class="sfe-icon-star-half" data-star-index="4"></span>\n
+  </span>\n
+<meta itemprop="ratingValue" content="4.8">\n
+<meta itemprop="bestRating" content="5">\n
+<meta itemprop="worstRating" content="1">\n
+    <span class="count" itemprop="reviewCount">28</span>\n
+  </span>\n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13774">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">37</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13774" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+  <div class="clearfix"></div>\n
+\n
+\n
+\n
+\n
+<p>Now to get into the Qwiic ecosystem, the key will be one of the following Qwiic shields to match your preference of microcontroller:</p>\n
+\n
+\n
+\n
+<div class="tile-wrap">\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14352" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV14352">\n
+      <meta itemprop="gtin13" content="0845156008322">\n
+    <meta itemprop="sku" content="DEV-14352">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14352">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/3/4/3/14352-01.jpg" alt="SparkFun Qwiic Shield for Arduino" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14352">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14352" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14352 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14352"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14352" itemprop="url">\n
+        <span itemprop="name">SparkFun Qwiic Shield for Arduino</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-14352    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        The SparkFun Qwiic Shield is an easy-to-assemble board that provides a simple way to incorporate the Qwiic Connect System wit…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="5.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="5.95">5.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14352">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">6</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14352" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14459" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV14459">\n
+      <meta itemprop="gtin13" content="0845156008506">\n
+    <meta itemprop="sku" content="DEV-14459">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14459">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/4/9/5/14459-01.jpg" alt="SparkFun Qwiic HAT for Raspberry Pi" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14459">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14459" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14459 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14459"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14459" itemprop="url">\n
+        <span itemprop="name">SparkFun Qwiic HAT for Raspberry Pi</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-14459    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        The SparkFun Qwiic HAT for Raspberry Pi is the quickest and easiest way to make your way into the Qwiic ecosystem and still u…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="4.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="4.95">4.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">\n
+        \n
+<span class="product-rating" title="5 stars">\n
+          <span class="sfe-icon-star-full" data-star-index="0"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="1"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="2"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="3"></span>\n
+          <span class="sfe-icon-star-full" data-star-index="4"></span>\n
+  </span>\n
+<meta itemprop="ratingValue" content="5">\n
+<meta itemprop="bestRating" content="5">\n
+<meta itemprop="worstRating" content="1">\n
+    <span class="count" itemprop="reviewCount">1</span>\n
+  </span>\n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14459">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">1</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14459" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14477" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="DEV14477">\n
+      <meta itemprop="gtin13" content="0845156008513">\n
+    <meta itemprop="sku" content="DEV-14477">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14477">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/5/2/6/14477-01.jpg" alt="SparkFun Qwiic Shield for Photon" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14477">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14477" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14477 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14477"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14477" itemprop="url">\n
+        <span itemprop="name">SparkFun Qwiic Shield for Photon</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      DEV-14477    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        The SparkFun Qwiic Shield for Photon is an easy-to-assemble board that provides a simple way to incorporate the Qwiic System …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="4.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="4.95">4.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14477">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">0</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14477" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+  <div class="clearfix"></div>\n
+\n
+\n
+\n
+\n
+<p>You will also need a Qwiic cable to connect the shield to your sensor, choose a length that suits your needs.</p>\n
+\n
+\n
+\n
+<div class="tile-wrap">\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14427" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="PRT14427">\n
+    <meta itemprop="sku" content="PRT-14427">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14427">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/4/5/3/14427-01.jpg" alt="Qwiic Cable - 100mm" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14427">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14427" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14427 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14427"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14427" itemprop="url">\n
+        <span itemprop="name">Qwiic Cable - 100mm</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      PRT-14427    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        This is a 100mm long 4-conductor cable with 1mm JST termination. It’s designed to connect Qwiic enabled components together…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="1.5"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.50">1.50</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14427">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">2</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14427" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14428" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="PRT14428">\n
+    <meta itemprop="sku" content="PRT-14428">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14428">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/4/5/4/14428-01.jpg" alt="Qwiic Cable - 200mm" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14428">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14428" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14428 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14428"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14428" itemprop="url">\n
+        <span itemprop="name">Qwiic Cable - 200mm</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      PRT-14428    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        This is a 200mm long 4-conductor cable with 1mm JST termination. It’s designed to connect Qwiic enabled components together…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="1.5"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.50">1.50</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14428">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">2</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14428" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14429" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="PRT14429">\n
+    <meta itemprop="sku" content="PRT-14429">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14429">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/4/5/5/14429-01.jpg" alt="Qwiic Cable - 500mm" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14429">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14429" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14429 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14429"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14429" itemprop="url">\n
+        <span itemprop="name">Qwiic Cable - 500mm</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      PRT-14429    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        This is a 50mm long 4-conductor cable with 1mm JST termination. It’s designed to connect Qwiic enabled components together …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="1.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.95">1.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14429">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">2</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14429" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="14426" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="PRT14426">\n
+    <meta itemprop="sku" content="PRT-14426">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/14426">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/1/2/4/5/2/14426-01.jpg" alt="Qwiic Cable - 50mm" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="14426">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14426" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_14426 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_14426"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/14426" itemprop="url">\n
+        <span itemprop="name">Qwiic Cable - 50mm</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      PRT-14426    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        This is a 50mm long 4-conductor cable with 1mm JST termination. It’s designed to connect Qwiic enabled components together …      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="0.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="0.95">0.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14426">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">2</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14426" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+  <div class="clearfix"></div>\n
+\n
+\n
+\n
+\n
+<p>If you don’t have a sewing needle, we’d recommend grabbing one if you’re trying to add these flex sensors to some gloves.</p>\n
+\n
+<div class="clearfix">\n
+\n
+<div>\n
+<div class="tile product-tile has_addl_actions  grid " data-id="10405" itemscope="" itemtype="http://schema.org/Product">\n
+  <meta itemprop="brand" content="SparkFun">\n
+  <meta itemprop="mpn" content="TOL10405">\n
+    <meta itemprop="sku" content="TOL-10405">\n
+\n
+  <div class="actions-wrap">\n
+\n
+    <a class="thumb" href="https://www.sparkfun.com/products/10405">\n
+      <img src="https://cdn.sparkfun.com/r/140-140/assets/parts/4/8/7/5/10405-04b.jpg" alt="Needle Set" height="140" itemprop="image">\n
+    </a>\n
+\n
+          <div class="actions" style="display:none">\n
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">\n
+          <input type="hidden" name="id" value="10405">\n
+          <input type="hidden" name="qty" value="1">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <!-- Add to Cart -->\n
+          <div class="quantity-container">\n
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_10405" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">\n
+          </div>\n
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">\n
+                  </form>\n
+      </div>\n
+      <div class="added_to_cart_10405 hide added_to_cart" style="display: none;">\n
+        <p class="success-message">\n
+          added <strong class="added_qty_10405"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!\n
+        </p>\n
+      </div>\n
+    \n
+  </div><!--/.actions-wrap-->\n
+\n
+  <div class="main">\n
+\n
+  \n
+    <h3 class="title">\n
+      <a href="https://www.sparkfun.com/products/10405" itemprop="url">\n
+        <span itemprop="name">Needle Set</span>\n
+      </a>\n
+    </h3>\n
+\n
+    <span class="bubbles" style="display:none">\n
+      \n
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>\n
+    </span>\n
+\n
+    <span class="sku" itemprop="sku">\n
+      TOL-10405    </span>\n
+\n
+          <p class="description" style="display:none" itemprop="description">\n
+        This set of sewing needles is a must-have when stitching together your next e-textile project. Each envelope contains three 4…      </p>\n
+    \n
+  </div>\n
+\n
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">\n
+      <div class="prices">\n
+                <span class="price-sale">\n
+          <span class="price calculated" itemprop="price" content="1.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.95">1.95</span></span>\n
+        </span>\n
+      </div>\n
+              <link itemprop="availability" href="http://schema.org/InStock">\n
+          </div>\n
+  \n
+  \n
+\n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="10405">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">6</span>\n
+</span>    <div class="dropdown wishlist-dropdown simple ">\n
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="10405" data-source="add_product_tile" href="#">\n
+    <span class="glyphicon glyphicon-list"></span>\n
+    <span class="name">Wish List</span>\n
+    <span class="caret"></span>\n
+  </a>\n
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>\n
+</div>\n
+  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+\n
+</div>\n
+\n
+\n
+<h3>Suggested Reading</h3>\n
+\n
+<p>If you aren’t familiar with our new Qwiic system, we recommend checking out our overview:</p>\n
+\n
+<p style="text-align:center;"> <a href="https://www.sparkfun.com/qwiic" class="btn btn-default">WHAT IS QWIIC?</a></p>\n
+\n
+<p>We would also recommend taking a look at the hookup guide for the Qwiic Shield if you haven’t already. Brushing up on your skills in I<sup>2</sup>C is also recommended, as all Qwiic sensors are I<sup>2</sup>C.</p>\n
+\n
+<p style="text-align:center;"> \n
+</p><div class="tile-wrap">\n
+  <div class="tile tutorial-tile has_addl_actions  grid " data-id="82">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/i2c">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/3/d/1/b/6/51adfda8ce395f151b000000.png)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">I2C</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      An introduction to I2C, one of the main embedded communications protocols in use today.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="82">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">74</span>\n
+</span>  </div>\n
+\n
+</div>\n
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="112">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/terminal-basics">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/1/1/2/terminalThumb.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Serial Terminal Basics</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      This tutorial will show you how to communicate with your serial devices using a variety of terminal emulator applications.     </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="112">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">22</span>\n
+</span>  </div>\n
+\n
+</div>\n
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="684">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/qwiic-shield-for-arduino--photon-hookup-guide">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/6/8/4/Qwic_Shield_Hookup_Guide-05.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Qwiic Shield for Arduino &amp; Photon Hookup Guide</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      Get started with our Qwiic ecosystem with the Qwiic shield for Arduino or Photon.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="684">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">1</span>\n
+</span>  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+  <div class="clearfix"></div>\n
+<p></p>\n
+\n
+<p>You’ll also most likely want to sew these boards into a wearable project, so if you’ve never picked up a needle and thread before, we’d recommend checking out a <a href="https://www.youtube.com/watch?v=ZvzMMcKHVR4">how-to on hand sewing</a>.</p>      </div>\n
+          <div class="section tutorial-page">\n
+        <h2 id="hardware-overview">Hardware Overview</h2>\n
+        <p>Let’s look over a few characteristics of the ADS1015 so we know a bit more about how our glove controller behaves.</p>\n
+\n
+<table class="table table-hover table-striped table-bordered">\n
+<tbody><tr><th class="tg-baqh"><b>Characteristic</b></th><th class="tg-baqh"><b>Range</b></th></tr>\n
+<tr><td class="tg-baqh">Operating Voltage</td><td class="tg-baqh"><b>2.0V - 5.5V</b></td></tr>\n
+<tr><td class="tg-baqh">Operating Temperature</td><td class="tg-baqh">-40°C - 125°C</td></tr>\n
+<tr><td class="tg-baqh">Resolution</td><td class="tg-baqh">12 bit</td></tr>\n
+<tr><td class="tg-baqh">Sample Rate</td><td class="tg-baqh">128 Hz - 3.3 kHz</td></tr>\n
+<tr><td class="tg-baqh">Current Consumption</td><td class="tg-baqh">150 µA (Typ.)</td></tr>\n
+<tr><td class="tg-baqh">I<sup>2</sup>C Address</td><td class="tg-baqh">0x48 (default), 0x49, 0x4A, 0x4B</td></tr>\n
+</tbody></table>\n
+\n
+\n
+<h3>Pins</h3>\n
+\n
+<p>The characteristics of the available pins on the magnetometer are outlined in the table below.</p>\n
+\n
+<table class="table table-hover table-striped table-bordered">\n
+<tbody><tr><th class="text-center">Pin Label</th><th class="text-center">Pin Function</th><th class="text-center">Input/Output</th><th>Notes</th></tr>\n
+<tr align="center"><td>3.3V</td><td>Power Supply</td><td>Input</td><td align="left">Should be between <b>2.2V - 3.6V</b></td></tr>\n
+<tr align="center"><td>GND</td><td>Ground</td><td>Input</td><td align="left">0V/common voltage.</td></tr>\n
+<tr align="center"><td>SDA</td><td>I<sup>2</sup>C Data Signal</td><td>Bi-directional</td><td align="left">Bi-directional data line. Voltage should not exceed power supply (e.g. 3.3V).</td></tr>\n
+<tr align="center"><td>SCL</td><td>I<sup>2</sup>C Clock Signal</td><td>Input</td><td align="left">Master-controlled clock signal. Voltage should not exceed power supply (e.g. 3.3V).</td></tr>\n
+</tbody></table>\n
+\n
+\n
+<br>\n
+\n
+\n
+<h3>Optional Features</h3>\n
+\n
+<p>The Qwiic Flex Glove controller has onboard I<sup>2</sup>C pull up resistors, which can be removed by removing the solder from the jumper highlighted below. Only remove this solder if you are using your own pullups on the I<sup>2</sup>C lines.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/I2CPU.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/I2CPU.png" alt="I2C Pullup"></a></p>\n
+\n
+<p>The I<sup>2</sup>C address of the board can be changed using the jumpers on the back of the board. The address selection pin is connected to the center pad of each jumper, the below table shows the addresses available when the address selection pin is tied to each of the 4 available pads.</p>\n
+\n
+<table class="table table-hover table-striped table-bordered">\n
+<tbody><tr><th class="tg-baqh"><b>Pin</b></th><th class="tg-baqh"><b>Address</b></th></tr>\n
+<tr><td class="tg-baqh">GND</td><td class="tg-baqh">0x48 (Default)</td></tr>\n
+<tr><td class="tg-baqh">VCC</td><td class="tg-baqh">0x49</td></tr>\n
+<tr><td class="tg-baqh">SDA</td><td class="tg-baqh">0x4A</td></tr>\n
+<tr><td class="tg-baqh">SCL</td><td class="tg-baqh">0x4B</td></tr>\n
+</tbody></table>\n
+\n
+\n
+<p>The location of the jumpers is shown in the below image.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/ADR.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/ADR.png" alt="Address Jumpers"></a></p>\n
+\n
+<p>The holes in the bottom corners of the board are used for sewing the board into the gloves of your choice.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Sewing.png"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Sewing.png" alt="Sewing holes"></a></p>\n
+\n
+<p>Make sure you don’t crease the flex sensors as this will break the sensor!</p>      </div>\n
+          <div class="section tutorial-page">\n
+        <h2 id="hardware-assembly">Hardware Assembly</h2>\n
+        <p>If you haven’t yet assembled your Qwiic Shield, now would be the time to head on over to that tutorial.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://learn.sparkfun.com/tutorials/qwiic-shield-for-arduino--photon-hookup-guide" class="btn btn-default">Qwiic Shield for Arduino Photon Hookup Guide</a></p>\n
+\n
+<p>With the shield assembled, SparkFun’s new Qwiic environment means that connecting the sensor could not be easier. Just plug one end of the Qwiic cable into the Flex Glove Controller breakout, the other into the Qwiic Shield of your choice and you’ll be ready to upload a sketch and figure out how bent your fingers are. It seems like it’s too easy to use, but that’s why we made it that way!</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-01.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-01.jpg" alt="Connected Flex Sensor"></a></p>\n
+\n
+<p>You may want to integrate this board into some gloves, after all, that’s what it was originally designed for. If you’re looking to get sensors on 8 fingers, you’ll need 4 glove boards, and if you have 4 boards on the same I<sup>s</sup>C bus, you’ll need to use every address available to the ADS1015. So get started by changing the addresses of your boards so no two boards share the same address.</p>\n
+\n
+<p>Now we want to attach our boards to our gloves. We’ve found it best to sandwich the board between two layers of gloves to keep the sensor flush with the finger. To accomplish this, we’ll sew the board to the outer layer of the inner glove. First, lay the glove out flat and place the board on the glove so that the ends of the flex sensors reach the tips of the fingers.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-04.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-04.jpg" alt="Sensor Laid on Glove"></a></p>\n
+\n
+<p>Once you have the sensor laid out on the glove, take a marker and mark the point where the sewing hole touches the glove.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-05.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-05.jpg" alt="Mark Sewing Points"></a></p>\n
+\n
+<p>Now simply sew the points to the available mounting holes on the sensor, The finished product should look like the below glove.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-06.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-06.jpg" alt="Glove put together"></a></p>\n
+\n
+<p>Now it’s time to hide the circuitry under a second glove. Go ahead and put the just the fingers of the second glove on, then slip the flex sensor down the gap between the the two layers of fabric. Sensors are shown at various states of this process in the image below.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-07.jpg"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-07.jpg" alt="Adding glove"></a></p>\n
+\n
+<p>Now just plug Qwiic cables to connect both boards together, then plug one board into your microcontroller so we can get readings from the glove.</p>      </div>\n
+          <div class="section tutorial-page">\n
+        <h2 id="library-overview">Library Overview</h2>\n
+        <div class="alert alert-info"><p><b>Note:</b> This example assumes you are using the latest version of the Arduino IDE on your desktop. If this is your first time using Arduino, please review our tutorial on <a href="https://learn.sparkfun.com/tutorials/installing-arduino-ide">installing the Arduino IDE.</a> If you have not previously installed an Arduino library, please check out our <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library">installation guide.</a></p></div>\n
+\n
+\n
+<p>Before we get into getting data from our flex sensors, let’s look at the available functions in the library. We’ve written a library to control the flex sensors. You can snag this library through the Arduino Library Manager. Search for <strong>SparkFun ADS1015 Arduino Library</strong> and you should be able to install the latest version. If you prefer manually downloading the libraries from the <a href="https://github.com/sparkfun/SparkFun_ADS1015_Arduino_Library">GitHub repository</a>, you can grab them here:</p>\n
+\n
+<p style="text-align:center;"> <a href="https://github.com/sparkfun/SparkFun_ADS1015_Arduino_Library/archive/master.zip" class="btn btn-default">Download the SparkFun ADS1015 Arduino Library (ZIP)</a></p>\n
+\n
+<p>Let’s get started by looking at the functions that set up the flex controller.</p>\n
+\n
+<h3>Setup and Settings</h3>\n
+\n
+<ul>\n
+<li><p><strong><code>boolean begin(uint8_t deviceAddress = BNO080_DEFAULT_ADDRESS, TwoWire &amp;wirePort = Wire);</code></strong> — By default use the default I2C address and use Wire port. Otherwise, pass in a custom I<sup>2</sup>C address and wire port.</p></li>\n
+<li><p><strong><code>uint16_t getAnalogData(uint8_t channel);</code></strong> — Returns the uncalibrated analog value from the sensor.</p></li>\n
+<li><strong><code>float getScaledAnalogData(uint8_t channel);</code></strong> — Returns a value between 0 and 1 based on calibration. Won’t work properly without first running <code>calibrate()</code></li>\n
+<li><p><strong><code>void calibrate();</code></strong> — Used to calibrate the sensor and map the flexible range to values given by the user. While running calibration, simply flex each sensor to the minimum and maximum that it will be used in your project.</p></li>\n
+<li><p><strong><code>void setMode(uint16_t mode);</code></strong> — Set mode of the sensor. Mode 0 is continuous read mode, mode 1 is single-shot</p></li>\n
+<li><strong><code>uint16_t getMode();</code></strong> — Get’s the read mode of the ADS1015.</li>\n
+<li><strong><code>getCalibration(uint8_t channel, bool hiLo)</code></strong> — Get the high or low calibration value for a certain channel. if <code>hiLo</code> is true, <code>getCalibration()</code> will return the high calibration for the given channel.</li>\n
+<li><strong><code>setCalibration(uint8_t channel, bool hiLo, uint16_t value)</code></strong> — Sets the high or low calibration value of a channel without using the automatic calibration function. Allows for manual calibration.</li>\n
+<li><p><strong><code>resetCalibration()</code></strong> — Resets the calibration to 0.</p></li>\n
+<li><p><strong><code>void setGain(uint16_t gain);</code></strong> — Pass in different values for different gains</p></li>\n
+<li><p><strong><code>uint16_t getGain();</code></strong> — Get’s the gain of the ADS1015. This will return 16-bit hex value. The values and their corresponding gains are listed below.</p>\n
+\n
+<ul>\n
+<li><strong><code>0x0E00</code></strong>: ± 0.256V</li>\n
+<li><strong><code>0X0000</code></strong>: ± 6.144V</li>\n
+<li><strong><code>0X0200</code></strong>: ± 4.096V</li>\n
+<li><strong><code>0X0400</code></strong>: ± 2.048V</li>\n
+<li><strong><code>0X0600</code></strong>: ± 1.024V</li>\n
+<li><strong><code>0X0800</code></strong>: ± 0.512V</li>\n
+<li><strong><code>0X0A00</code></strong>: ± 0.256V</li>\n
+</ul>\n
+</li>\n
+<li><p><strong><code>void setSampleRate(uint16_t sampleRate);</code></strong> — Sets the sample rate for the ADS1015, pass in the below 16-bit values to change to the corresponding sample rate.</p>\n
+\n
+<ul>\n
+<li><strong><code>0X0000</code></strong>: 128 Hz</li>\n
+<li><strong><code>0X0020</code></strong>: 250 Hz</li>\n
+<li><strong><code>0X0040</code></strong>: 490 Hz</li>\n
+<li><strong><code>0X0060</code></strong>: 920 Hz</li>\n
+<li><strong><code>0X0080</code></strong>: 1600 Hz</li>\n
+<li><strong><code>0X00A0</code></strong>: 2400 Hz</li>\n
+<li><strong><code>0X00C0</code></strong>: 3300 Hz</li>\n
+</ul>\n
+</li>\n
+<li><strong><code>uint16_t getSampleRate();</code></strong> — Returns the sample rate according to the above list of sample rates.</li>\n
+</ul>\n
+      </div>\n
+          <div class="section tutorial-page">\n
+        <h2 id="example-code">Example Code</h2>\n
+        <p>Now that we know how our library works, let’s go ahead and get started pulling values from our flex sensors.</p>\n
+\n
+<h3>Example 1 - Basic Readings</h3>\n
+\n
+<p>To get started with the first example, open up <b>File</b> &gt; <b>Examples</b> &gt; <b>SparkFun ADS1015 Arduino Library</b> &gt; <b>Example1_BasicReadings</b>. In this example, we begin by creating an <strong><code>ADS1015</code></strong> object called <code>fingerSensor</code> and then initializing our sensor object in the <code>setup()</code> loop. We then get the values from each finger by looping through and reading each channel on the ADS1015. The code for this is shown below.</p>\n
+\n
+<pre data-language="language:c\n
+,c\n
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="#include &amp;lt;SparkFun_ADS1015_Arduino_Library.h&amp;gt;\n
+\n
+ADS1015 fingerSensor;\n
+\n
+void setup() {\n
+\n
+  Wire.begin();\n
+  Serial.begin(115200);\n
+\n
+  if (fingerSensor.begin(Wire, 100000, ADS1015_ADDRESS_GND) == false) {\n
+     Serial.println(&quot;Device not found. Check wiring.&quot;);\n
+     while (1);\n
+  }\n
+\n
+}\n
+\n
+void loop() {  \n
+  uint16_t data;\n
+  for (int finger = 0; finger &amp;lt; 2; finger++) {\n
+    data = fingerSensor.getAnalogData(finger);\n
+    Serial.print(finger);\n
+    Serial.print(&quot;: &quot;);\n
+    Serial.print(data);\n
+    Serial.print(&quot;,&quot;);\n
+  }\n
+  Serial.println();\n
+}\n
+">Copy Code</button><code class="rainbow"><span class="comment">#include &lt;SparkFun_ADS1015_Arduino_Library.h&gt;</span>\n
+\n
+ADS1015 fingerSensor;\n
+\n
+<span class="keyword">void</span> <span class="function call">setup</span>() {\n
+\n
+  Wire.<span class="function call">begin</span>();\n
+  Serial.<span class="function call">begin</span>(<span class="constant numeric">115200</span>);\n
+\n
+  <span class="keyword">if</span> (fingerSensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_GND) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Device not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }\n
+\n
+}\n
+\n
+<span class="keyword">void</span> <span class="function call">loop</span>() {  \n
+  uint16_t data;\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> finger <span class="keyword operator">=</span> <span class="constant numeric">0</span>; finger <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; finger<span class="keyword operator">+</span><span class="keyword operator">+</span>) {\n
+    data <span class="keyword operator">=</span> fingerSensor.<span class="function call">getAnalogData</span>(finger);\n
+    Serial.<span class="keyword">print</span>(finger);\n
+    Serial.<span class="keyword">print</span>(<span class="string">": "</span>);\n
+    Serial.<span class="keyword">print</span>(data);\n
+    Serial.<span class="keyword">print</span>(<span class="string">","</span>);\n
+  }\n
+  Serial.<span class="function call">println</span>();\n
+}\n
+</code></pre>\n
+\n
+<p>Uploading this sketch and opening the Serial Monitor to 115200 bps will yield an output somewhat like the below image.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/EX1.PNG"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/EX1.PNG" alt="Example 1 Output"></a></p>\n
+\n
+<p style="text-align:center;"> <em>Single Sensor Output - click the image for a closer look</em></p>\n
+\n
+<h3>Example 2 - Setup hand</h3>\n
+\n
+<p>In this example, we’ll see how to setup an entire hand of flex sensors. To get started with this example, open up <b>File</b> &gt; <b>Examples</b> &gt; <b>SparkFun ADS1015 Arduino Library</b> &gt; <b>Example2_SetupHand</b>. In this example, we create two <code>ADS1015</code> objects, naming them <code>indexSensor</code> and <code>pinkySensor</code> to correspond with their locations on the glove. We also create an array with 4 spots to hold the data for the hand called <code>hand</code>. We then populate <code>hand</code> with values from each sensor. The code that accomplishes this is shown below.</p>\n
+\n
+<pre data-language="language:c\n
+,c\n
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="#include &amp;lt;SparkFun_ADS1015_Arduino_Library.h&amp;gt;\n
+\n
+ADS1015 pinkySensor;\n
+ADS1015 indexSensor;\n
+uint16_t hand[4] = {0, 0, 0, 0};\n
+\n
+void setup() { \n
+  Wire.begin();\n
+  Serial.begin(115200);\n
+\n
+  if (pinkySensor.begin(Wire, 100000, ADS1015_ADDRESS_SDA) == false) {\n
+     Serial.println(&quot;Pinky not found. Check wiring.&quot;);\n
+     while (1);\n
+  }\n
+  if (indexSensor.begin(Wire, 100000, ADS1015_ADDRESS_GND) == false) {\n
+     Serial.println(&quot;Index not found. Check wiring.&quot;);\n
+     while (1);\n
+  }  \n
+}\n
+\n
+void loop() {  \n
+  uint16_t data;\n
+  for (int finger = 0; finger &amp;lt; 2; finger++) {\n
+    hand[finger] = indexSensor.getAnalogData(finger);\n
+    hand[finger + 2] = pinkySensor.getAnalogData(finger);\n
+  }\n
+  for (int finger = 0; finger &amp;lt; 4; finger++)\n
+  {\n
+    Serial.print(finger);\n
+    Serial.print(&quot;: &quot;);\n
+    Serial.print(hand[finger]);\n
+    Serial.print(&quot; &quot;);\n
+  }\n
+  Serial.println();\n
+}\n
+">Copy Code</button><code class="rainbow"><span class="comment">#include &lt;SparkFun_ADS1015_Arduino_Library.h&gt;</span>\n
+\n
+ADS1015 pinkySensor;\n
+ADS1015 indexSensor;\n
+uint16_t hand[<span class="constant numeric">4</span>] <span class="keyword operator">=</span> {<span class="constant numeric">0</span>, <span class="constant numeric">0</span>, <span class="constant numeric">0</span>, <span class="constant numeric">0</span>};\n
+\n
+<span class="keyword">void</span> <span class="function call">setup</span>() { \n
+  Wire.<span class="function call">begin</span>();\n
+  Serial.<span class="function call">begin</span>(<span class="constant numeric">115200</span>);\n
+\n
+  <span class="keyword">if</span> (pinkySensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_SDA) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Pinky not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }\n
+  <span class="keyword">if</span> (indexSensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_GND) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Index not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }  \n
+}\n
+\n
+<span class="keyword">void</span> <span class="function call">loop</span>() {  \n
+  uint16_t data;\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> finger <span class="keyword operator">=</span> <span class="constant numeric">0</span>; finger <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; finger<span class="keyword operator">+</span><span class="keyword operator">+</span>) {\n
+    hand[finger] <span class="keyword operator">=</span> indexSensor.<span class="function call">getAnalogData</span>(finger);\n
+    hand[finger <span class="keyword operator">+</span> <span class="constant numeric">2</span>] <span class="keyword operator">=</span> pinkySensor.<span class="function call">getAnalogData</span>(finger);\n
+  }\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> finger <span class="keyword operator">=</span> <span class="constant numeric">0</span>; finger <span class="keyword operator">&lt;</span> <span class="constant numeric">4</span>; finger<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+  {\n
+    Serial.<span class="keyword">print</span>(finger);\n
+    Serial.<span class="keyword">print</span>(<span class="string">": "</span>);\n
+    Serial.<span class="keyword">print</span>(hand[finger]);\n
+    Serial.<span class="keyword">print</span>(<span class="string">" "</span>);\n
+  }\n
+  Serial.<span class="function call">println</span>();\n
+}\n
+</code></pre>\n
+\n
+<p>Uploading this sketch and opening the Serial Monitor to 115200 bps will yield an output somewhat like the below image.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/EX2.PNG"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/EX2.PNG" alt="Serial monitor output for full glove"></a></p>\n
+\n
+<p style="text-align:center;"> <em>Full Glove Output - click the image for a closer look</em></p>\n
+\n
+<h3>Example 3 - Calibration</h3>\n
+\n
+<p>The second example will show us how to calibrate our flex sensor so we get 0 when our finger is closed and 1 when it is open. To get started, open up <b>File</b> &gt; <b>Examples</b> &gt; <b>SparkFun ADS1015 Arduino Library</b> &gt; <b>Example3_Calibration</b>. In this example we will calibrate our sensor’s maximum and minimum values in order to find the range for our sensor.</p>\n
+\n
+<pre data-language="language:c\n
+,c\n
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="#include &amp;lt;SparkFun_ADS1015_Arduino_Library.h&amp;gt;\n
+#include &amp;lt;Wire.h&amp;gt;\n
+\n
+ADS1015 fingerSensor;\n
+\n
+void setup() {\n
+\n
+  Wire.begin();\n
+  Serial.begin(115200);\n
+\n
+  if (fingerSensor.begin(Wire, 100000, ADS1015_ADDRESS_GND) == false) {\n
+     Serial.println(&quot;Device not found. Check wiring.&quot;);\n
+     while (1);\n
+  }\n
+  Serial.println(&quot;Calibrating, send 'e' when finished&quot;);\n
+}\n
+\n
+void loop() {\n
+  uint8_t incoming;\n
+  do\n
+  {\n
+    fingerSensor.calibrate();\n
+\n
+    if(Serial.available())\n
+    {\n
+       incoming = Serial.read();\n
+    }\n
+  } while (incoming != 'e');\n
+  Serial.println(&quot;Calibrated&quot;);\n
+\n
+  for (int channel; channel &amp;lt; 2; channel++)\n
+  {\n
+    Serial.print(&quot;Channel &quot;);\n
+    Serial.print(channel);\n
+    Serial.print(&quot;: &quot;);\n
+    for (int hiLo = 0; hiLo &amp;lt; 2; hiLo++)\n
+    {\n
+      switch (hiLo)\n
+      {\n
+        case 0:\n
+        Serial.print(&quot;Low: &quot;);\n
+        Serial.print(fingerSensor.getCalibration(channel, hiLo));\n
+        break;\n
+        case 1:\n
+        Serial.print(&quot; High: &quot;);\n
+        Serial.print(fingerSensor.getCalibration(channel, hiLo));\n
+        break;\n
+      }\n
+    }\n
+    Serial.println();\n
+  }\n
+}\n
+">Copy Code</button><code class="rainbow"><span class="comment">#include &lt;SparkFun_ADS1015_Arduino_Library.h&gt;</span>\n
+<span class="comment">#include &lt;Wire.h&gt;</span>\n
+\n
+ADS1015 fingerSensor;\n
+\n
+<span class="keyword">void</span> <span class="function call">setup</span>() {\n
+\n
+  Wire.<span class="function call">begin</span>();\n
+  Serial.<span class="function call">begin</span>(<span class="constant numeric">115200</span>);\n
+\n
+  <span class="keyword">if</span> (fingerSensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_GND) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Device not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }\n
+  Serial.<span class="function call">println</span>(<span class="string">"Calibrating, send 'e' when finished"</span>);\n
+}\n
+\n
+<span class="keyword">void</span> <span class="function call">loop</span>() {\n
+  uint8_t incoming;\n
+  <span class="keyword">do</span>\n
+  {\n
+    fingerSensor.<span class="function call">calibrate</span>();\n
+\n
+    <span class="keyword">if</span>(Serial.<span class="function call">available</span>())\n
+    {\n
+       incoming <span class="keyword operator">=</span> Serial.<span class="function call">read</span>();\n
+    }\n
+  } <span class="keyword">while</span> (incoming <span class="keyword operator">!</span><span class="keyword operator">=</span> <span class="string">'e'</span>);\n
+  Serial.<span class="function call">println</span>(<span class="string">"Calibrated"</span>);\n
+\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> channel; channel <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; channel<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+  {\n
+    Serial.<span class="keyword">print</span>(<span class="string">"Channel "</span>);\n
+    Serial.<span class="keyword">print</span>(channel);\n
+    Serial.<span class="keyword">print</span>(<span class="string">": "</span>);\n
+    <span class="keyword">for</span> (<span class="keyword">int</span> hiLo <span class="keyword operator">=</span> <span class="constant numeric">0</span>; hiLo <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; hiLo<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+    {\n
+      <span class="keyword">switch</span> (hiLo)\n
+      {\n
+        <span class="keyword">case</span> <span class="constant numeric">0</span>:\n
+        Serial.<span class="keyword">print</span>(<span class="string">"Low: "</span>);\n
+        Serial.<span class="keyword">print</span>(fingerSensor.<span class="function call">getCalibration</span>(channel, hiLo));\n
+        <span class="keyword">break</span>;\n
+        <span class="keyword">case</span> <span class="constant numeric">1</span>:\n
+        Serial.<span class="keyword">print</span>(<span class="string">" High: "</span>);\n
+        Serial.<span class="keyword">print</span>(fingerSensor.<span class="function call">getCalibration</span>(channel, hiLo));\n
+        <span class="keyword">break</span>;\n
+      }\n
+    }\n
+    Serial.<span class="function call">println</span>();\n
+  }\n
+}\n
+</code></pre>\n
+\n
+<p>The sensor is initialized in the same manner as the first example, then our <code>loop()</code> begins calibrating the sensors. To calibrate the sensors, simply flex them to their maximum and minimum bend radii, then send an <code>e</code> over the Serial Monitor when you’re finished. This will save the current calibration and show you the values that have been saved. Uploading this sketch and opening the Serial Monitor to 115200 bps will yield an output somewhat like the below image once you’ve sent <code>e</code> and saved the calibration.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/EX3.PNG"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/EX3.PNG" alt="Example 3 - Calibration"></a></p>\n
+\n
+<p style="text-align:center;"> <em>Calibration Output - click the image for a closer look</em></p>\n
+\n
+<h3>Example 4 - Calibrated Hand</h3>\n
+\n
+<p>You don’t necessarily want to calibrate your hand every single time you put on a glove with the flex controllers built in, so let’s figure out how to manually set our calibration if we know it already. To get started, open up <b>File</b> &gt; <b>Examples</b> &gt; <b>SparkFun ADS1015 Arduino Library</b> &gt; <b>Example4_ManualCalibration</b>. We can see in the preamble to our code that we have an array of all of our calibration values, which were obtained using the previous example sketch. We then use a loop in the setup function along with our <code>setCalibration()</code> function to set the individual calibration values. The code for this is shown below.</p>\n
+\n
+<pre data-language="language:c\n
+,c\n
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="#include &amp;lt;SparkFun_ADS1015_Arduino_Library.h&amp;gt;\n
+#include &amp;lt;Wire.h&amp;gt;\n
+\n
+ADS1015 pinkySensor;\n
+ADS1015 indexSensor;\n
+float hand[4] = {0, 0, 0, 0};\n
+uint16_t handCalibration[4][2] = {\n
+//{hi , low}\n
+  {722, 1080},//index\n
+  {600, 980},//middle\n
+  {680, 900},//ring\n
+  {736, 907} //pinky\n
+};\n
+\n
+void setup() {\n
+\n
+  Wire.begin();\n
+  Serial.begin(115200);\n
+\n
+  //Begin our finger sensors, change addresses as needed.\n
+  if (pinkySensor.begin(Wire, 100000, ADS1015_ADDRESS_SDA) == false) \n
+  {\n
+     Serial.println(&quot;Pinky not found. Check wiring.&quot;);\n
+     while (1);\n
+  }\n
+  if (indexSensor.begin(Wire, 100000, ADS1015_ADDRESS_GND) == false) \n
+  {\n
+     Serial.println(&quot;Index not found. Check wiring.&quot;);\n
+     while (1);\n
+  }\n
+\n
+  //Set the calibration values for the hand.\n
+  for (int channel; channel &amp;lt; 2; channel++)\n
+  {\n
+    for (int hiLo = 0; hiLo &amp;lt; 2; hiLo++)\n
+    {\n
+      indexSensor.setCalibration(channel, hiLo, handCalibration[channel][hiLo]);\n
+      pinkySensor.setCalibration(channel, hiLo, handCalibration[channel + 2][hiLo]);\n
+    }\n
+    Serial.println();\n
+  }\n
+}\n
+\n
+void loop() {\n
+  for (int channel = 0; channel &amp;lt; 2; channel++)\n
+  {\n
+    //Keep in mind that getScaledAnalogData returns a float\n
+    hand[channel] = indexSensor.getScaledAnalogData(channel);\n
+    hand[channel + 2] = pinkySensor.getScaledAnalogData(channel);\n
+  }\n
+  for (int finger = 0; finger &amp;lt; 4; finger++)\n
+  {\n
+    Serial.print(finger);\n
+    Serial.print(&quot;: &quot;);\n
+    Serial.print(hand[finger]);\n
+    Serial.print(&quot; &quot;);\n
+  }\n
+  Serial.println();\n
+}\n
+">Copy Code</button><code class="rainbow"><span class="comment">#include &lt;SparkFun_ADS1015_Arduino_Library.h&gt;</span>\n
+<span class="comment">#include &lt;Wire.h&gt;</span>\n
+\n
+ADS1015 pinkySensor;\n
+ADS1015 indexSensor;\n
+<span class="keyword">float</span> hand[<span class="constant numeric">4</span>] <span class="keyword operator">=</span> {<span class="constant numeric">0</span>, <span class="constant numeric">0</span>, <span class="constant numeric">0</span>, <span class="constant numeric">0</span>};\n
+uint16_t handCalibration[<span class="constant numeric">4</span>][<span class="constant numeric">2</span>] <span class="keyword operator">=</span> {\n
+<span class="comment">//{hi , low}</span>\n
+  {<span class="constant numeric">722</span>, <span class="constant numeric">1080</span>},<span class="comment">//index</span>\n
+  {<span class="constant numeric">600</span>, <span class="constant numeric">980</span>},<span class="comment">//middle</span>\n
+  {<span class="constant numeric">680</span>, <span class="constant numeric">900</span>},<span class="comment">//ring</span>\n
+  {<span class="constant numeric">736</span>, <span class="constant numeric">907</span>} <span class="comment">//pinky</span>\n
+};\n
+\n
+<span class="keyword">void</span> <span class="function call">setup</span>() {\n
+\n
+  Wire.<span class="function call">begin</span>();\n
+  Serial.<span class="function call">begin</span>(<span class="constant numeric">115200</span>);\n
+\n
+  <span class="comment">//Begin our finger sensors, change addresses as needed.</span>\n
+  <span class="keyword">if</span> (pinkySensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_SDA) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) \n
+  {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Pinky not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }\n
+  <span class="keyword">if</span> (indexSensor.<span class="function call">begin</span>(Wire, <span class="constant numeric">100000</span>, ADS1015_ADDRESS_GND) <span class="keyword operator">=</span><span class="keyword operator">=</span> <span class="constant language">false</span>) \n
+  {\n
+     Serial.<span class="function call">println</span>(<span class="string">"Index not found. Check wiring."</span>);\n
+     <span class="keyword">while</span> (<span class="constant numeric">1</span>);\n
+  }\n
+\n
+  <span class="comment">//Set the calibration values for the hand.</span>\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> channel; channel <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; channel<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+  {\n
+    <span class="keyword">for</span> (<span class="keyword">int</span> hiLo <span class="keyword operator">=</span> <span class="constant numeric">0</span>; hiLo <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; hiLo<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+    {\n
+      indexSensor.<span class="function call">setCalibration</span>(channel, hiLo, handCalibration[channel][hiLo]);\n
+      pinkySensor.<span class="function call">setCalibration</span>(channel, hiLo, handCalibration[channel <span class="keyword operator">+</span> <span class="constant numeric">2</span>][hiLo]);\n
+    }\n
+    Serial.<span class="function call">println</span>();\n
+  }\n
+}\n
+\n
+<span class="keyword">void</span> <span class="function call">loop</span>() {\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> channel <span class="keyword operator">=</span> <span class="constant numeric">0</span>; channel <span class="keyword operator">&lt;</span> <span class="constant numeric">2</span>; channel<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+  {\n
+    <span class="comment">//Keep in mind that getScaledAnalogData returns a float</span>\n
+    hand[channel] <span class="keyword operator">=</span> indexSensor.<span class="function call">getScaledAnalogData</span>(channel);\n
+    hand[channel <span class="keyword operator">+</span> <span class="constant numeric">2</span>] <span class="keyword operator">=</span> pinkySensor.<span class="function call">getScaledAnalogData</span>(channel);\n
+  }\n
+  <span class="keyword">for</span> (<span class="keyword">int</span> finger <span class="keyword operator">=</span> <span class="constant numeric">0</span>; finger <span class="keyword operator">&lt;</span> <span class="constant numeric">4</span>; finger<span class="keyword operator">+</span><span class="keyword operator">+</span>)\n
+  {\n
+    Serial.<span class="keyword">print</span>(finger);\n
+    Serial.<span class="keyword">print</span>(<span class="string">": "</span>);\n
+    Serial.<span class="keyword">print</span>(hand[finger]);\n
+    Serial.<span class="keyword">print</span>(<span class="string">" "</span>);\n
+  }\n
+  Serial.<span class="function call">println</span>();\n
+}\n
+</code></pre>\n
+\n
+<p>Uploading this sketch and opening the serial monitor will show a stream of calibrated values. Use these to scale any other variable you’d like in your project.</p>\n
+\n
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/7/8/5/EX4.PNG"><img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/8/5/EX4.PNG" alt="Serial monitor output showing calibrated values"></a></p>\n
+\n
+<p style="text-align:center;"> <em>Calibrated Hand Output - click the image for a closer look</em></p>      </div>\n
+          <div class="section tutorial-page">\n
+        <h2 id="resources-and-going-further">Resources and Going Further</h2>\n
+        <p>Now that you’ve successfully got your Qwiic Flex Glove Controller up and running, it’s time to incorporate it into your own project!</p>\n
+\n
+<p>For more information, check out the resources below:</p>\n
+\n
+<ul>\n
+<li><a href="https://cdn.sparkfun.com/assets/c/b/9/4/7/SparkFun_Qwiic_Flex_Glove_Controller.pdf">Schematic (PDF)</a></li>\n
+<li><a href="https://cdn.sparkfun.com/assets/7/e/8/d/c/SparkFun_Qwiic_Flex_Glove_Controller.zip">Eagle Files (ZIP)</a></li>\n
+<li><a href="https://cdn.sparkfun.com/assets/1/8/1/0/d/ads1015.pdf">ADS1015 Datasheet (PDF)</a></li>\n
+<li><a href="https://www.sparkfun.com/qwiic">Qwiic Landing Page</a></li>\n
+<li>GitHub Repos\n
+\n
+<ul>\n
+<li><a href="https://github.com/sparkfun/Qwiic_Glove">Product</a></li>\n
+<li><a href="https://github.com/sparkfun/SparkFun_ADS1015_Arduino_Library">Arduino Library</a></li>\n
+</ul>\n
+</li>\n
+<li><a href="https://youtu.be/8PYa828t3MQ">SparkFun Product Showcase: Qwiic Flex Glove Controller</a></li>\n
+</ul>\n
+\n
+\n
+<p>Need even more inspiration for your next project? Check out some of these related tutorials:</p>\n
+\n
+\n
+<div class="tile-wrap">\n
+  <div class="tile tutorial-tile has_addl_actions  grid " data-id="689">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/qwiic-adapter-hookup-guide">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/6/8/9/14495-01.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Qwiic Adapter Hookup Guide</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      Get started with your Qwiic adapter board. This adapter breaks out the I2C pins from the Qwiic connectors to pins that you can easily solder with your favorite I2C enabled device.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="689">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">0</span>\n
+</span>  </div>\n
+\n
+</div>\n
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="704">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/qwiic-hat-for-raspberry-pi-hookup-guide">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/7/0/4/14459-01.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Qwiic HAT for Raspberry Pi Hookup Guide</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      Get started interfacing your Qwiic enabled boards with your Raspberry Pi. This Qwiic connects the I2C bus (GND, 3.3V, SDA, and SCL) on your Raspberry Pi to an array of Qwiic connectors.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="704">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">0</span>\n
+</span>  </div>\n
+\n
+</div>\n
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="729">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/qwiic-distance-sensor-rfd77402-hookup-guide">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/7/2/9/14539-SparkFun_Distance_Sensor_Breakout_-_RFD77402__Qwiic_-01.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Qwiic Distance Sensor (RFD77402) Hookup Guide</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      The RFD77402 uses an infrared VCSEL (Vertical Cavity Surface Emitting Laser) TOF (Time of Flight) module capable of millimeter precision distance readings up to 2 meters. It’s also part of SparkFun’s Qwiic system, so you won’t have to do any soldering to figure out how far away things are.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="729">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">1</span>\n
+</span>  </div>\n
+\n
+</div>\n
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="764">\n
+\n
+  <a href="https://learn.sparkfun.com/tutorials/qwiic-vr-imu-bno080-hookup-guide">\n
+          <div class="thumb-wrap">\n
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/7/6/4/14686-Qwiic_VR_IMU_BN0080-01.jpg)"></div>\n
+      </div>\n
+    \n
+    \n
+    <h3 class="title">Qwiic VR IMU (BNO080) Hookup Guide</h3>\n
+      </a>\n
+\n
+      <div class="description">\n
+      Figure out how things are oriented with the robust 9 degrees of freedom (DOF) BNO080 IMU. Maybe even make your own virtual reality (VR) applications if you're feeling savvy.    </div>\n
+  \n
+  \n
+  <div class="addl_actions">\n
+    <span class="fave_widget simple">\n
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="764">\n
+    <span class="fave_yes">\n
+      <span class="glyphicon glyphicon-heart"></span>\n
+      <span class="name">Favorited</span>\n
+    </span>\n
+    <span class="fave_no">\n
+      <span class="glyphicon glyphicon-heart-empty"></span>\n
+      <span class="name">Favorite</span>\n
+    </span>\n
+  </a>\n
+  <span class="fave_count">0</span>\n
+</span>  </div>\n
+\n
+</div>\n
+</div>\n
+\n
+  <div class="clearfix"></div>\n
+\n
+      </div>\n
+    \n
+        <div class="share-link-inline">\n
+\n
+  <a class="share-link-toggle" href="#">\n
+    <span class="share-title">\n
+      <span class="sfe-icon-share"></span>\n
+      Share    </span>\n
+  </a>\n
+\n
+  <div class="share-link-inner dialog">\n
+    Use this URL to share:<br>\n
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t785" onclick="$(this).select();">\n
+\n
+    <div class="share-social">\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http://sfe.io/t785" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http://sfe.io/t785&amp;name=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>\n
+\n
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http://sfe.io/t785" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>\n
+\n
+    </div>\n
+\n
+    </div>\n
+  \n
+  <div class="share-social">\n
+\n
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Qwiic+Flex+Glove+Controller+Hookup+Guide&amp;url=http://sfe.io/t785&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>\n
+\n
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http://sfe.io/t785&amp;t=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>\n
+\n
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http://sfe.io/t785&amp;media=https://cdn.sparkfun.com//r/500-1000/assets/learn_tutorials/7/8/5/Qwiic_Flex_Glove_Controller-04.jpg&amp;description=Qwiic+Flex+Glove+Controller+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>\n
+    \n
+  </div>\n
+\n
+  \n
+</div>\n
+\n
+  </div>\n
+\n
+  <div class="col-sm-4 nav-menu" id="nav-pages">\n
+\n
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>\n
+\n
+    <div id="sidebar_affix" class="affix-top">\n
+\n
+      <div id="tutorial-pages" class="list-group">\n
+        <a class="list-group-item"><b>Sections</b></a>\n
+                          <a data-pagename="introduction" class="list-group-item" href="#introduction">\n
+            Introduction          </a>\n
+                  <a data-pagename="hardware-overview" class="list-group-item" href="#hardware-overview">\n
+            Hardware Overview          </a>\n
+                  <a data-pagename="hardware-assembly" class="list-group-item" href="#hardware-assembly">\n
+            Hardware Assembly          </a>\n
+                  <a data-pagename="library-overview" class="list-group-item" href="#library-overview">\n
+            Library Overview          </a>\n
+                  <a data-pagename="example-code" class="list-group-item" href="#example-code">\n
+            Example Code          </a>\n
+                  <a data-pagename="resources-and-going-further" class="list-group-item" href="#resources-and-going-further">\n
+            Resources and Going Further          </a>\n
+              </div>\n
+\n
+      <div class="list-group">\n
+        <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/qwiic-flex-glove-controller-hookup-guide/discuss">\n
+          Comments\n
+          <span class="badge">0</span>\n
+        </a>\n
+                  <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/qwiic-flex-glove-controller-hookup-guide/introduction">\n
+            View Paginated\n
+          </a>\n
+                <a class="list-group-item" href="#" onclick="window.print(); return false;">\n
+          Print\n
+        </a>\n
+      </div>\n
+\n
+      <ul class="list-group">\n
+        <li class="list-group-item"><b>Tags</b></li>\n
+        <li class="list-group-item"><ul class="tags-list">\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/arduino">Arduino</a>  </li>\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/e-textiles">E-Textiles</a>  </li>\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/hookup">Hookup</a>  </li>\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/qwiic">Qwiic</a>  </li>\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/sensors">Sensors</a>  </li>\n
+  <li>\n
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/wearables">Wearables</a>  </li>\n
+</ul>\n
+</li>\n
+      </ul>\n
+\n
+      <ul class="list-group">\n
+        <li class="list-group-item"><b>License</b></li>\n
+        <li class="list-group-item">\n
+          <span class="sfe-icon-cc">\n
+            <span class="visuallyhidden">Creative Commons</span>\n
+          </span>\n
+          <small>tutorials are <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="new">CC BY-SA 4.0</a></small>\n
+        </li>\n
+      </ul>\n
+\n
+    </div>\n
+  </div>\n
+\n
+</div>\n
+\n
+<script type="text/javascript">\n
+  require(['tutorial', 'jquery.imagesloaded'], function() {\n
+    $('#tutorial').tutorial();\n
+  });\n
+</script>\n
+\n
+      </div> <!-- /container -->\n
+    </div> <!-- /content -->\n
+\n
+    \n
+<footer>\n
+\n
+<div class="social">\n
+  <div class="container">\n
+    <div class="row">\n
+      <div class="col-xs-12 col-sm-12 col-md-12">\n
+        <div class="sharing-ingenuity">\n
+          <span class="sfe-icon-flame"></span>\n
+          <span class="text"><span class="text-top">Start<br></span>something.</span>\n
+        </div>\n
+        <ul class="spew">\n
+          <li><a href="https://www.github.com/sparkfun" target="_blank" class="sfe-icon-github"><span class="visuallyhidden">GitHub</span></a></li>\n
+          <li><a href="https://www.youtube.com/sparkfun" target="_blank" class="sfe-icon-youtube"><span class="visuallyhidden">YouTube</span></a></li>\n
+          <li><a href="https://www.vimeo.com/sparkfun" target="_blank" class="sfe-icon-vimeo"><span class="visuallyhidden">Vimeo</span></a></li>\n
+          <li><a href="https://www.facebook.com/SparkFun" target="_blank" class="sfe-icon-facebook"><span class="visuallyhidden">Facebook</span></a></li>\n
+          <li><a href="https://www.instagram.com/sparkfun/" target="_blank" class="sfe-icon-instagram"><span class="visuallyhidden">Instagram</span></a></li>\n
+          <li><a href="https://plus.google.com/106084846822083498483/" target="_blank" class="sfe-icon-google-plus"><span class="visuallyhidden">Google Plus</span></a></li>\n
+          <li><a href="https://www.flickr.com/photos/sparkfun/" target="_blank" class="sfe-icon-flickr"><span class="visuallyhidden">Flickr</span></a></li>\n
+          <li><a href="https://twitter.com/#!/sparkfun" target="_blank" class="sfe-icon-twitter"><span class="visuallyhidden">Twitter</span></a></li>\n
+          <li><a href="https://www.sparkfun.com/feeds" class="sfe-icon-feed"><span class="visuallyhidden">RSS</span></a></li>\n
+        </ul>\n
+        <div class="newsletter">\n
+          <!--[if lte IE 8]>\n
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>\n
+<![endif]-->\n
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>\n
+<script>\n
+  hbspt.forms.create({\n
+    css: '',\n
+    cssClass: 'hubspot-newsletter-subscribe',\n
+    portalId: '2224003',\n
+    formId: 'd2b17dd4-e1bb-406a-ba41-44c19dcd0376'\n
+  });\n
+</script><div class="hbspt-form" id="hbspt-form-1532927435543-2463630123"><form novalidate="" accept-charset="UTF-8" action="https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/2224003/d2b17dd4-e1bb-406a-ba41-44c19dcd0376" enctype="multipart/form-data" id="hsForm_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" method="POST" class="hubspot-newsletter-subscribe hs-form hs-form-private hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_8e0e8b21-93ac-4427-952d-18b1e6147c54" data-form-id="d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-portal-id="2224003" target="target_iframe_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-reactid=".hbspt-forms-0"><div class="hs_email hs-email hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-0.0:$0"><label id="label-email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" class="" placeholder="Enter your " for="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-reactid=".hbspt-forms-0.0:$0.0"><span data-reactid=".hbspt-forms-0.0:$0.0.0"></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.0:$0.1"></legend><div class="input" data-reactid=".hbspt-forms-0.0:$0.$email"><input id="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" class="hs-input" type="email" name="email" placeholder="" value="" autocomplete="email" data-reactid=".hbspt-forms-0.0:$0.$email.0"></div></div><noscript data-reactid=".hbspt-forms-0.1"></noscript><div class="hs_submit hs-submit" data-reactid=".hbspt-forms-0.4"><div class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.4.0"></div><div class="actions" data-reactid=".hbspt-forms-0.4.1"><input type="submit" value="SUBSCRIBE TO EDUCATOR NEWSLETTER" class="hs-button primary large" data-reactid=".hbspt-forms-0.4.1.0"></div></div><input name="hs_context" type="hidden" value="{&quot;rumScriptExecuteTime&quot;:3084.7999999987223,&quot;rumServiceResponseTime&quot;:3559.400000000096,&quot;rumFormRenderTime&quot;:2.899999999499414,&quot;rumTotalRenderTime&quot;:5866.59999999938,&quot;rumTotalRequestTime&quot;:467.7000000010594,&quot;css&quot;:&quot;&quot;,&quot;pageUrl&quot;:&quot;https://learn.sparkfun.com/tutorials/qwiic-flex-glove-controller-hookup-guide&quot;,&quot;pageTitle&quot;:&quot;Qwiic Flex Glove Controller Hookup Guide - learn.sparkfun.com&quot;,&quot;source&quot;:&quot;FormsNext-static-2.138&quot;,&quot;isHostedOnHubspot&quot;:false,&quot;timestamp&quot;:1532927435858,&quot;userAgent&quot;:&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/68.0.3419.0 Safari/537.36&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;hutk&quot;:&quot;f1521775cdd1fb29f1a8aeca93bf4664&quot;,&quot;originalEmbedContext&quot;:{&quot;css&quot;:&quot;&quot;,&quot;cssClass&quot;:&quot;hubspot-newsletter-subscribe&quot;,&quot;portalId&quot;:&quot;2224003&quot;,&quot;formId&quot;:&quot;d2b17dd4-e1bb-406a-ba41-44c19dcd0376&quot;,&quot;privateInternalContext&quot;:{},&quot;target&quot;:&quot;#hbspt-form-1532927435543-2463630123&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;inlineMessage&quot;:true,&quot;hutk&quot;:&quot;f1521775cdd1fb29f1a8aeca93bf4664&quot;},&quot;recentFieldsCookie&quot;:{},&quot;boolCheckBoxFields&quot;:&quot;&quot;,&quot;dateFields&quot;:&quot;&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;smartFields&quot;:{},&quot;urlParams&quot;:{},&quot;formValidity&quot;:{},&quot;formTarget&quot;:&quot;#hbspt-form-1532927435543-2463630123&quot;,&quot;correlationId&quot;:&quot;f2a2576a-d496-40ee-b3a8-ce72935d1aee&quot;,&quot;disableCookieSubmission&quot;:false,&quot;isFallback&quot;:false}" data-reactid=".hbspt-forms-0.5"><iframe name="target_iframe_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" style="display:none;" data-reactid=".hbspt-forms-0.6"></iframe></form></div>\n
+        </div>\n
+      </div>\n
+    </div><!-- end .row -->\n
+  </div><!-- end .container -->\n
+</div><!-- end .social -->\n
+\n
+<div class="container">\n
+\n
+    <div class="row">\n
+\n
+    <div class="subfooter">\n
+\n
+      <div class="col-md-6 col-xs-12">\n
+\n
+        <div class="row">\n
+\n
+          <div class="col-xs-6">\n
+            <ul>\n
+              <li><b>About Us</b>\n
+              </li><li><a href="https://www.sparkfun.com/about_sparkfun">About SparkFun</a></li>\n
+              <li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.f1521775cdd1fb29f1a8aeca93bf4664.1532927438265.1532927438265.1532927438265.1&amp;__hssc=108804957.1.1532927438267&amp;__hsfp=4287614620" target="_blank">SparkFun Education <span class="glyphicon glyphicon-new-window"></span></a></li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.f1521775cdd1fb29f1a8aeca93bf4664.1532927438265.1532927438265.1532927438265.1&amp;__hssc=108804957.1.1532927438267&amp;__hsfp=4287614620" target="_blank">\n
+              </a><li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.f1521775cdd1fb29f1a8aeca93bf4664.1532927438265.1532927438265.1532927438265.1&amp;__hssc=108804957.1.1532927438267&amp;__hsfp=4287614620" target="_blank"></a><a title="RSS Feeds" href="https://www.sparkfun.com/feeds">Feeds <span class="sfe-icon-feed"></span></a></li>\n
+              <li><a href="https://www.sparkfun.com/jobs">Jobs</a></li>\n
+              <li><a href="https://www.sparkfun.com/static/contact">Contact</a></li>\n
+            </ul>\n
+          </div>\n
+\n
+          <div class="col-xs-6">\n
+            <ul>\n
+              <li><b>Help</b></li>\n
+              <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>\n
+              <li><a href="https://www.sparkfun.com/support#ShippingPolicy">Shipping</a></li>\n
+              <li><a href="https://www.sparkfun.com/returns">Return Policy</a></li>\n
+              <li><a href="https://www.sparkfun.com/static/faq">FAQ</a></li>\n
+                          </ul>\n
+          </div>\n
+\n
+        </div><!-- end .row -->\n
+\n
+        <div class="row">\n
+\n
+          <div class="col-xs-6">\n
+            <ul>\n
+              <li><b>Programs</b></li>\n
+              <li><a href="https://www.sparkfun.com/sponsorships">Become a Community Partner</a>                </li><li><ul><li><a href="https://www.sparkfun.com/cpp">Community Stories</a></li></ul></li>\n
+              \n
+              <li><a href="https://www.sparkfun.com/customkits">Custom Kit Requests</a></li>\n
+              <li><a href="https://www.sparkfun.com/project_calls">Tell Us About Your Project</a></li>\n
+              <li><a href="https://learn.sparkfun.com/tutorials/how-to-sell-your-widget-on-sparkfun">Sell Your Widget on SparkFun</a></li>\n
+              <li><a href="https://www.sparkfun.com/distributors/apply">Become a SparkFun Distributor</a></li>\n
+              <li><a href="https://www.sparkfun.com/volume">Large Volume Sales</a> </li>\n
+            </ul>\n
+          </div>\n
+\n
+          <div class="col-xs-6">\n
+            <ul>\n
+              <li><b>Community</b></li>\n
+              <li><a href="https://forum.sparkfun.com/">Forum</a></li>\n
+              <li><a href="https://www.sparkfun.com/news/263">SparkFun IRC Channel</a></li>\n
+              <li><a href="https://www.sparkfun.com/quiz">Take the SparkFun Quiz</a></li>\n
+              <li><a href="https://www.kickstarter.com/pages/sparkfun">SparkFun Kickstarter Projects</a></li>\n
+              <li><a href="https://www.sparkfun.com/distributors">Distributors</a></li>\n
+            </ul>\n
+          </div>\n
+\n
+        </div><!-- end .row -->\n
+\n
+      </div><!-- end left column .col-sm-6 -->\n
+\n
+      <div class="col-md-6 col-xs-12">\n
+\n
+      <p>\n
+        In 2003, CU student Nate Seidle fried a power supply in his dorm room and, in lieu of a way to order easy replacements, decided to start his own company. Since then, SparkFun has been committed to sustainably helping our world achieve electronics literacy from our headquarters in Boulder, Colorado.\n
+      </p>\n
+      <p>\n
+        No matter your vision, SparkFun's products and resources are designed to make the world of electronics more accessible. In addition to over 2,000 open source components and widgets, SparkFun offers curriculum, training and online tutorials designed to help demystify the wonderful world of embedded electronics. We're here to help you start something.\n
+      </p>\n
+\n
+      </div><!-- end left column .col-sm-6 -->\n
+\n
+    </div><!-- end .subfooter -->\n
+\n
+  </div><!-- end .row -->\n
+  \n
+  <ul class="copyleft">\n
+    <li>SparkFun Electronics <a href="https://www.sparkfun.com/news/300">®</a></li>\n
+    <li><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=6333+Dry+Creek+Parkway,+Niwot,+CO+80503">Niwot, Colorado</a></li>\n
+    <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>\n
+    <li><a href="https://www.sparkfun.com/sitemap">Site Map</a></li>\n
+    <li><a href="https://www.sparkfun.com/terms">Terms of Service</a></li>\n
+    <li><a href="https://www.sparkfun.com/privacy">Privacy Policy</a></li>\n
+    <li class="desktop-toggle">\n
+              <a href="https://www.sparkfun.com/account/mobile_toggle?redirect=/learn/tutorials/qwiic-flex-glove-controller-hookup-guide">Desktop Site</a>          </li>\n
+  </ul>\n
+\n
+</div><!-- end .container -->\n
+\n
+</footer>\n
+\n
+    <div class="nav-account">\n
+  <ul class="nav nav-tabs">\n
+    <li class="visible-xs">\n
+      <a class="nav-toggle-account back" href="#">Your Account</a>\n
+    </li>\n
+          <li class="">\n
+        <a href="https://www.sparkfun.com/account/login?redirect=/learn/tutorials/qwiic-flex-glove-controller-hookup-guide" data-toggle="modal" data-target="#login_modal" data-remote="false">Log In</a>\n
+      </li>\n
+          <li class="">\n
+        <a href="https://www.sparkfun.com/account/make">Register</a>\n
+      </li>\n
+      </ul>\n
+</div>\n
+\n
+      </div><!-- end .wrapper-inner -->\n
+    </div><!-- end .wrapper -->\n
+\n
+    <!-- Login Modal -->\n
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-hidden="true">\n
+  <div class="modal-dialog">\n
+    <div class="modal-content">\n
+      <div class="modal-header">\n
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>\n
+        <h4 class="modal-title">Log In</h4>\n
+        <p class="modal-header-msg"></p>\n
+      </div>\n
+      <div class="modal-body">\n
+        <form role="form" class="recaptcha-form" action="https://www.sparkfun.com/account/login" method="post">\n
+          <input type="hidden" name="csrf_token" value="5b224a7356a8a9c4faefe739d05153951459ed0d87c5678fbe814128d01bbe26610e282d604a5ece2a7c542d45dee507723b7607c57e5f542a2a921a69b9ce1d">          <input type="hidden" name="redirect" value="/learn/tutorials/qwiic-flex-glove-controller-hookup-guide">\n
+          <div class="form-group">\n
+            <label for="login-username">Email</label>\n
+            <input type="email" tabindex="1" name="user" id="login-username" class="form-control">\n
+          </div>\n
+          <div class="form-group">\n
+            <label for="login-password">Password</label>\n
+            <input tabindex="2" type="password" name="passwd" id="login-password" class="form-control" autocomplete="off">\n
+          </div>\n
+                      <div class="form-group">\n
+              <div class="g-recaptcha " data-sitekey="6LdC6DsUAAAAACOuFFkjQ5ICxIZHrq1XhvlpzXTd"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdC6DsUAAAAACOuFFkjQ5ICxIZHrq1XhvlpzXTd&amp;co=aHR0cHM6Ly9sZWFybi5zcGFya2Z1bi5jb206NDQz&amp;hl=en&amp;v=v1531759913576&amp;size=normal&amp;cb=mqdg3plp06ru" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>\n
+            </div>\n
+                    <div class="form-group">\n
+            <input type="submit" value="Log In" tabindex="3" class="btn btn-action">\n
+          </div>\n
+        </form>\n
+        <p>\n
+          <a href="https://www.sparkfun.com/account/forgot_password">Forgot your password?</a>          <br>\n
+          No account? <a id="btn_register_account" href="https://www.sparkfun.com/account/make">Register one!</a>        </p>\n
+      </div>\n
+    </div>\n
+  </div>\n
+</div>\n
+  \n
+          \n
+<!--  begin olark code -->\n
+  <script type="text/javascript" async=""> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");\n
+  /* custom configuration goes here (www.olark.com/documentation) */\n
+  olark.identify('4728-501-10-9212');</script>\n
+  <noscript><a href="https://www.olark.com/site/4728-501-10-9212/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>\n
+<!-- end olark code -->\n
+          <script type="text/javascript">\n
+      (function(d,s,i,r) {\n
+        if (d.getElementById(i)){return;}\n
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];\n
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2224003.js';\n
+        e.parentNode.insertBefore(n, e);\n
+      })(document,"script","hs-analytics",300000);\n
+    </script>\n
+        <script type="text/javascript">\n
+    setTimeout(function(){var a=document.createElement("script");\n
+    var b=document.getElementsByTagName("script")[0];\n
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0046/4761.js?"+Math.floor(new Date().getTime()/3600000);\n
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);\n
+  </script>\n
+      \n
+\n
+\n
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><iframe data-olark="true" aria-hidden="true" style="width: 0px; height: 0px; position: absolute; left: 0px; bottom: 0px; border: none;"></iframe><div style="background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); position: absolute; left: 0px; top: -10000px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.05;  filter: alpha(opacity=5)"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=v1531759913576&amp;k=6LdC6DsUAAAAACOuFFkjQ5ICxIZHrq1XhvlpzXTd&amp;cb=akz1c4wglfyg#j4bx50592x0z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" name="j4bx50592x0z" style="width: 100%; height: 100%;"></iframe></div></div><div data-olark="true" id="hbl-live-chat-wrapper" title="Live Chat Widget"><div id="olark-wrapper" class="olark-hidden" data-reactid=".0"><div aria-live="assertive" aria-atomic="true" role="alert" id="chat-box-announcer" style="position:absolute;visibility:visible;overflow:hidden;display:block;width:1px;height:1px;margin:-1px;border:0px;padding:0px;clip:rect(0px, 0px, 0px, 0px);clip-path:polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);white-space:nowrap;" data-reactid=".0.0"><p data-reactid=".0.0.0"></p></div><style rel="stylesheet" type="text/css" data-reactid=".0.1">#olark-wrapper #olark-container .olark-button {\n
+  background-color: #f03528 !important;\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper #olark-container .olark-button:hover {\n
+  background-color: #ee1f11 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-theme-bg {\n
+  background-color: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-theme-text {\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper .olark-launch-button {\n
+  background-color: #f03528 !important;\n
+}\n
+#olark-wrapper .olark-launch-button svg path {\n
+  fill: #ffffff !important;\n
+}\n
+#olark-wrapper .olark-launch-button .olark-button-text {\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper .olark-top-bar {\n
+  background-color: #f03528 !important;\n
+  color: #ffffff !important;\n
+  border-color: #ee1f11 !important;\n
+}\n
+#olark-wrapper .olark-top-bar-text {\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper .olark-top-bar-arrow {\n
+  fill: #ffffff !important;\n
+}\n
+#olark-wrapper .olark-end-chat-button {\n
+  color: #ffffff !important;\n
+  background-color: rgba(215, 28, 15, 0.5) !important;\n
+}\n
+#olark-wrapper .olark-end-chat-button:hover {\n
+  background-color: #d71c0f !important;\n
+}\n
+#olark-wrapper #olark-container .olark-visitor-message:not(.olark-message-trans-bg) {\n
+  background-color: rgba(240, 53, 40, 0.25) !important;\n
+}\n
+#olark-wrapper #olark-container .olark-form-send-button {\n
+  background-color: #f03528 !important;\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper #olark-container .olark-feedback-form-button {\n
+  background-color: #f03528 !important;\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper #olark-container .olark-restart-button {\n
+  background-color: #f03528 !important;\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper #olark-container .olark-branding-panel .olark-branding-cancel-button {\n
+  background-color: #f03528 !important;\n
+  border: none !important;\n
+  color: #ffffff !important;\n
+}\n
+#olark-wrapper #olark-container .olark-branding-panel .olark-branding-go-button {\n
+  border: none !important;\n
+  background: rgba(240, 53, 40, 0.35) !important;\n
+}\n
+#olark-wrapper #olark-container .olark-send-transcript-container .olark-send-transcript-form.olark-inline-form-valid .olark-form-input-container {\n
+  border-color: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-send-transcript-container .olark-send-transcript-form.olark-inline-form-valid .olark-send-icon {\n
+  fill: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-visitor-message:not(.olark-message-has-border) {\n
+  border: none !important;\n
+}\n
+#olark-wrapper .olark-end-chat-flag {\n
+  fill: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-form-confirmation-icon .olark-launch-button-icon {\n
+  fill: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-form-input:focus {\n
+  border-color: #f03528 !important;\n
+}\n
+#olark-wrapper #olark-container .olark-form-message-input:focus {\n
+  border-color: #f03528 !important;\n
+}\n
+</style><noscript data-reactid=".0.2"></noscript><button class="olark-launch-button olark-chat-tab olark-size-md" tabindex="0" role="button" aria-hidden="false" data-reactid=".0.4"><svg x="0px" y="0px" viewBox="0 0 28 23" aria-label="a question mark inside a chat bubble to indicate chat support" role="img" data-reactid=".0.4.0"><title data-reactid=".0.4.0.0">Question Mark in Chat Bubble Icon</title><desc data-reactid=".0.4.0.1">a question mark inside a chat bubble to indicate chat support</desc><path fill="#ffffff" d="M23.3,0.4L2.7,2.1C1.1,2.3,0,3.6,0,5.2v8c0,1.6,1,3,2.6,3.1l5.3,0.5c0,0,1,1.6,0.3,3.2\n
+c-0.7,1.6-1.9,2.3-1.9,2.3c4.2,0,6.6-3.1,7.8-4.9l9.3,0.7c1.8,0.2,3.6-1.3,3.6-3.1V3.5C27,1.7,25.1,0.2,23.3,0.4z M14.7,14.4H12v-2\n
+h2.7V14.4z M16.9,9c-0.3,0.5-1.2,0.9-1.8,1.4c-0.3,0.2-0.5,0.7-0.5,1.1H12v-0.6c0-0.7,0.3-1.2,0.7-1.5c0.2-0.2,0.7-0.6,1.1-1\n
+c0.3-0.2,0.5-0.7,0.5-1.1c0-0.6-0.5-0.9-1-0.9C12.5,6.5,12,7,12,8c0,0,0,0,0,0.1L9.5,7.8c0.2-2.2,1.8-3.4,4-3.4\n
+c1.1,0,2.1,0.3,2.7,0.9c0.7,0.6,1.1,1.4,1.1,2.3C17.3,8.1,17.2,8.5,16.9,9z" data-reactid=".0.4.0.2"></path></svg><div class="olark-notification-badge olark-hidden" data-reactid=".0.4.1"><div class="olark-notification-badge-text" data-reactid=".0.4.1.0">0</div></div><div class="olark-button-text" data-reactid=".0.4.2">We're offline, please message us!</div></button><div id="olark-container" class="olark-hidden olark-no-branding olark-size-md" aria-hidden="true" role="complementary" data-reactid=".0.5"><div class="olark-top-bar" data-reactid=".0.5.0"><div class="olark-top-bar-text" data-reactid=".0.5.0.0">We're offline, please message us!</div><div class="olark-top-bar-button" role="button" tabindex="-1" aria-hidden="true" aria-label="Minimize Chat" data-reactid=".0.5.0.1"><svg viewBox="0 0 15.1 8.9" fill="#ffffff" aria-label="a small down arrow to minimize chat box" role="img" data-reactid=".0.5.0.1.0"><title data-reactid=".0.5.0.1.0.0">Arrow Down</title><desc data-reactid=".0.5.0.1.0.1">a small down arrow to minimize chat box</desc><polygon class="olark-top-bar-arrow" points="0.2,1.4 7.6,8.9 15.1,1.4 13.7,0 7.6,6 1.6,0" data-reactid=".0.5.0.1.0.2"></polygon></svg></div></div><div class="olark-conversation-container olark-no-message-form" data-reactid=".0.5.1"><div class="olark-message-block-container olark-single-message" data-reactid=".0.5.1.0"><div class="olark-generated-message" data-reactid=".0.5.1.0.1">We're not around right now, but we'd love to help you as soon as we're back. Please type your message below!</div></div></div><noscript data-reactid=".0.5.4"></noscript></div></div></div></body></html>

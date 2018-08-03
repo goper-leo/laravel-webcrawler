@@ -46,7 +46,7 @@ class Websaper
     public function crawl($url)
     {
         $this->url = $url;
-
+        // domcontentloaded
         $content = $this->browsershot
                     ->url($this->url)
                     ->setChromePath($this->config['chrome_path'])
@@ -54,6 +54,7 @@ class Websaper
                     ->setNpmBinary($this->config['npm_binary'])
                     ->setOption('args', ['--headless=false'])
                     ->noSandbox()
+                    ->dismissDialogs()
                     ->bodyHtml();
 
         return $content;
