@@ -10,7 +10,7 @@ Laravel wrapper for spatie/browsershot.
     "repositories": [
             {
                 "type": "vcs",
-                "url": "git@bitbucket.org:goper/websaper.git"        
+                "url": "git@github.com:goper-leo/laravel-webcrawler.git"        
             }
         ]
     ```

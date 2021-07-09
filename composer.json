@@ -1,5 +1,5 @@
 {
-    "name": "goper/websaper",
+    "name": "goper-leo/laravel-webcrawler",
     "description": "Laravel wrapper for spatie/browsershot package.",
     "license": "MIT",
     "require": {
