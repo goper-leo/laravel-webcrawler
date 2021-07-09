@@ -14,14 +14,12 @@ Laravel wrapper for spatie/browsershot.
             }
         ]
     ```
+2. Install package
+```
+composer install goper-leo/laravel-webcrawler
+```
 
-2. Require this package
-
-    ``` "goper-leo/laravel-webcrawler": "dev-master" ```
-
-3. Run `composer install` or `composer update`
-
-4. Run `php artisan vendor:publish --provider=WebsaperServiceProvider` to publish **websaper.php** config file
+3. Run `php artisan vendor:publish --provider=WebsaperServiceProvider` to publish **websaper.php** config file
 
 ### How to use ###
 
