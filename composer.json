@@ -1,6 +1,6 @@
 {
     "name": "goper/websaper",
-    "description": "Laravel wrapper for spatie/crawler package.",
+    "description": "Laravel wrapper for spatie/browsershot package.",
     "license": "MIT",
     "require": {
         "illuminate/support": "^5.6",

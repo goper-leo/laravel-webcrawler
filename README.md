@@ -1,6 +1,6 @@
 # README #
 
-Laravel wrapper for spatie/crawler.
+Laravel wrapper for spatie/browsershot.
 
 ### Installation ###
 
@@ -33,5 +33,4 @@ Laravel wrapper for spatie/crawler.
 4. You want to build and get the content
 ```
 $content = WebSaper::testCrawl($request->url);
-$scraped = WebSaper::builder('Modules\Import\Patterns\AllAboutCircuits', $content);
 ```
