@@ -10,14 +10,14 @@ Laravel wrapper for spatie/browsershot.
     "repositories": [
             {
                 "type": "vcs",
-                "url": "git@bitbucket.org:goper/websaper.git"        
+                "url": "git@github.com:goper-leo/laravel-webcrawler.git"        
             }
         ]
     ```
 
 2. Require this package
 
-    ``` "goper/websaper": "dev-master" ```
+    ``` "goper-leo/laravel-webcrawler": "dev-master" ```
 
 3. Run `composer install` or `composer update`
 
