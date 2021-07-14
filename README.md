@@ -19,7 +19,16 @@ Laravel wrapper for spatie/browsershot.
 composer install goper-leo/laravel-webcrawler
 ```
 
-3. Run `php artisan vendor:publish --provider=WebsaperServiceProvider` to publish **websaper.php** config file
+3. Install puppetter `yarn add puppeteer`
+
+4. Run `php artisan vendor:publish --provider=WebsaperServiceProvider` to publish **websaper.php** config file
+
+5. Update config variables with your config.
+```
+NODE_BINARY=go_to_terminal_and_type- "which node" -paste result here
+NPM_BINARY=go_to_terminal_and_type- "which npm" -paste result here
+
+```
 
 ### How to use ###
 

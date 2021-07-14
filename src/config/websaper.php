@@ -9,7 +9,7 @@ return [
     |
     | Example: '/usr/lib/node_modules/puppeteer/.local-chromium/linux-555668/chrome-linux/chrome'
     */
-    'chrome_path' => env('CHROME_PATH', ''),
+    'chrome_path' => env('CHROME_PATH', base_path('node_modules/puppeteer/.local-chromium/linux-884014/chrome-linux/chrome')),
 
     /*
     |--------------------------------------------------------------------------

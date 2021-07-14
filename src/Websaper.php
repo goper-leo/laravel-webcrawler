@@ -1,14 +1,11 @@
 <?php
 namespace Goper\Websaper;
 
+use Exception;
 use Spatie\Browsershot\Browsershot;
-use Goper\Websaper\Traits\Validation;
 
 class Websaper
 {
-    //** Traits
-    use Validation;
-
     /**
      * Url to be crawled
      * @var string
@@ -92,6 +89,28 @@ class Websaper
         $body = $getters->content($xpath);
 
         return compact('title', 'summary', 'body', 'banner', 'materials');
+    }
+
+    /**
+     * Get observers
+     * 
+     * @return [type] [description]
+     */
+    public function validateConfig()
+    {
+        if (!$this->config) {
+            // No config file found
+            throw new Exception('No config file found. Run php artisan vendor:publish and publish the config.');
+        }
+    }
+
+    /**
+     * Get sample content
+     * @return string
+     */
+    public function sampleContent($file)
+    {
+        return file_get_contents(__DIR__ . '/test/' . $file, FILE_USE_INCLUDE_PATH);
     }
 
 }
